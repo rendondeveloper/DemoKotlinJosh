@@ -64,12 +64,11 @@ class SuscriptionActivity : AppCompatActivity() {
             binding.monthlyCard.foreground = null
             binding.yearCard.foreground = ContextCompat.getDrawable(this, R.drawable.black_dynamic_border)
         }
-        
+
         //hargebee.configure(site= "your-site",
         //                    publishableApiKey= "api_key",
         //                    sdkKey= "sdk_key",packageName = "packageName")
         //Chargebee.configure\
-
 
         binding.loginButton.setOnClickListener {
             Chargebee.configure("asdeporteapp-test.integrations",
