@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="orange_as">#e64a19</color>
+    <color name="orange_as_light">#ff6b00</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="dark_blue">#a3acbc</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+
+    <!-- Dynamic -->
+    <color name="white_dynamic">#000000</color>
+    <color name="black_dynamic">#FFFFFF</color>
+    <color name="green_dynamic">#30d158</color>
+    <color name="red_dynamic">#ff453a</color>
+
+    <color name="secondary_background">#1e1e1e</color>
+
+    <!-- External -->
+    <color name="facebook">#3b5998</color>
+    <color name="google">#db3236</color>
+
+    <color name="label_primary">#ffffff</color>
+    <color name="label_secondary">#FFBDBDBD</color>
+</resources>

@@ -1,0 +1,159 @@
+<resources>
+
+    <!-- Font type face -->
+    <style name="Kanit_Semi_Bold">
+        <item name="android:fontFamily">@font/kanit_semibold</item>
+    </style>
+
+    <!-- Font color -->
+    <style name="Kanit_Semi_Bold.Default" parent="Kanit_Semi_Bold">
+        <item name="android:textColor">@color/label_primary</item>
+    </style>
+
+    <style name="Kanit_Semi_Bold.Secondary" parent="Kanit_Semi_Bold">
+        <item name="android:textColor">@color/label_secondary</item>
+    </style>
+
+    <style name="Kanit_Semi_Bold.White" parent="Kanit_Semi_Bold">
+        <item name="android:textColor">@color/white_dynamic</item>
+    </style>
+
+    <style name="Kanit_Semi_Bold.Orange" parent="Kanit_Semi_Bold">
+        <item name="android:textColor">@color/orange_as_light</item>
+    </style>
+
+    <!-- Font size -->
+    <!-- Default color -->
+    <style name="Kanit_Semi_Bold.Default.10" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.11" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.12" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.13" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.14" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.15" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.16" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.17" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.18" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.19" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.20" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.21" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_21</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.22" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_22</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.23" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_23</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.24" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_24</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Default.25" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_25</item>
+    </style>
+    <!-- Secondary color -->
+    <style name="Kanit_Semi_Bold.Secondary.10" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.11" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.12" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.13" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.14" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.15" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.16" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.17" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.18" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.19" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Secondary.20" parent="Kanit_Semi_Bold.Secondary">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+    <!-- Orange color -->
+    <style name="Kanit_Semi_Bold.Orange.10" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.11" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.12" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.13" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.14" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.15" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.16" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.17" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.18" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.19" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.20" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.21" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_21</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.22" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_22</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.23" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_23</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.24" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_24</item>
+    </style>
+    <style name="Kanit_Semi_Bold.Orange.25" parent="Kanit_Semi_Bold.Orange">
+        <item name="android:textSize">@dimen/text_25</item>
+    </style>
+
+</resources>

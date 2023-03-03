@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="56dp"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:elevation="0dp"
+            android:padding="2dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_picture"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/avatarman"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@color/white_dynamic"/>
+
+            <LinearLayout
+                android:id="@+id/profile_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/user_picture"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ernesto Torres"
+                    style="@style/Kanit_Medium.Default.16"
+                    android:maxLines="2"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_400"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modalidad individual"
+            style="@style/Kanit_Semibold.Default.16"
+            android:maxLines="2"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deporte que consta de 3 disciplinas (natación, ciclismo y carrera)"
+            style="@style/Kanit_Regular.Default.14"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="32dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tu Plan de FMTRI:"
+                style="@style/Kanit_Regular.Default.16"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plata"
+                android:layout_marginHorizontal="8dp"
+                style="@style/Kanit_Semibold.Default.16"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/ic_info"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos obligatorios"
+            style="@style/Kanit_Medium.Default.20"/>
+
+        <LinearLayout
+            android:id="@+id/distance_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distancias:"
+                android:layout_marginTop="28dp"
+                style="@style/Kanit_Semibold.Default.16"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/distance_list"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <LinearLayout
+                android:id="@+id/distance_details_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="24dp"
+                    android:paddingHorizontal="21dp"
+                    android:layout_marginVertical="21dp"
+                    android:background="@drawable/pill_background"
+                    android:backgroundTint="@color/dark_blue">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sprint - Varonil"
+                        style="@style/Kanit_Semibold.Default.16"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Natación: 750m • Bicicleta: 20K • Carrera: 5K"
+                        style="@style/Kanit_Regular.Default.14"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rama:"
+                            style="@style/Kanit_Medium.Default.16"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Varonil"
+                            style="@style/Kanit_Regular.Default.16"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Categoría:"
+                            style="@style/Kanit_Medium.Default.16"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="35 a 39 años"
+                            style="@style/Kanit_Regular.Default.16"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="* Si necesitas cambiar la rama o la categoría, tienes que ir a editar Tu Perfil"
+                    android:layout_marginHorizontal="16dp"
+                    style="@style/Kanit_Regular.Secondary.14"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tshirt_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="28dp"
+            android:alpha=".3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elige tu talla de playera:"
+                    style="@style/Kanit_Semibold.Default.16"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/ic_info"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tshirt_list"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

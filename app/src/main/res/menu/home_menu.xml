@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/file"
+        android:title="Mis tribus" >
+        <!-- "file" submenu -->
+        <menu>
+            <item android:id="@+id/create_new"
+                android:title="Corredores Coyoacán" />
+            <item android:id="@+id/open"
+                android:title="Los Super Elite" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/btn_search"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/bell"
+        android:title="@string/notifications_title"
+        app:showAsAction="ifRoom"/>
+
+</menu>

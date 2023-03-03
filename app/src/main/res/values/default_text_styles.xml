@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Default Font color -->
+    <style name="Normal.Dark" parent="Normal">
+        <item name="android:textColor">@color/label_primary</item>
+    </style>
+    <style name="Bold.Dark" parent="Bold">
+        <item name="android:textColor">@color/label_primary</item>
+    </style>
+
+    <!-- Normal -->
+    <style name="Normal.Dark.12" parent="Normal.Dark">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Normal.Dark.14" parent="Normal.Dark">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+
+    <!-- Bold -->
+    <style name="Bold.Dark.14" parent="Bold.Dark">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+
+    <style name="Bold.Dark.17" parent="Bold.Dark">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+
+    <style name="Bold.Dark.45" parent="Bold.Dark">
+        <item name="android:textSize">@dimen/text_45</item>
+    </style>
+
+</resources>

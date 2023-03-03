@@ -1,0 +1,433 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/secondary_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/label_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                style="@style/Kanit_Regular.Default.20"
+                android:textAllCaps="true"
+                android:layout_gravity="center_horizontal"
+                android:text="triatlón astri la paz"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/label_secondary"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:text="17 de septiembre del 2022"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/label_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_marginTop="10dp"
+                android:text="Proximos pasos"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/check_on"
+                        app:tint="@color/green_dynamic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/label_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="paso 1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/label_secondary"
+                        android:textSize="12sp"
+                        android:text="Inscripción"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/check_off"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/label_secondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="paso 2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/label_secondary"
+                        android:textSize="12sp"
+                        android:text="Check in"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/check_off"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/label_secondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="paso 3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/label_secondary"
+                        android:textSize="12sp"
+                        android:text="Entrega de kit"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/label_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_marginTop="10dp"
+                android:text="Tu evento comienza en:"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/daysView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/label_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Días"/>
+
+                    <LinearLayout
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@color/gray_600"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="0"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@color/gray_600"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hoursView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/label_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Horas"/>
+
+                    <LinearLayout
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@color/gray_600"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="2"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@color/gray_600"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="3"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/gray_600"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:text=":"
+                    android:layout_weight="0"/>
+                <LinearLayout
+                    android:id="@+id/minutesView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/label_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Minutos"/>
+
+                    <LinearLayout
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@color/gray_600"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="5"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@color/gray_600"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="9"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/gray_600"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:text=":"
+                    android:layout_weight="0"/>
+                <LinearLayout
+                    android:id="@+id/secondsView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/label_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Segundos"/>
+
+                    <LinearLayout
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@color/gray_600"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="4"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@color/gray_600"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:text="6"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/label_secondary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:text="Mostrar todo"/>
+
+                <ImageButton
+                    android:id="@+id/enterDetail"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:tint="@color/black_dynamic"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/arrow_right"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="9dp">
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/photo_placeholder" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

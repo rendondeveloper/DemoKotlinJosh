@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/event_tribu_background"
+        android:elevation="0dp"
+        android:paddingTop="2dp">
+
+        <ImageView
+            android:id="@+id/person_image"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/person_image"
+            android:layout_alignParentTop="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mario Pérez"
+                android:gravity="center_vertical"
+                style="@style/Kanit_Medium.Default.20"
+                android:maxLines="2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Corredores Coyoacán"
+                style="@style/Kanit_Regular.Default.14"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="205 miembros"
+                style="@style/Kanit_Regular.Secondary.14"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/tab_more"
+            app:tint="@color/black_dynamic"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

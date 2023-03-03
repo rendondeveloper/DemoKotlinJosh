@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/event_tribu_background"
+        android:elevation="0dp"
+        android:paddingTop="2dp">
+
+        <ImageView
+            android:id="@+id/person_image"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/person_image"
+            android:layout_alignParentTop="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aarón Méndez"
+                android:gravity="center_vertical"
+                style="@style/Kanit_Medium.Default.20"
+                android:maxLines="2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8 amigos en común"
+                style="@style/Kanit_Regular.Secondary.14"/>
+
+            <LinearLayout
+                android:id="@+id/action_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/reject_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    style="@style/Kanit_Regular.Default.14"
+                    android:textColor="@color/black_dynamic"
+                    android:background="@drawable/secondary_button"
+                    app:backgroundTint="@color/black_dynamic"
+                    android:text="Eliminar"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/accept_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    style="@style/Kanit_Regular.Default.14"
+                    android:textColor="@color/white"
+                    android:background="@drawable/pill_background"
+                    android:text="Agregar"
+                    android:textAllCaps="false"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.mitribu.subtabs.tribus.TribuMainFragment"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="Muro Pro Cycling"
+        app:titleTextColor="@color/black_dynamic"
+        app:navigationIcon="@drawable/arrow_left"
+        app:navigationIconTint="@color/black_dynamic"
+        android:theme="@style/AsdToolbarTheme"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/secondary_background"/>
+
+            <!-- Header Tribu -->
+
+            <RelativeLayout
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/avatarman"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    app:civ_circle_background_color="@color/white_dynamic"/>
+
+                <LinearLayout
+                    android:id="@+id/profile_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/profile_image"
+                    android:layout_toStartOf="@+id/tribu_admin_button">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Corredores Narvarte"
+                        style="@style/Kanit_Bold.Default.16"
+                        android:maxLines="2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Administrador"
+                        android:background="@drawable/pill_background_light_gray"
+                        android:backgroundTint="@color/dark_blue"
+                        style="@style/Kanit_Regular.Default.14"
+                        android:textColor="@color/white"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/tribu_admin_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    style="@style/Kanit_Regular.Default.14"
+                    app:tint="@color/black_dynamic"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/tab_more"
+                    android:textAllCaps="false"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/details_tribu_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    style="@style/Kanit_Regular.Default.14"
+                    android:textColor="@color/black_dynamic"
+                    android:background="@drawable/secondary_button"
+                    app:backgroundTint="@color/black_dynamic"
+                    android:layout_alignParentStart="true"
+                    android:text="Ver Tribu"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="16dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/invite_friends_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    style="@style/Kanit_Regular.Default.14"
+                    android:layout_toEndOf="@+id/details_tribu_button"
+                    android:textColor="@color/white"
+                    android:background="@drawable/pill_background"
+                    android:text="Invitar miembros"
+                    android:textAllCaps="false"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"/>
+
+            </RelativeLayout>
+
+            <!-- Content -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/secondary_background"/>
+
+            <!-- Posts -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.asdeporte.asdeportev2.ui.reusableview.tribu.PublishHomeView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:background="@color/secondary_background">
+                    <TextView
+                        android:id="@+id/filter_posts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Ver publicaciones"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        style="@style/Kanit_Regular.Default.16"
+                        android:clickable="true"
+                        android:background="@drawable/filter_posts_background"
+                        android:drawablePadding="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:drawableEndCompat="@drawable/filter" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/posts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

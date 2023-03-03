@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:title="Unirme a otras tribus"
+                app:titleTextColor="@color/black_dynamic"
+                app:navigationIcon="@drawable/arrow_left"
+                app:navigationIconTint="@color/black_dynamic"
+                android:theme="@style/AsdToolbarTheme"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/secondary_background"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/tribu_image"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/avatarman"
+                        android:layout_alignParentStart="true"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/tribu_image"
+                        android:layout_alignParentTop="true"
+                        style="@style/Kanit_Semibold.Default.16"
+                        android:gravity="center_vertical"
+                        android:text="Master cycling"/>
+
+                    <TextView
+                        android:id="@+id/typeTribu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/tribu_image"
+                        android:text="Administrador: Alberto Lizárraga"
+                        style="@style/Kanit_Medium.Default.10"
+                        android:textColor="@color/white"
+                        android:background="@drawable/pill_background_light_gray"
+                        android:backgroundTint="@color/dark_blue"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/tribus_big"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="center"
+                    android:layout_toEndOf="@+id/tribu_image"
+                    style="@style/Kanit_Semi_Bold_Italic.Default.18"
+                    android:textAllCaps="true"
+                    android:text="tribu privada"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:text="La tribu MASTER CYCLING es privada, no puedes ver sus publicaciones, próximos eventos, resultados y miembros que pertenecen a ella. Para poder ver toda la interacción de está tribu, debes unirte y que el administrador te apruebe y seas parte de esta tribu."/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:weightSum="2">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/not_now_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_weight="1"
+                        style="@style/Kanit_Regular.Default.14"
+                        android:textColor="@color/black_dynamic"
+                        android:background="@drawable/secondary_button"
+                        app:backgroundTint="@color/black_dynamic"
+                        android:text="Ahora no"
+                        android:textAllCaps="false"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="7dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/join_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_weight="1"
+                        style="@style/Kanit_Regular.Default.14"
+                        android:textColor="@color/white"
+                        android:background="@drawable/pill_background"
+                        android:text="Unirme"
+                        android:textAllCaps="false"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="7dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

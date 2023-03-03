@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.inscription.InscriptionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/white_dynamic"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:title="Modalidad"
+            app:titleTextColor="@color/black_dynamic"
+            app:navigationIcon="@drawable/arrow_left"
+            app:navigationIconTint="@color/black_dynamic"
+            android:theme="@style/AsdToolbarTheme"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.aceinteract.android.stepper.StepperNavigationView
+        android:id="@+id/stepper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:paddingVertical="15dp"
+        android:background="@color/secondary_background"
+        app:stepperItems="@menu/inscription_steps_menu"
+        app:stepperType="tab"
+        app:stepperIconSize="16dp"
+        app:stepperWidgetColor="@color/orange_as_light"
+        app:stepperTextAppearance="@style/Kanit_Regular.Default.12"
+        app:stepperTextColor="@color/orange_as_light"
+        app:layout_constraintTop_toBottomOf="@id/appbar"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frame_stepper"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/resume_view"
+        app:layout_constraintTop_toBottomOf="@id/stepper"
+        app:navGraph="@navigation/nav_inscription" />
+
+    <RelativeLayout
+        android:id="@+id/resume_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/black"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/resume_action"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/continue_button"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESUMEN"
+                    style="@style/Kanit_Bold.Default.14"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    style="@style/Kanit_Medium.Default.10"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="-2dp"
+                    android:padding="0dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/white_circle"
+                    android:backgroundTint="@color/red_dynamic"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_arrow_up"
+                    app:tint="@color/white"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$699.00"
+                style="@style/Kanit_Regular.Default.14"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:text="Continuar"
+            android:textColor="@color/white"
+            android:background="@drawable/pill_background"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/resume_view"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/light_blue_600"
+        app:tint="@color/white"
+        app:srcCompat="@drawable/ic_chat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

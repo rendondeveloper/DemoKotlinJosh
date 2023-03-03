@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/search_tribu"
+        android:scaleType="centerCrop"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@drawable/gradient_dark_clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_above="@+id/subtitle"
+            android:text="¡Encuentra tu tribu!"/>
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gray_600"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_above="@+id/searchLayout"
+            android:text="1500 HÉROES  han encontrado su tribu y ya están practicando su deporte favorito."/>
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_dark_white"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/filters">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/gray_600"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:text="Encuentra una tribu"/>
+
+                <ImageButton
+                    android:id="@+id/search"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:src="@drawable/ic_search"
+                    android:background="@drawable/corners_8_right"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/filters"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_filters"
+                android:background="@drawable/border_dark_white"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,159 @@
+<resources>
+
+    <!-- Font type face -->
+    <style name="Kanit_Semi_Bold_Italic">
+        <item name="android:fontFamily">@font/kanit_semibolditalic</item>
+    </style>
+
+    <!-- Font color -->
+    <style name="Kanit_Semi_Bold_Italic.Default" parent="Kanit_Semi_Bold_Italic">
+        <item name="android:textColor">@color/label_primary</item>
+    </style>
+
+    <style name="Kanit_Semi_Bold_Italic.Secondary" parent="Kanit_Semi_Bold_Italic">
+        <item name="android:textColor">@color/label_secondary</item>
+    </style>
+
+    <style name="Kanit_Semi_Bold_Italic.White" parent="Kanit_Semi_Bold_Italic">
+        <item name="android:textColor">@color/white_dynamic</item>
+    </style>
+
+    <style name="Kanit_Semi_Bold_Italic.Orange" parent="Kanit_Semi_Bold_Italic">
+        <item name="android:textColor">@color/orange_as_light</item>
+    </style>
+
+    <!-- Font size -->
+    <!-- Default color -->
+    <style name="Kanit_Semi_Bold_Italic.Default.10" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.11" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.12" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.13" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.14" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.15" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.16" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.17" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.18" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.19" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.20" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.21" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_21</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.22" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_22</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.23" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_23</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.24" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_24</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Default.25" parent="Kanit_Semi_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_25</item>
+    </style>
+    <!-- Secondary color -->
+    <style name="Kanit_Semi_Bold_Italic.Secondary.10" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.11" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.12" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.13" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.14" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.15" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.16" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.17" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.18" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.19" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Secondary.20" parent="Kanit_Semi_Bold_Italic.Secondary">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+    <!-- Orange color -->
+    <style name="Kanit_Semi_Bold_Italic.Orange.10" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.11" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.12" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.13" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.14" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.15" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.16" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.17" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.18" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.19" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.20" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.21" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_21</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.22" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_22</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.23" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_23</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.24" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_24</item>
+    </style>
+    <style name="Kanit_Semi_Bold_Italic.Orange.25" parent="Kanit_Semi_Bold_Italic.Orange">
+        <item name="android:textSize">@dimen/text_25</item>
+    </style>
+
+</resources>

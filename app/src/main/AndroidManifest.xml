@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Allow the app to read common data. -->
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AsdeporteV2"
+        android:windowSoftInputMode="adjustPan"
+        tools:replace="android:allowBackup,android:theme,android:roundIcon,android:label"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.StartingActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@style/Theme.AsdeporteV2.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.access.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.AsdeporteV2.NoActionBar"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SuscriptionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AsdeporteV2.FullScreen" />
+        <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_onboarding"
+            android:theme="@style/Theme.AsdeporteV2.FullScreen"/>
+        <activity
+            android:name=".ui.inscription.InscriptionActivity"
+            android:exported="false"
+            android:label="@string/title_activity_inscription"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/Theme.AsdeporteV2.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.inscription.ResumeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_inscription"
+            android:parentActivityName=".ui.inscription.InscriptionActivity"
+            android:theme="@style/Theme.AsdeporteV2.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.inscription.InscriptionActivity" />
+        </activity>
+        <!--
+<activity
+            android:name="com.sportmaniac.view_live.view.ActivityAthleteDetail_"
+            android:exported="true" />
+        <activity
+            android:name="com.sportmaniac.view_commons.view.ActivityValidateCode_"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.sportmaniac.core_virtual.service.synchronize.CVBootServiceReceiver"
+            android:exported="true" />
+        -->
+        <service
+            android:name="com.asdeporte.hermes.service.HermesGoogleService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" /> <!-- Start API keys -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"
+            tools:replace="android:value" />
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="101418541" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/push_icon"
+            tools:replace="android:resource" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/orange_as_light"
+            tools:replace="android:resource" /> <!-- End API keys -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/applicationId_File_Provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

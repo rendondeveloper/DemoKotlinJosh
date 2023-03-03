@@ -1,0 +1,142 @@
+<resources>
+
+    <!-- Font type face -->
+    <style name="Kanit_Regular">
+        <item name="android:fontFamily">@font/kanit_regular</item>
+        <!--<item name="android:lineSpacingExtra">4dp</item>-->
+    </style>
+
+    <!-- Font color -->
+    <style name="Kanit_Regular.Default" parent="Kanit_Regular">
+        <item name="android:textColor">@color/label_primary</item>
+    </style>
+
+    <style name="Kanit_Regular.Secondary" parent="Kanit_Regular">
+        <item name="android:textColor">@color/label_secondary</item>
+    </style>
+
+    <style name="Kanit_Regular.White" parent="Kanit_Regular">
+        <item name="android:textColor">@color/white_dynamic</item>
+    </style>
+
+    <style name="Kanit_Regular.Orange" parent="Kanit_Regular">
+        <item name="android:textColor">@color/orange_as_light</item>
+    </style>
+
+    <!-- Font size -->
+    <!-- Default color -->
+    <style name="Kanit_Regular.Default.10" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Regular.Default.11" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Regular.Default.12" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Regular.Default.13" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Regular.Default.14" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Regular.Default.15" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Regular.Default.16" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Regular.Default.17" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Regular.Default.18" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Regular.Default.19" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Regular.Default.20" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+    <style name="Kanit_Regular.Default.21" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_21</item>
+    </style>
+    <style name="Kanit_Regular.Default.22" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_22</item>
+    </style>
+    <style name="Kanit_Regular.Default.23" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_23</item>
+    </style>
+    <style name="Kanit_Regular.Default.24" parent="Kanit_Regular.Default">
+        <item name="android:textSize">@dimen/text_24</item>
+    </style>
+    <!-- Secondary color -->
+    <style name="Kanit_Regular.Secondary.10" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.11" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.12" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.13" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.14" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.15" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.16" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.17" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.18" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.19" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Regular.Secondary.20" parent="Kanit_Regular.Secondary">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+    <!-- Orange color -->
+    <style name="Kanit_Regular.Orange.10" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_10</item>
+    </style>
+    <style name="Kanit_Regular.Orange.11" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_11</item>
+    </style>
+    <style name="Kanit_Regular.Orange.12" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+    <style name="Kanit_Regular.Orange.13" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_13</item>
+    </style>
+    <style name="Kanit_Regular.Orange.14" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+    <style name="Kanit_Regular.Orange.15" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_15</item>
+    </style>
+    <style name="Kanit_Regular.Orange.16" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+    <style name="Kanit_Regular.Orange.17" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_17</item>
+    </style>
+    <style name="Kanit_Regular.Orange.18" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <style name="Kanit_Regular.Orange.19" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_19</item>
+    </style>
+    <style name="Kanit_Regular.Orange.20" parent="Kanit_Regular.Orange">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+
+</resources>

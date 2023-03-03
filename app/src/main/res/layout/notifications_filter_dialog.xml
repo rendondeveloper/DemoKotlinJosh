@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        style="@style/Kanit_Regular.Default.24"
+        android:text="Administrar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                style="@style/Kanit_Semibold.Default.16"
+                android:text="Mis tribus" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                style="@style/Kanit_Regular.Default.14"
+                android:text="Activar notificaciones" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/tribu_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:theme="@style/SwitchAsd"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_400"
+        android:layout_marginTop="12dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                style="@style/Kanit_Semibold.Default.16"
+                android:text="Mis mensajes" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:enabled="true"
+                style="@style/Kanit_Regular.Default.14"
+                android:text="Activar notificaciones" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/messages_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:theme="@style/SwitchAsd"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginEnd="8dp"
+            style="@style/Kanit_Medium.Default.14"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:text="@string/cancel"
+            android:layout_toStartOf="@+id/confirm_button"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirm_button"
+            style="@style/Kanit_Medium.Default.16"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/pill_background"
+            android:text="@string/btn_confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

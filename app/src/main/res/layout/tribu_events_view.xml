@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="91dp">
+
+            <ImageView
+                android:id="@+id/event_image"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/event_image"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMPETENCIA"
+                    style="@style/Kanit_Regular.Default.12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trail Tetela por Ultra LATAM"
+                    style="@style/Kanit_Semibold.Default.16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13 Noviembre 2022"
+                    style="@style/Kanit_Regular.Secondary.12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dificultad: Moderado - Duración: 20 min"
+                    style="@style/Kanit_Regular.Secondary.12" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/avatarman"
+                    android:layout_alignParentStart="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:civ_border_width="2dp"
+                    app:civ_circle_background_color="@color/white_dynamic"
+                    app:civ_border_color="@color/gray_400"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="-5dp"
+                    android:src="@drawable/avatarman"
+                    android:layout_alignParentStart="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:civ_border_width="2dp"
+                    app:civ_circle_background_color="@color/white_dynamic"
+                    app:civ_border_color="@color/gray_400"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="-5dp"
+                    android:src="@drawable/avatarman"
+                    android:layout_alignParentStart="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:civ_border_width="2dp"
+                    app:civ_circle_background_color="@color/white_dynamic"
+                    app:civ_border_color="@color/gray_400"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="-5dp"
+                    android:src="@drawable/avatarman"
+                    android:layout_alignParentStart="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:civ_border_width="2dp"
+                    app:civ_circle_background_color="@color/white_dynamic"
+                    app:civ_border_color="@color/gray_400"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="-5dp"
+                    android:src="@drawable/avatarman"
+                    android:layout_alignParentStart="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:civ_border_width="2dp"
+                    app:civ_circle_background_color="@color/white_dynamic"
+                    app:civ_border_color="@color/gray_400"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ver detalles"
+                style="@style/Kanit_Semibold.Orange.14"
+                android:textAllCaps="false"
+                android:layout_alignParentEnd="true"
+                android:padding="0dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_400"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

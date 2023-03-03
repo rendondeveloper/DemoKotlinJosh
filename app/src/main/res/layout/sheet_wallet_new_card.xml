@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Theme.AsdeporteV2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="36dp"
+    app:behavior_peekHeight="600dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:id="@+id/activity_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/action_buttons"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar tarjeta"
+            android:textAlignment="center"
+            android:layout_marginVertical="26dp"
+            style="@style/Kanit_Semibold.Default.16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_background"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="26dp">
+            <com.asdeporte.asdeportev2.ui.reusableview.profile.CreditCardBackView
+                android:id="@+id/back_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+            <com.asdeporte.asdeportev2.ui.reusableview.profile.CreditCardFrontView
+                android:id="@+id/front_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_background"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Completa los datos de tu tarjeta"
+            android:layout_marginTop="16dp"
+            style="@style/Kanit_Regular.Default.14" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="10dp"
+            android:hint="Nombre del titular"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/numberTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="10dp"
+            android:hint="Número de tarjeta"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/numberTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fecha de Expiración"
+                android:layout_marginTop="16dp"
+                style="@style/Kanit_Regular.Default.14" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Código de Seguridad"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                style="@style/Kanit_Regular.Default.14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/monthTextField"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="Mes"
+                    app:hintTextColor="@color/black_dynamic"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_weight="1">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/monthTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="2"
+                        style="@style/Kanit_Regular.Default.16"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/yearTextField"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="4dp"
+                    android:hint="Año"
+                    app:hintTextColor="@color/black_dynamic"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/yearTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="2"
+                        style="@style/Kanit_Regular.Default.16"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cvvTextField"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="8dp"
+                android:hint="CVV"
+                app:hintTextColor="@color/black_dynamic"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cvvTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+                    android:maxLength="3"
+                    style="@style/Kanit_Regular.Default.16"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:orientation="horizontal"
+        android:background="@color/white_dynamic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:paddingStart="39dp"
+        android:paddingEnd="39dp"
+        android:weightSum="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:background="@drawable/secondary_button"
+            app:backgroundTint="@color/black_dynamic"
+            android:textColor="@color/black_dynamic"
+            android:textAllCaps="false"
+            android:layout_marginEnd="5dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirm_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:text="Agregar"
+            android:background="@drawable/pill_background"
+            android:textAllCaps="false"
+            android:layout_marginStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

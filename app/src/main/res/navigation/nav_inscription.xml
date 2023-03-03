@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_inscription"
+    app:startDestination="@id/step_modality">
+
+    <fragment
+        android:id="@+id/step_modality"
+        android:name="com.asdeporte.asdeportev2.ui.inscription.ModalityFragment"
+        android:label="Modalidad"
+        tools:layout="@layout/fragment_modality">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/step_kit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/step_kit"
+        android:name="com.asdeporte.asdeportev2.ui.inscription.KitsFragment"
+        android:label="Entrega de Kit"
+        tools:layout="@layout/fragment_kits">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/step_kit" />
+        <action
+            android:id="@+id/action_SecondFragment_to_ThirdFragment"
+            app:destination="@id/step_products" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/step_products"
+        android:name="com.asdeporte.asdeportev2.ui.inscription.ProductsFragment"
+        android:label="Productos"
+        tools:layout="@layout/fragment_products">
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/step_kit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/step_payment"
+        android:name="com.asdeporte.asdeportev2.ui.inscription.PaymentFragment"
+        android:label="Pago"
+        tools:layout="@layout/fragment_payment">
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/step_kit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resume_fragment"
+        android:name="com.asdeporte.asdeportev2.ui.inscription.ResumeFragment"
+        android:label="Pago"
+        tools:layout="@layout/activity_resume">
+    </fragment>
+
+</navigation>

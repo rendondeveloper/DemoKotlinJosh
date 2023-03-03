@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/message"
+        android:title="Enviar mensaje"
+        android:icon="@drawable/ic_message"
+        android:iconTint="@color/black_dynamic"/>
+
+    <item
+        android:id="@+id/share"
+        android:title="Eliminar"
+        android:icon="@drawable/ic_close"
+        android:iconTint="@color/black_dynamic"/>
+
+    <item
+        android:id="@+id/block"
+        android:title="Bloquear"
+        android:icon="@drawable/ic_block"
+        android:iconTint="@color/black_dynamic"/>
+
+</menu>

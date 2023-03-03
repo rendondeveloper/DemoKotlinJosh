@@ -1,0 +1,1089 @@
+<resources>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDBVden0W9OtTSNx95Ey084AoS82bpWYHI</string>
+    <string name="com.google.firebase.crashlytics.mapping_file_id">none</string>
+
+    <string name="app_name" translatable="false">Asdeporte V2</string>
+    <string name="applicationId_File_Provider" translatable="false">com.asdeporte.asdeportev2.fileprovider</string>
+    <string name="retry">Reintentar</string>
+    <string name="login">Log in</string>
+    <string name="init_session">Iniciar sesión</string>
+    <string name="your_account">Tu cuenta</string>
+    <string name="password">Contraseña</string>
+    <string name="facebook_login">Ingresa con Facebook</string>
+    <string name="google_login">Ingresa con Google</string>
+    <string name="no_account">¿No tienes una cuenta?</string>
+    <string name="no_password">¿Olvidaste tu contraseña?</string>
+    <string name="forgot_we_help">No te preocupes, podemos ayudarte.</string>
+    <string name="forgot_recover_pass">Recuperar mi contraseña</string>
+    <string name="forgot_email_send_title">¡Revisa tu correo!</string>
+    <string name="forgot_email_send_desc">Te hemos enviado un correo con las instrucciones para recuperar tu contraseña. Si el correo que te enviamos no lo puedes ver, revisa tu Spam.</string>
+    <string name="glad_to_see_you">Nos alegra verte de nuevo.</string>
+    <string name="register_you">Regístrate</string>
+    <string name="register_create">Crea tu cuenta</string>
+    <string name="register_create_end_it">Finaliza tu registro</string>
+    <string name="register_face_desc">Regístrate con Facebook o rellena los siguientes campos</string>
+    <string name="register">Registro</string>
+    <string name="personal_data">Datos personales</string>
+    <string name="birthdate">Fecha de nacimiento</string>
+    <string name="password_confirm">Confirma tu contraseña</string>
+    <string name="register_you_ex">¡Regístrate!</string>
+    <string name="accept_terms">Acepto los <u><b>Términos y Condiciones</b></u></string>
+    <string name="accept_politics">He leído y entendido la <u><b>Politica de privacidad</b></u></string>
+    <string name="accept_politics_codere">He leído y acepto todos los documentos antes mencionados</string>
+    <string name="accept_politics_codere_warning">Debes aceptar los términos y condiciones</string>
+    <string name="have_account">¿Ya tienes una cuenta?</string>
+    <string name="make_login"><u>Haz login</u></string>
+    <string name="empty_field_error">Este campo es requerido</string>
+    <string name="email_input_error">Introduce un email válido</string>
+    <string name="password_input_error">Introduce un password válido</string>
+    <string name="name_input_error">Introduce un nombre válido</string>
+    <string name="surname_input_error">Introduce un apellido válido</string>
+    <string name="phone_input_error">Introduce un teléfono válido</string>
+    <string name="birthdate_input_empty">Introduce tu fecha de nacimiento</string>
+    <string name="gender_input_empty">Introduce tu genero</string>
+    <string name="match_password_input_error">Las contraseñas no coinciden</string>
+    <string name="my_events">Mis eventos</string>
+    <string name="my_results">Mis resultados</string>
+    <string name="explore">Explorar</string>
+    <string name="my_profile">Mi perfil</string>
+    <string name="no_wait_participe">No esperes más, ¡Apúntate!</string>
+    <string name="open_inscriptions">Inscripciones abiertas</string>
+    <string name="comercial_asociations">Socios comerciales</string>
+    <string name="with_help_of">Con el apoyo de</string>
+    <string name="your_next_event">Tu próximo evento</string>
+    <string name="days_left_to_event">Días que faltan al evento</string>
+    <string name="next_events">Eventos futuros</string>
+    <string name="prev_events">Eventos pasados</string>
+    <string name="count_down_zero" translatable="false">00:00:00:00</string>
+    <string name="event_started">Evento comenzado</string>
+    <string name="event_share">Compartir evento</string>
+    <string name="loading">Cargando...</string>
+    <string name="news_description">Entérate de las ultimas noticias sobre el evento</string>
+    <string name="elevation_m">Elevación (m)</string>
+    <string name="exit_title">Salir de app</string>
+    <string name="exit_subtitle">Estas a punto de salir del app</string>
+    <string name="exit_action">Salir</string>
+    <string name="days">days</string>
+    <string name="hours_short">hrs</string>
+    <string name="mins_short">min</string>
+    <string name="secs_short">secs</string>
+    <string name="follow">Seguir</string>
+    <string name="participate">Participa</string>
+    <string name="photos">Fotos</string>
+    <string name="store">Tienda</string>
+    <string name="blog">Blog</string>
+    <string name="trainings">Entrenamientos</string>
+    <string name="skip">Saltar</string>
+
+
+    <!-- Common -->
+    <string name="network_error">Parece que algo no funciona. Revisa tu conexión a internet.</string>
+    <string name="common_error">Ha ocurrido un error. Inténtelo de nuevo</string>
+    <string name="try_again">Volver a intentar</string>
+    <string name="empty_data_error">Debes introducir todos los datos</string>
+    <string name="name_text">Nombre</string>
+    <string name="name_address">Nombre de la dirección</string>
+    <string name="first_surname">Apellido paterno</string>
+    <string name="second_surname">Apellido materno</string>
+    <string name="celular_phone">Teléfono celular</string>
+    <string name="contact_email">Email de contacto</string>
+    <string name="participant_email">Email del participante</string>
+    <string name="phone">Teléfono</string>
+    <string name="phone_number">Número de teléfono</string>
+    <string name="email">Correo electrónico</string>
+    <string name="view_detail">Ver detalle</string>
+    <string name="view_details">Ver detalles</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancelar</string>
+    <string name="accept">Aceptar</string>
+    <string name="complete">Completar</string>
+    <string name="btn_confirm">Confirmar</string>
+    <string name="btn_confirm_payment">Confirmar pago</string>
+    <string name="total_price">Precio total</string>
+    <string name="total_insurance">Seguro:</string>
+    <string name="total_shipping">Costo de envío:</string>
+    <string name="btn_add">Añadir</string>
+    <string name="view_all">Ver todos</string>
+    <string name="view_more">Ver más</string>
+    <string name="view_less">Ver menos</string>
+    <string name="btn_ok">Ok</string>
+    <string name="understood">Entendido</string>
+    <string name="btn_apply">Aplicar</string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="btn_send">Enviar</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_update">Actualizar</string>
+    <string name="btn_save_changes">Guardar cambios</string>
+    <string name="btn_affiliate">Afiliar</string>
+    <string name="btn_affiliated">Afiliado</string>
+    <string name="btn_affiliated_ready">Listo</string>
+    <string name="btn_search">Buscar</string>
+    <string name="btn_search_tribes">Buscar tribus</string>
+    <string name="popup_generic_error_title">Ha ocurrido un error</string>
+    <string name="race">Carrera</string>
+    <string name="triathlon">Triatlón</string>
+    <string name="cycling">Ciclismo</string>
+    <string name="trikids">Trikids</string>
+    <string name="swimming">Natación</string>
+    <string name="takeoff">Quitar</string>
+    <string name="netTime">Tiempo neto</string>
+    <string name="months">Meses</string>
+    <string name="version">Versión</string>
+    <string name="text_to_clipboard">Se copió el texto seleccionado</string>
+    <string name="default_word">Predeterminada</string>
+    <string name="available_weekend">Disponible fin de semana</string>
+    <string name="summary">Resumen</string>
+    <string name="choose_city">Elige tu ciudad</string>
+    <string name="choose_store">Elige tu tienda</string>
+    <string name="brand">Marca</string>
+    <string name="model">Modelo</string>
+    <string name="color">Color</string>
+    <string name="continue_word">Continuar</string>
+    <string name="file_saved">Archivo guardado</string>
+    <string name="file_not_saved">No se pudo guardar el archivo</string>
+    <string name="preview"><u>Previsualizar</u></string>
+
+    <string name="rate_app_title">Calificar</string>
+    <string name="rate_app_subtitle">Si te esta gustando AsDeporte, ¿te gustaría calificarnos? No te tomará más de un minuto.</string>
+    <string name="rate_app_calif">Calificar</string>
+    <string name="rate_app_later">Recuérdame más tarde</string>
+    <string name="rate_app_no_thanks">No, gracias</string>
+    <string name="hint_time">HH : MM : ss</string>
+
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">ENCUENTRA</string>
+    <string name="onboarding_title_2">INSCRÍBETE</string>
+    <string name="onboarding_title_3">TUS RESULTADOS</string>
+    <string name="onboarding_title_4">PERFIL</string>
+    <string name="onboarding_msg_1">Los mejores seriales y eventos deportivos de México en un solo lugar.</string>
+    <string name="onboarding_msg_2">De forma rápida y segura podrás asegurar tu lugar en los mejores eventos. Dile adiós a los procesos tardados de inscripción y registro.</string>
+    <string name="onboarding_msg_3">Tendrás acceso a tus resultados en tiempo real. Además, podrás ver tu historial de eventos y tiempos, hacer comparativas y mucho más.</string>
+    <string name="onboarding_msg_4">Porque eres parte de la comunidad Asdeporte. Todos tus datos y preferencias para que las mejores experiencias deportivas estén a un clic de distancia.</string>
+    <string name="onboarding_btn_next">Siguiente</string>
+    <string name="onboarding_btn_start">Empezar</string>
+
+    <!-- Login -->
+
+    <!-- Recovery password -->
+    <string name="recovery_psw_title">Establecer contraseña</string>
+    <string name="recovery_psw_msg">Introduce el mail con el que te has registrado y te enviaremos las instrucciones para establecer una nueva contraseña</string>
+    <string name="recovery_psw_your_email">Tu email</string>
+    <string name="recovery_psw_btn_send">Enviar</string>
+    <string name="recovery_psw_error">El usuario no está registrado dentro de la plataforma de Asdeporte</string>
+
+    <!-- Events logout -->
+    <string name="events">Eventos</string>
+    <string name="events_logout_msg">Para tener bajo control todos los detalles de tus próximos eventos, regístrate o haz login.</string>
+
+    <!-- Event detail -->
+    <string name="event_live_feed_meteo">Previsión meteorológica</string>
+    <string name="event_live_feed_bulletin">Boletín de hoy</string>
+    <string name="event_live_feed" translatable="false">Live feed</string>
+    <string name="event_your_inscription">Tu inscripción</string>
+    <string name="event_your_inscription_is_processed">Tu inscripción está procesada</string>
+    <string name="event_sponsor">Patrocinadores</string>
+    <string name="event_details">Detalles</string>
+    <string name="event_route">Ruta carrera</string>
+    <string name="event_transport">Transporte</string>
+    <string name="event_last_news">Últimas noticias</string>
+    <string name="event_see_results">Ver resultados</string>
+    <string name="event_asmas_subtitle">Fila express, paquete el mismo día y beneficios especiales</string>
+    <string name="event_start_at">Comienza a las</string>
+    <string name="event_distance_of">Distancia de</string>
+    <string name="event_resend_email">Reenviar el mail</string>
+    <string name="event_download_pdf">Descargar PDF</string>
+    <string name="event_download_cert">Descargar certificado</string>
+    <string name="event_uploading_results">Resultados aún no disponibles</string>
+    <string name="choose_an_option">Elige una opción</string>
+    <string name="event_go_to_event">Dirígete al evento</string>
+    <string name="event_pick_kit">Recoge tu kit</string>
+    <!-- Menu items -->
+    <string name="event_menu_result">Resultado</string>
+    <string name="event_menu_inscription">Inscripción</string>
+    <string name="event_menu_important">🚨 Importante</string>
+    <string name="event_menu_details">Detalles</string>
+    <string name="event_menu_medal">Medalla</string>
+    <string name="event_menu_livefeed">Live feed</string>
+
+    <!-- Live Feed -->
+    <string name="live_feed_weather_forecast">Previsión meteorológica</string>
+    <string name="live_feed_as_plus" translatable="false">AS+</string>
+    <string name="live_feed_as_plus_subtitle">Aprovecha de la oferta</string>
+    <string name="live_feed_news">News</string>
+    <string name="live_feed_lodging">Hospedaje</string>
+    <string name="live_feed_lodging_subtitle">Encuentra las mejores opciones para el día del evento</string>
+    <string name="live_feed_kits">Recogida kits</string>
+    <string name="live_feed_kits_subtitle">Obtén tu paquete para la carrera</string>
+
+    <!-- Live Feed Weather forecast -->
+    <string name="weather_forecast_sunrise">Salida del sol</string>
+    <string name="weather_forecast_rain_probability">Probabilidad de lluvia</string>
+    <string name="weather_forecast_humity">Humedad</string>
+    <string name="weather_forecast_pressure">Presión</string>
+    <string name="weather_forecast_wind">Viento</string>
+    <string name="weather_forecast_visibility">Visibilidad</string>
+    <string name="weather_forecast_uv_index">Índice UV</string>
+
+    <!-- kit collect -->
+    <string name="kit_collect_innovasport_polanco" translatable="false">Innovasport Polanco</string>
+
+    <!-- General info -->
+    <string name="runner_number">Número de competidor</string>
+
+    <!-- Altimetry -->
+    <string name="altimetry_title">Altimetría</string>
+    <string name="altimetry_available">Disponible</string>
+    <string name="altimetry_large_description">Utiliza este herramienta de variación en la altura del terreno llamada Altimetría para conocer las pendientes o desniveles dentro de la ruta en la que vas a participar y así conocer la dificultad de la ruta el día del evento.</string>
+
+    <!-- Teams -->
+    <string name="my_team">Mi equipo</string>
+    <string name="my_team_mange">Gestiona a los participantes</string>
+    <string name="my_team_name">Nombre de tu equipo</string>
+    <string name="my_team_full_name">Nombre completo</string>
+    <string name="my_team_save">Guardar equipo</string>
+    <string name="my_team_updated">El equipo se ha actualizado correctamente</string>
+    <string name="my_team_saved">El equipo se ha guardado correctamente</string>
+
+    <!-- Run route -->
+    <string name="marathon_distance">Distancia %s m</string>
+    <string name="marathon">Maratón</string>
+    <string name="half_marathon">Medio maratón</string>
+    <string name="photos_route">Fotos de la ruta</string>
+
+    <!-- Results logout -->
+    <string name="results">Resultados</string>
+    <string name="result">Resultado</string>
+    <string name="results_logout_msg">Para acceder a tus resultados completos, con todos los detalles sobre tu performance, regístrate o haz login.</string>
+
+    <!-- Profile logout -->
+    <string name="profile">Perfil</string>
+    <string name="profile_logout_msg">Para acceder a tus medallas y a tus eventos favoritos, regístrate o haz login.</string>
+
+    <!-- Profile screen - commoon -->
+    <string name="profile_height">Altura</string>
+    <string name="profile_weight">Peso</string>
+    <string name="profile_gender">Género</string>
+    <string name="profile_female">Femenino</string>
+    <string name="profile_male">Masculino</string>
+    <string name="profile_saved_success">Datos guardados correctamente</string>
+    <string name="profile_relation">Relación</string>
+    <string name="profile_level_beginner">Principiante</string>
+    <string name="profile_level_intermediate">Intermedio</string>
+    <string name="profile_level_advanced">Avanzado</string>
+    <string name="profile_level_elite">Élite</string>
+    <string name="profile_blood_0n" translatable="false">0-</string>
+    <string name="profile_blood_0p" translatable="false">0+</string>
+    <string name="profile_blood_an" translatable="false">A-</string>
+    <string name="profile_blood_ap" translatable="false">A+</string>
+    <string name="profile_blood_bn" translatable="false">B-</string>
+    <string name="profile_blood_bp" translatable="false">B+</string>
+    <string name="profile_blood_abn" translatable="false">AB-</string>
+    <string name="profile_blood_abp" translatable="false">AB+</string>
+    <string name="profile_shirt_size">Talla playera</string>
+    <string name="shirt_size">Talla playera:</string>
+    <string name="profile_shirt_size_xs" translatable="false">XS</string>
+    <string name="profile_shirt_size_s" translatable="false">S</string>
+    <string name="profile_shirt_size_m" translatable="false">M</string>
+    <string name="profile_shirt_size_g" translatable="false">L</string>
+    <string name="profile_shirt_size_xg" translatable="false">XL</string>
+
+    <string-array name="profile_gender_values">
+        <item>@string/profile_male</item>
+        <item>@string/profile_female</item>
+    </string-array>
+
+    <string-array name="profile_level_values">
+        <item></item>
+        <item>@string/profile_level_beginner</item>
+        <item>@string/profile_level_intermediate</item>
+        <item>@string/profile_level_advanced</item>
+        <item>@string/profile_level_elite</item>
+    </string-array>
+
+    <string-array name="profile_level_mandatory_values">
+        <item>@string/profile_level_beginner</item>
+        <item>@string/profile_level_intermediate</item>
+        <item>@string/profile_level_advanced</item>
+        <item>@string/profile_level_elite</item>
+    </string-array>
+
+    <string-array name="profile_shirt_values">
+        <item></item>
+        <item>@string/profile_shirt_size_xs</item>
+        <item>@string/profile_shirt_size_s</item>
+        <item>@string/profile_shirt_size_m</item>
+        <item>@string/profile_shirt_size_g</item>
+        <item>@string/profile_shirt_size_xg</item>
+    </string-array>
+
+    <string-array name="packages_shirt_values">
+        <item>@string/profile_shirt_size_xs</item>
+        <item>@string/profile_shirt_size_s</item>
+        <item>@string/profile_shirt_size_m</item>
+        <item>@string/profile_shirt_size_g</item>
+        <item>@string/profile_shirt_size_xg</item>
+    </string-array>
+
+
+    <string name="hours">Horas</string>
+    <string name="minutes">Minutos</string>
+    <string name="seconds">Segundos</string>
+
+    <string name="presented_by">Presentado por</string>
+
+    <!-- Profile dashboard screen -->
+    <string name="profile_dashboard">Mi Perfil</string>
+    <string name="profile_total_events">Eventos totales</string>
+    <string name="profile_medals">Medallas</string>
+    <string name="profile_your_medals">Tus medallas</string>
+    <string name="profile_favourite_events">Eventos favoritos</string>
+    <string name="profile_gallery">Galería</string>
+    <string name="profile_personal_data">Datos personales</string>
+    <string name="profile_account_detail">Detalles de tu cuenta</string>
+    <string name="profile_id_atleta">ID Atleta</string>
+    <string name="profile_discover_asmas">Descubre AS+</string>
+    <string name="profile_asmas_all_benefits">Todos los beneficios</string>
+    <string name="profile_qr_title_fragment">Token de acceso</string>
+    <string name="profile_qr_subtitle_fragment">Escanea el siguiente código QR para poder acceder a las instalaciones</string>
+    <string name="profile_qr_title_card">Parque Codere</string>
+    <string name="profile_qr_subtitle_card">Accede a instalaciones exclusivas generando tu token de acceso</string>
+    <string name="profile_family_title_card">Mis dependientes</string>
+    <string name="profile_family_subtitle_card">Revisa el perfil de tus familiares</string>
+
+    <!-- Profile your data screen -->
+    <string name="profile_your_data">Tus datos</string>
+    <string name="profile_your_data_edit_data">Edita tus datos</string>
+    <string name="profile_your_data_birthdate">Fecha nacimiento</string>
+    <string name="profile_your_data_age">Edad</string>
+    <string name="profile_your_data_level">Nivel</string>
+    <string name="profile_your_data_saved_family">Familiares guardados</string>
+    <string name="profile_your_data_emergency_contacts">Contacto de emergencia</string>
+    <string name="profile_your_data_phone">Teléfono</string>
+    <string name="profile_your_data_add_contact">Añadir contacto</string>
+    <string name="profile_your_data_surname_hint">Primer apellido</string>
+    <string name="profile_your_data_surname2_hint">Segundo apellido</string>
+    <string name="profile_your_data_years">años</string>
+    <string name="profile_your_data_edit_error">No se han podido guardar los datos. Inténtelo de nuevo</string>
+    <string name="profile_your_data_edit_error_country">Debes seleccionar un pais</string>
+    <string name="profile_your_data_edit_error_state">Debes seleccionar un estado</string>
+    <string name="profile_medal">Medalla y Certificado</string>
+    <string name="profile_print_certificate">Imprimir certificado</string>
+    <string name="profile_centimeters" translatable="false">cm</string>
+    <string name="profile_kilograms" translatable="false">kg</string>
+    <string name="profile_no_medals">No se encontraron medallas</string>
+    <string name="profile_social_success">Ahora puedes iniciar sesión con tu cuenta de</string>
+    <string name="profile_social_removed">Cuenta desvinculada</string>
+
+    <!-- Profile photo dialog -->
+    <string name="profile_description">Usa tu cara para poder mostrarte tus fotos en los eventos</string>
+    <string name="profile_delete_photo">Elimina foto</string>
+    <string name="profile_take_photo">Saca foto</string>
+    <string name="profile_open_photo">Abre tus fotos</string>
+
+    <!-- Profile id atleta -->
+    <string name="id_atleta_informations">Informaciones</string>
+    <string name="id_atleta_your_account">Tu cuenta Asdeporte</string>
+    <string name="id_atleta_shipping_address">Direcciones de Envío</string>
+    <string name="id_atleta_shipping_address_complete">Dirección completa</string>
+    <string name="id_atleta_shipping_address_delete">¿Eliminar dirección?</string>
+    <string name="id_atleta_shipping_address_phone_error_lenght">El teléfono debe tener al menos 10 dígitos</string>
+    <string name="id_atleta_shipping_address_rfc_error_lenght">El RFC debe tener al menos 13 dígitos</string>
+    <string name="id_atleta_shipping_address_map_desc">Haz clic para ingresar tu dirección</string>
+    <string name="id_atleta_shipping_address_delete_sub">¿Estás seguro de eliminar la dirección de envío?</string>
+    <string name="id_atleta_saved_cards">Tarjetas guardadas</string>
+    <string name="id_atleta_bill_request">Solicitud de facturas de eventos</string>
+    <string name="id_atleta_rfc_data">Datos de facturación</string>
+    <string name="id_atleta_rfc_warning">Solo puedes solicitar factura hasta 30 días después de haber realizado tu pago</string>
+    <string name="id_atleta_rfc_request">Selecciona una razón social para facturar</string>
+    <string name="id_atleta_link_facebook">Vincular Facebook</string>
+    <string name="id_atleta_link_twitter">Vincular Twitter</string>
+    <string name="id_atleta_link_google">Vincular Google</string>
+    <string name="id_atleta_link_garmin">Vincular Garmin</string>
+
+    <!-- Profile add emergency contact screen -->
+    <string name="profile_emergency_contact_add">Añadir contacto</string>
+
+    <!-- Profile emergency contact detail -->
+    <string name="profile_emergency_contact_detail">Detalle de contacto</string>
+    <string name="profile_emergency_contact_delete_success">Contacto de emergencia eliminado correctamente</string>
+    <string name="profile_emergency_contact_delete_popup_title">Eliminar contacto</string>
+    <string name="profile_emergency_contact_delete_popup_msg">¿Estás seguro que quieres eliminar el contacto de emergencia?</string>
+    <string name="profile_emergency_contact_delete_popup_yes">Si</string>
+    <string name="profile_emergency_contact_delete_popup_no">No</string>
+
+    <!-- Saved profiles -->
+    <string name="saved_profiles_add_family">Añadir familiar</string>
+    <string name="saved_profiles_surname">Apellido paterno</string>
+    <string name="saved_profiles_second_surname">Apellido materno</string>
+    <string name="saved_profiles_email">Email de contacto</string>
+    <string name="saved_profiles_edit_data">Editar contacto</string>
+    <string name="saved_profile_delete_popup_title">Eliminar contacto</string>
+    <string name="saved_profile_popup_msg">¿Estás seguro que quieres eliminar el contacto?</string>
+    <string name="saved_profile_popup_yes">Si</string>
+    <string name="saved_profile_popup_no">No</string>
+
+    <!-- Shipping address -->
+    <string name="shipping_address_desc">Aún no tienes direcciones de envío guardadas, crea una nueva.</string>
+    <string name="shipping_address_new">Nueva dirección</string>
+    <string name="shipping_address_saved">Dirección guardada</string>
+    <string name="shipping_address_updated">Dirección actualizada</string>
+    <string name="shipping_address_word">Dirección</string>
+    <string name="shipping_address_trouble">Si tienes problemas con el mapa escribe la dirección correcta en los campos de dirección 1 y dirección 2.</string>
+    <string name="shipping_address_word1">Dirección 1</string>
+    <string name="shipping_address_word2">Dirección 2</string>
+    <string name="shipping_address_use_map">Usa el mapa para mayor precisión</string>
+    <string name="shipping_address_step_1">1.- Busca tu código postal</string>
+    <string name="shipping_address_step_2">2.- Complementa tu dirección</string>
+    <string name="shipping_address_references">Referencias</string>
+    <string name="shipping_address_total">Costo de envío</string>
+    <string name="shipping_address_street_numbers">Calle y número exterior e interior</string>
+    <string name="shipping_address_choose_suburb">Elige tu colonia</string>
+
+    <!-- Sportmaniacs tutorial -->
+    <string name="sportmaniacs_instructions_title">Instructions</string>
+    <string name="sportmaniacs_instructions_text"><![CDATA[• <b>Activa tu GPS</b><br>Esto nos ayudará a calcular tu ruta y avisarte cuando completes tu distancia.<br><br><b>• Sincronización automática</b><br>No tienes que hacer nada al terminar, nosotros guardamos tus tiempos automáticamente.<br><br><b>• Busca tu clasificación</b><br>Al terminar ingresa en "Ver mi ficha" y en la pantalla siguiente, busca el tab de "clasificaciones", puede tardar unos minutos en aparecer tu tiempo en la aplicación.<br><br><b>• Corre sin preocupaciones</b><br> Pon tu música preferida y disfruta de la carrera.]]></string>
+
+    <!-- Credit cards -->
+    <string name="credit_card_card_data">Datos tarjeta</string>
+    <string name="credit_card_titular">Titular</string>
+    <string name="credit_card_cvv" translatable="false">CVV</string>
+    <string name="credit_card_number">Número</string>
+    <string name="credit_card_expire_date">Fecha de caducidad</string>
+    <string name="credit_card_add">Añadir tarjeta</string>
+    <string name="credit_card_number_error">Introduce un número de tarjeta válido</string>
+    <string name="credit_card_added_success">La tarjeta se ha añadido correctamente</string>
+    <string name="credit_card_deleted_success">La tarjeta se ha borrado correctamente</string>
+    <string name="credit_card_delete_popup_title">Eliminar tarjeta</string>
+    <string name="credit_card_delete_popup_msg">¿Estás seguro que quieres eliminar esta tarjeta?</string>
+    <string name="credit_card_btn_add">Añadir tarjeta</string>
+
+    <!-- Credit cards -->
+    <string name="openpay_error_unknown">Ha ocurrido un error al crear la tarjeta</string>
+    <string name="openpay_error_3001">Error! Tarjeta rechazada</string>
+    <string name="openpay_error_3002">Error! Tarjeta caducada</string>
+    <string name="openpay_error_3003">Error! Fondos insuficientes</string>
+    <string name="openpay_error_3004">Error! Tarjeta robada</string>
+    <string name="openpay_error_3005">Error! Sospecha de fraude</string>
+    <string name="openpay_error_2002">Error! Tarjeta existente</string>
+    <string name="openpay_error_communication">Error! No se ha podido establecer comunicación con el servidor Openpay</string>
+    <string name="openpay_error_9001">Error! Nombre de titular inválido</string>
+    <string name="openpay_error_9002">Error! CVV inválido</string>
+    <string name="openpay_error_9003">Error! Fecha de caducidad inválida</string>
+    <string name="openpay_error_9004">Error! Número de tarjeta inválido</string>
+
+    <!-- Bills -->
+    <string name="request_bill_btn">Solicita factura</string>
+    <string name="request_bill_title">Solicitud de facturas</string>
+
+    <!-- RFC -->
+    <string name="rfc_data">Datos de facturación</string>
+    <string name="rfc_add">Añadir datos de facturación</string>
+    <string name="rfc">RFC</string>
+    <string name="rfc_street">Calle</string>
+    <string name="rfc_num_ext">Núm ext</string>
+    <string name="rfc_num_int">Núm int</string>
+    <string name="rfc_colony">Colonia</string>
+    <string name="rfc_district">Distrito</string>
+    <string name="rfc_del_mun">Delegación o municipio</string>
+    <string name="rfc_country">País</string>
+    <string name="rfc_city">Ciudad</string>
+    <string name="rfc_state">Estado</string>
+    <string name="rfc_zip">Código postal</string>
+    <string name="rfc_references">Referencias</string>
+    <string name="rfc_added_successfully">Los datos de facturación se han guardado correctamente</string>
+    <string name="rfc_edit">Editar datos de facturación</string>
+    <string name="rfc_edit_message">Datos de facturación editados correctamente</string>
+    <string name="rfc_delete_message">Datos de facturación eliminados correctamente</string>
+    <string name="rfc_delete_popup_title">Eliminar datos de facturación</string>
+    <string name="rfc_delete_popup_msg">¿Estás seguro que quieres eliminar los datos de facturación?</string>
+    <string name="rfc_edit_missed_data">Debes rellenar toda la información</string>
+    <string name="rfc_request_invoice_popup_msg">¿Seguro que desea solicitar la factura?</string>
+    <string name="rfc_add_invoice_data">Agregar datos de facturación</string>
+    <string name="rfc_invoice_data">Datos de facturación</string>
+    <string name="rfc_invoice_type_sheet_title">Seleccionar concepto de factura</string>
+
+    <string name="invoice_type_general">Gastos en general</string>
+    <string name="invoice_type_define">Se asignará al recoger tu kit</string>
+
+    <!-- Dependent user -->
+    <string name="dependent_user_added_message">Usuario registrado correctamente</string>
+
+    <!-- Profile your medals screen -->
+
+    <!-- Settings -->
+    <string name="settings">Configuración</string>
+    <string name="settings_asdeporte" translatable="false">Asdeporte</string>
+    <string name="settings_terms">Términos y condiciones</string>
+    <string name="settings_policy">Aviso de privacidad</string>
+    <string name="settings_about">Sobre Asdeporte</string>
+    <string name="settings_help">Ayuda</string>
+    <string name="settings_need_help">¿Necesitas ayuda?</string>
+    <string name="settings_faq">Preguntas frecuentes</string>
+    <string name="settings_feedback">Feedback sobre la app</string>
+    <string name="settings_contact">Contáctanos</string>
+    <string name="settings_contact_experience">Queremos saber sobre tu experiencia</string>
+    <string name="settings_your_account">Tu cuenta</string>
+    <string name="settings_change_psw">Cambiar contraseña</string>
+    <string name="settings_delete_account">Borrar cuenta</string>
+    <string name="settings_logout">Log out</string>
+    <string name="settings_contact_us_empty_msg">Debes introducir un mensaje</string>
+    <string name="settings_contact_feed_empty_message">Escribe aqui…</string>
+    <string name="settings_contact_us_empty_fields">Por favor, rellena todos los campos</string>
+
+    <!-- Settings - change password -->
+    <string name="settings_current_password">Contraseña actual</string>
+    <string name="settings_new_password">Nueva contraseña</string>
+    <string name="settings_repeat_password">Repetir contraseña</string>
+    <string name="settings_change_password_btn">Cambiar contraseña</string>
+    <string name="change_password_not_match_error">Las contraseñas no coinciden</string>
+    <string name="password_length_error">La contraseña debe tener mínimo 8 caracteres</string>
+
+    <!-- Settings - delete account -->
+    <string name="delete_account_btn">Borrar cuenta</string>
+    <string name="delete_account_title">¿Estás seguro de que quieres borrar tu cuenta?</string>
+    <string name="delete_account_msg">\u2022 Perderás tu historial deportivo completo\n \u2022 Si tienes una membresía AS+, se te seguirá cobrando, si quieres cancelarla visita <a href="https://asmas.mx">asmas.mx</a>\n \u2022 Si tienes una afiliación a la FMTRI, podría invalidarse</string>
+    <string name="delete_account_psw">Introduce tu contraseña</string>
+    <string name="delete_account_error">Ha ocurrido un error. Inténtelo de nuevo</string>
+
+    <!-- Settings - log out -->
+    <string name="logout_confirm_title">Cerrar sesión</string>
+    <string name="logout_confirm_msg">¿Estás seguro que quieres cerrar sesión?</string>
+
+    <!-- Explore -->
+    <string name="explore_highlight">Seriales</string>
+    <string name="explore_asdeporte_events">Eventos Asdeporte</string>
+    <string name="explore_recomends_for_you">Recomendados para ti</string>
+    <string name="explore_more_events">Más eventos</string>
+    <string name="explore_title">Explorar</string>
+    <string name="explore_search_key_word">Palabra clave</string>
+    <string name="packages">Paquetes</string>
+    <string name="search_no_events">No hay eventos que cumplan con los criterios de búsqueda</string>
+    <string name="explore_near_you">Cerca de ti</string>
+    <string name="explore_complete_profile_title">Perfil incompleto</string>
+    <string name="explore_complete_profile_subtitle">Actualiza tu perfil con los datos necesarios para obtener una mejor experiencia.</string>
+
+    <!-- Explore Highlight events -->
+    <string name="explore_next_events">Próximos eventos</string>
+
+    <!-- Explore Inscription -->
+    <string name="explore_inscription">Inscripción</string>
+    <string name="explore_competitor">Participante</string>
+    <string name="explore_select_profile">Seleccionar participante</string>
+    <string name="explore_profile_does_not_exists">¿No está en la lista?\n\nPara inscribir a un participante que no está registrado en Asdeporte ingresa sus datos y correo personal para crear su cuenta.\n\n<u>Añadelo por aquí</u></string>
+    <string name="explore_profile_incorrect_distances">¿No es tu categoría correcta?\n<u>Actualiza tu perfil con tu fecha de nacimiento y género correctos.</u></string>
+    <string name="explore_profile_does_not_exists_no_competitors"><u>Añadelo por aquí</u></string>
+    <string name="explore_profile_does_not_exists_or" translatable="false">- o -</string>
+    <string name="explore_profile_does_not_exists_search_email">Si está registrado en AsDeporte búscalo por email</string>
+    <string name="explore_profile_does_not_exists_search_email_hint">Buscar email</string>
+    <string name="explore_profile_does_not_exists_search_email_error">Por favor, escribe una dirección de email válida</string>
+    <string name="explore_add_competitor">Añadir participante</string>
+    <string name="explore_btn_process_inscription">Tramitar inscripción</string>
+    <string name="explore_overview">Resumen</string>
+    <string name="explore_play_method">Método de pago</string>
+    <string name="explore_great">¡Estupendo!</string>
+    <string name="explore_might_be_interested">Te podría interesar</string>
+    <string name="explore_as_subscription">Suscripción AS+:</string>
+    <string name="explore_as_subscription_offer_limit">Membresía para deportistas con grandes beneficios en eventos, experiencias, contenidos y promociones</string>
+    <string name="explore_asplus_monthly_payment">Abono mensual ($89 MXN)</string>
+    <string name="explore_asplus_monthly_payment_msg">*El primer mes es gratis</string>
+    <string name="asmas_content"><![CDATA[
+        AS+ es la membresía de Asdeporte que busca recompensar tu vida como atleta y tu preferencia por nuestros eventos deportivos. Siendo miembro del programa AS+ podrás disfrutar de gran cantidad de beneficios, experiencias, contenidos y promociones que te motivarán a seguir siendo un gran deportista, con las ventajas que esto tiene en tu salud, en lo personal y como pasatiempo.<br>
+        Al ser afiliado del programa AS+ puedes disfrutar de gran cantidad de beneficios como:<br><br>
+            -Cambiar de evento sin costo<br>
+            -Utilizar la Fila Express en el registro de eventos<br>
+            -Recoger tu kit de competidor el mismo día del evento<br>
+            -Mecánicas para obtener inscripciones gratuitas<br>
+            -Asegurar tu talla de playera<br>
+            -Descuentos en la tienda deportiva Sportia.com.mx<br>
+            -Check up médico básico, uso de ambulancia, ¡sin costo!<br>
+            -Descuentos en establecimientos y mucho más…<br><br>
+        Conoce el resto de los beneficios de la membresía AS+ aquí (<a href="https://asmas.mx/#/beneficios">https://asmas.mx/#/beneficios</a>)
+        ]]>
+    </string>
+    <string name="inscriptions_tribike_dots">Tribike transport:</string>
+    <string name="inscriptions_tribike">Tribike transport</string>
+    <string name="inscriptions_tribike_description">Transporta tu bicicleta sin estres, precupaciones y económico.</string>
+    <string name="inscriptions_tribike_alert_no_fount_title">Sin disponibilidad</string>
+    <string name="inscriptions_tribike_alert_no_fount_usbtitle">No hay tiendas disponibles por el momento</string>
+
+    <string name="explore_distances">Distancias</string>
+    <string name="explore_categories">Categorías</string>
+    <string name="explore_shirt_size">Talla playera</string>
+    <string name="explore_discount_coupon">Cupón de descuento</string>
+    <string name="explore_discount_applied_coupon">Cupón de descuento aplicado</string>
+    <string name="explore_discount_invalid_coupon">Cupón de descuento inválido</string>
+    <string name="explore_discount_invalid_coupon_expired">El cupon seleccionado ha expirado, ya no puede puede ser utilizado para inscribirte</string>
+    <string name="explore_discount_invalid_coupon_used">El cupón seleccionado ha superado el limite de usos, ya no puede ser utilizado para inscribirte</string>
+    <string name="explore_discount_invalid_coupon_no_promotion">Para poder aplicar el cupón es necesario tener al menos $%1$d en tu carrito</string>
+    <string name="explore_apply_discount_coupon">Aplicar el código</string>
+    <string name="explore_apply_discount_coupon_error_empty_price">Para aplicar el cupón debes seleccionar una distancia</string>
+    <string name="explore_apply_discount_coupon_error_empty_coupon">Para aplicar el cupón debes escribir el código</string>
+    <string name="explore_apply_discount_coupon_error_deactived">El cupón no está activado</string>
+    <string name="explore_card">Tarjeta</string>
+    <string name="explore_card_msi">Pago a meses sin intereses</string>
+    <string name="explore_msi_one_exibition">Una sola exhibición</string>
+    <string name="explore_special_benefits">Beneficios especiales</string>
+    <string name="explore_sponsored_by">Patrocinado por</string>
+    <string name="explore_other_methods">Otros métodos</string>
+    <string name="explore_other_methods_paypal">Paga con PayPal</string>
+    <string name="explore_accept_insurance">Agregar seguro</string>
+    <string name="explore_terms_and_coditions_event"><u>Acepto los Términos y Condiciones del evento</u></string>
+    <string name="explore_terms_and_coditions"><u>Acepto el Aviso de Privacidad y Términos y Condiciones generales</u></string>
+    <string name="explore_reg_done_check_email">Revisa el email que te hemos enviado para ver más detalles sobre el evento y tu participación.</string>
+    <string name="inscription_resend_email_instructions">Reenviar correo de inscripción</string>
+    <string name="explore_reg_done_qr_ok">Tu inscripción está completa con este código QR podrás recoger tu kit, asegúrate de mantenerlo resguardado.</string>
+    <string name="explore_price_until">Hasta el</string>
+    <string name="total">Total:</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="cost_per_service">Costo por servicio:</string>
+    <string name="discount_code_name">Descuento (%1$s)</string>
+    <string name="btn_register_me">INSCRIBIRME</string>
+    <string name="btn_close_inscriptions">INSCRIPCIONES CERRADAS</string>
+    <string name="btn_another_inscription">OTRA INSCRIPCIÓN</string>
+    <string name="btn_complete_payment">Completar pago</string>
+    <string name="popup_inscription_user_already_inscribed_title">Inscripción</string>
+    <string name="popup_inscription_user_already_inscribed_msg">El usuario seleccionado ya se ecuentra inscrito</string>
+    <string name="popup_close_inscription_title">Cancelar inscripción</string>
+    <string name="popup_close_inscription_msg">¿Seguro que quieres cancelar la inscripción?</string>
+    <string name="inscription_overview_afiliation">Afiliación</string>
+    <string name="inscription_overview_discount">Descuento:</string>
+    <string name="inscription_overview_discount_bin">Descuento bancario:</string>
+    <string name="inscription_overview_wallet">Wallet:</string>
+    <string name="inscription_cvv_dialog_title">Pago con tarjeta</string>
+    <string name="inscription_cvv_dialog_hint">Introduce el CVV</string>
+    <string name="inscription_races_start">Arranque</string>
+    <string name="inscription_races_select_start">Selecciona un arranque</string>
+    <string name="inscription_races_empty_error">El usuario seleccionado no aplica para ninguna de las distancias disponibles</string>
+    <string name="inscription_presell_exclusive">Venta exclusiva para clientes</string>
+    <string name="inscription_presell_exclusive_error_title">Tarjeta no participante</string>
+    <string name="inscription_presell_exclusive_error_subtitle">La tarjeta seleccionada no aplica para la promoción</string>
+    <string name="inscription_coupon_invalid_title">Cupón no valido</string>
+    <string name="inscription_coupon_invalid_subtitle">Lo sentimos, has sobrepasado el total de usos de este cupón.</string>
+    <string name="inscription_team_search">Busca a tu equipo o crea uno nuevo</string>
+    <string name="inscription_team_search_create"><u>No se encontraron equipos con ese nombre, selecciona aqui para crearlo</u></string>
+    <string name="inscription_free_terms">Tu inscripción a los eventos seleccionados es gratuita. Presiona pagar para finalizar, gracias.</string>
+    <string name="my_team_relay_details">Los detalles de los participantes adicionales podrás configurarlos adelante en tu carta confirmación.</string>
+    <string name="select_tribu_main_desc"><![CDATA[Selecciona la Tribu que quieres asignar como <b>PRINCIPAL</b>]]></string>
+
+    <!-- New Inscription -->
+    <string name="inscription_confirm_title">Confirmación</string>
+    <string name="inscription_confirm_subtitle_done">¡Ya lo tienes!</string>
+    <string name="inscription_confirm_subtitle_pending">¡Estas a un paso de completar tu inscripción!</string>
+    <string name="inscription_confirm_desc_done"><![CDATA[<b>Tu inscripción ha sido realizada con éxito.</b> Te enviaremos un email con los detalles de tu evento.<br><br>¡Recuerda que no estás solo, Asdeporte está contigo para ayudarte a prepararte para tu gran día!  Para ello hemos seleccionado los mejores consejos de entrenamiento, nutrición y equipación de la mano de nuestros expertos en nuestro blog.]]></string>
+    <string name="inscription_confirm_desc_pending"><![CDATA[<b>Realiza tu pago en las proximas 24 horas.</b> Cuando realices el pago, te enviaremos un email con los detalles sobre el evento y tu participación.]]></string>
+    <string name="inscription_confirm_comple_payment">Completa tu pago aquí</string>
+    <string name="inscription_confirm_comple_payment_done">Ver inscripción</string>
+    <!-- New Inscription Validations-->
+    <string name="inscription_select_user_empty">Selecciona un participante para continuar</string>
+    <string name="inscription_select_user_distance">Selecciona una distancia y categoría para continuar</string>
+    <string name="inscription_select_user_tshirt">Selecciona una talla de playera para continuar</string>
+    <string name="inscription_select_questions">Responde las preguntas obligatorias para continuar</string>
+    <string name="inscription_select_shipping_optional_desc">Si vas a recoger tu kit en la expo de evento la dirección no es requerida.</string>
+    <string name="inscription_select_shipping_home_title">Envío a domicilio</string>
+    <string name="inscription_select_shipping_home_subtitle">Selecciona una dirección.</string>
+    <string name="inscription_select_shipping_place_title">Recoger el día de entrega de kits</string>
+    <string name="inscription_select_shipping_place_subtitle">Si vas a recoger tu kit el día de entrega de kits, la dirección no es requerida.</string>
+    <string name="inscription_select_shipping">Selecciona una dirección de envío para continuar</string>
+    <string name="inscription_select_payment">Selecciona un método de pago para continuar</string>
+
+    <!-- Packages -->
+    <string name="packages_continue">Continuar</string>
+    <string name="packages_title_desc">Aprovecha hasta %1$s de descuento</string>
+    <string name="packages_subtitle_desc">En la compra de %1$s o mas eventos con este simbolo.\n(Selecciona el icono para aplicar tu promoción)</string>
+    <string name="packages_no_fmtri">Es necesario contar con una afiliación a FMTRI para continuar.</string>
+    <string name="packages_alert_title">Quitar selección</string>
+    <string name="packages_alert_message">¿Deseas quitar el evento de tu paquete?</string>
+    <string name="packages_trifecta_remaining_two">Estas a dos eventos de obtener una medalla trifecta</string>
+    <string name="packages_trifecta_remaining_one">Estas a un evento de obtener una medalla trifecta</string>
+    <string name="packages_trifecta_congrats">¡Felicidades!</string>
+    <string name="packages_trifecta_congrats_title">Ganaste una medalla trifecta</string>
+    <string name="packages_trifecta_congrats_subtitle">Se te entregará al finalizar tu tercer evento</string>
+    <string name="packages_select_number_of_events">Elige solo</string>
+    <string name="packages_select_distances">Elige tu distancia</string>
+
+    <!-- Filter -->
+    <string name="recent">Recientes</string>
+    <string name="price">Precio</string>
+    <string name="from">Desde</string>
+    <string name="to">Hasta</string>
+    <string name="filter">Filtrar</string>
+    <string name="clean">Limpiar</string>
+    <string name="reset_filters">Restablecer filtros</string>
+    <string name="near_me">Cerca de mi</string>
+    <string name="order_by">Ordenar por</string>
+    <string name="event_date">Fecha</string>
+    <string name="location">Localización</string>
+    <string name="sport">Deporte</string>
+    <string name="distance">Distancia</string>
+    <string name="level">Nivel</string>
+    <string name="kids">Niños</string>
+    <string name="apply_filter">Aplicar filtros</string>
+    <string name="filter_results_empty">No se encontraron resultados.</string>
+    <string name="filter_results_empty_button"><u>Limpia los filtros</u></string>
+
+    <!-- Results -->
+    <string name="results_your_last_result">Tu último resultado</string>
+    <string name="results_results_history">Historial de resultados</string>
+    <string name="my_results_your_history">Tu historial</string>
+    <string name="my_results_more">Más resultados</string>
+
+    <string name="results_interest_event_text">Recibe los resultados de tus eventos</string>
+    <string name="results_register_now">¡Apúntate ya!</string>
+    <string name="results_rhythm_min_km">Ritmo min/km</string>
+    <string name="results_category_general">Categoría  /  General</string>
+    <string name="results_category">Categoría</string>
+    <string name="results_categories">Categorías</string>
+    <string name="results_general">General</string>
+    <string name="results_time_finish">Time (chip) finish</string>
+    <string name="results_ranking">Ranking</string>
+    <string name="results_your_perfomance">Tu perfomance</string>
+    <string name="results_your_medal_certificate">Tu certificado de participación</string>
+    <string name="results_comp">Comparativas</string>
+    <string name="results_comp_sub">¡Has mejorado tu marca anterior!</string>
+    <string name="results_ritmo">Ritmo</string>
+    <string name="results_ritmo_sub">Tramos, ritmo, posición</string>
+    <string name="results_info_race">Info de carrera</string>
+    <string name="results_chip_time">Chip start time</string>
+    <string name="results_gun_time">Gun time</string>
+    <string name="results_meteo">Meteo</string>
+    <string name="results_calif_exp">Califica tu experiencia</string>
+    <string name="results_calif_title_stars">¿Te ha gustado el evento?</string>
+    <string name="results_calif_subtitle_stars">Selecciona una estrella para evaluar</string>
+    <string name="results_calif_dialog_hint">Escribe tu opinión</string>
+    <string name="results_live_tracking">Evento presencial</string>
+    <string name="results_live_tracking_subtitle">Sigue a tu participante durante el evento físico</string>
+    <string name="results_pace_your_best">tu mejor marca</string>
+    <string name="results_pace_other_person">otra persona</string>
+    <string name="results_pace_compare_with">Comparar con</string>
+    <string name="results_pace_search_person_result">Buscar resultado de otra persona</string>
+    <string name="results_no_person">No se encontraron resultados</string>
+    <string name="results_pace_search_title">Resultados generales</string>
+    <string name="my_results_no_results">TU RESULTADO AUN NO ESTÁ DISPONIBLE</string>
+    <string name="my_results_no_results_available">TODAVÍA NO HAY RESULTADOS DISPONIBLES</string>
+    <string name="my_results_classified">Clasificado</string>
+    <string name="my_results_total_time">Tiempo total</string>
+
+    <!-- Contact us -->
+    <string name="contact">Contacto</string>
+    <string name="contact_us_first_surname">Apellido paterno</string>
+    <string name="contact_us_second_surname">Apellido materno</string>
+    <string name="contact_us_email">Email de contacto</string>
+    <string name="contact_us_phone">Teléfono celular</string>
+    <string name="contact_us_select_category">Selecciona categoría</string>
+    <string name="contact_us_reach_team">Te pedimos contactar a nuestro equipo.</string>
+
+    <!-- FMTRI -->
+    <string name="fmtri_affiliation">Afiliación</string>
+    <string name="fmtri_no_membership_msg">Una o más personas no cuentan con una afiliación vigente a la FMTRI para el %1$d, serás redirigido al proceso de afiliación. Al terminar volverás al proceso de inscripción.</string>
+    <string name="fmtri_event_without_fmtri">Este evento no requiere una afiliación vigente a la FMTRI.</string>
+    <string name="fmtri_form_address">Dirección</string>
+    <string name="fmtri_form_street">Calle*</string>
+    <string name="fmtri_form_ext_num">No. Ext*</string>
+    <string name="fmtri_form_int_num">No. Int*</string>
+    <string name="fmtri_form_colony">Colonia*</string>
+    <string name="fmtri_form_postal_code">C.P.*</string>
+    <string name="fmtri_form_delegation">Delegación / Municipio*</string>
+    <string name="fmtri_form_city">Ciudad*</string>
+    <string name="fmtri_form_general_info">Información General</string>
+    <string name="fmtri_form_curp">CURP*</string>
+    <string name="fmtri_form_scholarship">Escolaridad*</string>
+    <string name="fmtri_form_current_studying">Cursando actualmente*</string>
+    <string name="fmtri_form_weight">Peso (kg)*</string>
+    <string name="fmtri_form_height">Estatura (cm)*</string>
+    <string name="fmtri_form_blood_type">Tipo de Sangre*</string>
+    <string name="fmtri_form_association">Asociación*</string>
+    <string name="fmtri_form_club">Club*</string>
+    <string name="fmtri_form_coach">Entrenador*</string>
+    <string name="fmtri_form_afilitaion_type">Tipo de afiliación</string>
+    <string name="fmtri_form_afilitaion_type_mandatory">Tipo de afiliación*</string>
+    <string name="fmtri_form_price_info">Tiene un costo de <b>$%1$s</b>, más <b>$%2$s</b> por costo por servicio.</string>
+    <string name="fmtri_form_afilitaion_select_type">Selecciona un tipo de afiliación</string>
+    <string name="fmtri_form_empty_fields">Por favor, rellena todos los datos</string>
+    <string name="fmtri_packages_title">Afiliación FMTRI</string>
+    <string name="fmtri_packages_subtitle">Necesitas contar con una afiliación FMTRI activa para poder continuar</string>
+    <string name="fmtri_packages_already">Ya estoy afiliado</string>
+    <string name="fmtri_packages_skip">Afiliarme</string>
+
+    <!-- Questions -->
+    <string name="questions">Preguntas</string>
+    <string name="no_questions">No hay preguntas. Puedes continuar con el proceso de inscripción.</string>
+    <string name="questions_general">Generales</string>
+
+    <string-array name="fmtri_form_scholarship_values">
+        <item>Kinder</item>
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Media Superior</item>
+        <item>Superior</item>
+    </string-array>
+
+    <string-array name="fmtri_form_current_studying_values">
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="fmtri_form_blood_values">
+        <item>@string/profile_blood_0n</item>
+        <item>@string/profile_blood_0p</item>
+        <item>@string/profile_blood_an</item>
+        <item>@string/profile_blood_ap</item>
+        <item>@string/profile_blood_bn</item>
+        <item>@string/profile_blood_bp</item>
+        <item>@string/profile_blood_abn</item>
+        <item>@string/profile_blood_abp</item>
+    </string-array>
+
+    <string-array name="fmtri_form_current_association_values">
+        <item>Aguascalientes</item>
+        <item>Baja California</item>
+        <item>Baja California Sur</item>
+        <item>Campeche</item>
+        <item>Coahuila</item>
+        <item>Colima</item>
+        <item>Chiapas</item>
+        <item>Chihuahua</item>
+        <item>Ciudad de México</item>
+        <item>Durango</item>
+        <item>Guanajuato</item>
+        <item>Guerrero</item>
+        <item>Hidalgo</item>
+        <item>Jalisco</item>
+        <item>México</item>
+        <item>Michoacán</item>
+        <item>Morelos</item>
+        <item>Nayarit</item>
+        <item>Nuevo León</item>
+        <item>Oaxaca</item>
+        <item>Puebla</item>
+        <item>Querétaro</item>
+        <item>Quintana Roo</item>
+        <item>San Luis Potosí</item>
+        <item>Sinaloa</item>
+        <item>Sonora</item>
+        <item>Tabasco</item>
+        <item>Tamaulipas</item>
+        <item>Tlaxcala</item>
+        <item>Veracruz</item>
+        <item>Yucatán</item>
+        <item>Zacatecas</item>
+    </string-array>
+
+    <string-array name="relationship_values">
+        <item>Madre</item>
+        <item>Padre</item>
+        <item>Padre o madre</item>
+        <item>Hermano</item>
+        <item>Hermana</item>
+        <item>Hijo</item>
+        <item>Hija</item>
+        <item>Amigo(a)</item>
+        <item>Cónyuge</item>
+        <item>Pareja</item>
+        <item>Asistente</item>
+        <item>Médico</item>
+        <item>Emergencia</item>
+        <item>Jefe</item>
+        <item>Otro</item>
+    </string-array>
+
+    <!-- Scan Card screen -->
+    <string name="wocr_hint_position_card_in_frame">Posiciona la tarjeta en el cuadro</string>
+    <string name="wocr_button_enter_card_number">Ingresar datos de tarjeta de forma manual</string>
+    <string name="wocr_toggle_flash">Activar/Desactivar flash</string>
+    <string name="wocr_powered_by_pay_cards" translatable="false">retry</string>
+
+    <!-- Reviews -->
+    <string name="reviews_title">Calificaciones</string>
+    <string name="reviews_filter_title">Filtrar comentarios por número de estrellas</string>
+    <string name="reviews_total">%1$d Calificaciones</string>
+    <string name="reviews_stars">Estrellas</string>
+
+    <!-- Codere -->
+    <string name="profile_codere_integral_park">Parque Codere Integral</string>
+    <string name="profile_qr_codere_park_simple">Parque Codere Simplificado</string>
+    <string name="profile_qr_codere_park_adults">Uso Adultos Parque Codere</string>
+    <string name="profile_qr_codere_park_minors">Menores De Edad Parque Codere</string>
+    <string name="profile_qr_codere_park_sign">Firma en el recuadro de abajo</string>
+
+    <string name="slycalendar_cancel">Cancelar</string>
+    <string name="slycalendar_save">Guardar</string>
+
+    <!-- Mati -->
+    <string name="mati_view_title">Web check-In</string>
+    <string name="mati_done">Tu verificación se esta procesando, te notificaremos al terminar.</string>
+    <string name="mati_title_normal">Haz Web check-in</string>
+    <string name="mati_subtitle_normal"><![CDATA[Durante el proceso es probable que te pidamos algunos datos personales por lo que te recomendamos <b>tener una identificación oficial</b> (INE, licencia de conducir o pasaporte) para completar tu web check-in.]]></string>
+    <string name="mati_desc_normal">En Asdeporte nos preocupamos por el medio ambiente. Al hacer tu web check-in digital nos ayudas a reducir la huella de contaminación durante la realización del evento.</string>
+
+    <string name="mati_title_running">Espera un momento</string>
+    <string name="mati_subtitle_running"><![CDATA[Estamos verificando tus datos, esto puede <b>tardar un poco</b>, te enviaremos una notificación a tu teléfono cuando el proceso haya concluido.]]></string>
+    <string name="mati_desc_running">En Asdeporte nos preocupamos por el medio ambiente. Al hacer tu web check-in digital nos ayudas a reducir la huella de contaminación durante la realización del evento.</string>
+
+    <string name="mati_title_tryagain">Algo salio mal</string>
+    <string name="mati_subtitle_tryagain"><![CDATA[No hemos podido <b>verificar tus documentos</b>, te pedimos vuelvas a realizar el proceso, asegurándote:<br><br>- <b>Subir</b> una foto de tu identificación clara.<br>- <b>Toma</b> un video donde se vea tu rostro completo.]]></string>
+    <string name="mati_desc_tryagain">En Asdeporte nos preocupamos por el medio ambiente. Al hacer tu web check-in digital nos ayudas a reducir la huella de contaminación durante la realización del evento.</string>
+
+    <string name="mati_inscription_congrats">¡Muchas gracias por participar en %1$s!\nTe confirmamos que tu inscripción se ha realizado correctamente.\nEn breve recibirás un email con más información.</string>
+    <string name="mati_inscription_desc">Firma tu exoneración digitalmente ahora mismo y ayuda a reducir la huella del evento al medio ambiente.</string>
+
+    <string name="mati_title_inscription">Haz Web check-in ahora</string>
+    <string name="mati_subtitle_inscription">Firma tu exoneración y ahorra tiempo al recoger tu paquete.</string>
+
+    <string name="mati_contact">Si tienes problemas al hacer tu check-in, contactanos.</string>
+
+    <string name="kyc_pending_title">Preparando los documentos</string>
+    <string name="kyc_pending_subtitle"><![CDATA[Estamos generando y subiendo los documentos necesarios para que puedas <b>terminar tu web check-in</b> en el evento.<br><br>Vuelve en unos momentos para verificar si ya están disponibles, no te preocupes por el evento, <b>tu participación esta asegurada</b>.]]></string>
+    <string name="kyc_docs_desc">Por favor lee todos los documentos completos, acepta los términos y condiciones para poder concluir tu proceso de web check-in.</string>
+    <string name="accept_politics_kyc">He leído y acepto todos los documentos antes mencionados junto con la exoneración del evento</string>
+
+    <string name="kyc_done_qr_instruction">El día de entrega de paquetes pasa directo a recoger tu kit.</string>
+    <string name="kyc_disabled_qr_instruction">El día de entrega de paquetes pasa directo a recoger tu kit, no olvides llevar tu identificación.</string>
+    <!-- New Mati -->
+    <string name="new_check_validating_docs">Estamos validando tus documentos, en breve te notificaremos.</string>
+    <string name="new_check_sign_to_continue">Para continuar te invitamos a firmar tu exoneración y obtener tu código QR.</string>
+    <string name="new_check_we_sorry">Lo sentimos</string>
+    <string name="new_check_doc_reyected_contact">Tu documento no fue acreditado, te pedimos contactar a nuestro equipo.</string>
+    <string name="new_check_in">Check-in</string>
+    <string name="new_check_exoneration">Exoneración</string>
+    <string name="new_check_doc_reyected">Tu documento no fue acreditado</string>
+    <string name="new_check_doc_reyected_again">Te invitamos a realizar nuevamente el Check in con un documento válido.</string>
+    <string name="new_check_doc_kyc_pending">Estamos generando los documentos para que puedas continuar.</string>
+    <string name="new_check_doc_success">¡Tus documentos son correctos!</string>
+    <string name="new_mati_tryagain_empty_reason">- Sube una foto de tu identificación clara.\n- Toma un vídeo donde se vea tu rostro completo.</string>
+    <string name="new_check_number">Número:</string>
+    <string name="new_check_distance">Distancia:</string>
+    <string name="new_check_category">Categoría:</string>
+    <string name="new_check_shirt">Talla playera:</string>
+    <string name="new_check_payment">Método de pago:</string>
+    <string name="new_check_sign_title">Firmar exoneración</string>
+    <string name="new_check_sign_subtitle">Firma tu exoneración y ahorra tiempo al recoger tu kit.</string>
+    <string name="new_check_email_send">Correo enviado</string>
+    <string name="new_check_email_send_msg">Se ha enviado el correo al participante para realizar el Check in.</string>
+    <string name="new_check_minor_warning">¡El participante es menor de edad y no cuenta con una dirección de correo electrónico!\n\nPara continuar el tutor ó la persona responsable (18+) deberá realizar el check in.</string>
+    <string name="new_check_someone_else">Alguien más</string>
+    <string name="new_check_im_parent">Yo soy el tutor</string>
+    <string name="new_check_add_email">Agrega un correo electrónico</string>
+    <string name="new_check_wating_of">En espera que</string>
+    <string name="new_check_finish_checkin">realice el Check in</string>
+
+    <!-- Virtual time -->
+    <string name="virtual_card_title">Comienza la carrera</string>
+    <string name="virtual_card_subtitle">Activa tu GPS y te avisamos cuando cruces la meta</string>
+    <string name="virtual_title">Agrega tu tiempo de carrera</string>
+    <string name="virtual_subtitle">En caso de no haber corrido con nuestra app ingresa tu tiempo final de tu carrera virtual (no se podrá editar).</string>
+    <string name="virtual_send">Enviar resultado</string>
+    <string name="virtual_sendSuccess">Resultado enviado</string>
+    <string name="virtual_user_select">Selecciona un participante</string>
+    <string name="virtual_no_user_selected">Debes seleccionar un participante</string>
+    <string name="virtual_mode">Modo</string>
+    <string name="virtual_mode_indoor">Interior</string>
+    <string name="virtual_mode_outdoor">exterior</string>
+    <string-array name="virtual_modes">
+        <item>@string/virtual_mode_indoor</item>
+        <item>@string/virtual_mode_outdoor</item>
+    </string-array>
+    <string name="virtual_mode_no_selected">Debes seleccionar un modo</string>
+    <string name="virtual_time_of">Tiempo de:</string>
+    <string name="virtual_record_times">Registra tus tiempos</string>
+    <string name="hermes_virtual_card_title">Participa virtualmente</string>
+    <string name="hermes_virtual_card_subtitle">Activa tu GPS y corre con tu teléfono</string>
+    <string name="hermes_ratings_card_title">Resultados preliminares</string>
+    <string name="hermes_ratings_card_subtitle">Aquí podrás consultar la lista de resultados del evento virtual</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Notificaciones</string>
+    <!-- Tutorials -->
+    <string name="tutorials_title">Tutoriales</string>
+
+    <!-- Wallet -->
+    <string name="wallet">Wallet</string>
+    <string name="wallet_card_title">Mi Wallet</string>
+    <string name="wallet_card_subtitle">Revisa y agrega saldo a tu wallet</string>
+    <string name="wallet_your_balance">Tu saldo</string>
+    <string name="wallet_history">Historial</string>
+    <string name="wallet_history_empty">No se encontró ningún movimiento</string>
+    <string name="wallet_add_balance">Agregar saldo</string>
+    <string name="wallet_add_amount_edit">Ingresa otra cantidad</string>
+    <string name="wallet_charge">Recargar</string>
+    <string name="wallet_inscription">Usar saldo de mi Wallet: </string>
+
+    <!-- Tutorials -->
+    <string name="tutorial0_title">Corre con Asdeporte</string>
+    <string name="tutorial0_subtitle">Registra tus tiempos desde la aplicación.</string>
+    <string name="tutorial1_title">Tips a la hora de buscar</string>
+    <string name="tutorial1_subtitle">Te mostramos algunas recomendaciones para que encuentres cualquier evento que necesites.</string>
+    <string name="tutorial2_title">Tus próximos eventos</string>
+    <string name="tutorial2_subtitle">Descubre todos los detalles de tus próximos retos y aprovecha al máximo esta sección.</string>
+    <string name="tutorial3_title">Información de eventos</string>
+    <string name="tutorial3_subtitle">Encuentra desde lo más básico a lo más específico en cualquiera de nuestros eventos, no te pierdas ningún detalle.</string>
+    <string name="tutorial4_title">¿Cómo inscribirme?</string>
+    <string name="tutorial4_subtitle">Te explicamos el proceso de inscripción, para que no tengas ninguna duda al momento de inscribirte a tu próximo reto.</string>
+    <string name="tutorial5_title">Conociendo mi perfil</string>
+    <string name="tutorial5_subtitle">Es un apartado completamente para ti, el cual puedes personalizar e ir conociendo las medallas y récords que vas acumulando.</string>
+    <string name="tutorial6_title">Tus resultados</string>
+    <string name="tutorial6_subtitle">Desde revisar tu resultado en el evento hasta poder compararte con amigos o familiares, utiliza sus herramientas como lo necesites.</string>
+
+    <string name="com_facebook_loginview_logged_in_using_facebook_f1gender">Logged in using Facebook</string>
+
+    <!-- Verify email -->
+    <string name="verify_email_title">Verifica tu correo</string>
+    <string name="verify_email_subtitle">Obtén acceso completo a Asdeporte. Da clic en verificar para seguir el proceso.</string>
+    <string name="verify_email_button">Verificar</string>
+
+    <!-- Crash form View -->
+    <string name="crash_form_description">Detectamos que tu aplicación sé cerro de forma inesperada, cuéntanos que estabas haciendo cuando sé cerro.\n\nTus comentarios nos ayudan a mejorar.</string>
+    <string name="crash_form_description_text">Cuéntanos que pasó …</string>
+    <string name="crash_form_alert_title">Gracias por tu comentario</string>
+    <string name="crash_form_alert_subtitle">Juntos mejoraremos la app</string>
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_inscription">InscriptionActivity</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+
+</resources>

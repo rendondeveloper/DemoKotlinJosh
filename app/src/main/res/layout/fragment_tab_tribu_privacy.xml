@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mitribu.MiTribuFragment" >
+
+    <FrameLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/secondary_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:text="CONFIGURACIÓN DE PRIVACIDAD"
+                        android:gravity="center_vertical"
+                        style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="Accesos directos de privacidad"
+                        android:gravity="center_vertical"
+                        style="@style/Kanit_Semibold.Default.16"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Administra tu perfil"
+                        android:gravity="center_vertical"
+                        style="@style/Kanit_Semibold.Default.14"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="En dos pasos editar tu perfil para cambiar cierta información; por ejemplo, usuario, nombre, fecha de nacimiento y dirección."
+                        android:layout_marginTop="8dp"
+                        style="@style/Kanit_Regular.Default.14"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Consultar aspectos básicos de la privacidad"
+                        android:layout_marginTop="24dp"
+                        style="@style/Kanit_Semibold.Default.14"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Obtén respuestas a preguntas frecuentes con esta guía interactiva."
+                        android:layout_marginTop="8dp"
+                        style="@style/Kanit_Regular.Default.14"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/border_gray"/>
+
+                    <LinearLayout
+                        android:id="@+id/view_info_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:text="Información de Perfil"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="40dp"
+                            style="@style/Kanit_Semibold.Default.16"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-40dp"
+                            android:src="@drawable/arrow_right"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/border_gray"/>
+
+                    <LinearLayout
+                        android:id="@+id/view_visibility"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:text="Quién puede ver lo que compartes"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="40dp"
+                            style="@style/Kanit_Semibold.Default.16"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-40dp"
+                            android:src="@drawable/arrow_right"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/border_gray"/>
+
+                    <LinearLayout
+                        android:id="@+id/view_find_you"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:text="Cómo pueden encontrate y contactarte los demás"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="40dp"
+                            style="@style/Kanit_Semibold.Default.16"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-40dp"
+                            android:src="@drawable/arrow_right"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/border_gray"/>
+
+                    <LinearLayout
+                        android:id="@+id/view_message_request"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:text="Cómo recibes las solicitudes de mensajes"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="40dp"
+                            style="@style/Kanit_Semibold.Default.16"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-40dp"
+                            android:src="@drawable/arrow_right"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/border_gray"/>
+
+                    <LinearLayout
+                        android:id="@+id/view_block"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:text="Bloquear"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="40dp"
+                            style="@style/Kanit_Semibold.Default.16"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-40dp"
+                            android:src="@drawable/arrow_right"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/info_profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:title="Información de perfil"
+            app:titleTextColor="@color/black_dynamic"
+            app:navigationIcon="@drawable/arrow_left"
+            app:navigationIconTint="@color/black_dynamic"
+            android:theme="@style/AsdToolbarTheme"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/secondary_background"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="30dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="Información de Perfil"
+                            android:gravity="center_vertical"
+                            style="@style/Kanit_Semibold.Default.16"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="En dos pasos editar tu perfil para cambiar cierta información; por ejemplo, usuario, nombre, fecha de nacimiento y dirección."
+                            android:layout_marginTop="8dp"
+                            style="@style/Kanit_Regular.Default.14"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="40dp"
+                                android:weightSum="2">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="bottom"
+                                    android:text="Usuario"
+                                    style="@style/Kanit_Semibold.Default.16"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="top"
+                                    android:text="@ernie1234"
+                                    style="@style/Kanit_Regular.Default.14"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/choose_user"
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Amigos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="40dp"
+                                android:weightSum="2">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="bottom"
+                                    android:text="@string/email"
+                                    style="@style/Kanit_Semibold.Default.16"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="top"
+                                    android:text="dalvarez@asdeporte.com"
+                                    style="@style/Kanit_Regular.Default.14"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/choose_email"
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Amigos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="40dp"
+                                android:weightSum="2">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="bottom"
+                                    android:text="@string/celular_phone"
+                                    style="@style/Kanit_Semibold.Default.16"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="top"
+                                    android:text="+52 55 1020 3040"
+                                    style="@style/Kanit_Regular.Default.14"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/choose_phone"
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Amigos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="40dp"
+                                android:weightSum="2">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="bottom"
+                                    android:text="@string/birthdate"
+                                    style="@style/Kanit_Semibold.Default.16"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="top"
+                                    android:text="21 de octubre de 1980"
+                                    style="@style/Kanit_Regular.Default.14"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/choose_birth"
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Amigos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="120dp"
+                                android:weightSum="2">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="bottom"
+                                    android:text="@string/rfc_city"
+                                    style="@style/Kanit_Semibold.Default.16"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="top"
+                                    android:text="Av. Universidad #424, Col. San Jerónimo, México."
+                                    style="@style/Kanit_Regular.Default.14"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/choose_city"
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Amigos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/visibility_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_visibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:title="Visibilidad de publicaciones"
+                app:titleTextColor="@color/black_dynamic"
+                app:navigationIcon="@drawable/arrow_left"
+                app:navigationIconTint="@color/black_dynamic"
+                android:theme="@style/AsdToolbarTheme"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/secondary_background"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="30dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="Quién puede ver lo que compartes"
+                            android:gravity="center_vertical"
+                            style="@style/Kanit_Semibold.Default.16"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="120dp"
+                                    android:gravity="center_vertical"
+                                    android:text="¿Quién puede ver lo que compartes?"
+                                    style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Amigos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién puede ver mis próximos eventos?"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Sólo yo"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién puede ver mis resultados?"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Todos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién puede ver mis metas?"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Todos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="Limitar el público de publicaciones anteriores"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Todos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién quieres que vea tus publicaciones futuras?"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Todos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/find_you_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_find_you"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:title="Quién te puede encontrar"
+                app:titleTextColor="@color/black_dynamic"
+                app:navigationIcon="@drawable/arrow_left"
+                app:navigationIconTint="@color/black_dynamic"
+                android:theme="@style/AsdToolbarTheme"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/secondary_background"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="30dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="Cómo pueden encontrarte y contactarte los demás"
+                            android:gravity="center_vertical"
+                            style="@style/Kanit_Semibold.Default.16"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién puede enviarte solicitudes de amistad?"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Todos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién puede ver tu lista de amigos?"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Sólo yo"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién puede ver tu lista de tribus a las que perteneces?"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Todos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién puede buscarte con la dirección de correo electrónico que proporcionaste?"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Todos"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/message_request_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_message_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:title="Solicitud de mensajes"
+                app:titleTextColor="@color/black_dynamic"
+                app:navigationIcon="@drawable/arrow_left"
+                app:navigationIconTint="@color/black_dynamic"
+                android:theme="@style/AsdToolbarTheme"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/secondary_background"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="30dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="Cómo recibes las solicitudes de mensajes"
+                            android:gravity="center_vertical"
+                            style="@style/Kanit_Semibold.Default.16"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Decide si las solicitudes de mensajes se envían a la lista de chats, a la carpeta &quot;Solicitudes de mensajes&quot; o si no quieres recibirlas."
+                            android:layout_marginTop="8dp"
+                            style="@style/Kanit_Regular.Default.14"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="Amigos de amigos en AsDeporte"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="No recibir"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_gray"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="Miembros de alguna Tribu"
+                                style="@style/Kanit_Regular.Default.14"/>
+
+                            <TextView
+                                android:layout_width="@dimen/privacy_select_width"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="Solicitud"
+                                android:background="@drawable/post_upload_border"
+                                android:drawableEnd="@drawable/arrow_down"
+                                style="@style/Kanit_Semibold.Default.16"/>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/block_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:title="Bloquear"
+                app:titleTextColor="@color/black_dynamic"
+                app:navigationIcon="@drawable/arrow_left"
+                app:navigationIconTint="@color/black_dynamic"
+                android:theme="@style/AsdToolbarTheme"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/secondary_background"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="30dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="Bloquear a alguien"
+                            android:gravity="center_vertical"
+                            style="@style/Kanit_Semibold.Default.16"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cuando bloqueas a alguien, esa persona ya no puede ver la actividad que realices, performance, resultados, menciones, invitarte a clases, entrenamientos o retos, tu lista de amigos ó tribus, iniciar una conversación contigo ni agregarte a su lista de amigos."
+                            android:layout_marginTop="8dp"
+                            style="@style/Kanit_Regular.Default.14"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nota: Cuando bloquees a alguien, no le avisaremos que lo hiciste."
+                            android:layout_marginTop="20dp"
+                            style="@style/Kanit_Semibold.Default.14"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:padding="0dp"
+                            android:textAllCaps="false"
+                            android:text="Agregar personas a la lista de bloqueos"
+                            style="@style/Kanit_Regular.Default.14"
+                            android:textColor="@color/white"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

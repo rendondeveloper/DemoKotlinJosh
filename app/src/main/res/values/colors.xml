@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="orange_as">#e64a19</color>
+    <color name="orange_as_light">#FF6A00</color>
+    <color name="light_orange_as">#FDF1E9</color>
+    <color name="orangeTransparent">#1AFF6A00</color>
+    <color name="pink">#FF5255</color>
+    <color name="pinkTransparent">#1AFF5255</color>
+    <color name="yellow">#FFC340</color>
+    <color name="yellowTransparent">#1AFFC340</color>
+    <color name="asd_pink">#FF5255</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="dark_blue">#303642</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+
+    <!-- Dynamic -->
+    <color name="white_dynamic">#FFFFFF</color>
+    <color name="black_dynamic">#000000</color>
+    <color name="green_dynamic">#34c759</color>
+    <color name="red_dynamic">#ff3b30</color>
+    <!--<color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#34c759</color> -->
+
+    <color name="secondary_background">#F5F5F5</color>
+    <color name="border_gray">#E7E7E7</color>
+
+    <!-- External -->
+    <color name="facebook">#3b5998</color>
+    <color name="google">#db3236</color>
+
+    <color name="label_primary">#000000</color>
+    <color name="label_secondary">#7C7C7B</color>
+</resources>

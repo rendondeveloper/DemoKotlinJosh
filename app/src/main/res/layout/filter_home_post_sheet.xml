@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AsdeporteV2"
+    app:behavior_fitToContents="true"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="12dp"
+        android:layout_marginBottom="-11dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Mis tribus"
+                android:gravity="center"
+                style="@style/Kanit_Regular.Default.16"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:text="@string/btn_save"
+                android:background="@drawable/pill_background"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="-10dp"
+                android:layout_above="@+id/filer_view_button"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Todas"
+                        android:layout_alignParentStart="true"
+                        style="@style/Kanit_Regular.Default.16"/>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/all_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_400"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentStart="true">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Corredores Coyoacán"
+                            style="@style/Kanit_Regular.Default.16"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tribu principal"
+                            style="@style/Kanit_Regular.Secondary.14"/>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/radio_default"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:text=""/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentStart="true">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="The Avengers"
+                            style="@style/Kanit_Regular.Default.16"/>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/radio_1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:text=""/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentStart="true">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Amigos"
+                            style="@style/Kanit_Regular.Default.16"/>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/radio_2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:text=""/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filer_view_button"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:orientation="horizontal"
+                android:background="@color/white_dynamic"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="39dp"
+                android:paddingEnd="39dp">
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

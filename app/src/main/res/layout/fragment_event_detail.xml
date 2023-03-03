@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_background"
+    tools:context=".ui.home.HomeFragment" >
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/inscription_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+            
+            <ImageView
+                android:id="@+id/banner_event"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:background="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="1dp"
+                    android:background="@drawable/event_border_5_white">
+
+                    <ImageView
+                        android:id="@+id/event_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/photo_placeholder" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tune Up City Santander, Santa fe"
+                        android:textColor="@color/white"
+                        style="@style/Kanit_Medium.Default.20"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Carrera de ruta"
+                        android:textColor="@color/white"
+                        style="@style/Kanit_Regular.Default.12"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.EventTopDetailsView
+                android:id="@+id/top_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.EventTabView
+                android:id="@+id/tab_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <com.asdeporte.asdeportev2.ui.reusableview.convocatory.TitleAndDescripctionView
+                android:id="@+id/footer_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_dynamic"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundTint="@color/white"
+        android:theme="@style/AsdToolbarTheme"
+        android:background="@drawable/background_toolbar_translucent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title=""
+        app:titleTextColor="@color/black_dynamic"
+        app:navigationIcon="@drawable/arrow_left"
+        app:menu="@menu/event_menu"
+        app:navigationIconTint="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/inscription_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/black"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/inscription_button"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desde: $680.00 MNX"
+                style="@style/Kanit_Regular.Default.14"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plus:"
+                    android:layout_marginEnd="4dp"
+                    style="@style/Kanit_Regular.Default.14"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$580.00 MNX"
+                    style="@style/Kanit_Semi_Bold.Default.18"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/inscription_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:text="Inscribirme"
+            android:background="@drawable/pill_background"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

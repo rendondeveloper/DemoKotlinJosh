@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Theme.AsdeporteV2"
+    app:behavior_peekHeight="90dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-22dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:orientation="vertical"
+        android:background="@drawable/options_new_post_sheet_backround">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/options_new_post_sheet_backround">
+
+            <ImageView
+                android:id="@+id/eventCover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.google.android.exoplayer2.ui.StyledPlayerView
+                android:id="@+id/video_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:surface_type="texture_view"
+                app:resize_mode="fill"
+                android:background="@drawable/options_new_post_sheet_backround"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/logo_asd"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/dark_blue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/eventImage"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/gray_600"
+                        android:scaleType="center"
+                        android:src="@drawable/empty_event_clear"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/eventImage"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/eventName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Kanit_Bold.Default.16"
+                            android:textColor="@color/white"
+                            android:text="Triatlón AsTri Acapulco"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Kanit_Regular.Default.14"
+                            android:textColor="@color/white"
+                            android:text="Acapulco, Guerrero"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Kanit_Regular.Default.14"
+                            android:textColor="@color/white"
+                            android:text="15 octubre 2022"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Kanit_Regular.Default.12"
+                                android:textColor="@color/white"
+                                android:text="Carrera"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Kanit_Regular.Default.12"
+                                android:textColor="@color/white"
+                                android:text=" | "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Kanit_Regular.Default.12"
+                                android:textColor="@color/white"
+                                android:text="Avanzado"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Kanit_Regular.Default.12"
+                                android:textColor="@color/white"
+                                android:text=" | "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Kanit_Regular.Default.12"
+                                android:textColor="@color/white"
+                                android:text="Competencia"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="15dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Kanit_Regular.Default.12"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:text="Precio regular"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Kanit_Regular.Default.12"
+                                android:textColor="@color/white"
+                                android:text="Desde "/>
+                            <TextView
+                                android:id="@+id/striked_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Kanit_Bold.Default.16"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:text="$500.00 MXN"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Kanit_Regular.Default.12"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:text="Precio regular"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Kanit_Bold.Default.16"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:text="Desde $450.00 MXN"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="3">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"
+                    style="@style/Kanit_Regular.Default.12"
+                    android:textAllCaps="false"
+                    android:text="Favoritos"
+                    android:textColor="@color/white"
+                    android:padding="0dp"
+                    app:icon="@drawable/ic_favorite_circle"
+                    app:iconGravity="top"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"
+                    style="@style/Kanit_Regular.Default.12"
+                    android:textAllCaps="false"
+                    android:text="Me gusta"
+                    android:textColor="@color/white"
+                    android:padding="0dp"
+                    app:icon="@drawable/ic_like"
+                    app:iconGravity="top"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/event_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"
+                    style="@style/Kanit_Regular.Default.12"
+                    android:textAllCaps="false"
+                    android:text="Ver info"
+                    android:textColor="@color/white"
+                    android:padding="0dp"
+                    app:icon="@drawable/ic_arrow_right_circle"
+                    app:iconGravity="top"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/inscription_button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/orange_as_light"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="@string/btn_register_me"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/orange_as_light"/>
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/AccessFragment">
+
+    <fragment
+        android:id="@+id/AccessFragment"
+        android:name="com.asdeporte.asdeportev2.ui.access.AccessFragment"
+        tools:layout="@layout/fragment_access">
+
+        <action
+            android:id="@+id/action_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popExitAnim="@anim/nav_slide_out_right"
+            app:popEnterAnim="@anim/nav_slide_in_left"/>
+
+        <action
+            android:id="@+id/action_to_RegisterFragment"
+            app:destination="@id/RegisterFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popExitAnim="@anim/nav_slide_out_right"
+            app:popEnterAnim="@anim/nav_slide_in_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.asdeporte.asdeportev2.ui.access.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_to_ForgotPasswordFragment"
+            app:destination="@+id/ForgotPasswordFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popExitAnim="@anim/nav_slide_out_right"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            />
+        <action
+            android:id="@+id/action_to_RegisterFragment"
+            app:destination="@+id/RegisterFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popExitAnim="@anim/nav_slide_out_right"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ForgotPasswordFragment"
+        android:name="com.asdeporte.asdeportev2.ui.access.ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.asdeporte.asdeportev2.ui.access.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.access.RegisterFragment"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AsdToolbarTheme"/>
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/register_create"
+        style="@style/Kanit_Semibold.Default.24"/>
+
+    <LinearLayout
+        android:id="@+id/firstStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_below="@+id/titleText"
+        android:layout_above="@+id/nextButton"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/name_text"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastNameTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/first_surname"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastNameTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastName2TextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/second_surname"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastName2TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/birthTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/birthdate"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/calendar_icon"
+            app:endIconTint="@color/black_dynamic"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/birthTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="date"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/genderTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/profile_gender"
+            app:endIconDrawable="@drawable/arrow_down"
+            app:endIconTint="@color/black_dynamic"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/MenuTextInputLayoutStyle">
+
+            <AutoCompleteTextView
+                android:id="@+id/genderTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:focusable="false"
+                android:inputType="none"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:weightSum="2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/countryTextField"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:hint="@string/rfc_country"
+                app:endIconDrawable="@drawable/arrow_down"
+                app:endIconTint="@color/black_dynamic"
+                app:hintTextColor="@color/black_dynamic"
+                style="@style/MenuTextInputLayoutStyle"
+                android:layout_weight="1">
+
+                <AutoCompleteTextView
+                    android:id="@+id/countryTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:focusable="false"
+                    android:inputType="none"
+                    style="@style/Kanit_Regular.Default.16"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/stateTextField"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:hint="@string/rfc_city"
+                app:endIconDrawable="@drawable/arrow_down"
+                app:endIconTint="@color/black_dynamic"
+                app:hintTextColor="@color/black_dynamic"
+                style="@style/MenuTextInputLayoutStyle"
+                android:layout_weight="1">
+
+                <AutoCompleteTextView
+                    android:id="@+id/stateTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:focusable="false"
+                    android:inputType="none"
+                    style="@style/Kanit_Regular.Default.16"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_below="@+id/titleText"
+        android:layout_above="@+id/nextButton"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:hint="@string/email"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                style="@style/Kanit_Regular.Default.16"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/validationCharacteres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Debe contener mínimo 8 caracteres"
+            android:layout_marginBottom="5dp"
+            style="@style/Kanit_Regular.Default.16"/>
+        <TextView
+            android:id="@+id/validationMayus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Debe contener al menos 1 una mayúscula"
+            android:layout_marginBottom="5dp"
+            style="@style/Kanit_Regular.Default.16"/>
+        <TextView
+            android:id="@+id/validationSpecial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Debe tener por mínimo 1 caracter especial (Ej. ! @ # $ % ^ &amp; * ? - _ =)."
+            style="@style/Kanit_Regular.Default.16"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordConfirmTextField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/password_confirm"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/black_dynamic"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordConfirmTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <CheckBox
+                android:id="@+id/radio_terms"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:text=""/>
+            <TextView
+                android:id="@+id/terms_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/radio_terms"
+                android:text="@string/accept_terms"
+                style="@style/Kanit_Regular.Default.14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <CheckBox
+                android:id="@+id/radio_politics"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:text=""/>
+            <TextView
+                android:id="@+id/terms_politics"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/radio_politics"
+                android:text="@string/accept_politics"
+                style="@style/Kanit_Regular.Default.14" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/pill_background"
+        android:textColor="@color/white"
+        android:text="Siguiente"
+        android:textAllCaps="false"
+        style="@style/Kanit_Medium.Default.16" />
+
+</RelativeLayout>

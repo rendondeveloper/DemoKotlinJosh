@@ -1,0 +1,91 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/white_dynamic">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Kanit_Semi_Bold_Italic.Default.18"
+            android:layout_marginHorizontal="16dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:text="mi galería"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Kanit_Semi_Bold.Default.14"
+            android:layout_marginHorizontal="16dp"
+            android:text="Triatlón Astri la Paz"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_marginHorizontal="16dp"
+            android:text="17 octubre 2022"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Kanit_Semi_Bold.Default.14"
+            android:layout_marginHorizontal="16dp"
+            android:text="Triatlón Astri la Paz"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_marginHorizontal="16dp"
+            android:text="17 octubre 2022"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bottom_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver todas"
+                android:gravity="center"
+                style="@style/Kanit_Medium.Orange.14"
+                android:textAllCaps="false"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

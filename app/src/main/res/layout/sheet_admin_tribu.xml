@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Theme.AsdeporteV2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:id="@+id/activity_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/avatarman"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                app:civ_circle_background_color="@color/white_dynamic"/>
+
+            <LinearLayout
+                android:id="@+id/profile_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/profile_image">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Corredores Narvarte"
+                    style="@style/Kanit_Bold.Default.16"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administrador"
+                    android:background="@drawable/pill_background_light_gray"
+                    android:backgroundTint="@color/dark_blue"
+                    style="@style/Kanit_Regular.Default.14"
+                    android:textColor="@color/white"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="88dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corredores Narvarte"
+                style="@style/Kanit_Medium.Default.12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" • "
+                style="@style/Kanit_Medium.Default.12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="205 miembros"
+                style="@style/Kanit_Medium.Default.12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" • "
+                style="@style/Kanit_Medium.Default.12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Running"
+                style="@style/Kanit_Medium.Default.12" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/secondary_background"/>
+
+        <LinearLayout
+            android:id="@+id/change_admin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/secondary_button"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@color/black_dynamic">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/user"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Ceder la administración"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:gravity="center_vertical"
+                style="@style/Kanit_Regular.Default.16"
+                android:drawablePadding="10dp"
+                android:layout_marginEnd="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/abandom_tribu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/secondary_button"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@color/black_dynamic">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/exit"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Abandonar tribu"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:gravity="center_vertical"
+                style="@style/Kanit_Regular.Default.16"
+                android:drawablePadding="10dp"
+                android:layout_marginEnd="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/delete_tribu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/secondary_button"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:backgroundTint="@color/black_dynamic">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/trash"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Eliminar tribu"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:gravity="center_vertical"
+                style="@style/Kanit_Regular.Default.16"
+                android:drawablePadding="10dp"
+                android:layout_marginEnd="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

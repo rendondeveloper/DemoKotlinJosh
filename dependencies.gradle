@@ -1,0 +1,32 @@
+ext {
+
+    kotlin_version = '1.7.0'
+    gradle_version = '4.1.2'
+
+    configuration = [
+            applicationId           : "es.as.deportesapp",
+            applicationIdCTR        : "com.asdeporte.clicktorace",
+            compileSdkVersion       : 32,
+            minSdkVersion           : 26,
+            targetSdkVersion        : 33,
+            version_versionMajor    : "2",
+            version_versionMinor    : "0",
+            version_versionPatch    : "0",
+            version_versionCode     : 3000000000
+    ]
+
+    libraries = [
+            appcompat               : "28.0.0",
+
+            sportmaniacs            : "1.4.8",
+            play_services_ads       : "21.0.0",
+            play_services_maps      : "18.0.2",
+            google_places           : "2.6.0",
+            play_core               : "1.10.3",
+            play_core_ktx           : "1.8.1",
+
+            play_services_location  : "16.0.0",
+            firebase_core           : "21.0.0",
+            firebase_messaging      : "21.0.0",
+    ]
+}
