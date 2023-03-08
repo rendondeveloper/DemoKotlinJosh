@@ -60,7 +60,7 @@ class OnboardingActivity : AppCompatActivity() {
         binding.fab.setOnClickListener {
             //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
             binding.previus.visibility = View.VISIBLE
-            if (viewPager.currentItem == 1) {
+            if (viewPager.currentItem == 2) {
                 this.finish()
                 startActivity(Intent(this, LoginActivity::class.java))
             }
@@ -80,12 +80,12 @@ class OnboardingActivity : AppCompatActivity() {
 
 class OnboardingCollectionAdapter(fragment: OnboardingActivity) : FragmentStateAdapter(fragment) {
 
-    override fun getItemCount(): Int = 2
+    override fun getItemCount(): Int = 3
 
-    var images = listOf(R.drawable.onboarding1, R.drawable.onboarding2)
-    var titles = listOf("Con asdeporte el cielo es el límite",
-        "Lleva al máximo tu energía y rendimiento",
-        "tu cuerpo es el motor para llevarte a la gloria")
+    var images = listOf(R.drawable.onboarding1, R.drawable.onboarding2, R.drawable.onboarding3)
+    var titles = listOf(fragment.getString(R.string.onboarding1),
+        fragment.getString(R.string.onboarding2),
+        fragment.getString(R.string.onboarding3))
 
     override fun createFragment(position: Int): Fragment {
         // Return a NEW fragment instance in createFragment(int)

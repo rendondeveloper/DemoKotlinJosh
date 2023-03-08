@@ -26,7 +26,6 @@ class EventsHorizontalBigAdapter : RecyclerViewAdapterBase<EventData, EventsHori
     override fun onBindViewHolder(holder: ViewWrapper<EventsHorizontalView>, position: Int) {
         val item = items[position]
 
-        println("EventsHorizontalBigAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, isBig = true)
         }
@@ -50,7 +49,6 @@ class EventsHorizontalAdapter : RecyclerViewAdapterBase<EventData, EventsHorizon
     override fun onBindViewHolder(holder: ViewWrapper<EventsHorizontalView>, position: Int) {
         val item = items[position]
 
-        println("EventsHorizontalAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
@@ -118,7 +116,6 @@ class EventsHorizontalView @JvmOverloads constructor(
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .skipMemoryCache(true))
             .into(binding.eventLogo)
-        println("EventsHorizontalView")
 
     }
 }

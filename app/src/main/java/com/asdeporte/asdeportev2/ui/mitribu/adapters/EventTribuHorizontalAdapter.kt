@@ -15,7 +15,6 @@ class EventTribuHorizontalAdapter : RecyclerViewAdapterBase<EventData, EventTrib
     override fun onBindViewHolder(holder: ViewWrapper<EventTribuHorizontalView>, position: Int) {
         val item = items[position]
 
-        println("PostsAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }

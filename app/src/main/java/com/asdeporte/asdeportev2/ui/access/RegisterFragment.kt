@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentAccessBinding
 import com.asdeporte.asdeportev2.databinding.FragmentRegisterBinding
@@ -48,7 +49,15 @@ class RegisterFragment : Fragment() {
         binding.toolbar.title = "Registro"
         binding.toolbar.navigationIcon = ContextCompat.getDrawable(requireContext(), R.drawable.arrow_left)
         binding.toolbar.setNavigationOnClickListener {
-            activity?.supportFragmentManager?.popBackStack()
+            if(currentStep == 1){
+                currentStep = 0
+                binding.titleText.text = getString(R.string.register_create)
+                binding.firstStep.visibility = View.VISIBLE
+                binding.secondStep.visibility = View.GONE
+                binding.nextButton.text = getString(R.string.continue_word)
+            }else{
+                findNavController().popBackStack()
+            }
         }
 
         currentStep = 0
@@ -61,12 +70,12 @@ class RegisterFragment : Fragment() {
                 binding.titleText.text = getString(R.string.register_create)
                 binding.firstStep.visibility = View.VISIBLE
                 binding.secondStep.visibility = View.GONE
-                binding.nextButton.text = "Siguiente"
+                binding.nextButton.text = getString(R.string.continue_word)
             } else if (currentStep == 1) {
                         binding.titleText.text = getString(R.string.register_create_end_it)
                 binding.firstStep.visibility = View.GONE
                 binding.secondStep.visibility = View.VISIBLE
-                binding.nextButton.text = "Finalizar"
+                binding.nextButton.text = getString(R.string.finish)
             }
         }
 
@@ -75,7 +84,6 @@ class RegisterFragment : Fragment() {
         binding.genderTextInput.setAdapter(genderAdapter)
 
         binding.birthTextInput.setOnClickListener {
-            println("birthTextInput")
             initDatePicker()
         }
 

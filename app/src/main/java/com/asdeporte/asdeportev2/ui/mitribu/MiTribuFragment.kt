@@ -27,7 +27,6 @@ class MiTribuFragment : Fragment() {
     private lateinit var viewPager: ViewPager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        println("onCreateView")
         _binding = FragmentMiTribuBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -46,16 +45,13 @@ class MiTribuFragment : Fragment() {
 
         viewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
             override fun onPageSelected(position: Int) {
-                println("viewPager position: $position")
                 changeTabState(position)
             }
 
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-                println("viewPager onPageScrolled: $position")
             }
 
             override fun onPageScrollStateChanged(state: Int) {
-                println("viewPager onPageScrollStateChanged: $state")
             }
         })
 
@@ -146,19 +142,14 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
 
         return if (position == 0) {
-            println("SectionsPagerAdapter TabTribuWallFragment")
             TabTribuWallFragment()
         } else if(position == 1) {
-            println("SectionsPagerAdapter TabTribuTribusFragment")
             TabTribuTribusFragment()
         } else if(position == 2) {
-            println("SectionsPagerAdapter TabTribuFriendsFragment")
             TabTribuFriendsFragment()
         } else if(position == 3) {
-            println("SectionsPagerAdapter TabTribuPrivacyFragment")
             TabTribuPrivacyFragment()
         } else {
-            println("SectionsPagerAdapter TabTribuProfileFragment")
             TabTribuProfileFragment()
         }
         //return TabTribuPrivacyFragment()

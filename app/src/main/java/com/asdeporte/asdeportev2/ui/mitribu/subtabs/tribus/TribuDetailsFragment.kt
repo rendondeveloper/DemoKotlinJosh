@@ -9,6 +9,7 @@ import com.asdeporte.asdeportev2.databinding.FragmentTribuDetailsBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 
 class TribuDetailsFragment : Fragment() {
 
@@ -29,16 +30,16 @@ class TribuDetailsFragment : Fragment() {
         }
 
         binding.infoView.setOnClickListener {
-            findNavController().navigate(R.id.editTribuAction)
+            findNavController().safelyNavigate(R.id.editTribuAction)
         }
         binding.membersView.setOnClickListener {
-            findNavController().navigate(R.id.membersTribuAction)
+            findNavController().safelyNavigate(R.id.membersTribuAction)
         }
         binding.eventsView.setOnClickListener {
-            findNavController().navigate(R.id.eventsTribuAction)
+            findNavController().safelyNavigate(R.id.eventsTribuAction)
         }
         binding.resultsView.setOnClickListener {
-            findNavController().navigate(R.id.resultsTribuAction)
+            findNavController().safelyNavigate(R.id.resultsTribuAction)
         }
 
     }

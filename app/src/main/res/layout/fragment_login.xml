@@ -5,25 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_vertical"
     android:padding="16dp"
     tools:context=".LoginFragment">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="47dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="40dp"
         android:src="@drawable/asd_logo_large"
-        app:tint="@color/orange_as_light"/>
+        app:tint="@color/orange_as_light" />
 
     <TextView
+        style="@style/Kanit_Semi_Bold.Default.24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        style="@style/Kanit_Bold.Default.20"
-        android:textAlignment="center"
-        android:text="@string/glad_to_see_you"/>
+        android:layout_marginBottom="44dp"
+        android:text="@string/glad_to_see_you"
+        android:textAlignment="center" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTextField"
@@ -44,32 +44,32 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordTextField"
+        style="@style/LoginTextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/input_height"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="8dp"
         android:hint="@string/password"
         app:endIconMode="password_toggle"
-        app:hintTextColor="@color/black_dynamic"
-        style="@style/LoginTextInputLayoutStyle">
+        app:hintTextColor="@color/black_dynamic">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordTextInput"
+            style="@style/Kanit_Regular.Default.16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Kanit_Regular.Default.16"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/forgotText"
+        style="@style/Kanit_Bold.Orange.14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="38dp"
         android:text="@string/no_password"
-        style="@style/Kanit_Bold.Orange.14"
-        android:textAlignment="viewEnd"/>
+        android:textAlignment="viewEnd" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginButton"

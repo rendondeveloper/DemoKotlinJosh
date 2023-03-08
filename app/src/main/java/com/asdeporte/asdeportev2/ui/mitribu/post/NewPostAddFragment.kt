@@ -51,7 +51,6 @@ class NewPostAddFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheetLi
 
         fromNewPost = arguments?.getBoolean("fromNewPost") ?: false
         type = arguments?.getSerializable("type") as NewPostType
-        println("NewPostAddFragment type: $type")
 
         initPosts()
     }

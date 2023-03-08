@@ -236,7 +236,6 @@ class MainActivity : AppCompatActivity() {
 
         //val userid = "bb94d8ef-765b-4fcf-8638-77b2a2f72830"//SharedPreferencesAsd.getUserId(requireContext())
         val userid = SharedPreferencesAsd.getUserId(this)
-        println("getUserid: $userid")
 
         val quotesApi = RetrofitHelper.getInstance().create(UserApi::class.java)
 
@@ -245,7 +244,6 @@ class MainActivity : AppCompatActivity() {
                 val response = quotesApi.getUser(null, Locale.getDefault().isO3Language, userid ?: "")
                 withContext(Dispatchers.Main) {
                     if (response.isSuccessful) {
-                        println("isSuccessful: ${response.code()}")
                         response.body()?.data?.userid?.let {
                             onGetUser(UserCall.UserResult(response.body()?.data, null))
                         } ?: run {
@@ -253,18 +251,14 @@ class MainActivity : AppCompatActivity() {
                         }
 
                     } else {
-                        println("Error: ${response.code()}")
                         val error = RetrofitHelper.getMessageException(response.errorBody()?.charStream()?.readText())
-                        println("Error message: ${error.message}")
                         onGetUser(UserCall.UserResult(null, error.message))
                     }
                 }
             } catch (e: HttpException) {
-                println("Exception ${e.message}")
                 onGetUser(UserCall.UserResult(null, e.message()))
             } catch (e: Throwable) {
                 onGetUser(UserCall.UserResult(null, "Ooops: Something else went wrong"))
-                println("Ooops: Something else went wrong")
             }
         }
 
@@ -288,16 +282,13 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.navigation_profile -> {
-                println("navigation_profile")
                 Navigation.findNavController(this, R.id.nav_host_fragment_activity_main).navigate(R.id.profileTribuAction)
-                //findNavController().navigate(R.id.detailsTribuAction)
+                //findNavController().safelyNavigate(R.id.detailsTribuAction)
                 true
             }
             R.id.navigation_notifications -> {
-                println("navigation_profile")
                 Navigation.findNavController(this, R.id.nav_host_fragment_activity_main).navigate(R.id.toNotificationsAction)
-
-                //findNavController().navigate(R.id.detailsTribuAction)
+                //findNavController().safelyNavigate(R.id.detailsTribuAction)
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -313,11 +304,9 @@ class MainActivity : AppCompatActivity() {
     Action bar
      */
     fun showActionBar() {
-        println("showActionBar")
         supportActionBar?.show()
     }
     fun hideActionBar() {
-        println("hideActionBar")
         supportActionBar?.hide()
     }
 
@@ -325,11 +314,9 @@ class MainActivity : AppCompatActivity() {
     Navigation bar
      */
     fun showNavigationBar() {
-        println("showNavigationBar")
         binding.navView.visibility = View.VISIBLE
     }
     fun hideNavigationBar() {
-        println("hideNavigationBar")
         binding.navView.visibility = View.GONE
     }
 
@@ -337,11 +324,9 @@ class MainActivity : AppCompatActivity() {
     Loading
     */
     fun showLoading() {
-        println("showLoading")
         binding.loadingBar.visibility = View.VISIBLE
     }
     fun hideLoading() {
-        println("hideLoading")
         binding.loadingBar.visibility = View.GONE
     }
 
@@ -349,9 +334,6 @@ class MainActivity : AppCompatActivity() {
         override fun handleOnBackPressed() {
             val navigation = Navigation.findNavController(this@MainActivity, R.id.nav_host_fragment_activity_main)
             val current = Navigation.findNavController(this@MainActivity, R.id.nav_host_fragment_activity_main).currentDestination
-            println("current: $current")
-            println("currentDestination: ${R.layout.fragment_notifications}")
-            //println("navigation: ${navigation.findDestination(R.id.navigation_notifications)}")
 
             when(current) {
                 navigation.findDestination(R.id.navigation_home) -> {

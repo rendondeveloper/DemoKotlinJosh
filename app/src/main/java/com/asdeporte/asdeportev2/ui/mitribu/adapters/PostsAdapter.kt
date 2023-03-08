@@ -17,7 +17,6 @@ class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
     override fun onBindViewHolder(holder: ViewWrapper<PostsAdapterView>, position: Int) {
         val item = items[position]
 
-        println("PostsAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, this@PostsAdapter)
         }

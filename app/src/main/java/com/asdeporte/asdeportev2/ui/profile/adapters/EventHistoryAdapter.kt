@@ -29,13 +29,11 @@ class EventHistoryAdapter : RecyclerViewAdapterBase<EventData, EventHistoryView>
     override fun onBindViewHolder(holder: ViewWrapper<EventHistoryView>, position: Int) {
         val item = items[position]
 
-        println("EventHistoryAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
 
         holder.view.setOnClickListener {
-            println("EventHistoryAdapter")
             onItemClick?.invoke(item)
         }
     }

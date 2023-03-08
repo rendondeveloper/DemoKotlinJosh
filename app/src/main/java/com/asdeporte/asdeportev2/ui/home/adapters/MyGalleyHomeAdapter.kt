@@ -23,7 +23,6 @@ class MyGalleyHomeAdapter : RecyclerViewAdapterBase<String, MyGalleyHomeAdapterV
     override fun onBindViewHolder(holder: ViewWrapper<MyGalleyHomeAdapterView>, position: Int) {
         val item = items[position]
 
-        println("EventsHorizontalBigAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
@@ -57,7 +56,6 @@ class MyGalleyHomeAdapterView @JvmOverloads constructor(
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .skipMemoryCache(true))
             .into(binding.galleryItem)
-        println("EventsHorizontalView")
 
     }
 }

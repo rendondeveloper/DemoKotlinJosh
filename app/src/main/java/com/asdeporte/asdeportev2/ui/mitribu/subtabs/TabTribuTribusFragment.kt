@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuTribusBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.mitribu.ChangeDefaultTribuDialog
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.AddTribuMemberAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
@@ -41,7 +42,6 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println("onViewCreated")
 
         binding.homeTribus.visibility = View.VISIBLE
         binding.createTribuView.visibility = View.GONE
@@ -59,7 +59,7 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
 
         binding.defaultTribuView.setData()
         binding.defaultTribuView.setOnClickListener {
-            findNavController().navigate(R.id.mainTribuAction)
+            findNavController().safelyNavigate(R.id.mainTribuAction)
         }
         binding.secondTribuView.setData()
 
@@ -113,7 +113,7 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
 
 
             binding.subFrames.visibility = View.VISIBLE*/
-            findNavController().navigate(R.id.toRequests)
+            findNavController().safelyNavigate(R.id.toRequests)
         }
 
         binding.filterButton.setOnClickListener {
@@ -133,7 +133,7 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
         // More Tribus
         tribusAdapter = SmallTribuJoinAdapter().apply {
             onItemClick = {
-                findNavController().navigate(R.id.toJoinTribu)
+                findNavController().safelyNavigate(R.id.toJoinTribu)
                 //EventBottomSheet.create(this@TabTribuTribusFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
             }
         }
@@ -171,13 +171,11 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
 
             //tts.speak("Hello word", TextToSpeech.QUEUE_FLUSH, null, "")
             /*if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                println("TTS: The Language specified is not supported!")
+
             } else {
                 //buttonSpeak!!.isEnabled = true
             }*/
 
-        } else {
-            println("TTS: Initilization Failed!")
         }
     }
 

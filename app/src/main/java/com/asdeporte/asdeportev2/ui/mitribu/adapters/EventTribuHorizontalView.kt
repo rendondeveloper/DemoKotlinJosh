@@ -45,7 +45,6 @@ class EventTribuHorizontalView @JvmOverloads constructor(
             .apply(
                 requestOptions)
             .into(binding.eventImage)
-        println("PostsAdapterView")
 
         //binding.postOptions.setOnClickListener {
             //showMenu(it, R.menu.menu_post_options)

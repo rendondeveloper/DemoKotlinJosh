@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuWallBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.EventTribuHorizontalAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.post.NewPostPreviewSheet
@@ -51,24 +52,24 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
 
         binding.openMainTribu.setOnClickListener {
             //TribuMainFragment
-            findNavController().navigate(R.id.mainTribuAction)
+            findNavController().safelyNavigate(R.id.mainTribuAction)
         }
 
         binding.publishView.setOnClickListener {
-            //findNavController().navigate(R.id.toNewPost)
+            //findNavController().safelyNavigate(R.id.toNewPost)
         }
         binding.publishView.findViewById<RelativeLayout>(R.id.thinking_view).setOnClickListener {
-            findNavController().navigate(R.id.toNewPost)
+            findNavController().safelyNavigate(R.id.toNewPost)
         }
         binding.publishView.findViewById<LinearLayout>(R.id.activity_view).setOnClickListener {
             val bundle = Bundle()
             bundle.putSerializable("type", NewPostType.ACTIVITY)
-            findNavController().navigate(R.id.toNewPostPreview, bundle)
+            findNavController().safelyNavigate(R.id.toNewPostPreview, bundle)
         }
         binding.publishView.findViewById<LinearLayout>(R.id.medal_view).setOnClickListener {
             val bundle = Bundle()
             bundle.putSerializable("type", NewPostType.MEDAL)
-            findNavController().navigate(R.id.toNewPostPreview, bundle)
+            findNavController().safelyNavigate(R.id.toNewPostPreview, bundle)
         }
         binding.publishView.findViewById<LinearLayout>(R.id.media_view).setOnClickListener {
             NewPostPreviewSheet.create(this@TabTribuWallFragment, NewPostType.MEDIA).show(requireActivity().supportFragmentManager, "EventBottomSheet")

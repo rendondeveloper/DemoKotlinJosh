@@ -63,7 +63,7 @@ class ModalityFragment : Fragment() {
         binding.userOne.bind(testEvent)
         binding.userTwo.bind(testEvent)
         //binding.buttonFirst.setOnClickListener {
-            //findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            //findNavController().safelyNavigate(R.id.action_FirstFragment_to_SecondFragment)
         //}
 
     }

@@ -86,7 +86,6 @@ open class ChallengesFragment : Fragment() {
     private fun getUser() {
 
         val userid = "bb94d8ef-765b-4fcf-8638-77b2a2f72830"//SharedPreferencesAsd.getUserId(requireContext())
-        println("getUserid: $userid")
 
         val quotesApi = RetrofitHelper.getInstance().create(UserApi::class.java)
 
@@ -98,18 +97,14 @@ open class ChallengesFragment : Fragment() {
                     if (response.isSuccessful) {
                         onGetUser(UserCall.UserResult(response.body()?.data, null))
                     } else {
-                        println("Error: ${response.code()}")
                         val error = getMessageException(response.errorBody()?.charStream()?.readText())
-                        println("Error message: ${error.message}")
                         onGetUser(UserCall.UserResult(null, error.message))
                     }
                 }
             } catch (e: HttpException) {
-                println("Exception ${e.message}")
                 onGetUser(UserCall.UserResult(null, e.message()))
             } catch (e: Throwable) {
                 onGetUser(UserCall.UserResult(null, "Ooops: Something else went wrong"))
-                println("Ooops: Something else went wrong")
             }
         }
 

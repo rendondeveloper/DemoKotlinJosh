@@ -40,7 +40,6 @@ class PostsAdapterView @JvmOverloads constructor(
     }
 
     fun bind(item: EventData, listener: PostsAdapterListener) {
-        println("PostsAdapterView")
 
         var requestOptions = RequestOptions()
             //.placeholder(ContextCompat.getDrawable(context, R.drawable.placeholder_img))
@@ -72,7 +71,6 @@ class PostsAdapterView @JvmOverloads constructor(
         }
 
         binding.likeButton.setOnClickListener {
-            println("post liked: $isLiked")
             if (isLiked) {
                 isLiked = false
                 binding.likeIcon.setColorFilter(ContextCompat.getColor(context, R.color.label_secondary), PorterDuff.Mode.SRC_IN)

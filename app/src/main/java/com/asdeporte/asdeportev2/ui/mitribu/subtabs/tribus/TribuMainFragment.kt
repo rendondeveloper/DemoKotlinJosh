@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTribuMainBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.subtabs.AdminTribuSheet
@@ -42,7 +43,7 @@ class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener, F
         }
 
         binding.detailsTribuButton.setOnClickListener {
-            findNavController().navigate(R.id.detailsTribuAction)
+            findNavController().safelyNavigate(R.id.detailsTribuAction)
         }
         binding.tribuAdminButton.setOnClickListener {
             AdminTribuSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "TribuMainFragment")

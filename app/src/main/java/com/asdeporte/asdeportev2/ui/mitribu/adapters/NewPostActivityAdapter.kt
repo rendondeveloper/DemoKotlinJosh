@@ -34,7 +34,6 @@ class NewPostActivityAdapter : RecyclerViewAdapterBase<EventData, NewPostActivit
     override fun onBindViewHolder(holder: ViewWrapper<NewPostActivityView>, position: Int) {
         val item = items[position]
 
-        println("PostsAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, this@NewPostActivityAdapter)
         }

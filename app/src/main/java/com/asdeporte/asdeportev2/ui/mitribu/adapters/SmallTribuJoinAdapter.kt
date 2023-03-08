@@ -16,13 +16,11 @@ class SmallTribuJoinAdapter : RecyclerViewAdapterBase<EventData, TribuSmallView>
     override fun onBindViewHolder(holder: ViewWrapper<TribuSmallView>, position: Int) {
         val item = items[position]
 
-        println("SmallTribuJoinAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
 
         holder.view.setOnClickListener {
-            println("onItemClick")
             onItemClick?.invoke(item)
         }
     }

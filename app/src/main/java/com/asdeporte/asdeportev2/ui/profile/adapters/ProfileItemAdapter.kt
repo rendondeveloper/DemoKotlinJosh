@@ -24,13 +24,11 @@ class ProfileItemHomeAdapter : RecyclerViewAdapterBase<ProfileMenuItem, ProfileI
     override fun onBindViewHolder(holder: ViewWrapper<ProfileItemView>, position: Int) {
         val item = items[position]
 
-        println("ProfileItemHomeAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, true)
         }
 
         holder.view.setOnClickListener {
-            println("ProfileItemHomeAdapter")
             onItemClick?.invoke(item)
         }
     }
@@ -48,13 +46,11 @@ class ProfileItemDetailAdapter : RecyclerViewAdapterBase<ProfileMenuItem, Profil
     override fun onBindViewHolder(holder: ViewWrapper<ProfileItemView>, position: Int) {
         val item = items[position]
 
-        println("ProfileItemHomeAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, false)
         }
 
         holder.view.setOnClickListener {
-            println("ProfileItemDetailAdapter")
             onItemClick?.invoke(item)
         }
     }
@@ -76,7 +72,6 @@ class ProfileItemView @JvmOverloads constructor(
     }
 
     fun bind(item: ProfileMenuItem, isFromHome: Boolean) {
-        println("isFromHome: $isFromHome")
         item.icon?.let {
             binding.icon.setImageDrawable(it)
         } ?: run {
@@ -96,7 +91,6 @@ class ProfileItemView @JvmOverloads constructor(
             binding.subtitle.visibility = View.GONE
         }
 
-        println("EventsHorizontalView")
 
     }
 }

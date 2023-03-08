@@ -14,6 +14,7 @@ import com.asdeporte.asdeportev2.data.api.UserApi
 import com.asdeporte.asdeportev2.data.bodies.LoginRequestDTO
 import com.asdeporte.asdeportev2.data.calls.UserCall
 import com.asdeporte.asdeportev2.databinding.FragmentLoginBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.utils.SharedPreferencesAsd
 //import com.sportmaniac.view_live.view.ActivityMap
@@ -42,18 +43,16 @@ class LoginFragment : Fragment() {
         }
 
         binding.registerButton.setOnClickListener {
-            findNavController().navigate(R.id.action_to_RegisterFragment)
-            //findNavController().navigateUp()
+            findNavController().safelyNavigate(R.id.action_to_RegisterFragment)
         }
 
         binding.forgotText.setOnClickListener {
-            findNavController().navigate(R.id.action_to_ForgotPasswordFragment)
+            findNavController().safelyNavigate(R.id.action_to_ForgotPasswordFragment)
         }
 
     }
 
     private fun nextActivity() {
-        //println("nextActivity")
         //requireActivity().runOnUiThread {
             requireActivity().run {
                 val intent = Intent(this, MainActivity::class.java)
@@ -98,18 +97,14 @@ class LoginFragment : Fragment() {
                     if (response.isSuccessful) {
                         onGetUser(UserCall.UserResult(response.body()?.data, null))
                     } else {
-                        println("Error: ${response.code()}")
                         val error = RetrofitHelper.getMessageException(response.errorBody()?.charStream()?.readText())
-                        println("Error message: ${error.message}")
                         onGetUser(UserCall.UserResult(null, error.message))
                     }
                 }
             } catch (e: HttpException) {
-                println("Exception ${e.message}")
                 onGetUser(UserCall.UserResult(null, e.message()))
             } catch (e: Throwable) {
                 onGetUser(UserCall.UserResult(null, e.localizedMessage))
-                println(e.localizedMessage)
             }
         }
 

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuFriendsBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.FriendRequestAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendDefaultView
@@ -34,23 +35,22 @@ class TabTribuFriendsFragment : Fragment(), FriendDefaultView.FriendDefaultViewL
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println("onViewCreated")
 
         binding.homeTribus.visibility = View.VISIBLE
 
         requestsFragment.listener = this
         binding.pendingRequests.setOnClickListener {
-            findNavController().navigate(R.id.toRequests)
+            findNavController().safelyNavigate(R.id.toRequests)
         }
 
         binding.friendPlaceholder1.setData(this)
         binding.friendPlaceholder1.setOnClickListener {
-            findNavController().navigate(R.id.toUserProfile)
+            findNavController().safelyNavigate(R.id.toUserProfile)
         }
 
         binding.friendPlaceholder2.setData(this)
         binding.friendPlaceholder2.setOnClickListener {
-            findNavController().navigate(R.id.toUserProfile)
+            findNavController().safelyNavigate(R.id.toUserProfile)
         }
 
         setupAdapters()
@@ -66,7 +66,7 @@ class TabTribuFriendsFragment : Fragment(), FriendDefaultView.FriendDefaultViewL
         // More Friends
         otherFriendsAdapter = FriendRequestAdapter().apply {
             onItemClick = {
-                findNavController().navigate(R.id.toUserProfile)
+                findNavController().safelyNavigate(R.id.toUserProfile)
                 //EventBottomSheet.create(this@TabTribuFriendsFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
             }
         }
@@ -84,7 +84,6 @@ class TabTribuFriendsFragment : Fragment(), FriendDefaultView.FriendDefaultViewL
      */
 
     override fun onOptionSelected(friendId: Int, option: FriendMenuOption) {
-        println("onOptionSelected: $option")
     }
 
     override fun onRequestViewBack() {

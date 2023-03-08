@@ -17,7 +17,12 @@
     <string name="forgot_recover_pass">Recuperar mi contraseña</string>
     <string name="forgot_email_send_title">¡Revisa tu correo!</string>
     <string name="forgot_email_send_desc">Te hemos enviado un correo con las instrucciones para recuperar tu contraseña. Si el correo que te enviamos no lo puedes ver, revisa tu Spam.</string>
-    <string name="glad_to_see_you">Nos alegra verte de nuevo.</string>
+    <string name="glad_to_see_you">¡Nos alegra verte de nuevo!</string>
+
+    <!-- Register -->
+    <string name="finish">Finalizar</string>
+    <string name="enter_email">Escribe tu correo electrónico</string>
+    <string name="enter_password">Escribe una contraseña</string>
     <string name="register_you">Regístrate</string>
     <string name="register_create">Crea tu cuenta</string>
     <string name="register_create_end_it">Finaliza tu registro</string>
@@ -27,8 +32,10 @@
     <string name="birthdate">Fecha de nacimiento</string>
     <string name="password_confirm">Confirma tu contraseña</string>
     <string name="register_you_ex">¡Regístrate!</string>
-    <string name="accept_terms">Acepto los <u><b>Términos y Condiciones</b></u></string>
-    <string name="accept_politics">He leído y entendido la <u><b>Politica de privacidad</b></u></string>
+    <string name="accept_terms">Acepto los</string>
+    <string name="accept_conditions">Términos y Condiciones</string>
+    <string name="accept_politics">He leído y entendido la</string>
+    <string name="politics">Política de privacidad</string>
     <string name="accept_politics_codere">He leído y acepto todos los documentos antes mencionados</string>
     <string name="accept_politics_codere_warning">Debes aceptar los términos y condiciones</string>
     <string name="have_account">¿Ya tienes una cuenta?</string>
@@ -265,6 +272,7 @@
     <string name="profile_height">Altura</string>
     <string name="profile_weight">Peso</string>
     <string name="profile_gender">Género</string>
+    <string name="profile_sex">Sexo</string>
     <string name="profile_female">Femenino</string>
     <string name="profile_male">Masculino</string>
     <string name="profile_saved_success">Datos guardados correctamente</string>
@@ -1085,5 +1093,8 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="onboarding1">Inscríbete a nuestros eventos de manera fácil y rápida</string>
+    <string name="onboarding2">Accede a contenido exclusivo</string>
+    <string name="onboarding3">Da seguimiento a tu desempeño</string>
 
 </resources>

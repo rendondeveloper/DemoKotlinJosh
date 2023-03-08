@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentProfileTabBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.SuscriptionActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.ProfileItemHomeAdapter
 
@@ -64,7 +65,7 @@ class ProfileTabFragment : Fragment() {
         }
 
         binding.profileView.setOnClickListener {
-            findNavController().navigate(R.id.detailProfileAction)
+            findNavController().safelyNavigate(R.id.detailProfileAction)
         }
 
         setupAdapter()
@@ -76,10 +77,10 @@ class ProfileTabFragment : Fragment() {
             onItemClick = {
                 //EventBottomSheet.create(this@ProfileTabFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
                 when (it.type) {
-                    //MoreItem.HISTORIC -> { findNavController().navigate(R.id.to_personal_history) }
-                    //MoreItem.PERSONALDATA -> { findNavController().navigate(R.id.to_personal_data) }
+                    //MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.to_personal_history) }
+                    //MoreItem.PERSONALDATA -> { findNavController().safelyNavigate(R.id.to_personal_data) }
                     else -> {
-                        println("do nothing")
+                        //TODO("Not yet implemented")
                     }
                 }
             }

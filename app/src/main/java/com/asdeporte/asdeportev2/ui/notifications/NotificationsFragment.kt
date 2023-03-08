@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentNotificationsBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.notifications.adapter.*
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
@@ -60,7 +61,6 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
 
         binding.tabView.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                println("onTabSelected ${tab?.position}")
                 if (tab?.position == 0) {
                     binding.updatesScroll.visibility = View.VISIBLE
                     binding.messagesScroll.visibility = View.GONE
@@ -123,7 +123,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
                 val holder = UpdateUserView(requireContext())
                 holder.bind(item)
                 holder.setOnClickListener {
-                    findNavController().navigate(R.id.toChat)
+                    findNavController().safelyNavigate(R.id.toChat)
                 }
                 binding.messagesLinear.addView(holder)
             }
@@ -169,11 +169,11 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
     }
 
     override fun onSearch() {
-        println("onSearch")
+        //TODO("Not yet implemented")
     }
 
     override fun onFilters() {
-        println("onFilters")
+        //TODO("Not yet implemented")
     }
 
     override fun onDestroyView() {

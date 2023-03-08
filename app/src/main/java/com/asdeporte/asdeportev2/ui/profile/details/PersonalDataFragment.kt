@@ -33,7 +33,7 @@ class PersonalDataFragment : Fragment() {
         }
 
         /*requireActivity().onBackPressedDispatcher.addCallback {
-            println("onBackPressedDispatcher")
+
         }*/
 
     }

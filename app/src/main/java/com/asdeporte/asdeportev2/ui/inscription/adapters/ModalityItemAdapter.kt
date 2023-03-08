@@ -23,7 +23,6 @@ class ModalityItemAdapter : RecyclerViewAdapterBase<String, ModalityItemView>(),
     override fun onBindViewHolder(holder: ViewWrapper<ModalityItemView>, position: Int) {
         val item = items[position]
 
-        println("EventsHorizontalBigAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, this@ModalityItemAdapter)
         }
@@ -37,7 +36,6 @@ class ModalityItemAdapter : RecyclerViewAdapterBase<String, ModalityItemView>(),
     }
 
     override fun onItemSelected(item: String) {
-        println("onItemSelected: $item")
         onItemClick?.invoke(item)
     }
 }
@@ -66,7 +64,6 @@ class ModalityItemView @JvmOverloads constructor(
         binding.itemButton.text = item
 
         binding.itemButton.setOnClickListener {
-            println("itemButton click: $isActive")
             this.listener.onItemSelected(item)
             if (isActive) {
                 isActive = false
@@ -78,7 +75,6 @@ class ModalityItemView @JvmOverloads constructor(
                 binding.itemButton.setTextColor(ContextCompat.getColor(context, R.color.white_dynamic))
             }
         }
-        //println("ModalityItemView")
 
     }
 }

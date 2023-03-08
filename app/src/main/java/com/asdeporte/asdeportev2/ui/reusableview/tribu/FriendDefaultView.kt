@@ -64,7 +64,6 @@ class FriendDefaultView @JvmOverloads constructor(
         }
         popup.setOnMenuItemClickListener {
             // Respond to menu item click.
-            println("menu click: ${it.itemId}")
             if (it.title == "Enviar mensaje") {
                 listener.onOptionSelected(0, FriendMenuOption.MESSAGE)
             } else if (it.title == "Eliminar") {

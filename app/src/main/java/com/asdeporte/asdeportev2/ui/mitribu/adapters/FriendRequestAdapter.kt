@@ -16,13 +16,11 @@ class FriendRequestAdapter : RecyclerViewAdapterBase<EventData, FriendRequestVie
     override fun onBindViewHolder(holder: ViewWrapper<FriendRequestView>, position: Int) {
         val item = items[position]
 
-        println("FriendRequestAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
 
         holder.view.setOnClickListener {
-            println("onItemClick")
             onItemClick?.invoke(item)
         }
     }

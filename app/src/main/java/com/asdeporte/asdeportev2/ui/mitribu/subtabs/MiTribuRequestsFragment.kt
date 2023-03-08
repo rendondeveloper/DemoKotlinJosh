@@ -14,6 +14,7 @@ import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentMiTribuRequestsBinding
 import com.asdeporte.asdeportev2.databinding.FragmentTribuMainBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
@@ -87,7 +88,7 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
         // Requests send
         requestAdapter = TribuUserRequestAdapter().apply {
             onItemClick = {
-                findNavController().navigate(R.id.toUserProfile)
+                findNavController().safelyNavigate(R.id.toUserProfile)
             }
         }
 
@@ -110,8 +111,7 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
         val tribus = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
         tribusAdapter = SmallTribuJoinAdapter().apply {
             onItemClick = {
-                println("toJoinTribu")
-                findNavController().navigate(R.id.toJoinTribu)
+                findNavController().safelyNavigate(R.id.toJoinTribu)
             }
         }
 

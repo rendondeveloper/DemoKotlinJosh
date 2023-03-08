@@ -124,7 +124,6 @@ class TabTribuPrivacyFragment: Fragment() {
         }
         popup.setOnMenuItemClickListener {
             // Respond to menu item click.
-            println("menu click: ${it.title}")
             v.text = it.title
             return@setOnMenuItemClickListener true
         }

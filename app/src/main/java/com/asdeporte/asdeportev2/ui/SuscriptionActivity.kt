@@ -107,7 +107,6 @@ class SuscriptionAdapter : RecyclerViewAdapterBase<EventData, SuscriptionItemVie
     override fun onBindViewHolder(holder: ViewWrapper<SuscriptionItemView>, position: Int) {
         val item = items[position]
 
-        println("SuscriptionAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
@@ -132,7 +131,6 @@ class SuscriptionItemView constructor(
 
     fun bind(item: EventData) {
 
-        println("SuscriptionItemView")
 
     }
 }

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentPersonalWalletBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.CreditCardAdapter
 import com.asdeporte.asdeportev2.ui.profile.details.wallet.WalletNewCardSheet
@@ -41,14 +42,14 @@ class PersonalWalletFragment : Fragment(), WalletNewCardSheet.NewCardSheetListen
             WalletNewCardSheet.create(this).show(requireActivity().supportFragmentManager, "PersonalWalletFragment")
         }
         binding.addBalance.setOnClickListener {
-            findNavController().navigate(R.id.toAddBalance)
+            findNavController().safelyNavigate(R.id.toAddBalance)
         }
     }
 
     private fun setupCards() {
         creditCardAdapter = CreditCardAdapter().apply {
             onItemClick = {
-                println("do nothing")
+                //TODO("Not yet implemented")
             }
         }
 

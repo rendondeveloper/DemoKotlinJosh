@@ -84,7 +84,6 @@ class InscriptionActivity : AppCompatActivity(), StepperNavListener {
         setupWithNavController(findNavControllerFromFragmentContainer(R.id.frame_stepper))
     }
     override fun onStepChanged(step: Int) {
-        println("onStepChanged: $step")
         //showToast("Step changed to: $step")
 
         if (step == 3) {
@@ -94,7 +93,7 @@ class InscriptionActivity : AppCompatActivity(), StepperNavListener {
         }
     }
     override fun onCompleted() {
-        println("Stepper completed")
+        //TODO("Not yet implemented")
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -104,8 +103,6 @@ class InscriptionActivity : AppCompatActivity(), StepperNavListener {
     }
 
     /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        println("onOptionsItemSelected: ${item.title}")
-        println("onOptionsItemSelected: ${item.itemId}")
         return when (item.itemId) {
             R.id.step_modality -> {
                 false

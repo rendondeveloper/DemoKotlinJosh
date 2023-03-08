@@ -16,13 +16,11 @@ class TribuEventsAdapter : RecyclerViewAdapterBase<EventData, TribuEventstView>(
     override fun onBindViewHolder(holder: ViewWrapper<TribuEventstView>, position: Int) {
         val item = items[position]
 
-        println("TribuEventsAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
 
         holder.view.setOnClickListener {
-            println("onItemClick")
             onItemClick?.invoke(item)
         }
     }

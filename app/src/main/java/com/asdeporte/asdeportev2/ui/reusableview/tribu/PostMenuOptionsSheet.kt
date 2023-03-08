@@ -29,15 +29,11 @@ class PostMenuOptionsSheet : BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = PostMenuOptionsSheetBinding.inflate(inflater)
-        println("PostMenuOptionsSheet event: $event")
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        println("PostMenuOptionsSheet event: $event")
-
 
 
     }

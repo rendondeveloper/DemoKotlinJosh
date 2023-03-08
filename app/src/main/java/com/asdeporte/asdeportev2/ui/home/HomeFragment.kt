@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentHomeBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalAdapter
 import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalBigAdapter
 import com.asdeporte.asdeportev2.ui.inscription.InscriptionActivity
@@ -97,7 +98,7 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
 
   override fun onOpenEvent(event: String) {
     // open event
-    findNavController().navigate(R.id.toEventDetailAction)
+    findNavController().safelyNavigate(R.id.toEventDetailAction)
   }
 
   @OptIn(ExperimentalCoroutinesApi::class)
@@ -106,11 +107,9 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
   }
 
   override fun onSearch() {
-    println("onSearch")
   }
 
   override fun onFilters() {
-    println("onFilters")
   }
 
   override fun onDestroyView() {
