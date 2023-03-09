@@ -37,9 +37,9 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loginButton.setOnClickListener {
-            (activity as LoginActivity).showLoading()
-            makeLogin()
-            //nextActivity()
+            //(activity as LoginActivity).showLoading()
+            //makeLogin()
+            nextActivity()
         }
 
         binding.registerButton.setOnClickListener {

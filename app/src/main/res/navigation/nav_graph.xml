@@ -47,6 +47,9 @@
             app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
             />
+        <action
+            android:id="@+id/action_LoginFragment_to_mobile_navigation"
+            app:destination="@id/mobile_navigation" />
     </fragment>
 
     <fragment
@@ -61,6 +64,10 @@
         android:name="com.asdeporte.asdeportev2.ui.access.RegisterFragment"
         tools:layout="@layout/fragment_register">
 
+        <action
+            android:id="@+id/action_RegisterFragment_to_mobile_navigation"
+            app:destination="@id/mobile_navigation" />
     </fragment>
+    <include app:graph="@navigation/mobile_navigation" />
 
 </navigation>

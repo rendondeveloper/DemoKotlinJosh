@@ -1,6 +1,7 @@
 package com.asdeporte.asdeportev2.ui.access
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,6 +13,8 @@ import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentAccessBinding
 import com.asdeporte.asdeportev2.databinding.FragmentRegisterBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
+import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.utils.getStringDate
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.DateValidatorPointBackward
@@ -66,16 +69,18 @@ class RegisterFragment : Fragment() {
 
         binding.nextButton.setOnClickListener {
             currentStep += 1
-            if (currentStep == 0) {
+            if(currentStep == 0) {
                 binding.titleText.text = getString(R.string.register_create)
                 binding.firstStep.visibility = View.VISIBLE
                 binding.secondStep.visibility = View.GONE
                 binding.nextButton.text = getString(R.string.continue_word)
             } else if (currentStep == 1) {
-                        binding.titleText.text = getString(R.string.register_create_end_it)
+                binding.titleText.text = getString(R.string.register_create_end_it)
                 binding.firstStep.visibility = View.GONE
                 binding.secondStep.visibility = View.VISIBLE
                 binding.nextButton.text = getString(R.string.finish)
+            }else if(currentStep == 2){
+                nextActivity()
             }
         }
 
@@ -118,6 +123,15 @@ class RegisterFragment : Fragment() {
         }
     }
 
+    private fun nextActivity() {
+        //requireActivity().runOnUiThread {
+        requireActivity().run {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        //}
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
