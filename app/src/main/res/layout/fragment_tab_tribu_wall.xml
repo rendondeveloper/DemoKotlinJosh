@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mitribu.MiTribuFragment" >
+    tools:context=".ui.mitribu.MiTribuFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,80 +25,81 @@
                 android:layout_height="54dp"
                 android:background="@color/dark_blue"
                 android:clickable="true">
-                
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/main_tribu_image"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/avatarman"
                     android:layout_margin="12dp"
+                    android:src="@drawable/avatarman"
+                    app:civ_border_color="@color/gray_400"
                     app:civ_border_width="1dp"
-                    app:civ_circle_background_color="@color/white_dynamic"
-                    app:civ_border_color="@color/gray_400"/>
+                    app:civ_circle_background_color="@color/white_dynamic" />
 
                 <TextView
                     android:id="@+id/main_placeholder"
+                    style="@style/Kanit_Regular.Default.12"
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
-                    android:text="Tribu principal"
-                    style="@style/Kanit_Regular.Default.12"
-                    android:textColor="@color/white"
+                    android:layout_alignParentTop="true"
                     android:layout_marginTop="12dp"
                     android:layout_toEndOf="@+id/main_tribu_image"
-                    android:layout_alignParentTop="true"/>
+                    android:text="Tribu principal"
+                    android:textColor="@color/white" />
 
                 <TextView
+                    style="@style/Kanit_Regular.Default.12"
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
-                    android:text="Corredores Coyoacán"
-                    style="@style/Kanit_Regular.Default.12"
-                    android:textColor="@color/white"
+                    android:layout_below="@+id/main_placeholder"
                     android:layout_toEndOf="@+id/main_tribu_image"
-                    android:layout_below="@+id/main_placeholder"/>
+                    android:text="Corredores Coyoacán"
+                    android:textColor="@color/white" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginBottom="15dp"
                     android:gravity="center_vertical"
                     android:src="@drawable/arrow_right"
-                    app:tint="@color/white"
-                    android:layout_alignParentEnd="true"/>
+                    app:tint="@color/white" />
 
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/secondary_background"/>
+                android:layout_height="@dimen/dimen_16dp"
+                android:background="@color/secondary_background" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.tribu.PublishHomeView
                 android:id="@+id/publish_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/secondary_background"
                 android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:background="@color/secondary_background">
+                android:paddingBottom="16dp">
+
                 <TextView
                     android:id="@+id/filter_posts"
+                    style="@style/Kanit_Regular.Default.16"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:text="Ver publicaciones"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/filter_posts_background"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:gravity="center_vertical"
-                    style="@style/Kanit_Regular.Default.16"
-                    android:clickable="true"
-                    android:background="@drawable/filter_posts_background"
-                    android:drawablePadding="10dp"
-                    android:layout_marginEnd="10dp"
+                    android:text="Ver publicaciones"
                     app:drawableEndCompat="@drawable/filter" />
             </RelativeLayout>
 
@@ -107,20 +107,17 @@
                 android:id="@+id/events"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:overScrollMode="never"
                 android:clipToPadding="false"
+                android:overScrollMode="never"
                 android:paddingStart="10dp"
+                android:visibility="gone"
                 tools:ignore="RtlSymmetry" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:background="@color/secondary_background"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/posts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:overScrollMode="never"/>
+                android:overScrollMode="never" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:paddingTop="5dp"
-        android:paddingBottom="0dp">
+        android:paddingBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,51 +25,51 @@
                 android:id="@+id/profile_image"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/avatarman"
                 android:layout_alignParentStart="true"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/white"/>
+                android:src="@drawable/avatarman"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_toEndOf="@+id/profile_image"
-                android:layout_alignParentTop="true"
                 style="@style/Kanit_Regular.Default.16"
-                android:gravity="center_vertical"
-                android:text="Felipe Rodriguez"/>
-
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
                 android:layout_marginStart="10dp"
-                android:layout_alignParentBottom="true"
                 android:layout_toEndOf="@+id/profile_image"
-                style="@style/Kanit_Regular.Secondary.12"
                 android:gravity="center_vertical"
-                android:text="Hace un momento"/>
+                android:text="Felipe Rodriguez" />
+
+            <TextView
+                style="@style/Kanit_Regular.Secondary.12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/profile_image"
+                android:gravity="center_vertical"
+                android:text="Hace un momento" />
 
             <ImageButton
                 android:id="@+id/post_options"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
                 android:src="@drawable/more_horiz"
-                app:tint="@color/black_dynamic"
-                android:background="@android:color/transparent"/>
+                app:tint="@color/black_dynamic" />
 
         </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/label_primary"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="10dp"
-            android:text="Lorem ipsum dolor sit amet consectetur. Imperdiet sed urna proin vitae donec dictum in nisi leo."/>
+            android:text="Lorem ipsum dolor sit amet consectetur. Imperdiet sed urna proin vitae donec dictum in nisi leo."
+            android:textColor="@color/label_primary" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -77,42 +77,45 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/post_activity_background">
+
             <ImageView
                 android:id="@+id/postImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:background="@drawable/post_activity_background"
                 android:scaleType="center"
-                android:src="@drawable/placeholder_img"/>
+                android:src="@drawable/placeholder_img" />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
             android:weightSum="3">
 
             <TextView
+                style="@style/Kanit_Regular.Secondary.12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.9"
-                style="@style/Kanit_Regular.Secondary.12"
-                android:text="28 Me gusta"/>
+                android:text="28 Me gusta" />
+
             <TextView
+                style="@style/Kanit_Regular.Secondary.12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.9"
-                style="@style/Kanit_Regular.Secondary.12"
-                android:text="0 comentarios"/>
+                android:text="0 comentarios" />
+
             <TextView
+                style="@style/Kanit_Regular.Secondary.12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.2"
-                style="@style/Kanit_Regular.Secondary.12"
-                android:text="2 veces compartido"/>
+                android:text="2 veces compartido" />
 
         </LinearLayout>
 
@@ -121,14 +124,14 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_margin="10dp"
-            android:background="@color/gray_400"/>
+            android:background="@color/gray_400" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginBottom="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -137,25 +140,28 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"
+                android:clickable="true"
                 android:gravity="start"
+                android:orientation="horizontal"
                 android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:clickable="true">
+                android:paddingBottom="3dp">
+
                 <ImageView
                     android:id="@+id/like_icon"
                     android:layout_width="20dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/post_like"
-                    app:tint="@color/label_secondary"/>
+                    app:tint="@color/label_secondary" />
+
                 <TextView
                     android:id="@+id/like_text"
+                    style="@style/Kanit_Regular.Secondary.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
                     android:layout_marginEnd="10dp"
-                    style="@style/Kanit_Regular.Secondary.14"
-                    android:text="Me gusta"/>
+                    android:text="@string/like" />
             </LinearLayout>
 
             <LinearLayout
@@ -163,23 +169,26 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"
+                android:clickable="true"
                 android:gravity="end"
+                android:orientation="horizontal"
                 android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:clickable="true">
+                android:paddingBottom="3dp">
+
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/post_share"
-                    app:tint="@color/label_secondary"/>
+                    android:src="@drawable/ic_share"
+                    app:tint="@color/label_secondary" />
+
                 <TextView
+                    style="@style/Kanit_Regular.Secondary.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginEnd="10dp"
-                    style="@style/Kanit_Regular.Secondary.14"
-                    android:text="Compartir"/>
+                    android:text="Compartir" />
             </LinearLayout>
 
         </LinearLayout>
@@ -187,8 +196,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="26dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -197,24 +206,24 @@
                 android:layout_height="match_parent"
                 android:foregroundGravity="center_vertical"
                 android:src="@drawable/avatarman"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/white"/>
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
 
             <RelativeLayout
                 android:id="@+id/thinkingView"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/border_dark_white"
                 android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/profile_secondary_image">
+                android:layout_toEndOf="@id/profile_secondary_image"
+                android:background="@drawable/border_dark_white">
 
                 <TextView
+                    style="@style/Kanit_Regular.Secondary.16"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
-                    style="@style/Kanit_Regular.Secondary.16"
                     android:gravity="center_vertical"
-                    android:text="Escribe tu comentario"/>
+                    android:text="Escribe tu comentario" />
 
             </RelativeLayout>
 
@@ -223,7 +232,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            android:background="@color/secondary_background"/>
+            android:background="@color/secondary_background" />
 
     </LinearLayout>
 

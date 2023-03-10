@@ -1,9 +1,11 @@
 package com.asdeporte.asdeportev2.ui.mitribu.adapters
 
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
+
 
 class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
     PostsAdapterView.PostsAdapterListener {
@@ -18,7 +20,7 @@ class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
         val item = items[position]
 
         holder.view.apply {
-            bind(item, this@PostsAdapter)
+            bind(item, this@PostsAdapter, (context as AppCompatActivity).supportFragmentManager)
         }
 
         holder.view.setOnClickListener {

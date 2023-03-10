@@ -1103,6 +1103,14 @@
     <string name="position">Posición:</string>
     <string name="time">Tiempo</string>
     <string name="my_tribe">Mi Tribu:</string>
+    <string name="like">Me gusta</string>
+    <string name="you_like">Te gusta</string>
+    <string name="share_instructions">Di algo sobre esta publicación</string>
+    <string name="share">Compartir</string>
+    <string name="share_message">Compartir en un mensaje</string>
+    <string name="share_in_group">Compartir en un grupo</string>
+    <string name="share_in_trabe">Compartir en una tribu</string>
+    <string name="more_options">Más opciones</string>
 
 
 </resources>
