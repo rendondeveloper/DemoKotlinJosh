@@ -1,35 +1,25 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/white_dynamic"
     app:cardCornerRadius="0dp"
-    app:cardElevation="0dp"
-    app:cardBackgroundColor="@color/white_dynamic">
+    app:cardElevation="0dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Kanit_Bold_Italic.Default.16"
-            android:textAllCaps="true"
-            android:text="mi resultado más reciente"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"/>
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
@@ -37,109 +27,121 @@
                 android:layout_height="56dp"
                 android:foregroundGravity="center_vertical"
                 android:src="@drawable/avatarman"
+                app:civ_border_color="@color/white"
                 app:civ_border_width="2dp"
-                app:civ_border_color="@color/white"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvName"
+                app:srcCompat="@drawable/arrow_down_line" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:text="Ernesto Torres"
+                app:layout_constraintEnd_toStartOf="@+id/ivRow"
+                app:layout_constraintStart_toEndOf="@+id/profile_image"
+                app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/Kanit_Regular.Secondary.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_tribe"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvTribeName"
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:text="Corredores Coyoacán"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="@+id/tvName"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/clInfo"
+            tools:layout_editor_absoluteX="@dimen/dimen_16dp">
+
+            <TextView
+                style="@style/Kanit_Bold_Italic.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:text="mi personal best"
+                android:textAllCaps="true" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                style="@style/Kanit_Bold_Italic.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="mi historial"
+                android:textAllCaps="true" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                style="@style/Kanit_Bold_Italic.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="mis próximas metas"
+                android:textAllCaps="true" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.EventProgressGoal
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="56dp"
-                android:orientation="vertical">
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Kanit_Regular.Default.16"
-                    android:text="Ernesto Torres"/>
-                <LinearLayout
+                    style="@style/Kanit_Medium.Orange.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/Kanit_Regular.Secondary.12"
-                        android:text="Mi Tribu: "/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/Kanit_Regular.Default.12"
-                        android:text="Corredores Coyoacán"/>
-                </LinearLayout>
+                    android:layout_gravity="end"
+                    android:background="@android:color/transparent"
+                    android:gravity="end"
+                    android:text="Ver detalles"
+                    android:textAllCaps="false" />
 
             </LinearLayout>
-
-            <ImageButton
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:layout_marginStart="-56dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/arrow_down"/>
-
         </LinearLayout>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            style="@style/Kanit_Bold_Italic.Default.14"
-            android:text="mi personal best"
-            android:textAllCaps="true"/>
-
-        <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            style="@style/Kanit_Bold_Italic.Default.14"
-            android:text="mi historial"
-            android:textAllCaps="true"/>
-
-        <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            style="@style/Kanit_Bold_Italic.Default.14"
-            android:text="mis próximas metas"
-            android:textAllCaps="true"/>
-
-        <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ver detalles"
-                android:layout_gravity="end"
-                android:gravity="end"
-                style="@style/Kanit_Medium.Orange.14"
-                android:textAllCaps="false"
-                android:background="@android:color/transparent"/>
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

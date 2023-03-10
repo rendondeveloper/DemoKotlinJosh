@@ -24,6 +24,7 @@
         android:layout_height="20dp"
         android:scaleType="centerCrop"
         android:src="@drawable/arrow_right"
+        android:visibility="gone"
         android:background="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

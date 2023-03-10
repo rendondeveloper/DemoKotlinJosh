@@ -1097,4 +1097,12 @@
     <string name="onboarding2">Accede a contenido exclusivo</string>
     <string name="onboarding3">Da seguimiento a tu desempeño</string>
 
+    <string name="title_select_country">Selecciona un país</string>
+    <string name="title_select_state">Selecciona un estado</string>
+    <string name="my_last_goal">mi resultado más reciente</string>
+    <string name="position">Posición:</string>
+    <string name="time">Tiempo</string>
+    <string name="my_tribe">Mi Tribu:</string>
+
+
 </resources>

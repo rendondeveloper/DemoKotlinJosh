@@ -52,7 +52,7 @@
             android:layout_height="@dimen/input_height"
             android:layout_marginBottom="10dp"
             android:hint="Tipo de deporte"
-            app:endIconDrawable="@drawable/arrow_down"
+            app:endIconDrawable="@drawable/arrow_down_sec"
             app:endIconTint="@color/black_dynamic"
             app:hintTextColor="@color/black_dynamic"
             style="@style/MenuTextInputLayoutStyle">
