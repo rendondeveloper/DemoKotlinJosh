@@ -64,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16dp"
             android:layout_marginEnd="16dp"
+            android:textAllCaps="true"
             android:text="Triatlon Astri la Paz"
             app:layout_constraintEnd_toStartOf="@+id/imageView2"
             app:layout_constraintStart_toEndOf="@+id/event_image"

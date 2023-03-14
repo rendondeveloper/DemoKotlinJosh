@@ -39,6 +39,9 @@ class ForgotPasswordFragment : Fragment() {
         binding.toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
+        binding.initSesionButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
         //toolbarTitle.text = getString(R.string.profile_gallery)
 
