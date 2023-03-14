@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mitribu.post.NewPostPreviewFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
 
         <RelativeLayout
+            android:id="@+id/top_view"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp">
 
             <ImageView
                 android:id="@+id/event_image"
@@ -30,20 +29,20 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_toEndOf="@+id/event_image"
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/Kanit_Semi_Bold.Default.16"
+                    style="@style/Kanit_Medium.Default.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:text="RETO" />
 
                 <TextView
-                    style="@style/Kanit_Semi_Bold.Default.14"
+                    style="@style/Kanit_Medium.Default.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -59,7 +58,6 @@
 
 
         </RelativeLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +78,7 @@
                     style="@style/Kanit_Semi_Bold.Secondary.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Posición"
+                    android:text="@string/position_p"
                     android:textAlignment="center" />
 
                 <TextView
@@ -107,7 +105,7 @@
                     style="@style/Kanit_Semi_Bold.Secondary.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tiempo"
+                    android:text="@string/time"
                     android:textAlignment="center" />
 
                 <TextView
@@ -120,48 +118,73 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchTextField"
+            style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_toStartOf="@+id/button_send"
+            android:hint="Escribe un comentario"
+            app:endIconMode="custom"
+            app:endIconTint="@color/black_dynamic"
+            app:hintTextColor="@color/black_dynamic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_view">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchTextInput"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
             android:orientation="horizontal"
-            android:weightSum="2">
+            app:layout_constraintTop_toBottomOf="@+id/searchTextField">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/preview_button"
-                style="@style/Kanit_Semi_Bold.Orange.14"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/cancel_button"
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
+                android:background="@drawable/secondary_button"
+                android:paddingHorizontal="@dimen/dimen_32dp"
+                android:text="@string/cancel"
+                android:textAlignment="center"
                 android:textAllCaps="false"
-                android:background="@android:color/transparent"
-                android:text="@string/preview"
-                android:textAlignment="center" />
+                android:textColor="@color/black_dynamic"
+                app:backgroundTint="@color/black_dynamic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/post_button"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/post_button"
                 style="@style/Kanit_Regular.Default.16"
-                android:layout_width="0dp"
-                android:layout_marginEnd="@dimen/dimen_32dp"
-                android:layout_marginStart="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/dimen_32dp"
                 android:text="@string/publish"
-                android:textAllCaps="false"
                 android:textAlignment="center"
-                android:textColor="@color/white" />
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/gray_400" />
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

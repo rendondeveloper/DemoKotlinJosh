@@ -149,7 +149,7 @@
     <string name="continue_word">Continuar</string>
     <string name="file_saved">Archivo guardado</string>
     <string name="file_not_saved">No se pudo guardar el archivo</string>
-    <string name="preview"><u>Previsualizar</u></string>
+    <string name="preview">Previsualizar</string>
 
     <string name="rate_app_title">Calificar</string>
     <string name="rate_app_subtitle">Si te esta gustando AsDeporte, ¿te gustaría calificarnos? No te tomará más de un minuto.</string>
@@ -1111,6 +1111,8 @@
     <string name="share_in_group">Compartir en un grupo</string>
     <string name="share_in_trabe">Compartir en una tribu</string>
     <string name="more_options">Más opciones</string>
+    <string name="publish">Publicar</string>
+    <string name="position_p">Posición</string>
 
 
 </resources>
