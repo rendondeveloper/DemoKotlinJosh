@@ -31,23 +31,37 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/partner_border"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/partner_epura" />
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <ImageView
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/partner_epura" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/partner_border"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/partner_aeromexico" />
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/partner_aeromexico" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -57,23 +71,37 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/partner_border"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/partner_santander" />
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <ImageView
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/partner_santander" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/partner_border"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/partner_gatorade" />
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/partner_gatorade" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -83,23 +111,37 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/partner_border"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/partner_gmc" />
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <ImageView
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/partner_gmc" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/partner_border"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/partner_innova" />
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/partner_innova" />
+                </LinearLayout>
 
             </LinearLayout>
 

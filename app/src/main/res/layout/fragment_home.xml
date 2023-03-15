@@ -107,6 +107,66 @@
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
 
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
+                    android:id="@+id/recomendedForMeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recomendedForMeEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
+                    android:id="@+id/topTenTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/topTenEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
+                    android:id="@+id/experiencesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/experiencesEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
+                    android:id="@+id/weekendTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weekendEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
             </LinearLayout>
 
             <com.asdeporte.asdeportev2.ui.reusableview.PartnersGridView

@@ -62,33 +62,64 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
   private fun setupAdapters() {
     val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
 
-    // Top events
+    // Estelares
     binding.topEventsTitle.setTitle("Estelares")
     eventsHorizontalBigAdapter = EventsHorizontalBigAdapter().apply {
       onItemClick = {
         EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
       }
     }
-
     binding.topEvents.adapter = eventsHorizontalBigAdapter
     binding.topEvents.setHasFixedSize(true)
     binding.topEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-
-
     eventsHorizontalBigAdapter.setItems(items)
 
-    // More events
+    // Eventos cerca de mi
     binding.moreEventsTitle.setTitle("Eventos cerca de mi")
     eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
       onItemClick = {
         EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
       }
     }
-
     binding.moreEvents.adapter = eventsHorizontalAdapter
     binding.moreEvents.setHasFixedSize(true)
     binding.moreEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+    eventsHorizontalAdapter.setItems(items)
 
+    // Recomendados para mi
+    binding.recomendedForMeTitle.setTitle("Recomendados para mi")
+    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
+      onItemClick = {
+        EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+      }
+    }
+    binding.recomendedForMeEvents.adapter = eventsHorizontalAdapter
+    binding.recomendedForMeEvents.setHasFixedSize(true)
+    binding.recomendedForMeEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+    eventsHorizontalAdapter.setItems(items)
+
+    // Los 10 + populares
+    binding.topTenTitle.setTitle("Los 10 + populares")
+    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
+      onItemClick = {
+        EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+      }
+    }
+    binding.topTenEvents.adapter = eventsHorizontalAdapter
+    binding.topTenEvents.setHasFixedSize(true)
+    binding.topTenEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+    eventsHorizontalAdapter.setItems(items)
+
+    // Este fin de semana
+    binding.weekendTitle.setTitle("Este fin de semana")
+    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
+      onItemClick = {
+        EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+      }
+    }
+    binding.weekendEvents.adapter = eventsHorizontalAdapter
+    binding.weekendEvents.setHasFixedSize(true)
+    binding.weekendEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
     eventsHorizontalAdapter.setItems(items)
 
 
