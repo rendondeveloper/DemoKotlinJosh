@@ -16,7 +16,7 @@
     <string name="forgot_we_help">No te preocupes, podemos ayudarte.</string>
     <string name="forgot_recover_pass">Recuperar mi contraseña</string>
     <string name="forgot_email_send_title">¡Revisa tu correo!</string>
-    <string name="forgot_email_send_desc">Te hemos enviado un correo con las instrucciones para recuperar tu contraseña. Si el correo que te enviamos no lo puedes ver, revisa tu Spam.</string>
+    <string name="forgot_email_send_desc">Te hemos enviado un correo con las instrucciones para recuperar tu contraseña. Si el correo que te enviamos no lo puedes ver, revisa tu spam.</string>
     <string name="glad_to_see_you">¡Nos alegra verte de nuevo!</string>
 
     <!-- Register -->
