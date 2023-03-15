@@ -1113,6 +1113,10 @@
     <string name="more_options">Más opciones</string>
     <string name="publish">Publicar</string>
     <string name="position_p">Posición</string>
+    <string name="load_image">Cargar imagen</string>
+    <string name="image_recomendation_one">Imagen: No pesar más de 5MB</string>
+    <string name="image_recomendation_two">Vídeo: No pesar más de 10MB</string>
+    <string name="write_comment">Escribe un comentario</string>
 
 
 </resources>

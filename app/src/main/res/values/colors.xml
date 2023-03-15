@@ -24,6 +24,8 @@
     <color name="black_dynamic">#000000</color>
     <color name="green_dynamic">#34c759</color>
     <color name="red_dynamic">#ff3b30</color>
+
+    <color name="gray_secondary_text">#BBBCBC</color>
     <!--<color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#34c759</color> -->
 
     <color name="gray_text">#CCCCCC</color>

@@ -102,6 +102,9 @@
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/nav_slide_in_left"
             app:popExitAnim="@anim/nav_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_newPostMediaFragment"
+            app:destination="@id/newPostMediaFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_new_post"
@@ -380,4 +383,9 @@
         android:id="@+id/newMedalPreviewFragment"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.post.NewMedalPreviewFragment"
         android:label="NewMedalPreviewFragment" />
+    <fragment
+        android:id="@+id/newPostMediaFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.post.NewPostMediaFragment"
+        android:label="fragment_new_post_media"
+        tools:layout="@layout/fragment_new_post_media" />
 </navigation>
