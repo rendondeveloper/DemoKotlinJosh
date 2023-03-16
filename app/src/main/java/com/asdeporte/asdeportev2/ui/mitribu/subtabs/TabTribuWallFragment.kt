@@ -83,9 +83,11 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
         }
 
         binding.filterPosts.setOnClickListener {
+            findNavController().safelyNavigate(R.id.action_navigation_tribu_to_tribeFiltersFragment)
+
             //showMenu(it, R.menu.home_menu)
-            FilterHomePostsSheet.create(this@TabTribuWallFragment)
-                .show(requireActivity().supportFragmentManager, "EventBottomSheet")
+            //FilterHomePostsSheet.create(this@TabTribuWallFragment)
+              //  .show(requireActivity().supportFragmentManager, "EventBottomSheet")
         }
 
         Handler(Looper.getMainLooper()).postDelayed({

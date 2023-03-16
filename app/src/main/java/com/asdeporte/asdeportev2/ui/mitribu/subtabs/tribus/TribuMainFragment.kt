@@ -50,8 +50,8 @@ class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener, F
         }
 
         binding.filterPosts.setOnClickListener {
-            //showMenu(it, R.menu.home_menu)
-            FilterHomePostsSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+            findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_tribeFiltersFragment)
+            //FilterHomePostsSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "EventBottomSheet")
         }
 
         initPosts()

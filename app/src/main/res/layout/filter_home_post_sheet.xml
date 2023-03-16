@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parent_view"
     android:layout_width="match_parent"
@@ -13,45 +12,44 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="12dp"
-        android:layout_marginBottom="-11dp">
+        android:layout_marginBottom="-11dp"
+        app:cardCornerRadius="12dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
+                style="@style/Kanit_Regular.Default.16"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Mis tribus"
                 android:gravity="center"
-                style="@style/Kanit_Regular.Default.16"/>
+                android:text="Mis tribus" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/confirm_button"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/button_height"
-                android:layout_weight="1"
-                android:text="@string/btn_save"
-                android:background="@drawable/pill_background"
-                android:textAllCaps="false"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/pill_background"
                 android:paddingStart="7dp"
-                android:paddingEnd="7dp"/>
+                android:paddingTop="0dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="0dp"
+                android:text="@string/btn_save"
+                android:textAllCaps="false" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="-10dp"
                 android:layout_above="@+id/filer_view_button"
                 android:layout_marginTop="60dp"
+                android:layout_marginBottom="-10dp"
                 android:orientation="vertical">
-
 
 
                 <RelativeLayout
@@ -61,11 +59,11 @@
                     android:padding="16dp">
 
                     <TextView
+                        style="@style/Kanit_Regular.Default.16"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Todas"
                         android:layout_alignParentStart="true"
-                        style="@style/Kanit_Regular.Default.16"/>
+                        android:text="Todas" />
 
                     <com.google.android.material.switchmaterial.SwitchMaterial
                         android:id="@+id/all_check"
@@ -79,7 +77,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray_400"/>
+                    android:background="@color/gray_400" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -91,19 +89,21 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
+                        android:layout_alignParentStart="true"
                         android:gravity="center_vertical"
-                        android:layout_alignParentStart="true">
+                        android:orientation="vertical">
+
                         <TextView
+                            style="@style/Kanit_Regular.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Corredores Coyoacán"
-                            style="@style/Kanit_Regular.Default.16"/>
+                            android:text="Corredores Coyoacán" />
+
                         <TextView
+                            style="@style/Kanit_Regular.Secondary.14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Tribu principal"
-                            style="@style/Kanit_Regular.Secondary.14"/>
+                            android:text="Tribu principal" />
                     </LinearLayout>
 
                     <CheckBox
@@ -112,7 +112,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentEnd="true"
                         android:gravity="center_vertical"
-                        android:text=""/>
+                        android:text="" />
 
                 </RelativeLayout>
 
@@ -126,14 +126,15 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
+                        android:layout_alignParentStart="true"
                         android:gravity="center_vertical"
-                        android:layout_alignParentStart="true">
+                        android:orientation="vertical">
+
                         <TextView
+                            style="@style/Kanit_Regular.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="The Avengers"
-                            style="@style/Kanit_Regular.Default.16"/>
+                            android:text="The Avengers" />
                     </LinearLayout>
 
                     <CheckBox
@@ -142,7 +143,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentEnd="true"
                         android:gravity="center_vertical"
-                        android:text=""/>
+                        android:text="" />
 
                 </RelativeLayout>
 
@@ -156,14 +157,15 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
+                        android:layout_alignParentStart="true"
                         android:gravity="center_vertical"
-                        android:layout_alignParentStart="true">
+                        android:orientation="vertical">
+
                         <TextView
+                            style="@style/Kanit_Regular.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Amigos"
-                            style="@style/Kanit_Regular.Default.16"/>
+                            android:text="Amigos" />
                     </LinearLayout>
 
                     <CheckBox
@@ -172,7 +174,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentEnd="true"
                         android:gravity="center_vertical"
-                        android:text=""/>
+                        android:text="" />
 
                 </RelativeLayout>
 
@@ -182,11 +184,11 @@
                 android:id="@+id/filer_view_button"
                 android:layout_width="match_parent"
                 android:layout_height="82dp"
-                android:orientation="horizontal"
-                android:background="@color/white_dynamic"
                 android:layout_alignParentBottom="true"
-                android:gravity="center_vertical"
                 android:layout_marginBottom="10dp"
+                android:background="@color/white_dynamic"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:paddingStart="39dp"
                 android:paddingEnd="39dp">
 

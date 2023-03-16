@@ -141,16 +141,22 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
 
     override fun getItem(position: Int): Fragment {
 
-        return if (position == 0) {
-            TabTribuWallFragment()
-        } else if(position == 1) {
-            TabTribuTribusFragment()
-        } else if(position == 2) {
-            TabTribuFriendsFragment()
-        } else if(position == 3) {
-            TabTribuPrivacyFragment()
-        } else {
-            TabTribuProfileFragment()
+        return when (position) {
+            0 -> {
+                TabTribuWallFragment()
+            }
+            1 -> {
+                TabTribuTribusFragment()
+            }
+            2 -> {
+                TabTribuFriendsFragment()
+            }
+            3 -> {
+                TabTribuPrivacyFragment()
+            }
+            else -> {
+                TabTribuProfileFragment()
+            }
         }
         //return TabTribuPrivacyFragment()
 

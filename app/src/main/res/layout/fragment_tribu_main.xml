@@ -80,10 +80,10 @@
                         android:text="Administrador"
                         android:background="@drawable/pill_background_light_gray"
                         android:backgroundTint="@color/dark_blue"
-                        style="@style/Kanit_Regular.Default.14"
+                        style="@style/Kanit_Regular.Default.10"
                         android:textColor="@color/white"
-                        android:paddingStart="5dp"
-                        android:paddingEnd="5dp"/>
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"/>
 
                 </LinearLayout>
 

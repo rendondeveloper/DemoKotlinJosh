@@ -105,6 +105,9 @@
         <action
             android:id="@+id/action_navigation_tribu_to_newPostMediaFragment"
             app:destination="@id/newPostMediaFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_tribeFiltersFragment"
+            app:destination="@id/tribeFiltersFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_new_post"
@@ -139,6 +142,13 @@
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/nav_slide_in_left"
             app:popExitAnim="@anim/nav_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_tribeFiltersFragment"
+            app:destination="@id/tribeFiltersFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            app:popExitAnim="@anim/nav_slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/navigation_tribu_details"
@@ -388,4 +398,9 @@
         android:name="com.asdeporte.asdeportev2.ui.mitribu.post.NewPostMediaFragment"
         android:label="fragment_new_post_media"
         tools:layout="@layout/fragment_new_post_media" />
+    <fragment
+        android:id="@+id/tribeFiltersFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.post.TribeFiltersFragment"
+        android:label="fragment_tribe_filters"
+        tools:layout="@layout/fragment_tribe_filters" />
 </navigation>
