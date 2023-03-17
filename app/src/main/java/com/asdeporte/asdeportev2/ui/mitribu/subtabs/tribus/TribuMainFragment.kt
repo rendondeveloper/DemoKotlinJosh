@@ -46,7 +46,8 @@ class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener, F
             findNavController().safelyNavigate(R.id.detailsTribuAction)
         }
         binding.tribuAdminButton.setOnClickListener {
-            AdminTribuSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "TribuMainFragment")
+            findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_tribeAdminFragment)
+            //AdminTribuSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "TribuMainFragment")
         }
 
         binding.filterPosts.setOnClickListener {

@@ -109,5 +109,4 @@ class NewPostMediaFragment : Fragment() {
     fun openMedia() {
         pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
     }
-
 }

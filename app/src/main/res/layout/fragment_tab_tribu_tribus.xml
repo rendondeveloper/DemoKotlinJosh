@@ -228,6 +228,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:navigationIcon="@drawable/arrow_left"
                     app:navigationIconTint="@color/black_dynamic"
+                    app:menu="@menu/friends_menu"
                     app:title="Crear tribu"
                     app:titleTextColor="@color/black_dynamic" />
 
@@ -350,14 +351,14 @@
                                 android:src="@drawable/ic_upload" />
 
                             <TextView
-                                style="@style/Kanit_Medium.Default.12"
+                                style="@style/Kanit_Medium.Default.16"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Foto de portada"
                                 android:textAlignment="center" />
 
                             <TextView
-                                style="@style/Kanit_Regular.Default.10"
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="La imagen no debe pesar más de 5 MB"

@@ -1118,4 +1118,5 @@
     <string name="image_recomendation_two">Vídeo: No pesar más de 10MB</string>
     <string name="write_comment">Escribe un comentario</string>
     <string name="create_tribe">Crear tribu</string>
+    <string name="give_admin">Ceder la administración a</string>
 </resources>
