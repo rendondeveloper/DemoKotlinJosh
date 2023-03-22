@@ -115,7 +115,8 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
 
         requestsFragment.listener = this
         binding.pendingRequests.setOnClickListener {
-            findNavController().safelyNavigate(R.id.toRequests)
+            //findNavController().safelyNavigate(R.id.toRequests)
+            findNavController().safelyNavigate(R.id.action_navigation_tribu_to_mitribuRequestFragment)
         }
 
         binding.filterButton.setOnClickListener {

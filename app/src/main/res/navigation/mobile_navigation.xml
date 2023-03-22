@@ -111,6 +111,9 @@
         <action
             android:id="@+id/action_navigation_tribu_to_tribeAdminFragment"
             app:destination="@id/tribeAdminFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_mitribuRequestFragment"
+            app:destination="@id/mitribuRequestFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_new_post"
@@ -155,6 +158,18 @@
         <action
             android:id="@+id/action_navigation_tribu_main_to_tribeAdminFragment"
             app:destination="@id/tribeAdminFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_navigation_new_post"
+            app:destination="@id/navigation_new_post" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_navigation_new_post_fragment"
+            app:destination="@id/navigation_new_post_fragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_newPostMediaFragment"
+            app:destination="@id/newPostMediaFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_navigation_new_post_fragment2"
+            app:destination="@id/navigation_new_post_fragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_tribu_details"
@@ -413,4 +428,27 @@
         android:id="@+id/tribeAdminFragment"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.TribeAdminFragment"
         android:label="TribeAdminFragment" />
+    <fragment
+        android:id="@+id/mitribuRequestFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.MitribuRequestFragment"
+        android:label="fragment_mitribu_request"
+        tools:layout="@layout/fragment_mitribu_request" />
+    <fragment
+        android:id="@+id/requestsReceivedFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.RequestsReceivedFragment"
+        android:label="fragment_requests_received"
+        tools:layout="@layout/fragment_requests_received" >
+        <action
+            android:id="@+id/action_requestsReceivedFragment_to_navigation_tribu_profile"
+            app:destination="@id/navigation_tribu_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestsSentFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.RequestsSentFragment"
+        android:label="fragment_requests_sent"
+        tools:layout="@layout/fragment_requests_sent" >
+        <action
+            android:id="@+id/action_requestsSentFragment_to_navigation_tribu_profile"
+            app:destination="@id/navigation_tribu_profile" />
+    </fragment>
 </navigation>

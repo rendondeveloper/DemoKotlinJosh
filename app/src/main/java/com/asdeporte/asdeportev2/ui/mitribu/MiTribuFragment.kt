@@ -75,41 +75,47 @@ class MiTribuFragment : Fragment() {
     private fun changeTabState(position: Int) {
         viewPager.currentItem = position
 
-        if (position == 0) {
-            activeTab = TribuTabs.WALL
-            binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall_active))
-            binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
-            binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
-            binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
-            binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
-        } else if (position == 1) {
-            activeTab = TribuTabs.TRIBUS
-            binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall))
-            binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu_active))
-            binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
-            binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
-            binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
-        } else if (position == 2) {
-            activeTab = TribuTabs.FRIENDS
-            binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall))
-            binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
-            binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends_active))
-            binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
-            binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
-        } else if (position == 3) {
-            activeTab = TribuTabs.PRIVACY
-            binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall))
-            binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
-            binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
-            binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy_active))
-            binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
-        } else if (position == 4) {
-            activeTab = TribuTabs.EDIT_PROFILE
-            binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall))
-            binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
-            binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
-            binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
-            binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu_active))
+        when (position) {
+            0 -> {
+                activeTab = TribuTabs.WALL
+                binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall_active))
+                binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+                binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
+                binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+            }
+            1 -> {
+                activeTab = TribuTabs.TRIBUS
+                binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall))
+                binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu_active))
+                binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
+                binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+            }
+            2 -> {
+                activeTab = TribuTabs.FRIENDS
+                binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall))
+                binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+                binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends_active))
+                binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+            }
+            3 -> {
+                activeTab = TribuTabs.PRIVACY
+                binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall))
+                binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+                binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
+                binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy_active))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+            }
+            4 -> {
+                activeTab = TribuTabs.EDIT_PROFILE
+                binding.tabWallImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_wall))
+                binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+                binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
+                binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu_active))
+            }
         }
     }
 

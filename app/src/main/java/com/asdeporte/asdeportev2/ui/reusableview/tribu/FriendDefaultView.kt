@@ -53,7 +53,6 @@ class FriendDefaultView @JvmOverloads constructor(
         binding.menuButton.setOnClickListener {
             showMenu(it, R.menu.default_frient_menu)
         }
-
     }
 
     private fun showMenu(v: View, @MenuRes menuRes: Int) {

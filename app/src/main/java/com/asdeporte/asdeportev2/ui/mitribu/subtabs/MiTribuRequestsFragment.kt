@@ -44,11 +44,6 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
         val root: View = binding.root
 
         (activity as MainActivity).hideActionBar()
-        /*binding.toolbar.setNavigationOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
-        }*/
-
-
         return root
     }
 
@@ -57,10 +52,6 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
 
         binding.toolbarRequests.setOnClickListener {
             (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
-            //val fm = activity?.supportFragmentManager?.beginTransaction()
-            //fm?.detach(this)
-            //fm?.commit()
-            //listener.onRequestViewBack()
         }
 
         binding.filterButton.setOnClickListener {
@@ -88,14 +79,14 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
             }
         }
 
-        binding.requestsList.adapter = requestAdapter
+        /*binding.requestsList.adapter = requestAdapter
         binding.requestsList.setHasFixedSize(true)
         binding.requestsList.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         requestAdapter.setItems(requests)
 
-        /*binding.requestsListView.removeAllViews()
+        binding.requestsListView.removeAllViews()
         for (event in requests) {
             val requestView = TribuUserRequestView(requireContext())
             requestView.bind(event, false)
