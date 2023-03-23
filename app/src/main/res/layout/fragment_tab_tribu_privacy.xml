@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mitribu.MiTribuFragment" >
+    tools:context=".ui.mitribu.MiTribuFragment">
 
     <FrameLayout
         android:id="@+id/home_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="gone">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -29,63 +28,65 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:background="@color/secondary_background"/>
+                    android:background="@color/secondary_background" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingBottom="10dp"
                     android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
+                        style="@style/Kanit_Semi_Bold_Italic.Default.20"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="10dp"
-                        android:text="CONFIGURACIÓN DE PRIVACIDAD"
                         android:gravity="center_vertical"
-                        style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+                        android:text="CONFIGURACIÓN DE PRIVACIDAD" />
 
                     <TextView
+                        style="@style/Kanit_Semibold.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:text="Accesos directos de privacidad"
                         android:gravity="center_vertical"
-                        style="@style/Kanit_Semibold.Default.16"/>
+                        android:text="Accesos directos de privacidad" />
 
                     <TextView
+                        style="@style/Kanit_Semibold.Default.14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Administra tu perfil"
                         android:gravity="center_vertical"
-                        style="@style/Kanit_Semibold.Default.14"/>
+                        android:text="Administra tu perfil" />
+
                     <TextView
+                        style="@style/Kanit_Regular.Default.14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="En dos pasos editar tu perfil para cambiar cierta información; por ejemplo, usuario, nombre, fecha de nacimiento y dirección."
                         android:layout_marginTop="8dp"
-                        style="@style/Kanit_Regular.Default.14"/>
+                        android:text="En dos pasos editar tu perfil para cambiar cierta información; por ejemplo, usuario, nombre, fecha de nacimiento y dirección." />
 
                     <TextView
+                        style="@style/Kanit_Semibold.Default.14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Consultar aspectos básicos de la privacidad"
                         android:layout_marginTop="24dp"
-                        style="@style/Kanit_Semibold.Default.14"/>
+                        android:text="Consultar aspectos básicos de la privacidad" />
+
                     <TextView
+                        style="@style/Kanit_Regular.Default.14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Obtén respuestas a preguntas frecuentes con esta guía interactiva."
                         android:layout_marginTop="8dp"
-                        style="@style/Kanit_Regular.Default.14"/>
+                        android:text="Obtén respuestas a preguntas frecuentes con esta guía interactiva." />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/border_gray"/>
+                        android:background="@color/border_gray" />
 
                     <LinearLayout
                         android:id="@+id/view_info_profile"
@@ -94,18 +95,20 @@
                         android:background="?attr/selectableItemBackground"
                         android:clickable="true"
                         android:orientation="horizontal">
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
-                            android:text="Información de Perfil"
-                            android:gravity="center_vertical"
                             android:layout_marginEnd="40dp"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:gravity="center_vertical"
+                            android:text="Información de Perfil" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="-40dp"
-                            android:src="@drawable/arrow_right"/>
+                            android:src="@drawable/arrow_right" />
                     </LinearLayout>
 
                     <View
@@ -113,7 +116,7 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/border_gray"/>
+                        android:background="@color/border_gray" />
 
                     <LinearLayout
                         android:id="@+id/view_visibility"
@@ -122,18 +125,20 @@
                         android:background="?attr/selectableItemBackground"
                         android:clickable="true"
                         android:orientation="horizontal">
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
-                            android:text="Quién puede ver lo que compartes"
-                            android:gravity="center_vertical"
                             android:layout_marginEnd="40dp"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:gravity="center_vertical"
+                            android:text="Quién puede ver lo que compartes" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="-40dp"
-                            android:src="@drawable/arrow_right"/>
+                            android:src="@drawable/arrow_right" />
                     </LinearLayout>
 
                     <View
@@ -141,7 +146,7 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/border_gray"/>
+                        android:background="@color/border_gray" />
 
                     <LinearLayout
                         android:id="@+id/view_find_you"
@@ -150,18 +155,20 @@
                         android:background="?attr/selectableItemBackground"
                         android:clickable="true"
                         android:orientation="horizontal">
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
-                            android:text="Cómo pueden encontrate y contactarte los demás"
-                            android:gravity="center_vertical"
                             android:layout_marginEnd="40dp"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:gravity="center_vertical"
+                            android:text="Cómo pueden encontrate y contactarte los demás" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="-40dp"
-                            android:src="@drawable/arrow_right"/>
+                            android:src="@drawable/arrow_right" />
                     </LinearLayout>
 
                     <View
@@ -169,7 +176,7 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/border_gray"/>
+                        android:background="@color/border_gray" />
 
                     <LinearLayout
                         android:id="@+id/view_message_request"
@@ -178,18 +185,20 @@
                         android:background="?attr/selectableItemBackground"
                         android:clickable="true"
                         android:orientation="horizontal">
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
-                            android:text="Cómo recibes las solicitudes de mensajes"
-                            android:gravity="center_vertical"
                             android:layout_marginEnd="40dp"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:gravity="center_vertical"
+                            android:text="Cómo recibes las solicitudes de mensajes" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="-40dp"
-                            android:src="@drawable/arrow_right"/>
+                            android:src="@drawable/arrow_right" />
                     </LinearLayout>
 
                     <View
@@ -197,7 +206,7 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/border_gray"/>
+                        android:background="@color/border_gray" />
 
                     <LinearLayout
                         android:id="@+id/view_block"
@@ -206,18 +215,20 @@
                         android:background="?attr/selectableItemBackground"
                         android:clickable="true"
                         android:orientation="horizontal">
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
-                            android:text="Bloquear"
-                            android:gravity="center_vertical"
                             android:layout_marginEnd="40dp"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:gravity="center_vertical"
+                            android:text="Bloquear" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="-40dp"
-                            android:src="@drawable/arrow_right"/>
+                            android:src="@drawable/arrow_right" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -231,28 +242,29 @@
         android:id="@+id/info_profile_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="visible">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar_profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:title="Información de perfil"
-            app:titleTextColor="@color/black_dynamic"
-            app:navigationIcon="@drawable/arrow_left"
-            app:navigationIconTint="@color/black_dynamic"
-            android:theme="@style/AsdToolbarTheme"/>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AsdToolbarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/arrow_left"
+                app:navigationIconTint="@color/black_dynamic"
+                app:title="Información de perfil"
+                app:titleTextColor="@color/black_dynamic" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -266,68 +278,71 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:background="@color/secondary_background"/>
+                        android:background="@color/secondary_background" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:paddingBottom="30dp"
                         android:paddingStart="16dp"
-                        android:paddingEnd="16dp">
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="30dp">
 
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:text="Información de Perfil"
                             android:gravity="center_vertical"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Información de Perfil" />
 
                         <TextView
+                            style="@style/Kanit_Regular.Default.14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="En dos pasos editar tu perfil para cambiar cierta información; por ejemplo, usuario, nombre, fecha de nacimiento y dirección."
                             android:layout_marginTop="8dp"
-                            style="@style/Kanit_Regular.Default.14"/>
+                            android:text="En dos pasos editar tu perfil para cambiar cierta información; por ejemplo, usuario, nombre, fecha de nacimiento y dirección." />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
-                                android:orientation="vertical"
                                 android:layout_marginEnd="40dp"
+                                android:orientation="vertical"
                                 android:weightSum="2">
+
                                 <TextView
+                                    style="@style/Kanit_Semibold.Default.16"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="bottom"
-                                    android:text="Usuario"
-                                    style="@style/Kanit_Semibold.Default.16"/>
+                                    android:text="Usuario" />
+
                                 <TextView
+                                    style="@style/Kanit_Regular.Default.14"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="top"
-                                    android:text="@ernie1234"
-                                    style="@style/Kanit_Regular.Default.14"/>
+                                    android:text="ernie@1234" />
                             </LinearLayout>
 
                             <TextView
                                 android:id="@+id/choose_user"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Amigos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Amigos" />
 
                         </RelativeLayout>
 
@@ -336,46 +351,49 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
-                                android:orientation="vertical"
                                 android:layout_marginEnd="40dp"
+                                android:orientation="vertical"
                                 android:weightSum="2">
+
                                 <TextView
+                                    style="@style/Kanit_Semibold.Default.16"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="bottom"
-                                    android:text="@string/email"
-                                    style="@style/Kanit_Semibold.Default.16"/>
+                                    android:text="@string/email" />
+
                                 <TextView
+                                    style="@style/Kanit_Regular.Default.14"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="top"
-                                    android:text="dalvarez@asdeporte.com"
-                                    style="@style/Kanit_Regular.Default.14"/>
+                                    android:text="dalvarez@asdeporte.com" />
                             </LinearLayout>
 
                             <TextView
                                 android:id="@+id/choose_email"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Amigos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Amigos" />
 
                         </RelativeLayout>
 
@@ -384,46 +402,49 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
-                                android:orientation="vertical"
                                 android:layout_marginEnd="40dp"
+                                android:orientation="vertical"
                                 android:weightSum="2">
+
                                 <TextView
+                                    style="@style/Kanit_Semibold.Default.16"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="bottom"
-                                    android:text="@string/celular_phone"
-                                    style="@style/Kanit_Semibold.Default.16"/>
+                                    android:text="@string/celular_phone" />
+
                                 <TextView
+                                    style="@style/Kanit_Regular.Default.14"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="top"
-                                    android:text="+52 55 1020 3040"
-                                    style="@style/Kanit_Regular.Default.14"/>
+                                    android:text="+52 55 1020 3040" />
                             </LinearLayout>
 
                             <TextView
                                 android:id="@+id/choose_phone"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Amigos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Amigos" />
 
                         </RelativeLayout>
 
@@ -432,46 +453,49 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
-                                android:orientation="vertical"
                                 android:layout_marginEnd="40dp"
+                                android:orientation="vertical"
                                 android:weightSum="2">
+
                                 <TextView
+                                    style="@style/Kanit_Semibold.Default.16"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="bottom"
-                                    android:text="@string/birthdate"
-                                    style="@style/Kanit_Semibold.Default.16"/>
+                                    android:text="@string/birthdate" />
+
                                 <TextView
+                                    style="@style/Kanit_Regular.Default.14"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="top"
-                                    android:text="21 de octubre de 1980"
-                                    style="@style/Kanit_Regular.Default.14"/>
+                                    android:text="21 de octubre de 1980" />
                             </LinearLayout>
 
                             <TextView
                                 android:id="@+id/choose_birth"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Amigos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Amigos" />
 
                         </RelativeLayout>
 
@@ -480,46 +504,49 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
-                                android:orientation="vertical"
                                 android:layout_marginEnd="120dp"
+                                android:orientation="vertical"
                                 android:weightSum="2">
+
                                 <TextView
+                                    style="@style/Kanit_Semibold.Default.16"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="bottom"
-                                    android:text="@string/rfc_city"
-                                    style="@style/Kanit_Semibold.Default.16"/>
+                                    android:text="@string/rfc_city" />
+
                                 <TextView
+                                    style="@style/Kanit_Regular.Default.14"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
                                     android:gravity="top"
-                                    android:text="Av. Universidad #424, Col. San Jerónimo, México."
-                                    style="@style/Kanit_Regular.Default.14"/>
+                                    android:text="Av. Universidad #424, Col. San Jerónimo, México." />
                             </LinearLayout>
 
                             <TextView
                                 android:id="@+id/choose_city"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Amigos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Amigos" />
 
                         </RelativeLayout>
 
@@ -536,28 +563,29 @@
         android:id="@+id/visibility_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="gone">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar_visibility"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/AsdToolbarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:title="Visibilidad de publicaciones"
-                app:titleTextColor="@color/black_dynamic"
                 app:navigationIcon="@drawable/arrow_left"
                 app:navigationIconTint="@color/black_dynamic"
-                android:theme="@style/AsdToolbarTheme"/>
+                app:title="Visibilidad de publicaciones"
+                app:titleTextColor="@color/black_dynamic" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -571,45 +599,47 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:background="@color/secondary_background"/>
+                        android:background="@color/secondary_background" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:paddingBottom="30dp"
                         android:paddingStart="16dp"
-                        android:paddingEnd="16dp">
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="30dp">
 
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:text="Quién puede ver lo que compartes"
                             android:gravity="center_vertical"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Quién puede ver lo que compartes" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginEnd="120dp"
-                                    android:gravity="center_vertical"
-                                    android:text="¿Quién puede ver lo que compartes?"
-                                    style="@style/Kanit_Regular.Default.14"/>
 
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="120dp"
+                                android:gravity="center_vertical"
+                                android:text="¿Quién puede ver lo que compartes?" />
+
+                            <TextView
+                                android:id="@+id/tvYourShares"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Amigos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Amigos" />
 
                         </RelativeLayout>
 
@@ -618,30 +648,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="¿Quién puede ver mis próximos eventos?"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="¿Quién puede ver mis próximos eventos?" />
 
                             <TextView
+                                android:id="@+id/tvYourEvents"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Sólo yo"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Sólo yo" />
 
                         </RelativeLayout>
 
@@ -650,30 +682,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="¿Quién puede ver mis resultados?"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="¿Quién puede ver mis resultados?" />
 
                             <TextView
+                                android:id="@+id/tvMyResults"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Todos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Todos" />
 
                         </RelativeLayout>
 
@@ -682,30 +716,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="¿Quién puede ver mis metas?"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="¿Quién puede ver mis metas?" />
 
                             <TextView
+                                android:id="@+id/tvMyGoals"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Todos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Todos" />
 
                         </RelativeLayout>
 
@@ -714,30 +750,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="Limitar el público de publicaciones anteriores"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="Limitar el público de publicaciones anteriores" />
 
                             <TextView
+                                android:id="@+id/tvMyPosts"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Todos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Todos" />
 
                         </RelativeLayout>
 
@@ -746,30 +784,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="¿Quién quieres que vea tus publicaciones futuras?"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="¿Quién quieres que vea tus publicaciones futuras?" />
 
                             <TextView
+                                android:id="@+id/tvMyFuturePosts"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Todos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Todos" />
 
                         </RelativeLayout>
 
@@ -786,28 +826,29 @@
         android:id="@+id/find_you_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="gone">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar_find_you"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/AsdToolbarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:title="Quién te puede encontrar"
-                app:titleTextColor="@color/black_dynamic"
                 app:navigationIcon="@drawable/arrow_left"
                 app:navigationIconTint="@color/black_dynamic"
-                android:theme="@style/AsdToolbarTheme"/>
+                app:title="Quién te puede encontrar"
+                app:titleTextColor="@color/black_dynamic" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -821,45 +862,47 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:background="@color/secondary_background"/>
+                        android:background="@color/secondary_background" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:paddingBottom="30dp"
                         android:paddingStart="16dp"
-                        android:paddingEnd="16dp">
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="30dp">
 
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:text="Cómo pueden encontrarte y contactarte los demás"
                             android:gravity="center_vertical"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Cómo pueden encontrarte y contactarte los demás" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="¿Quién puede enviarte solicitudes de amistad?"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="¿Quién puede enviarte solicitudes de amistad?" />
 
                             <TextView
+                                android:id="@+id/tvRequestsFriends"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Todos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Todos" />
 
                         </RelativeLayout>
 
@@ -868,30 +911,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="¿Quién puede ver tu lista de amigos?"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="¿Quién puede ver tu lista de amigos?" />
 
                             <TextView
+                                android:id="@+id/tvListFriends"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Sólo yo"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Sólo yo" />
 
                         </RelativeLayout>
 
@@ -900,30 +945,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="¿Quién puede ver tu lista de tribus a las que perteneces?"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="¿Quién puede ver tu lista de tribus a las que perteneces?" />
 
                             <TextView
+                                android:id="@+id/tvListTribes"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Todos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Todos" />
 
                         </RelativeLayout>
 
@@ -932,30 +979,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="¿Quién puede buscarte con la dirección de correo electrónico que proporcionaste?"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="¿Quién puede buscarte con la dirección de correo electrónico que proporcionaste?" />
 
                             <TextView
+                                android:id="@+id/tvWhoCanFindYou"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Todos"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Todos" />
 
                         </RelativeLayout>
 
@@ -972,28 +1021,29 @@
         android:id="@+id/message_request_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="gone">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar_message_request"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/AsdToolbarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:title="Solicitud de mensajes"
-                app:titleTextColor="@color/black_dynamic"
                 app:navigationIcon="@drawable/arrow_left"
                 app:navigationIconTint="@color/black_dynamic"
-                android:theme="@style/AsdToolbarTheme"/>
+                app:title="Solicitud de mensajes"
+                app:titleTextColor="@color/black_dynamic" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -1007,52 +1057,54 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:background="@color/secondary_background"/>
+                        android:background="@color/secondary_background" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:paddingBottom="30dp"
                         android:paddingStart="16dp"
-                        android:paddingEnd="16dp">
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="30dp">
 
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:text="Cómo recibes las solicitudes de mensajes"
                             android:gravity="center_vertical"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Cómo recibes las solicitudes de mensajes" />
 
                         <TextView
+                            style="@style/Kanit_Regular.Default.14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Decide si las solicitudes de mensajes se envían a la lista de chats, a la carpeta &quot;Solicitudes de mensajes&quot; o si no quieres recibirlas."
                             android:layout_marginTop="8dp"
-                            style="@style/Kanit_Regular.Default.14"/>
+                            android:text="Decide si las solicitudes de mensajes se envían a la lista de chats, a la carpeta &quot;Solicitudes de mensajes&quot; o si no quieres recibirlas." />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="Amigos de amigos en AsDeporte"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="Amigos de amigos en AsDeporte" />
 
                             <TextView
+                                android:id="@+id/tvFriends"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="No recibir"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="No recibir" />
 
                         </RelativeLayout>
 
@@ -1061,30 +1113,32 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@color/border_gray"/>
+                            android:background="@color/border_gray" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/Kanit_Regular.Default.14"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginEnd="120dp"
                                 android:gravity="center_vertical"
-                                android:text="Miembros de alguna Tribu"
-                                style="@style/Kanit_Regular.Default.14"/>
+                                android:text="Miembros de alguna Tribu" />
 
                             <TextView
+                                android:id="@+id/tvFriendsTribe"
+                                style="@style/Kanit_Semibold.Default.16"
                                 android:layout_width="@dimen/privacy_select_width"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:padding="10dp"
-                                android:text="Solicitud"
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
-                                style="@style/Kanit_Semibold.Default.16"/>
+                                android:padding="10dp"
+                                android:text="Solicitud" />
 
                         </RelativeLayout>
 
@@ -1102,28 +1156,29 @@
         android:id="@+id/block_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="gone">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar_block"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/AsdToolbarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:title="Bloquear"
-                app:titleTextColor="@color/black_dynamic"
                 app:navigationIcon="@drawable/arrow_left"
                 app:navigationIconTint="@color/black_dynamic"
-                android:theme="@style/AsdToolbarTheme"/>
+                app:title="Bloquear"
+                app:titleTextColor="@color/black_dynamic" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -1137,55 +1192,52 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:background="@color/secondary_background"/>
+                        android:background="@color/secondary_background" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:paddingBottom="30dp"
                         android:paddingStart="16dp"
-                        android:paddingEnd="16dp">
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="30dp">
 
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:text="Bloquear a alguien"
                             android:gravity="center_vertical"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Bloquear a alguien" />
 
                         <TextView
+                            style="@style/Kanit_Regular.Default.14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Cuando bloqueas a alguien, esa persona ya no puede ver la actividad que realices, performance, resultados, menciones, invitarte a clases, entrenamientos o retos, tu lista de amigos ó tribus, iniciar una conversación contigo ni agregarte a su lista de amigos."
                             android:layout_marginTop="8dp"
-                            style="@style/Kanit_Regular.Default.14"/>
+                            android:text="Cuando bloqueas a alguien, esa persona ya no puede ver la actividad que realices, performance, resultados, menciones, invitarte a clases, entrenamientos o retos, tu lista de amigos ó tribus, iniciar una conversación contigo ni agregarte a su lista de amigos." />
 
                         <TextView
+                            style="@style/Kanit_Semibold.Default.14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nota: Cuando bloquees a alguien, no le avisaremos que lo hiciste."
                             android:layout_marginTop="20dp"
-                            style="@style/Kanit_Semibold.Default.14"/>
+                            android:text="Nota: Cuando bloquees a alguien, no le avisaremos que lo hiciste." />
 
                         <com.google.android.material.button.MaterialButton
+                            style="@style/Kanit_Regular.Default.14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
                             android:padding="0dp"
-                            android:textAllCaps="false"
                             android:text="Agregar personas a la lista de bloqueos"
-                            style="@style/Kanit_Regular.Default.14"
-                            android:textColor="@color/white"/>
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
 
 
                     </LinearLayout>
                 </LinearLayout>
-
             </ScrollView>
 
         </LinearLayout>
-
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

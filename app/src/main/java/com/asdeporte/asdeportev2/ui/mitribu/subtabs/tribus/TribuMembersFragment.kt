@@ -6,20 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
-import com.asdeporte.asdeportev2.databinding.FragmentTribuEditInfoBinding
 import com.asdeporte.asdeportev2.databinding.FragmentTribuMembersBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.AddTribuMemberAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuResultAdapter
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendDefaultView
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendMenuOption
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.bitmap.FitCenter
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
 
 class TribuMembersFragment : Fragment(), FriendDefaultView.FriendDefaultViewListener {
 
@@ -67,8 +59,8 @@ class TribuMembersFragment : Fragment(), FriendDefaultView.FriendDefaultViewList
         resultsdapter.setItems(items)
 
 
-        binding.friendPlaceholder1.setData(this)
-        binding.friendPlaceholder2.setData(this)
+        binding.friendPlaceholder1.setData(this, requireActivity().supportFragmentManager)
+        binding.friendPlaceholder2.setData(this, requireActivity().supportFragmentManager)
     }
 
     /*

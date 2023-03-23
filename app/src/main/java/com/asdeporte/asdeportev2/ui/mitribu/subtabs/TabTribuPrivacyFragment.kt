@@ -11,20 +11,27 @@ import androidx.annotation.MenuRes
 import androidx.fragment.app.Fragment
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuPrivacyBinding
+import com.asdeporte.asdeportev2.ui.access.ModalBottomSheetCountry
 
-class TabTribuPrivacyFragment: Fragment() {
+class TabTribuPrivacyFragment : Fragment() {
     private var _binding: FragmentTabTribuPrivacyBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private lateinit var privacyMenuBottomSheet: PrivacyMenuBottomSheet
     private val binding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         _binding = FragmentTabTribuPrivacyBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        privacyMenuBottomSheet = PrivacyMenuBottomSheet()
+
         binding.viewInfoProfile.setOnClickListener {
             binding.homeLayout.visibility = View.GONE
             binding.infoProfileLayout.visibility = View.VISIBLE
@@ -100,22 +107,63 @@ class TabTribuPrivacyFragment: Fragment() {
 
     private fun clickOptions() {
         binding.chooseUser.setOnClickListener {
-            showMenu(binding.chooseUser, R.menu.privacy_main_menu)
+            privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
         }
         binding.chooseEmail.setOnClickListener {
-            showMenu(binding.chooseEmail, R.menu.privacy_main_menu)
+            privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
         }
         binding.choosePhone.setOnClickListener {
-            showMenu(binding.choosePhone, R.menu.privacy_main_menu)
+            privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
         }
         binding.chooseBirth.setOnClickListener {
-            showMenu(binding.chooseBirth, R.menu.privacy_main_menu)
+            privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
         }
         binding.chooseCity.setOnClickListener {
-            showMenu(binding.chooseCity, R.menu.privacy_main_menu)
+            privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
         }
 
+        binding.apply {
+            tvYourShares.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvYourEvents.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvMyResults.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvMyGoals.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvMyPosts.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvMyFuturePosts.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+
+            tvRequestsFriends.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvListFriends.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvListTribes.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvWhoCanFindYou.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+
+            tvFriends.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+            tvFriendsTribe.setOnClickListener {
+                privacyMenuBottomSheet.show(parentFragmentManager, "MY_BOTTOM_SHEET")
+            }
+        }
     }
+
     private fun showMenu(v: TextView, @MenuRes menuRes: Int) {
         val popup = PopupMenu(requireContext(), v)
         popup.menuInflater.inflate(menuRes, popup.menu)

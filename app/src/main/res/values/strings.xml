@@ -1119,4 +1119,8 @@
     <string name="write_comment">Escribe un comentario</string>
     <string name="create_tribe">Crear tribu</string>
     <string name="give_admin">Ceder la administración a</string>
+    <string name="txt_all">Todos</string>
+    <string name="txt_friends">Amigos</string>
+    <string name="txt_me">Solo yo</string>
+    <string name="txt_send_msg">Enviar mensaje</string>
 </resources>

@@ -1,7 +1,6 @@
 package com.asdeporte.asdeportev2.ui.mitribu.subtabs
 
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,6 @@ import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuFriendsBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.FriendRequestAdapter
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendDefaultView
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendMenuOption
 
@@ -43,12 +41,12 @@ class TabTribuFriendsFragment : Fragment(), FriendDefaultView.FriendDefaultViewL
             findNavController().safelyNavigate(R.id.toRequests)
         }
 
-        binding.friendPlaceholder1.setData(this)
+        binding.friendPlaceholder1.setData(this, requireActivity().supportFragmentManager)
         binding.friendPlaceholder1.setOnClickListener {
             findNavController().safelyNavigate(R.id.toUserProfile)
         }
 
-        binding.friendPlaceholder2.setData(this)
+        binding.friendPlaceholder2.setData(this, requireActivity().supportFragmentManager)
         binding.friendPlaceholder2.setOnClickListener {
             findNavController().safelyNavigate(R.id.toUserProfile)
         }
