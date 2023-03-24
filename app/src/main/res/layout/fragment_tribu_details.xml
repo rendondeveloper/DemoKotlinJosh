@@ -232,10 +232,13 @@
                 android:background="@android:color/transparent"
                 android:src="@drawable/arrow_right"
                 app:tint="@color/black_dynamic"/>
-
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:background="@color/secondary_background"/>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

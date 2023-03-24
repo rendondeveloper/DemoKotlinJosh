@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp">
 
@@ -11,14 +11,14 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/secondary_background"
         android:orientation="vertical"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -28,55 +28,55 @@
                 android:id="@+id/profile_image"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/avatarman"
-                android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
-                app:civ_circle_background_color="@color/white_dynamic"/>
+                android:layout_centerVertical="true"
+                android:src="@drawable/avatarman"
+                app:civ_circle_background_color="@color/white_dynamic" />
 
             <TextView
                 android:id="@+id/person_name"
+                style="@style/Kanit_Bold_Italic.Default.20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lupe Olvera"
-                style="@style/Kanit_Medium.Default.20"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="8dp"
-                android:layout_toEndOf="@id/profile_image" />
+                android:layout_toEndOf="@id/profile_image"
+                android:text="Lupe Olvera" />
 
             <TextView
                 android:id="@+id/admin_badge"
+                style="@style/Kanit_Regular.Default.14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Administrador"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/person_name"
                 android:background="@drawable/pill_background_light_gray"
                 android:backgroundTint="@color/dark_blue"
-                android:layout_toEndOf="@id/person_name"
-                android:layout_marginStart="10dp"
-                style="@style/Kanit_Regular.Default.14"
-                android:textColor="@color/white"
-                android:layout_centerVertical="true"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
-                android:visibility="gone"/>
+                android:text="Administrador"
+                android:textColor="@color/white"
+                android:visibility="gone" />
 
             <ImageButton
                 android:id="@+id/options_button"
+                style="@style/Kanit_Regular.Default.14"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/button_height"
-                style="@style/Kanit_Regular.Default.14"
-                app:tint="@color/black_dynamic"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:background="@android:color/transparent"
                 android:src="@drawable/tab_more"
                 android:textAllCaps="false"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"/>
+                app:tint="@color/black_dynamic" />
 
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_400"/>
+            android:background="@color/gray_400" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -86,37 +86,37 @@
                 android:id="@+id/event_image"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentStart="true"/>
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
 
             <TextView
                 android:id="@+id/event_text"
+                style="@style/Kanit_Regular.Default.12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EVENTO:"
-                style="@style/Kanit_Regular.Default.12"
                 android:layout_centerVertical="true"
-                android:textAllCaps="true"
                 android:layout_marginStart="8dp"
                 android:layout_toEndOf="@id/event_image"
-                android:maxLines="2"/>
+                android:maxLines="2"
+                android:text="EVENTO:"
+                android:textAllCaps="true" />
 
             <TextView
+                style="@style/Kanit_Medium.Default.16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Carrera Puerto Morelos 2022"
-                style="@style/Kanit_Medium.Default.16"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="8dp"
                 android:layout_toEndOf="@id/event_text"
-                android:maxLines="2"/>
+                android:maxLines="2"
+                android:text="Carrera Puerto Morelos 2022" />
 
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_400"/>
+            android:background="@color/gray_400" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -127,43 +127,67 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:layout_weight="1">
+                android:orientation="vertical">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Posición"
                     style="@style/Kanit_Semibold.Default.14"
-                    android:maxLines="2"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5to lugar"
-                    style="@style/Kanit_Medium.Default.20"
-                    android:maxLines="2"/>
+                    android:maxLines="2"
+                    android:text="Posición" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        style="@style/Kanit_Bold_Italic.Default.20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:layout_marginEnd="@dimen/dimen_4dp"
+                        android:text="5to"/>
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        style="@style/Kanit_Regular.Default.14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dimen_4dp"
+                        android:maxLines="2"
+                        android:text="lugar"/>
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:layout_weight="1">
+                android:orientation="vertical">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tiempo oficial"
                     style="@style/Kanit_Semibold.Default.14"
-                    android:maxLines="2"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="00:52:18 min"
+                    android:maxLines="2"
+                    android:text="Tiempo oficial" />
+
+                <TextView
                     style="@style/Kanit_Medium.Default.20"
-                    android:maxLines="2"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="00:52:18 min" />
             </LinearLayout>
 
         </LinearLayout>

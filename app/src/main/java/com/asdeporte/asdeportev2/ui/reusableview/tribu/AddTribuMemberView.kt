@@ -4,9 +4,12 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import com.asdeporte.asdeportev2.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.AddTribuMemberViewBinding
+import com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.MembersFragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
@@ -22,7 +25,7 @@ class AddTribuMemberView @JvmOverloads constructor(
         binding = AddTribuMemberViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun bind(item: EventData) {
+    fun bind(item: EventData, context: Context) {
 
         Glide.with(this)
             .load("https://picsum.photos/600/900")
@@ -32,8 +35,8 @@ class AddTribuMemberView @JvmOverloads constructor(
                     //.placeholder(R.drawable.placeholder)
                     //.error(R.drawable.error)
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
-                    .skipMemoryCache(true))
+                    .skipMemoryCache(true)
+            )
             .into(binding.profileImage)
-
     }
 }

@@ -163,7 +163,7 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
 
         // More Tribus
         val users = listOf(testEvent, testEvent, testEvent)
-        addTribuMemberAdapter = AddTribuMemberAdapter().apply {
+        addTribuMemberAdapter = AddTribuMemberAdapter(requireContext()).apply {
             onItemClick = {
                 //EventBottomSheet.create(this@TabTribuTribusFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
             }

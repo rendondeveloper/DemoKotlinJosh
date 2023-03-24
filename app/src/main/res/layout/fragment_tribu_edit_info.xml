@@ -13,9 +13,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:title="Editar información"
+        app:title="Información de tribu"
         app:titleTextColor="@color/black_dynamic"
         app:navigationIcon="@drawable/arrow_left"
+        app:menu="@menu/friends_menu"
         app:navigationIconTint="@color/black_dynamic"
         android:theme="@style/AsdToolbarTheme"/>
 
@@ -78,10 +79,9 @@
                         android:text="Administrador"
                         android:background="@drawable/pill_background_light_gray"
                         android:backgroundTint="@color/dark_blue"
-                        style="@style/Kanit_Regular.Default.14"
-                        android:textColor="@color/white"
-                        android:paddingStart="5dp"
-                        android:paddingEnd="5dp"/>
+                        style="@style/Kanit_Regular.Default.10"
+                        android:paddingHorizontal="@dimen/dimen_12dp"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
@@ -101,7 +101,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" • "
+                    android:text="•"
+                    android:layout_marginHorizontal="@dimen/dimen_8dp"
                     style="@style/Kanit_Medium.Default.12" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,7 +112,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" • "
+                    android:text="•"
+                    android:layout_marginHorizontal="@dimen/dimen_8dp"
                     style="@style/Kanit_Medium.Default.12" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -243,14 +245,14 @@
                             android:src="@drawable/ic_upload" />
 
                         <TextView
-                            style="@style/Kanit_Medium.Default.12"
+                            style="@style/Kanit_Semi_Bold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Foto de portada"
+                            android:text="Cambiar foto de portada"
                             android:textAlignment="center" />
 
                         <TextView
-                            style="@style/Kanit_Regular.Default.10"
+                            style="@style/Kanit_Regular.Default.14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="La imagen no debe pesar más de 5 MB"
