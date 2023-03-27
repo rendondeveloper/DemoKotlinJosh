@@ -31,6 +31,7 @@
     <color name="gray_text">#CCCCCC</color>
     <color name="secondary_background">#F5F5F5</color>
     <color name="border_gray">#E7E7E7</color>
+    <color name="gray_views">#79747E</color>
 
     <!-- External -->
     <color name="facebook">#3b5998</color>

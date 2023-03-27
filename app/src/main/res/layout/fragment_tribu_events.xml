@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mitribu.subtabs.tribus.TribuEditInfoFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/AsdToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:title="Próximos eventos"
-        app:titleTextColor="@color/black_dynamic"
         app:navigationIcon="@drawable/arrow_left"
         app:navigationIconTint="@color/black_dynamic"
-        android:theme="@style/AsdToolbarTheme"/>
+        app:title="Próximos eventos"
+        app:titleTextColor="@color/black_dynamic" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
             android:id="@+id/create_tribu_view"
@@ -36,7 +36,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="16dp"
-                android:background="@color/secondary_background"/>
+                android:background="@color/secondary_background" />
 
             <RelativeLayout
                 android:id="@+id/cardView"
@@ -48,38 +48,37 @@
                     android:id="@+id/tribu_logo"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:src="@drawable/avatarman"
-                    android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    app:civ_circle_background_color="@color/white_dynamic"/>
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/avatarman"
+                    app:civ_circle_background_color="@color/white_dynamic" />
 
                 <LinearLayout
                     android:id="@+id/profile_data"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="start"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
-                    android:layout_toEndOf="@id/tribu_logo">
+                    android:layout_toEndOf="@id/tribu_logo"
+                    android:gravity="start"
+                    android:orientation="vertical">
 
                     <TextView
+                        style="@style/Kanit_Semi_Bold.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Corredores Narvarte"
-                        style="@style/Kanit_Bold.Default.16"
-                        android:maxLines="2"/>
+                        android:maxLines="2"
+                        android:text="Corredores Narvarte" />
 
                     <TextView
+                        style="@style/Kanit_Medium.Default.10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Administrador"
                         android:background="@drawable/pill_background_light_gray"
                         android:backgroundTint="@color/dark_blue"
-                        style="@style/Kanit_Regular.Default.14"
-                        android:textColor="@color/white"
-                        android:paddingStart="5dp"
-                        android:paddingEnd="5dp"/>
+                        android:paddingHorizontal="@dimen/dimen_12dp"
+                        android:text="Administrador"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
@@ -88,34 +87,34 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="16dp"
-                android:background="@color/secondary_background"/>
+                android:background="@color/secondary_background" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/searchMembersTextField"
+                    style="@style/LoginTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
                     android:hint="@string/btn_search"
-                    app:endIconMode="custom"
                     app:endIconDrawable="@drawable/ic_search"
-                    app:hintTextColor="@color/black_dynamic"
+                    app:endIconMode="custom"
                     app:endIconTint="@color/black_dynamic"
-                    style="@style/LoginTextInputLayoutStyle">
+                    app:hintTextColor="@color/black_dynamic">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/searchMembersTextInput"
+                        style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        style="@style/Kanit_Regular.Default.16"/>
+                        android:inputType="textPersonName" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,21 +123,21 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp">
+
                     <TextView
                         android:id="@+id/filter_posts"
+                        style="@style/Kanit_Semi_Bold.Default.16"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:text="Ver eventos"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
                         android:layout_alignParentEnd="true"
-                        android:gravity="center_vertical"
-                        style="@style/Kanit_Regular.Default.16"
-                        android:clickable="true"
-                        android:background="@drawable/event_tribu_background"
-                        android:drawablePadding="10dp"
                         android:layout_marginEnd="10dp"
-                        app:drawableEndCompat="@drawable/filter" />
+                        android:background="@drawable/event_tribu_background"
+                        android:clickable="true"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/dimen_20dp"
+                        android:text="@string/see_events"
+                        app:drawableEndCompat="@drawable/ic_filter" />
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView

@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTribuEventsBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuEventsAdapter
 
@@ -29,6 +32,10 @@ class TribuEventsFragment : Fragment() {
         (activity as MainActivity).hideActionBar()
         binding.toolbar.setNavigationOnClickListener {
             (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
+        }
+
+        binding.filterPosts.setOnClickListener {
+            findNavController().safelyNavigate(R.id.action_navigation_tribu_events_to_eventFiltersFragment)
         }
 
         setupData()

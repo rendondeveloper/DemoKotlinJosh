@@ -70,7 +70,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Corredores Narvarte"
-                        style="@style/Kanit_Bold.Default.16"
+                        style="@style/Kanit_Semi_Bold.Default.16"
                         android:maxLines="2"/>
 
                     <TextView
@@ -123,14 +123,6 @@
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondary_background"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,7 +135,7 @@
                     android:id="@+id/nameTextField"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/text_18"
                     android:layout_marginBottom="10dp"
                     android:hint="Nombre de la tribu"
                     app:hintTextColor="@color/black_dynamic"

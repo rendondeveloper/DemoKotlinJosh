@@ -1123,4 +1123,5 @@
     <string name="txt_friends">Amigos</string>
     <string name="txt_me">Solo yo</string>
     <string name="txt_send_msg">Enviar mensaje</string>
+    <string name="see_events">Ver eventos</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.asdeporte.asdeportev2.ui.mitribu.adapters
 
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.TribuResultView
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
@@ -17,7 +18,7 @@ class TribuResultAdapter : RecyclerViewAdapterBase<EventData, TribuResultView>()
         val item = items[position]
 
         holder.view.apply {
-            bind(item)
+            bind(item, (context as AppCompatActivity).supportFragmentManager)
         }
 
         holder.view.setOnClickListener {
