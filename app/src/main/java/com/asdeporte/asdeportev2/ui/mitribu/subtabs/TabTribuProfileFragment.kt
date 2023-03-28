@@ -13,7 +13,7 @@ class TabTribuProfileFragment : Fragment() {
     private var _binding: FragmentTabTribuProfileBinding? = null
     private val binding get() = _binding!!
     private var isProfilePicture: Boolean = false
-
+    /*
     private val pickMedia =
         registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
             if (uri != null) {
@@ -25,6 +25,7 @@ class TabTribuProfileFragment : Fragment() {
                 print("")
             }
         }
+     */
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,6 +55,6 @@ class TabTribuProfileFragment : Fragment() {
     }
 
     fun openMedia() {
-        pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+        //pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
     }
 }

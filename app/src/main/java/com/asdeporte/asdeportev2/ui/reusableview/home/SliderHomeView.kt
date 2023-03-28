@@ -36,25 +36,26 @@ class SliderHomeView @JvmOverloads constructor(
 
         val typefaceRegular = ResourcesCompat.getFont(context, R.font.kanit_regular)
         val typefaceBold = ResourcesCompat.getFont(context, R.font.kanit_bold)
-
+        /*
         Glide.with(this)
             .load(images[activeTag])
             .centerCrop()
             .into(binding.image)
+         */
 
         binding.firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
 
         binding.firstButton.setOnClickListener {
             binding.firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
             binding.firstButton.typeface = typefaceBold
-            binding.secondButton.setTextColor(ContextCompat.getColor(context, R.color.gray_400))
+            binding.secondButton.setTextColor(ContextCompat.getColor(context, R.color.white))
             binding.secondButton.typeface = typefaceRegular
             activeTag = 0
             changeImage(activeTag)
         }
 
         binding.secondButton.setOnClickListener {
-            binding.firstButton.setTextColor(ContextCompat.getColor(context, R.color.gray_400))
+            binding.firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
             binding.firstButton.typeface = typefaceRegular
             binding.secondButton.setTextColor(ContextCompat.getColor(context, R.color.white))
             binding.secondButton.typeface = typefaceBold
@@ -64,10 +65,12 @@ class SliderHomeView @JvmOverloads constructor(
     }
 
     fun changeImage(position: Int) {
+        /*
         Glide.with(this)
             .load(images[position])
             .centerCrop()
             .into(binding.image)
+         */
     }
 
 }

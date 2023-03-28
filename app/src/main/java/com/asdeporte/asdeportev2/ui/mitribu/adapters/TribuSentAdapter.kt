@@ -29,7 +29,7 @@ class TribuSentAdapter(val sent: MutableList<EventData>, val listener: (EventDat
 
         fun bind(sent: EventData) {
             binding.apply {
-
+binding.tribuLogo
             }
             binding.root.setOnClickListener {
                 listener(sent)

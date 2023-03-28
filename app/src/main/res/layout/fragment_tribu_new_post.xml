@@ -86,7 +86,7 @@
             android:layout_width="42dp"
             android:layout_height="match_parent"
             android:foregroundGravity="center_vertical"
-            android:src="@drawable/avatarman"
+            android:src="@drawable/avatar_dummy"
             app:civ_border_color="@color/white"
             app:civ_border_width="2dp" />
 

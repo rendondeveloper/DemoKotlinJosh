@@ -51,7 +51,7 @@
                 android:layout_height="56dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/avatarman"
+                android:src="@drawable/avatar_dummy"
                 app:civ_circle_background_color="@color/white_dynamic" />
 
             <LinearLayout

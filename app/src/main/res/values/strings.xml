@@ -1125,4 +1125,5 @@
     <string name="txt_send_msg">Enviar mensaje</string>
     <string name="see_events">Ver eventos</string>
     <string name="clean_filters">Limpiar filtros</string>
+    <string name="received_name_dummy"><b>Aarón Méndez</b> ya forma parte de <b>Corredores Narvarte</b></string>
 </resources>

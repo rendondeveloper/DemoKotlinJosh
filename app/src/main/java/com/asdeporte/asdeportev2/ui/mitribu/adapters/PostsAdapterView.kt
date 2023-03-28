@@ -58,7 +58,7 @@ class PostsAdapterView @JvmOverloads constructor(
             .diskCacheStrategy(DiskCacheStrategy.NONE)
             .skipMemoryCache(true)
         requestOptions = requestOptions.transforms(CenterCrop(), RoundedCorners(14))
-
+        /*
         Glide.with(this)
             .load("https://i.pravatar.cc/100")
             .centerCrop()
@@ -76,6 +76,7 @@ class PostsAdapterView @JvmOverloads constructor(
             .centerCrop()
             .apply(requestOptions)
             .into(binding.postImage)
+         */
 
         binding.postImage.setOnClickListener {
             val dialog = ImageDialogView()

@@ -27,13 +27,15 @@ class TribuReceivedAdapter(val requests: MutableList<EventData>, val listener: (
 
     class TribuReceivedViewHolder(val binding: ItemReceivedBinding, val listener: (EventData) -> Unit) : RecyclerView.ViewHolder(binding.root) {
         fun bind(request: EventData) {
+
             binding.apply {
                 tvName.text = request.official_name
-
+                /*
                 Glide.with(binding.root.context)
-                    .load("https://d3cnkhyiyh0ve2.cloudfront.net/upload%2F2022%2F5%2Fimg_1655144427045_TUP-Marquesa-22-logo-nvo-jun-13.JPG")
+                    .load(request.logo)
                     .centerCrop()
                     .into(binding.ivImage)
+                 */
             }
 
             binding.root.setOnClickListener {

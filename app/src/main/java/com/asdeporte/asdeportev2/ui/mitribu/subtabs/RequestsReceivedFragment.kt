@@ -37,7 +37,7 @@ class RequestsReceivedFragment : Fragment() {
             "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80"
         )
 
-        val requests = listOf(testEvent, testEvent, testEvent)
+        val requests = listOf(testEvent)
 
         tribuReceivedAdapter = TribuReceivedAdapter(requests as MutableList<EventData>) {
             findNavController().safelyNavigate(R.id.action_requestsReceivedFragment_to_navigation_tribu_profile)

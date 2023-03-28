@@ -44,7 +44,7 @@ class TribuProfileFragment : Fragment() {
         binding.toolbar.setNavigationOnClickListener {
             (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
         }
-
+        /*
         Glide.with(this)
             .load("https://picsum.photos/600/300")
             .centerCrop()
@@ -56,6 +56,7 @@ class TribuProfileFragment : Fragment() {
                     .skipMemoryCache(true))
             .into(binding.bannerImage)
 
+
         Glide.with(this)
             .load("https://picsum.photos/150/150")
             .centerCrop()
@@ -66,7 +67,7 @@ class TribuProfileFragment : Fragment() {
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .skipMemoryCache(true))
             .into(binding.profileImage)
-
+        */
         initRecent()
         initPosts()
     }

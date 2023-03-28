@@ -81,7 +81,7 @@
                 android:id="@+id/tab_friends_img"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:src="@drawable/tribu_tab_tribu" />
+                android:src="@drawable/friends" />
 
             <TextView
                 style="@style/Kanit_Regular.Default.12"
@@ -127,7 +127,7 @@
                 android:id="@+id/tab_profile_img"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:src="@drawable/tribu_tab_tribu" />
+                android:src="@drawable/edit_profile" />
 
             <TextView
                 style="@style/Kanit_Regular.Default.12"

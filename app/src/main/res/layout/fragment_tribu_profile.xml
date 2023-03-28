@@ -82,7 +82,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:src="@drawable/tribu_tab_tribu"/>
+                android:src="@drawable/friends"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -119,20 +119,20 @@
             <ImageView
                 android:id="@+id/bannerImage"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:scaleType="center"
+                android:layout_height="122dp"
                 android:background="@color/gray_400"
-                android:src="@drawable/placeholder_img"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/banner_dummy" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileImage"
                 android:layout_width="68dp"
                 android:layout_height="68dp"
-                android:src="@drawable/avatarman"
-                android:layout_marginTop="-35dp"
                 android:layout_gravity="center_horizontal"
-                app:civ_border_width="2pt"
-                app:civ_border_color="@color/white_dynamic"/>
+                android:layout_marginTop="-35dp"
+                android:src="@drawable/avatar_dummy"
+                app:civ_border_color="@color/white_dynamic"
+                app:civ_border_width="2pt" />
 
             <TextView
                 android:layout_width="wrap_content"

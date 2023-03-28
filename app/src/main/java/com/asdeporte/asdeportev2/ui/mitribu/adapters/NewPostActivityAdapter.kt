@@ -71,7 +71,7 @@ class NewPostActivityView @JvmOverloads constructor(
     }
 
     fun bind(item: EventData, listener: PostsAdapterListener) {
-
+        /*
        var requestOptions = RequestOptions()
             .placeholder(ContextCompat.getDrawable(context, R.drawable.placeholder_img))
             .diskCacheStrategy(DiskCacheStrategy.NONE)
@@ -82,6 +82,7 @@ class NewPostActivityView @JvmOverloads constructor(
             .centerCrop()
             .apply(requestOptions)
             .into(binding.eventImage)
+         */
 
         binding.previewButton.setOnClickListener {
             //showMenu(it, R.menu.menu_post_options)

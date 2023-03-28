@@ -17,20 +17,21 @@
         <ImageView
             android:id="@+id/ivImage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:src="@drawable/recibidas_dummy"/>
 
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvName"
-        style="@style/Kanit_Semibold.Default.16"
+        style="@style/Kanit_Regular.Default.16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:maxLines="2"
-        android:text="Aarón Méndez ya forma parte de Corredores Narvarte"
+        android:text="@string/received_name_dummy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardView3"
         app:layout_constraintTop_toTopOf="parent" />

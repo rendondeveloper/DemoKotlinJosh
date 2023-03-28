@@ -10,15 +10,17 @@
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/dark_blue"/>
+        android:background="@color/dark_blue"
+        android:scaleType="fitXY"
+        android:src="@drawable/slide_dummy" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="@dimen/dimen_32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/dimen_32dp"
         android:layout_marginEnd="@dimen/dimen_32dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/dimen_16dp"
         android:orientation="vertical">
 
         <TextView
@@ -54,31 +56,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/steps"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/registerButton"
+                style="@style/Kanit_Regular.Default.16"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
-                style="@style/Kanit_Regular.Default.16"
-                android:textColor="@color/black"
-                app:backgroundTint="@null"
                 android:background="@drawable/tertiary_button"
+                android:text="Ver detalles"
                 android:textAllCaps="false"
-                android:text="Ver detalles" />
+                android:textColor="@color/black"
+                app:backgroundTint="@null" />
 
             <Button
                 android:id="@+id/loginButton"
+                style="@style/Kanit_Regular.Default.16"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                app:backgroundTint="@null"
                 android:background="@drawable/pill_background"
-                android:textAllCaps="false"
                 android:text="Inscribirme"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
-                style="@style/Kanit_Regular.Default.16" />
+                app:backgroundTint="@null" />
 
         </LinearLayout>
 
@@ -88,14 +90,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="22dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginTop="24dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="5">
 
             <Button
                 android:id="@+id/firstButton"
+                style="@style/Kanit_Bold.Default.16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -103,13 +106,13 @@
                 android:autoSizeMinTextSize="10sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
-                android:textColor="@color/white"
-                style="@style/Kanit_Bold.Default.16"
                 android:background="@android:color/transparent"
-                android:text="01" />
+                android:text="01"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/secondButton"
+                style="@style/Kanit_Regular.Default.16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -117,13 +120,13 @@
                 android:autoSizeMinTextSize="10sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
-                android:textColor="@color/gray_400"
-                style="@style/Kanit_Regular.Default.16"
                 android:background="@android:color/transparent"
-                android:text="02" />
+                android:text="02"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/thirdButton"
+                style="@style/Kanit_Regular.Default.16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -131,13 +134,13 @@
                 android:autoSizeMinTextSize="10sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
-                android:textColor="@color/gray_400"
-                style="@style/Kanit_Regular.Default.16"
                 android:background="@android:color/transparent"
-                android:text="03" />
+                android:text="03"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/fourthButton"
+                style="@style/Kanit_Regular.Default.16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -145,13 +148,13 @@
                 android:autoSizeMinTextSize="10sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
-                android:textColor="@color/gray_400"
-                style="@style/Kanit_Regular.Default.16"
                 android:background="@android:color/transparent"
-                android:text="04" />
+                android:text="04"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/fiveButton"
+                style="@style/Kanit_Regular.Default.16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -159,10 +162,9 @@
                 android:autoSizeMinTextSize="10sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
-                android:textColor="@color/gray_400"
-                style="@style/Kanit_Regular.Default.16"
                 android:background="@android:color/transparent"
-                android:text="05" />
+                android:text="05"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
