@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:text="Lupe Olvera"
                 style="@style/Kanit_Semi_Bold.Default.16"
-                android:maxLines="2"/>
+                android:maxLines="1"/>
 
             <TextView
                 android:layout_width="match_parent"

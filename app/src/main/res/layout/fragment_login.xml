@@ -134,6 +134,7 @@
             android:textColor="@color/facebook"
             app:backgroundTint="@color/facebook"
             app:icon="@drawable/facebook_small"
+            app:iconGravity="textStart"
             app:iconTint="@color/facebook" />
 
         <com.google.android.material.button.MaterialButton
@@ -149,6 +150,7 @@
             android:textColor="@color/google"
             app:backgroundTint="@color/google"
             app:icon="@drawable/google_small"
+            app:iconGravity="textStart"
             app:iconTint="@null" />
 
         <LinearLayout

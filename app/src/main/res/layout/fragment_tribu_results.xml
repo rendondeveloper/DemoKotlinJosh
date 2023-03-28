@@ -138,7 +138,7 @@
                         android:background="@drawable/event_tribu_background"
                         android:drawablePadding="10dp"
                         android:layout_marginEnd="10dp"
-                        app:drawableEndCompat="@drawable/filter" />
+                        app:drawableEndCompat="@drawable/ic_filter" />
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView

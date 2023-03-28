@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        app:menu="@menu/register_menu"
         android:theme="@style/AsdToolbarTheme"/>
 
     <TextView
@@ -77,7 +78,6 @@
             style="@style/Kanit_Regular.Default.16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
             android:text="\u2022 Debe contener mínimo 8 caracteres" />
 
         <TextView
@@ -85,7 +85,6 @@
             style="@style/Kanit_Regular.Default.16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
             android:text="\u2022 Debe contener al menos 1 una mayúscula" />
 
         <TextView

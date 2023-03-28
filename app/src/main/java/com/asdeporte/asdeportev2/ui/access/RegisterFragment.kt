@@ -69,6 +69,9 @@ class RegisterFragment : Fragment() {
         binding.toolbar.title = "Registro"
         binding.toolbar.navigationIcon =
             ContextCompat.getDrawable(requireContext(), R.drawable.arrow_left)
+
+
+
         binding.toolbar.setNavigationOnClickListener {
             if (currentStep == 1) {
                 currentStep = 0

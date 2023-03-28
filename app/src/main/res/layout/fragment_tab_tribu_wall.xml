@@ -95,6 +95,7 @@
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/filter_posts_background"
                     android:clickable="true"
+                    android:layout_marginVertical="@dimen/dimen_8dp"
                     android:drawablePadding="10dp"
                     android:gravity="center_vertical"
                     android:paddingStart="10dp"

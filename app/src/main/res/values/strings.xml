@@ -21,8 +21,8 @@
 
     <!-- Register -->
     <string name="finish">Finalizar</string>
-    <string name="enter_email">Escribe tu correo electrónico</string>
-    <string name="enter_password">Escribe una contraseña</string>
+    <string name="enter_email">Correo electrónico</string>
+    <string name="enter_password">Contraseña</string>
     <string name="register_you">Regístrate</string>
     <string name="register_create">Crea tu cuenta</string>
     <string name="register_create_end_it">Finaliza tu registro</string>
@@ -1124,4 +1124,5 @@
     <string name="txt_me">Solo yo</string>
     <string name="txt_send_msg">Enviar mensaje</string>
     <string name="see_events">Ver eventos</string>
+    <string name="clean_filters">Limpiar filtros</string>
 </resources>

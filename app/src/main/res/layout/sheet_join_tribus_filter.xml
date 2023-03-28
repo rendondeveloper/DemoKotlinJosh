@@ -110,7 +110,7 @@
                         android:layout_width="0dp"
                         android:layout_height="@dimen/button_height"
                         android:layout_weight="1"
-                        android:text="@string/clean"
+                        android:text="@string/clean_filters"
                         android:background="@drawable/secondary_button"
                         app:backgroundTint="@color/black_dynamic"
                         android:textColor="@color/black_dynamic"
