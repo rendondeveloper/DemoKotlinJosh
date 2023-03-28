@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             android:text="Ciudad de México"
             android:textColor="@color/white" />
 
@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/subtitle"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="4dp"
             android:text="5 de marzo 2022"
             android:textColor="@color/white" />
 
@@ -104,7 +104,7 @@
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/white"
-                style="@style/Kanit_Bold.Default.14"
+                style="@style/Kanit_Bold.Default.16"
                 android:background="@android:color/transparent"
                 android:text="01" />
 
@@ -118,7 +118,7 @@
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/gray_400"
-                style="@style/Kanit_Bold.Default.14"
+                style="@style/Kanit_Regular.Default.16"
                 android:background="@android:color/transparent"
                 android:text="02" />
 
@@ -132,7 +132,7 @@
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/gray_400"
-                style="@style/Kanit_Bold.Default.14"
+                style="@style/Kanit_Regular.Default.16"
                 android:background="@android:color/transparent"
                 android:text="03" />
 
@@ -146,7 +146,7 @@
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/gray_400"
-                style="@style/Kanit_Bold.Default.14"
+                style="@style/Kanit_Regular.Default.16"
                 android:background="@android:color/transparent"
                 android:text="04" />
 
@@ -160,7 +160,7 @@
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/gray_400"
-                style="@style/Kanit_Bold.Default.14"
+                style="@style/Kanit_Regular.Default.16"
                 android:background="@android:color/transparent"
                 android:text="05" />
 

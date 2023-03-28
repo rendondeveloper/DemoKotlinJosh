@@ -32,7 +32,7 @@
             <!--<com.asdeporte.asdeportev2.ui.reusableview.home.MyNextRaceView
                 android:id="@+id/nextRace"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />-->
+                android:layout_height="wrap_content" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyLatestResultView
                 android:id="@+id/latestResult"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_24dp" />
 
-            <!--<com.asdeporte.asdeportev2.ui.reusableview.home.MyGalleryHomeView
+            <com.asdeporte.asdeportev2.ui.reusableview.home.MyGalleryHomeView
                 android:id="@+id/galleryHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,6 +56,18 @@
                 android:id="@+id/sliderHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.SerialsGridView
+                android:id="@+id/serialsGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.PartnersGridView
+                android:id="@+id/partnersGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.SearEventBigView
                 android:id="@+id/searchEvent"
@@ -168,13 +180,6 @@
                     tools:ignore="RtlSymmetry" />
 
             </LinearLayout>
-
-            <com.asdeporte.asdeportev2.ui.reusableview.PartnersGridView
-                android:id="@+id/partnersGrid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" />
-
         </LinearLayout>
 
     </ScrollView>
