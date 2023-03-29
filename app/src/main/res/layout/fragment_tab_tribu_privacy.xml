@@ -342,7 +342,7 @@
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
                                 android:padding="10dp"
-                                android:text="Amigos" />
+                                android:text="@string/txt_friends" />
 
                         </RelativeLayout>
 
@@ -393,7 +393,7 @@
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
                                 android:padding="10dp"
-                                android:text="Amigos" />
+                                android:text="@string/txt_friends" />
 
                         </RelativeLayout>
 
@@ -444,7 +444,7 @@
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
                                 android:padding="10dp"
-                                android:text="Amigos" />
+                                android:text="@string/txt_friends" />
 
                         </RelativeLayout>
 
@@ -495,7 +495,7 @@
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
                                 android:padding="10dp"
-                                android:text="Amigos" />
+                                android:text="@string/txt_friends" />
 
                         </RelativeLayout>
 
@@ -546,7 +546,7 @@
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
                                 android:padding="10dp"
-                                android:text="Amigos" />
+                                android:text="@string/txt_friends" />
 
                         </RelativeLayout>
 
@@ -639,7 +639,7 @@
                                 android:background="@drawable/post_upload_border"
                                 android:drawableEnd="@drawable/arrow_down"
                                 android:padding="10dp"
-                                android:text="Amigos" />
+                                android:text="@string/txt_friends" />
 
                         </RelativeLayout>
 

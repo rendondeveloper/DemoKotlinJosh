@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/dimen_12dp"
+    app:cardCornerRadius="@dimen/dimen_4dp"
+    app:cardElevation="0dp"
     android:layout_marginEnd="8dp">
 
     <RelativeLayout
@@ -11,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/event_tribu_background"
-        android:elevation="0dp"
         android:padding="@dimen/dimen_8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +91,7 @@
                     android:paddingEnd="7dp"
                     android:paddingBottom="0dp"
                     android:layout_marginStart="@dimen/dimen_16dp"
-                    android:text="Agregar"
+                    android:text="@string/invite"
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
             </LinearLayout>

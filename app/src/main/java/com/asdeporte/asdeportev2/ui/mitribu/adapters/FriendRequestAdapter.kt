@@ -25,7 +25,4 @@ class FriendRequestAdapter : RecyclerViewAdapterBase<EventData, FriendRequestVie
         }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

@@ -44,11 +44,11 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
     binding.serialsGrid.setData("47")
     //binding.nextRace.setData("")
 
-    /*binding.latestResult.setOnClickListener {
+    binding.latestResult.setOnClickListener {
       EventBottomSheet.create(this, testEvent).show(requireActivity().supportFragmentManager, "EventBottomSheet")
-    }*/
+    }
 
-    //binding.resumeHome.setData("47")
+    binding.resumeHome.setData("47")
 
     //binding.galleryHome.setData("")
 

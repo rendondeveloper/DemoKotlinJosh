@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/arrow_left"
         app:navigationIconTint="@color/black_dynamic"
-        app:title="Próximos eventos"
+        app:title="@string/explore_next_events"
         app:titleTextColor="@color/black_dynamic" />
 
     <androidx.core.widget.NestedScrollView

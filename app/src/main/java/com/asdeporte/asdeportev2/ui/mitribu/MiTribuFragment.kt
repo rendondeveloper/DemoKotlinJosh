@@ -1,21 +1,15 @@
 package com.asdeporte.asdeportev2.ui.mitribu
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
-import androidx.fragment.app.commit
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentMiTribuBinding
-import com.asdeporte.asdeportev2.ui.mitribu.subtabs.*
+import com.asdeporte.asdeportev2.ui.mitribu.adapters.SectionsPagerAdapter
 
 class MiTribuFragment : Fragment() {
     private var _binding: FragmentMiTribuBinding? = null
@@ -82,7 +76,7 @@ class MiTribuFragment : Fragment() {
                 binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
                 binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
                 binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
-                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.edit_profile))
             }
             1 -> {
                 activeTab = TribuTabs.TRIBUS
@@ -90,7 +84,7 @@ class MiTribuFragment : Fragment() {
                 binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu_active))
                 binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
                 binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
-                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.edit_profile))
             }
             2 -> {
                 activeTab = TribuTabs.FRIENDS
@@ -98,7 +92,7 @@ class MiTribuFragment : Fragment() {
                 binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
                 binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends_active))
                 binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
-                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.edit_profile))
             }
             3 -> {
                 activeTab = TribuTabs.PRIVACY
@@ -106,7 +100,7 @@ class MiTribuFragment : Fragment() {
                 binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
                 binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
                 binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy_active))
-                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.edit_profile))
             }
             4 -> {
                 activeTab = TribuTabs.EDIT_PROFILE
@@ -114,7 +108,7 @@ class MiTribuFragment : Fragment() {
                 binding.tabTribusImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu))
                 binding.tabFriendsImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_friends))
                 binding.tabPrivacyImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_privacy))
-                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.tribu_tab_tribu_active))
+                binding.tabProfileImg.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.edit_profile_active))
             }
         }
     }
@@ -135,41 +129,6 @@ enum class TribuTabs {
     TRIBUS,
     FRIENDS,
     PRIVACY,
-    EDIT_PROFILE
-}
-
-/**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
- */
-class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
-    FragmentPagerAdapter(fm) {
-
-    override fun getItem(position: Int): Fragment {
-
-        return when (position) {
-            0 -> {
-                TabTribuWallFragment()
-            }
-            1 -> {
-                TabTribuTribusFragment()
-            }
-            2 -> {
-                TabTribuFriendsFragment()
-            }
-            3 -> {
-                TabTribuPrivacyFragment()
-            }
-            else -> {
-                TabTribuProfileFragment()
-            }
-        }
-        //return TabTribuPrivacyFragment()
-
-    }
-
-    override fun getCount(): Int {
-        // Show 2 total pages.
-        return 5
-    }
+    EDIT_PROFILE,
+    MORE,
 }

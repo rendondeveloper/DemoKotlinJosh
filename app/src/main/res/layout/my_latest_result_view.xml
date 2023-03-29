@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/tvDate"
-            style="@style/Kanit_Medium.Secondary.12"
+            style="@style/Kanit_Regular.Secondary.12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_8dp"
@@ -52,14 +52,14 @@
             android:layout_width="@dimen/dimen_48dp"
             android:layout_height="@dimen/dimen_48dp"
             android:layout_marginTop="@dimen/dimen_16dp"
-            android:src="@drawable/empty_event_clear"
+            android:src="@drawable/serial_dummy"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/view3"
             app:layout_constraintTop_toBottomOf="@+id/view3" />
 
         <TextView
             android:id="@+id/tvName"
-            style="@style/Kanit_Bold_Italic.Default.14"
+            style="@style/Kanit_Medium.Default.14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16dp"

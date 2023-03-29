@@ -81,7 +81,7 @@ class TribuNewPostFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheet
             }
             NewPostAudience.FRIENDS -> {
                 binding.audienceImage.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_friends_audience))
-                binding.audienceTitle.text = "Amigos"
+                binding.audienceTitle.text = getString(R.string.txt_friends)
             }
             NewPostAudience.PRIVATE -> {
                 binding.audienceImage.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_user_audience))

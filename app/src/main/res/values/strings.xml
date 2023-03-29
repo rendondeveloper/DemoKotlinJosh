@@ -1131,4 +1131,6 @@
     <string name="txt_know_more_data">Conocer más contenido</string>
     <string name="txt_blog_text">Entrenamiento, nutrición, histórias motivacionales y más contenido de video para corredores</string>
     <string name="txt_event_detail">Detalle de evento</string>
+    <string name="invite_members">Invitar miembros</string>
+    <string name="invite">Invitar</string>
 </resources>

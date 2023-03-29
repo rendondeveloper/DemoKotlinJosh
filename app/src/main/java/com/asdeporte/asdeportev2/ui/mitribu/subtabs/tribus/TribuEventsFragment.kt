@@ -52,7 +52,7 @@ class TribuEventsFragment : Fragment() {
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
 
         eventsAdapter = TribuEventsAdapter().apply {
-            onItemClick = {
+            onDetailClick = {
                 findNavController().safelyNavigate(R.id.action_navigation_tribu_events_to_seeEventDetailFragment)
             }
         }
