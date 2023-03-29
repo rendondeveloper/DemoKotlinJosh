@@ -1126,4 +1126,9 @@
     <string name="see_events">Ver eventos</string>
     <string name="clean_filters">Limpiar filtros</string>
     <string name="received_name_dummy"><b>Aarón Méndez</b> ya forma parte de <b>Corredores Narvarte</b></string>
+    <string name="title_my_tribe">La <b>comunidad</b> para todos los <b>Atletas</b>  donde pueden <b>compartir</b> e interactuar  con otros miembros con la misma pasión hacia el <b>deporte.</b></string>
+    <string name="txt_see_demo"><u>Ver demo</u></string>
+    <string name="txt_know_more_data">Conocer más contenido</string>
+    <string name="txt_blog_text">Entrenamiento, nutrición, histórias motivacionales y más contenido de video para corredores</string>
+    <string name="txt_event_detail">Detalle de evento</string>
 </resources>

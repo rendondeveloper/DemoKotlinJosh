@@ -39,4 +39,5 @@
 
     <color name="label_primary">#000000</color>
     <color name="label_secondary">#7C7C7B</color>
+    <color name="label_blog">#ED3A3A</color>
 </resources>

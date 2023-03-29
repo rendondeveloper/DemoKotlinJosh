@@ -53,7 +53,7 @@ class TribuEventsFragment : Fragment() {
 
         eventsAdapter = TribuEventsAdapter().apply {
             onItemClick = {
-                //EventBottomSheet.create(this@TabTribuTribusFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_events_to_seeEventDetailFragment)
             }
         }
 

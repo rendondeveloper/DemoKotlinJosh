@@ -170,6 +170,9 @@
         <action
             android:id="@+id/action_navigation_tribu_main_to_navigation_new_post_fragment2"
             app:destination="@id/navigation_new_post_fragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_inviteFriendsFragment"
+            app:destination="@id/inviteFriendsFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_tribu_details"
@@ -219,6 +222,9 @@
         <action
             android:id="@+id/action_navigation_tribu_events_to_eventFiltersFragment"
             app:destination="@id/eventFiltersFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_events_to_seeEventDetailFragment"
+            app:destination="@id/seeEventDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_tribu_results"
@@ -460,4 +466,14 @@
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.EventFiltersFragment"
         android:label="fragment_event_filters"
         tools:layout="@layout/fragment_event_filters" />
+    <fragment
+        android:id="@+id/seeEventDetailFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.SeeEventDetailFragment"
+        android:label="fragment_see_event_detail"
+        tools:layout="@layout/fragment_see_event_detail" />
+    <fragment
+        android:id="@+id/inviteFriendsFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.InviteFriendsFragment"
+        android:label="fragment_invite_friends"
+        tools:layout="@layout/fragment_invite_friends" />
 </navigation>
