@@ -64,6 +64,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/orange_as_light"
         app:tint="@color/white"
+        app:borderWidth="0dp"
         app:srcCompat="@drawable/arrow_right" />
 
 
