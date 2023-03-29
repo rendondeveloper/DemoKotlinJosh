@@ -18,8 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="50dp">
+            android:orientation="vertical">
 
             <!--<View
                 android:id="@+id/extendedNavBar"
@@ -179,9 +178,46 @@
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
 
+                <com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView
+                    android:id="@+id/myTribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32dp" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.BlogView
+                    android:id="@+id/blog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loginButton"
+                        style="@style/Kanit_Medium.Default.16"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="@dimen/dimen_42dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_marginBottom="36dp"
+                        android:background="@drawable/pill_background"
+                        android:paddingTop="0dp"
+                        android:text="@string/txt_know_more_data"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@null" />
+
+                </LinearLayout>
+
+                <!--<com.asdeporte.asdeportev2.ui.reusableview.home.PlansView
+                    android:id="@+id/plans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32dp" />-->
+
             </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -80,6 +80,10 @@ class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener,
             )
         }
 
+        binding.inviteFriendsButton.setOnClickListener {
+            findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_inviteFriendsFragment)
+        }
+
         binding.publishView.findViewById<LinearLayout>(R.id.medal_view).setOnClickListener {
             val bundle = Bundle()
             bundle.putSerializable("type", NewPostType.MEDAL)

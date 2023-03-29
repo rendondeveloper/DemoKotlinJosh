@@ -33,6 +33,7 @@ class TribuEventstView @JvmOverloads constructor(
             .diskCacheStrategy(DiskCacheStrategy.NONE)
             .skipMemoryCache(true)
         requestOptions = requestOptions.transforms(FitCenter(), RoundedCorners(8))
+
         Glide.with(this)
             .load("https://picsum.photos/150/150")
             .centerCrop()
