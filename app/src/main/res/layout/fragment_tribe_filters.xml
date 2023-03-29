@@ -100,7 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Amigos"
+        android:text="@string/txt_friends"
         app:layout_constraintEnd_toStartOf="@+id/radio_2"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />

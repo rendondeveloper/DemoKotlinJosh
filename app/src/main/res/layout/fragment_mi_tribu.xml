@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:maxLines="1"
-                android:text="Amigos"
+                android:text="@string/txt_friends"
                 android:textAlignment="center"
                 app:autoSizeMinTextSize="10sp" />
         </LinearLayout>

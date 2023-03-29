@@ -90,7 +90,7 @@
                 android:maxLines="1"
                 app:autoSizeMinTextSize="10sp"
                 style="@style/Kanit_Regular.Default.12"
-                android:text="Amigos"/>
+                android:text="@string/txt_friends"/>
         </LinearLayout>
 
     </LinearLayout>

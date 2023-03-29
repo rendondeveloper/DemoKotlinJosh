@@ -114,7 +114,7 @@
                         android:paddingTop="0dp"
                         android:paddingEnd="@dimen/dimen_16dp"
                         android:paddingBottom="0dp"
-                        android:text="Crear tribu"
+                        android:text="@string/create_tribe"
                         android:textAllCaps="false"
                         android:textColor="@color/white" />
                 </RelativeLayout>
@@ -229,7 +229,7 @@
                     app:menu="@menu/friends_menu"
                     app:navigationIcon="@drawable/arrow_left"
                     app:navigationIconTint="@color/black_dynamic"
-                    app:title="Crear tribu"
+                    app:title="@string/create_tribe"
                     app:titleTextColor="@color/black_dynamic" />
 
                 <View

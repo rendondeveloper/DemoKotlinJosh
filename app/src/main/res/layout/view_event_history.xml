@@ -73,7 +73,7 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Ver resultados"
+                android:text="@string/event_see_results"
                 style="@style/Kanit_Semibold.Orange.14"
                 android:textAllCaps="false"
                 android:background="@android:color/transparent"

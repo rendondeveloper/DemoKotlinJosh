@@ -130,7 +130,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setIcon(R.drawable.asd_logo_large)
 
-        binding.toolbar.title = "Asdeporte"
+        binding.toolbar.title =  getString(R.string.settings_asdeporte)
         binding.toolbar.background = ColorDrawable(ContextCompat.getColor(this, R.color.orange_as_light))
         binding.toolbar.visibility = View.GONE
 
