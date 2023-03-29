@@ -17,12 +17,13 @@ class SmallTribuJoinAdapter : RecyclerViewAdapterBase<EventData, TribuSmallView>
         val item = items[position]
 
         holder.view.apply {
-            bind(item)
+            bind(item,onItemClick)
         }
 
         holder.view.setOnClickListener {
             onItemClick?.invoke(item)
         }
+
     }
 
     override fun getItemCount(): Int {

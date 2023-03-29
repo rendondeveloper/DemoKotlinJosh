@@ -10,7 +10,7 @@ import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentMembersBinding
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuResultAdapter
 
-class MembersFragment : Fragment() {
+class MembersFragment(private val isAmigo: Boolean) : Fragment() {
 
     lateinit var binding: FragmentMembersBinding
     private lateinit var resultsdapter: TribuResultAdapter
@@ -30,7 +30,8 @@ class MembersFragment : Fragment() {
             "123",
             "7, 14 y 21K by WomanUp",
             "https://d3cnkhyiyh0ve2.cloudfront.net/upload%2F2021%2F6%2Fimg_1625774286890_21K-WUp-logo-A-jul-6.jpg",
-            "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80"
+            "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80",
+            isAmigo
         )
         val items = listOf(
             testEvent,

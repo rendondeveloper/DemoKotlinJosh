@@ -70,21 +70,22 @@
                 style="@style/Kanit_Medium.Default.10"/>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUnirme"
+                style="@style/Kanit_Regular.Default.14"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                style="@style/Kanit_Regular.Default.14"
-                android:textColor="@color/black_dynamic"
-                android:background="@drawable/secondary_button"
-                app:backgroundTint="@color/black_dynamic"
-                android:text="Unirme"
-                android:textAllCaps="false"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="12dp"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
+                android:background="@drawable/secondary_button"
                 android:paddingStart="7dp"
-                android:paddingEnd="7dp"/>
+                android:paddingTop="0dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="0dp"
+                android:text="Unirme"
+                android:textAllCaps="false"
+                android:textColor="@color/black_dynamic"
+                app:backgroundTint="@color/black_dynamic" />
 
         </LinearLayout>
 

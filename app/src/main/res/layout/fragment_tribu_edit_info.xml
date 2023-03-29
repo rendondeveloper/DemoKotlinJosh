@@ -94,10 +94,10 @@
                 android:paddingStart="88dp">
 
                 <TextView
+                    style="@style/Kanit_Medium.Default.12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Corredores Narvarte"
-                    style="@style/Kanit_Medium.Default.12" />
+                    android:text="Público" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -296,6 +296,50 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/create_tribu_buttons_view"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white_dynamic"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="39dp"
+                android:paddingEnd="39dp"
+                android:weightSum="2"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_create_button"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/secondary_button"
+                    android:paddingStart="7dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="0dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black_dynamic"
+                    app:backgroundTint="@color/black_dynamic" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/create_tribu"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/pill_background"
+                    android:paddingStart="7dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="0dp"
+                    android:text="Crear"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

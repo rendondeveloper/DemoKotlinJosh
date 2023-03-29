@@ -81,8 +81,8 @@ class TribuMembersFragment : Fragment(), FriendDefaultView.FriendDefaultViewList
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                0 -> MembersFragment()
-                else -> MembersFragment()
+                0 -> MembersFragment(false)
+                else -> MembersFragment(true)
             }
         }
     }

@@ -354,6 +354,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
+                android:textAllCaps="true"
                 android:text="@string/fmtri_form_address" />
 
             <View
@@ -413,24 +414,6 @@
                         android:focusable="false"
                         android:inputType="none"
                         android:padding="15dp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/cpTextField"
-                    style="@style/LoginTextInputLayoutStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/input_height"
-                    android:layout_marginBottom="10dp"
-                    android:hint="@string/fmtri_form_postal_code"
-                    app:hintTextColor="@color/black_dynamic">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/cpTextInput"
-                        style="@style/Kanit_Regular.Default.16"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>

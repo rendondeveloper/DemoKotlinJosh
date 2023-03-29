@@ -11,6 +11,7 @@ import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.TribuResultViewBinding
 import com.asdeporte.asdeportev2.ui.access.ModalBottomSheetCountry
+import com.asdeporte.asdeportev2.ui.mitribu.subtabs.FriendMenuBottomSheet
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.FitCenter
@@ -26,15 +27,12 @@ class TribuResultView @JvmOverloads constructor(
     private lateinit var binding: TribuResultViewBinding
 
     private var isAdmin: Boolean = false
-    private lateinit var bottomSheetMembers: ModalBottomSheetMembers
 
     init {
         binding = TribuResultViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
     fun bind(item: EventData, fragmentManager: FragmentManager) {
-
-        bottomSheetMembers = ModalBottomSheetMembers()
 
         isAdmin = Random.nextBoolean()
 
@@ -66,7 +64,14 @@ class TribuResultView @JvmOverloads constructor(
             binding.adminBadge.visibility = View.GONE
 
         binding.optionsButton.setOnClickListener {
-            bottomSheetMembers.show(fragmentManager, "MY_BOTTOM_SHEET")
+            item.isAmigo?.let { isAmigo ->
+                if(isAmigo){
+                    FriendMenuBottomSheet().show(fragmentManager, "MY_BOTTOM_SHEET")
+                }else{
+                    ModalBottomSheetMembers().show(fragmentManager, "MY_BOTTOM_SHEET")
+                }
+            }
+
         }
     }
 }

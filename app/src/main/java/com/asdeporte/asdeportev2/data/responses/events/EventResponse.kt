@@ -10,5 +10,6 @@ data class EventData(
     val eventid: String?,
     val official_name: String?,
     val logo: String?,
-    val cover: String?
+    val cover: String?,
+    val isAmigo: Boolean? = false
 )

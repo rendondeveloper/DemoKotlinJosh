@@ -96,7 +96,7 @@
                 style="@style/Kanit_Medium.Default.12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Corredores Narvarte" />
+                android:text="Publico" />
 
             <TextView
                 style="@style/Kanit_Medium.Default.12"
@@ -139,7 +139,6 @@
             android:layout_marginStart="@dimen/dimen_16dp"
             android:layout_marginTop="@dimen/dimen_16dp"
             android:layout_marginEnd="@dimen/dimen_16dp"
-            android:layout_marginBottom="@dimen/dimen_16dp"
             android:hint="@string/give_admin"
             app:endIconDrawable="@drawable/arrow_down_line"
             app:endIconTint="@color/black_dynamic"
@@ -149,7 +148,7 @@
                 android:id="@+id/stateTextInput"
                 style="@style/Kanit_Regular.Default.16"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:focusable="false"
                 android:inputType="none"
                 android:padding="15dp" />
@@ -160,9 +159,8 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:background="@drawable/secondary_button"
             android:backgroundTint="@color/black_dynamic"
             android:gravity="center_horizontal"
@@ -191,7 +189,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/secondary_button"

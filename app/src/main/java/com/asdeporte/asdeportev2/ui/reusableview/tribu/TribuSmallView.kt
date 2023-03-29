@@ -22,7 +22,7 @@ class TribuSmallView @JvmOverloads constructor(
         binding = TribuSmallViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun bind(item: EventData) {
+    fun bind(item: EventData, onItemClick: ((item: EventData) -> Unit)?) {
 
         Glide.with(this)
             .load("https://picsum.photos/600/900")
@@ -34,6 +34,8 @@ class TribuSmallView @JvmOverloads constructor(
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .skipMemoryCache(true))
             .into(binding.tribuLogo)
-
+        binding.btnUnirme.setOnClickListener {
+            onItemClick?.invoke(item)
+        }
     }
 }

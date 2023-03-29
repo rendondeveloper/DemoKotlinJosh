@@ -1,6 +1,7 @@
 package com.asdeporte.asdeportev2.ui.mitribu
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -62,5 +63,9 @@ class ModalBottomSheetShare : BottomSheetDialogFragment() {
                 }
             }
         })
+        binding.lnCompartir.setOnClickListener {
+            val compartirtc = Intent(Intent.ACTION_SEND)
+            startActivity(Intent.createChooser(compartirtc, ""))
+        }
     }
 }
