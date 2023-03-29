@@ -138,7 +138,7 @@
                     android:paddingTop="0dp"
                     android:paddingEnd="7dp"
                     android:paddingBottom="0dp"
-                    android:text="Invitar miembros"
+                    android:text="@string/invite_members"
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
 

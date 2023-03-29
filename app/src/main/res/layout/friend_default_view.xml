@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/dimen_12dp">
+    app:cardCornerRadius="@dimen/dimen_4dp"
+    app:cardElevation="0dp">
 
     <RelativeLayout
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/event_tribu_background"
-        android:elevation="0dp"
         android:paddingTop="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

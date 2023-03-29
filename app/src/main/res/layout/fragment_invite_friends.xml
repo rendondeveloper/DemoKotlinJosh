@@ -51,7 +51,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_toEndOf="@+id/back_image"
-                android:text="Invitar miembros"
+                android:text="@string/invite_members"
                 app:layout_constraintBottom_toBottomOf="@+id/back_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/back_image"

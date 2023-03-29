@@ -25,7 +25,6 @@ class TribuProfileFragment : Fragment() {
 
     private var _binding: FragmentTribuProfileBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var postsAdapter: PostsAdapter
     val testEvent = EventData("123",
         "7, 14 y 21K by WomanUp",
@@ -40,10 +39,6 @@ class TribuProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as MainActivity).hideActionBar()
-        binding.toolbar.setNavigationOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
-        }
         /*
         Glide.with(this)
             .load("https://picsum.photos/600/300")

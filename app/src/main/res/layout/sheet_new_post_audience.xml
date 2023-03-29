@@ -109,7 +109,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Amigos"
+                                android:text="@string/txt_friends"
                                 style="@style/Kanit_Regular.Default.16"/>
                             <TextView
                                 android:layout_width="match_parent"

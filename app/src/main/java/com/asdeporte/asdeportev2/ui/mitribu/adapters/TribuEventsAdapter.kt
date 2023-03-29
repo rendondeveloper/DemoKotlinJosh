@@ -6,9 +6,9 @@ import com.asdeporte.asdeportev2.ui.reusableview.tribu.TribuEventstView
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
 
-class TribuEventsAdapter : RecyclerViewAdapterBase<EventData, TribuEventstView>() {
+class TribuEventsAdapter : RecyclerViewAdapterBase<EventData, TribuEventstView>(),TribuEventstView.TribuEventsListener {
 
-    var onItemClick: ((item: EventData) -> Unit)? = null
+    var onDetailClick: ((item: EventData) -> Unit)? = null
 
     override fun onCreateItemView(parent: ViewGroup, viewType: Int): TribuEventstView =
         TribuEventstView(parent.context)
@@ -17,15 +17,13 @@ class TribuEventsAdapter : RecyclerViewAdapterBase<EventData, TribuEventstView>(
         val item = items[position]
 
         holder.view.apply {
-            bind(item)
+            bind(item,this@TribuEventsAdapter)
         }
 
-        holder.view.setOnClickListener {
-            onItemClick?.invoke(item)
-        }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
+    override fun onDetail(event: EventData) {
+        onDetailClick?.invoke(event)
     }
+
 }
