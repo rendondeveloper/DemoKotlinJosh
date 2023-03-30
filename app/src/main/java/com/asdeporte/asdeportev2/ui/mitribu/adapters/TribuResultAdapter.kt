@@ -25,8 +25,4 @@ class TribuResultAdapter : RecyclerViewAdapterBase<EventData, TribuResultView>()
             onItemClick?.invoke(item)
         }
     }
-
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

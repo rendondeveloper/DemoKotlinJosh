@@ -78,6 +78,15 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/post_activity_background">
 
+            <com.google.android.exoplayer2.ui.StyledPlayerView
+                android:id="@+id/video_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/options_new_post_sheet_backround"
+                android:visibility="gone"
+                app:resize_mode="fill"
+                app:surface_type="texture_view" />
+
             <ImageView
                 android:id="@+id/postImage"
                 android:layout_width="match_parent"
@@ -85,6 +94,7 @@
                 android:background="@drawable/post_activity_background"
                 android:scaleType="center"
                 android:src="@drawable/post_dummy" />
+
         </RelativeLayout>
 
         <LinearLayout
@@ -188,7 +198,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="10dp"
-                    android:text="Compartir" />
+                    android:text="@string/share" />
             </LinearLayout>
 
         </LinearLayout>

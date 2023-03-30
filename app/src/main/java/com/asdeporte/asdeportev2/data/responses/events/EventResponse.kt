@@ -11,7 +11,8 @@ data class EventData(
     val official_name: String?,
     val logo: String?,
     val cover: String?,
-    val isAmigo: Boolean? = false
+    val isAmigo: Boolean? = false,
+    val isVideo: Boolean? = false
 )
 
 data class ScoreData(

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -21,7 +22,7 @@ import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
 import java.util.*
 
-class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetListener,
+class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventBottomSheet.EventBottomSheetListener,
     TextToSpeech.OnInitListener,
     MiTribuRequestsFragment.MiTribuRequestsListener,
     JoinTribusFilterSheet.JoinTribusFilterSheetListener {
@@ -59,10 +60,11 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        validFlow()
+
         binding.homeTribus.visibility = View.VISIBLE
         binding.createTribuView.visibility = View.GONE
         binding.createTribuButtonsView.visibility = View.GONE
-
         binding.changeTribuButton.setOnClickListener {
             //ChangeDefaultTribuSheet.create(this@TabTribuTribusFragment, EventData("", "", "", "")).show(requireActivity().supportFragmentManager, "TabTribuTribusFragment")
             val alert = ChangeDefaultTribuDialog().apply {
@@ -125,6 +127,19 @@ class TabTribuTribusFragment : Fragment(), EventBottomSheet.EventBottomSheetList
         }
 
         setupAdapters()
+    }
+
+    private fun validFlow(){
+        when(flow){
+            "friends" -> {
+                binding.txtTitle.text = getString(R.string.tribus).uppercase()
+                binding.pendingRequests.visibility = GONE
+                binding.txtDescription.visibility = GONE
+                binding.rlAddTribu.visibility = GONE
+                binding.lnOtherTribus.visibility = GONE
+                binding.createTribuButtonsView.visibility = GONE
+            }
+        }
     }
 
     private fun setupAdapters() {

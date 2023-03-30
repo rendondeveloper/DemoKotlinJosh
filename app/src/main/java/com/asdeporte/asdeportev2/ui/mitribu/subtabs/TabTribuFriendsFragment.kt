@@ -3,6 +3,7 @@ package com.asdeporte.asdeportev2.ui.mitribu.subtabs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -15,11 +16,10 @@ import com.asdeporte.asdeportev2.ui.mitribu.adapters.FriendRequestAdapter
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendDefaultView
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendMenuOption
 
-class TabTribuFriendsFragment : Fragment(), FriendDefaultView.FriendDefaultViewListener,
+class TabTribuFriendsFragment(private val flow: String = "") : Fragment(), FriendDefaultView.FriendDefaultViewListener,
     MiTribuRequestsFragment.MiTribuRequestsListener {
     private var _binding: FragmentTabTribuFriendsBinding? = null
     private val binding get() = _binding!!
-
     //private lateinit var tribusAdapter: SmallTribuJoinAdapter
     private lateinit var otherFriendsAdapter: FriendRequestAdapter
 
@@ -34,8 +34,8 @@ class TabTribuFriendsFragment : Fragment(), FriendDefaultView.FriendDefaultViewL
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        validFlow()
         binding.homeTribus.visibility = View.VISIBLE
-
         requestsFragment.listener = this
         binding.pendingRequests.setOnClickListener {
             findNavController().safelyNavigate(R.id.toRequests)
@@ -52,6 +52,14 @@ class TabTribuFriendsFragment : Fragment(), FriendDefaultView.FriendDefaultViewL
         }
 
         setupAdapters()
+    }
+
+    private fun validFlow(){
+        if(flow == "friends"){
+            binding.lnTitle.visibility = GONE
+            binding.txtTitle2.visibility = GONE
+            binding.moreFriends.visibility = GONE
+        }
     }
 
     private fun setupAdapters() {

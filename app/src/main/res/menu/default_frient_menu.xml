@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/message"
-        android:title="Enviar mensaje"
+        android:title="@string/txt_send_msg"
         android:icon="@drawable/ic_message"
         android:iconTint="@color/black_dynamic"/>
 

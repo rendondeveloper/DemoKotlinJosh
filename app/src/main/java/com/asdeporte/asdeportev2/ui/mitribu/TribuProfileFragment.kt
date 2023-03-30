@@ -21,7 +21,7 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 
 
-class TribuProfileFragment : Fragment() {
+class TribuProfileFragment() : Fragment() {
 
     private var _binding: FragmentTribuProfileBinding? = null
     private val binding get() = _binding!!

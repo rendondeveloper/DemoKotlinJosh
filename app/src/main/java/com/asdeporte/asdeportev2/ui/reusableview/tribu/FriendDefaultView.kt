@@ -12,7 +12,10 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FriendDefaultViewBinding
+import com.asdeporte.asdeportev2.extensions.getVisibleFragment
+import com.asdeporte.asdeportev2.ui.mitribu.TabsFriendsProfileFragment
 import com.asdeporte.asdeportev2.ui.mitribu.subtabs.FriendMenuBottomSheet
+import com.asdeporte.asdeportev2.ui.mitribu.subtabs.TabTribuFriendsFragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.FitCenter
@@ -25,23 +28,18 @@ class FriendDefaultView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var friendMenuBottomSheet: FriendMenuBottomSheet
-
     interface FriendDefaultViewListener {
         fun onOptionSelected(friendId: Int, option: FriendMenuOption)
     }
 
     private lateinit var listener: FriendDefaultViewListener
-
-    private lateinit var binding: FriendDefaultViewBinding
+    private var binding: FriendDefaultViewBinding
 
     init {
         binding = FriendDefaultViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
     fun setData(listener: FriendDefaultViewListener, supportFragmentManager: FragmentManager) {
-
-        friendMenuBottomSheet = FriendMenuBottomSheet()
 
         //binding.numberEvents.text = events
         this.listener = listener
@@ -59,7 +57,13 @@ class FriendDefaultView @JvmOverloads constructor(
 
 
         binding.menuButton.setOnClickListener {
-            friendMenuBottomSheet.show(supportFragmentManager, "MY_BOTTOM_SHEET")
+            val friendsFragment = supportFragmentManager.getVisibleFragment("TabsFriendsProfileFragment")
+            val miTribuFragment = supportFragmentManager.getVisibleFragment("MiTribuFragment")
+            if(friendsFragment || miTribuFragment){
+                ModalBottomSheetMembers().show(supportFragmentManager, "MY_BOTTOM_SHEET")
+            }else{
+                FriendMenuBottomSheet().show(supportFragmentManager, "MY_BOTTOM_SHEET")
+            }
         }
     }
 

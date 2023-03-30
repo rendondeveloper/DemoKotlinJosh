@@ -11,6 +11,7 @@ import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentTabsFriendsProfileBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.SectionsFriendsPagerAdapter
+import com.asdeporte.asdeportev2.ui.reusableview.tribu.ModalBottomSheetMembers
 
 class TabsFriendsProfileFragment : Fragment() {
 
@@ -37,7 +38,7 @@ class TabsFriendsProfileFragment : Fragment() {
     private fun initTabs(){
         val sectionsPagerAdapter = SectionsFriendsPagerAdapter(requireContext(), childFragmentManager)
         viewPager = binding.viewPager
-        viewPager.offscreenPageLimit = 4
+        viewPager.offscreenPageLimit = 3
         viewPager.adapter = sectionsPagerAdapter
 
         viewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
@@ -53,22 +54,20 @@ class TabsFriendsProfileFragment : Fragment() {
         })
 
         binding.tabWall.setOnClickListener {
-            changeTabState(0)
+            viewPager.currentItem = 0
         }
         binding.tabTribus.setOnClickListener {
-            changeTabState(1)
+            viewPager.currentItem = 1
         }
         binding.tabFriends.setOnClickListener {
-            changeTabState(2)
+            viewPager.currentItem = 2
         }
-        binding.tabMore.setOnClickListener {
-            changeTabState(3)
+        binding.tabMoreOptions.setOnClickListener {
+            ModalBottomSheetMembers().show(requireActivity().supportFragmentManager, "MY_BOTTOM_SHEET")
         }
     }
 
     private fun changeTabState(position: Int) {
-        viewPager.currentItem = position
-
         when (position) {
             0 -> {
                 activeTab = TribuTabs.WALL
