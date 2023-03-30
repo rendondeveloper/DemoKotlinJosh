@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:theme="@style/Theme.AsdeporteV2"
-    app:behavior_peekHeight="90dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    tools:context=".ui.mitribu.FilterResultsBottomSheetFragment">
 
     <LinearLayout
         android:id="@+id/activity_view"
@@ -61,7 +60,7 @@
                     android:id="@+id/cityTextField"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
-                    android:hint="@string/rfc_city"
+                    android:hint="Rama"
                     app:endIconDrawable="@drawable/arrow_down"
                     app:endIconTint="@color/black_dynamic"
                     app:hintTextColor="@color/black_dynamic"
@@ -83,7 +82,7 @@
                     android:id="@+id/sportTextField"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
-                    android:hint="@string/sport"
+                    android:hint="Categoria"
                     app:endIconDrawable="@drawable/arrow_down"
                     app:endIconTint="@color/black_dynamic"
                     app:hintTextColor="@color/black_dynamic"
@@ -144,11 +143,6 @@
                     android:background="@color/white_dynamic"/>
 
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
-
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

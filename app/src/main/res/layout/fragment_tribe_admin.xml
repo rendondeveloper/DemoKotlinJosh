@@ -145,7 +145,7 @@
             app:hintTextColor="@color/black_dynamic">
 
             <AutoCompleteTextView
-                android:id="@+id/stateTextInput"
+                android:id="@+id/adminTextInput"
                 style="@style/Kanit_Regular.Default.16"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"

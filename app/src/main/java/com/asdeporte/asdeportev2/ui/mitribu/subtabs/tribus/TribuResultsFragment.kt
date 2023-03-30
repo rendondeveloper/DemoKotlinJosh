@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTribuResultsBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuEventsAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuResultAdapter
@@ -47,7 +50,7 @@ class TribuResultsFragment : Fragment() {
 
         resultsdapter = TribuEventsAdapter().apply {
             onDetailClick = {
-                //EventBottomSheet.create(this@TabTribuTribusFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_results_to_resultsDetailFragment)
             }
         }
 

@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentTribeAdminBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.alert.AlertDialog
 import com.asdeporte.asdeportev2.ui.notifications.NotificationsFilterDialog
@@ -42,8 +44,13 @@ class TribeAdminFragment : Fragment() {
             alert.show(requireActivity().supportFragmentManager, this.tag)
         }
 
-        binding.stateTextInput.setOnClickListener {
-            val alert = AlertDialog(
+        binding.tilChangeAdmin.setOnClickListener {
+            findNavController().safelyNavigate(R.id.action_tribeAdminFragment_to_chooseAdminFragment)
+        }
+
+        binding.adminTextInput.setOnClickListener {
+            findNavController().safelyNavigate(R.id.action_tribeAdminFragment_to_chooseAdminFragment)
+            /*val alert = AlertDialog(
                 title = "Nuevo administrador",
                 message = "¿Estás seguro de ceder la administración a Alicia Martínez?",
                 isButtonAction = true).apply {
@@ -51,7 +58,7 @@ class TribeAdminFragment : Fragment() {
                     findNavController().popBackStack()
                 }
             }
-            alert.show(requireActivity().supportFragmentManager, this.tag)
+            alert.show(requireActivity().supportFragmentManager, this.tag)*/
         }
 
         binding.deleteTribu.setOnClickListener {

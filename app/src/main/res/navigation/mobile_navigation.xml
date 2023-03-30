@@ -229,7 +229,11 @@
     <fragment
         android:id="@+id/navigation_tribu_results"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.TribuResultsFragment"
-        tools:layout="@layout/fragment_tribu_details" />
+        tools:layout="@layout/fragment_tribu_details" >
+        <action
+            android:id="@+id/action_navigation_tribu_results_to_resultsDetailFragment"
+            app:destination="@id/resultsDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_tribu_profile"
@@ -437,7 +441,11 @@
     <fragment
         android:id="@+id/tribeAdminFragment"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.TribeAdminFragment"
-        android:label="TribeAdminFragment" />
+        android:label="TribeAdminFragment" >
+        <action
+            android:id="@+id/action_tribeAdminFragment_to_chooseAdminFragment"
+            app:destination="@id/chooseAdminFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mitribuRequestFragment"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.MitribuRequestFragment"
@@ -476,4 +484,23 @@
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.InviteFriendsFragment"
         android:label="fragment_invite_friends"
         tools:layout="@layout/fragment_invite_friends" />
+    <fragment
+        android:id="@+id/chooseAdminFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.ChooseAdminFragment"
+        android:label="fragment_choose_admin"
+        tools:layout="@layout/fragment_choose_admin" />
+    <fragment
+        android:id="@+id/resultsDetailFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.ResultsDetailFragment"
+        android:label="fragment_results_detail"
+        tools:layout="@layout/fragment_results_detail" >
+        <action
+            android:id="@+id/action_resultsDetailFragment_to_compairFriendsFragment"
+            app:destination="@id/compairFriendsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/compairFriendsFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.CompairFriendsFragment"
+        android:label="fragment_compair_friends"
+        tools:layout="@layout/fragment_compair_friends" />
 </navigation>

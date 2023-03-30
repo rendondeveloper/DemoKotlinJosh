@@ -93,7 +93,6 @@ class SeeEventDetailFragment : Fragment() {
                 binding.tabView.getTabAt(position)?.select()
             }
         })
-
     }
 
     class EventsViewPagerAdapter(fragmentActivity: FragmentActivity) :

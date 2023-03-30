@@ -58,6 +58,9 @@
     <style name="Kanit_Bold.Default.20" parent="Kanit_Bold.Default">
         <item name="android:textSize">@dimen/text_20</item>
     </style>
+    <style name="Kanit_Bold.Default.28" parent="Kanit_Bold.Default">
+        <item name="android:textSize">@dimen/text_28</item>
+    </style>
     <style name="Kanit_Bold.Default.36" parent="Kanit_Bold.Default">
         <item name="android:textSize">@dimen/text_36</item>
     </style>

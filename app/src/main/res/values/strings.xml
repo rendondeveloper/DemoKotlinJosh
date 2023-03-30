@@ -1134,4 +1134,5 @@
     <string name="invite_members">Invitar miembros</string>
     <string name="invite">Invitar</string>
     <string name="information_tribu">Información de tribu</string>
+    <string name="txt_results_subtitle">Puedes compararte hasta con <b>10 competidores</b> que sean de la misma <b>rama y categoría</b></string>
 </resources>

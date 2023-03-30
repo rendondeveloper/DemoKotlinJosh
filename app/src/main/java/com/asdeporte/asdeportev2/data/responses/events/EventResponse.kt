@@ -13,3 +13,9 @@ data class EventData(
     val cover: String?,
     val isAmigo: Boolean? = false
 )
+
+data class ScoreData(
+    val position: Int?,
+    val name: String?,
+    val time: String?
+)
