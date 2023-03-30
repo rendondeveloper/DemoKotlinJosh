@@ -8,7 +8,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/create_tribu_buttons_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -40,6 +40,7 @@
                     android:paddingBottom="14dp">
 
                     <TextView
+                        android:id="@+id/txt_title"
                         style="@style/Kanit_Semi_Bold_Italic.Default.20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -70,6 +71,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
+                    android:id="@+id/txt_description"
                     style="@style/Kanit_Regular.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -79,6 +81,7 @@
                     android:text="Todavía puedes unirte o crear una tribu" />
 
                 <RelativeLayout
+                    android:id="@+id/rl_add_tribu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -144,6 +147,7 @@
                     android:background="@color/secondary_background" />
 
                 <LinearLayout
+                    android:id="@+id/ln_other_tribus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -198,16 +202,16 @@
 
                     </LinearLayout>
 
-                </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/moreTribus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:clipToPadding="false"
+                        android:paddingStart="16dp"
+                        tools:ignore="RtlSymmetry" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/moreTribus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:clipToPadding="false"
-                    android:paddingStart="16dp"
-                    tools:ignore="RtlSymmetry" />
+                </LinearLayout>
 
             </LinearLayout>
 

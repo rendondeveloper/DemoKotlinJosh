@@ -112,7 +112,7 @@
                 android:gravity="center_vertical"
                 android:layout_marginStart="15dp"
                 style="@style/Kanit_Regular.Default.16"
-                android:text="Información de tribu" />
+                android:text="@string/information_tribu" />
 
             <ImageButton
                 android:layout_width="32dp"

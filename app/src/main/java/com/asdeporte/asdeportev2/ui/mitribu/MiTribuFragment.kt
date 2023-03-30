@@ -130,5 +130,4 @@ enum class TribuTabs {
     FRIENDS,
     PRIVACY,
     EDIT_PROFILE,
-    MORE,
 }

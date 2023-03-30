@@ -68,7 +68,7 @@ class TribuResultView @JvmOverloads constructor(
                 if(isAmigo){
                     FriendMenuBottomSheet().show(fragmentManager, "MY_BOTTOM_SHEET")
                 }else{
-                    ModalBottomSheetMembers().show(fragmentManager, "MY_BOTTOM_SHEET")
+                    ModalBottomSheetMembers("add").show(fragmentManager, "MY_BOTTOM_SHEET")
                 }
             }
 

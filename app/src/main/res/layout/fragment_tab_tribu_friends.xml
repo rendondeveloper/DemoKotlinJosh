@@ -27,6 +27,7 @@
                 android:background="@color/secondary_background" />
 
             <RelativeLayout
+                android:id="@+id/ln_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -39,17 +40,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text="@string/txt_friends"
                     android:layout_centerVertical="true"
+                    android:text="@string/txt_friends"
                     android:textAllCaps="true" />
 
                 <TextView
                     android:id="@+id/pending_requests"
-                    android:layout_centerVertical="true"
                     style="@style/Kanit_Semibold.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
                     android:text="Solicitudes pendientes (2)"
                     android:textColor="@color/orange_as_light" />
             </RelativeLayout>
@@ -90,6 +91,7 @@
                 android:layout_marginEnd="16dp" />
 
             <TextView
+                android:id="@+id/txt_title2"
                 style="@style/Kanit_Semi_Bold_Italic.Default.20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

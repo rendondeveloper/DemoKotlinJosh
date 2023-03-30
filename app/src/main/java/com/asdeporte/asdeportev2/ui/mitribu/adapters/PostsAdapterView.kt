@@ -16,12 +16,13 @@ import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.PostHomeViewBinding
 import com.asdeporte.asdeportev2.ui.mitribu.ImageDialogView
-import com.asdeporte.asdeportev2.ui.mitribu.ModalBottomSheetShare
-import com.bumptech.glide.Glide
+import com.asdeporte.asdeportev2.ui.reusableview.tribu.ModalBottomSheetShare
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
 
 
 class PostsAdapterView @JvmOverloads constructor(
@@ -29,9 +30,9 @@ class PostsAdapterView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
-    private lateinit var binding: PostHomeViewBinding
+    private var binding: PostHomeViewBinding
     private lateinit var bottomSheetShare: ModalBottomSheetShare
-
+    private lateinit var player: ExoPlayer
     interface PostsAdapterListener {
         fun onItem(event: EventData)
         fun onMenu(event: EventData)
@@ -122,6 +123,23 @@ class PostsAdapterView @JvmOverloads constructor(
         binding.shareButton.setOnClickListener {
             bottomSheetShare.show(fragmentManager, "MY_BOTTOM_SHEET")
         }
+        item.isVideo?.let {
+            if(it){
+                binding.postImage.visibility = GONE
+                binding.videoPlayerView.visibility = VISIBLE
+                player = ExoPlayer.Builder(context).build()
+                binding.videoPlayerView.player = player
+                val mediaItem = MediaItem.fromUri("https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd")
+                player.addMediaItem(mediaItem)
+                player.prepare()
+                player.play()
+                player.volume = 0f
+            }else{
+                binding.postImage.visibility = VISIBLE
+                binding.videoPlayerView.visibility = GONE
+            }
+        }
+
     }
 
     private fun showMenu(v: View, @MenuRes menuRes: Int) {

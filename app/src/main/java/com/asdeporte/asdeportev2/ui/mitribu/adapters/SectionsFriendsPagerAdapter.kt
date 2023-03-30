@@ -16,19 +16,16 @@ class SectionsFriendsPagerAdapter(private val context: Context, fm: FragmentMana
                 TribuProfileFragment()
             }
             1 -> {
-                TabTribuTribusFragment()
-            }
-            2 -> {
-                TabTribuFriendsFragment()
+                TabTribuTribusFragment(flow = "friends")
             }
             else -> {
-                TabTribuFriendsFragment()
+                TabTribuFriendsFragment(flow = "friends")
             }
         }
 
     }
 
     override fun getCount(): Int {
-        return 4
+        return 3
     }
 }

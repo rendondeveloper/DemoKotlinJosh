@@ -1,4 +1,4 @@
-package com.asdeporte.asdeportev2.ui.mitribu
+package com.asdeporte.asdeportev2.ui.reusableview.tribu
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -63,9 +63,9 @@ class ModalBottomSheetShare : BottomSheetDialogFragment() {
                 }
             }
         })
-        binding.lnCompartir.setOnClickListener {
-            val compartirtc = Intent(Intent.ACTION_SEND)
-            startActivity(Intent.createChooser(compartirtc, ""))
+        binding.lnShare.setOnClickListener {
+            val iShare = Intent(Intent.ACTION_SEND)
+            startActivity(Intent.createChooser(iShare, ""))
         }
     }
 }

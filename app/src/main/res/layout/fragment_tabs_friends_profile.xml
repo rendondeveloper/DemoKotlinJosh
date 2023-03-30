@@ -33,8 +33,36 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
+            android:id="@+id/tab_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tab_tribus"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/tabFriendsImg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                android:src="@drawable/friends" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:maxLines="1"
+                android:text="@string/txt_friends"
+                android:textAlignment="center"
+                app:autoSizeMinTextSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/tab_wall"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="55dp"
             android:layout_weight="1"
@@ -81,41 +109,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:maxLines="1"
-                android:text="Tribus"
+                android:text="@string/tribus"
                 android:textAlignment="center"
                 app:autoSizeMinTextSize="10sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/tab_friends"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tab_tribus"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/tabFriendsImg"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:scaleType="center"
-                android:src="@drawable/friends" />
-
-            <TextView
-                style="@style/Kanit_Regular.Default.12"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:maxLines="1"
-                android:text="@string/txt_friends"
-                android:textAlignment="center"
-                app:autoSizeMinTextSize="10sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tab_more"
+            android:id="@+id/tab_more_options"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginEnd="32dp"
@@ -124,7 +124,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/post_options2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
