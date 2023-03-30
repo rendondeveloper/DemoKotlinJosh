@@ -13,7 +13,6 @@ import com.asdeporte.asdeportev2.databinding.FragmentTribuResultsBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuEventsAdapter
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuResultAdapter
 
 class TribuResultsFragment : Fragment() {
 

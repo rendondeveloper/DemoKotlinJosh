@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.data.responses.events.ScoreData
 import com.asdeporte.asdeportev2.databinding.FragmentResultsBinding
 import com.asdeporte.asdeportev2.ui.mitribu.FilterResultsBottomSheetFragment
-import com.asdeporte.asdeportev2.ui.mitribu.ModalBottomSheetShare
 import com.asdeporte.asdeportev2.ui.mitribu.ScoreBottomSheetFragment
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.ScoreAdapter
 
