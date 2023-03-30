@@ -115,10 +115,11 @@ class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener,
 
         // Top events
         postsAdapter = PostsAdapter().apply {
-            onItemClick = {
+            onMenuClick = {
                 PostMenuOptionsSheet.create(this@TribuMainFragment, it)
                     .show(requireActivity().supportFragmentManager, "EventBottomSheet")
             }
+
         }
 
         binding.posts.adapter = postsAdapter

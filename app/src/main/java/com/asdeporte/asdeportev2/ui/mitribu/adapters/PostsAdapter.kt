@@ -22,14 +22,10 @@ class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
         holder.view.apply {
             bind(item, this@PostsAdapter, (context as AppCompatActivity).supportFragmentManager)
         }
-
-        holder.view.setOnClickListener {
-            onItemClick?.invoke(item)
-        }
-
     }
 
     override fun onItem(event: EventData) {
+        onItemClick?.invoke(event)
     }
 
     override fun onMenu(event: EventData) {

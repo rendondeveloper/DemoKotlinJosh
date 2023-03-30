@@ -233,8 +233,8 @@
 
     <fragment
         android:id="@+id/navigation_tribu_profile"
-        android:name="com.asdeporte.asdeportev2.ui.mitribu.TribuProfileFragment"
-        tools:layout="@layout/fragment_tribu_profile" />
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.TabsFriendsProfileFragment"
+        tools:layout="@layout/fragment_tabs_friends_profile" />
 
 
     <fragment

@@ -46,7 +46,7 @@ class TribuResultsFragment : Fragment() {
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
 
         resultsdapter = TribuEventsAdapter().apply {
-            onItemClick = {
+            onDetailClick = {
                 //EventBottomSheet.create(this@TabTribuTribusFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
             }
         }

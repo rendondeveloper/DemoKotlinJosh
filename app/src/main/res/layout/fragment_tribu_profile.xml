@@ -6,110 +6,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mitribu.TribuProfileFragment">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:title="Perfíl de Aarón Méndez"
-        app:titleTextColor="@color/black_dynamic"
-        app:navigationIcon="@drawable/arrow_left"
-        app:navigationIconTint="@color/black_dynamic"
-        android:theme="@style/AsdToolbarTheme"/>
-
-    <LinearLayout
-        android:id="@+id/tab_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:weightSum="3">
-
-        <LinearLayout
-            android:id="@+id/tab_wall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                android:id="@+id/tab_wall_img"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:src="@drawable/tribu_tab_wall_active" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:textAlignment="center"
-                android:maxLines="1"
-                app:autoSizeMinTextSize="10sp"
-                style="@style/Kanit_Regular.Default.12"
-                android:text="Perfil"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tab_tribus"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                android:id="@+id/tab_tribus_img"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:src="@drawable/tribu_tab_tribu"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:textAlignment="center"
-                android:maxLines="1"
-                app:autoSizeMinTextSize="10sp"
-                style="@style/Kanit_Regular.Default.12"
-                android:text="Tribus"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tab_friends"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:src="@drawable/friends"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:textAlignment="center"
-                android:maxLines="1"
-                app:autoSizeMinTextSize="10sp"
-                style="@style/Kanit_Regular.Default.12"
-                android:text="@string/txt_friends"/>
-        </LinearLayout>
-
-    </LinearLayout>
-    <View
-        android:id="@+id/separator"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tab_view"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/separator"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,8 +29,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileImage"
-                android:layout_width="68dp"
-                android:layout_height="68dp"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="-35dp"
                 android:src="@drawable/avatar_dummy"
@@ -135,67 +38,68 @@
                 app:civ_border_width="2pt" />
 
             <TextView
+                style="@style/Kanit_Semi_Bold.Default.14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Aarón Méndez"
-                style="@style/Kanit_Regular.Default.14"/>
+                android:text="Aarón Méndez" />
+
             <TextView
+                style="@style/Kanit_Regular.Default.14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@aaron123"
-                style="@style/Kanit_Regular.Default.14"/>
+                android:text="@aaron123" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/invite_button"
+                style="@style/Kanit_Medium.Default.16"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/button_height"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/pill_background"
                 android:insetLeft="0dp"
                 android:insetTop="0dp"
                 android:insetRight="0dp"
                 android:insetBottom="0dp"
-                style="@style/Kanit_Medium.Default.16"
+                android:text="Agregar amigo"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:background="@drawable/pill_background"
-                android:text="Agregar amigo"/>
+                android:textColor="@color/white" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
                 <View
                     android:layout_width="43dp"
                     android:layout_height="1dp"
-                    android:background="@color/black_dynamic"
                     android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@+id/main_tribu_desc"/>
+                    android:layout_toLeftOf="@+id/main_tribu_desc"
+                    android:background="@color/black_dynamic" />
 
                 <TextView
                     android:id="@+id/main_tribu_desc"
+                    style="@style/Kanit_Regular.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="Tribu Principal"
-                    style="@style/Kanit_Regular.Default.14"/>
+                    android:text="Tribu Principal" />
 
                 <View
                     android:layout_width="43dp"
                     android:layout_height="1dp"
-                    android:background="@color/black_dynamic"
                     android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/main_tribu_desc"/>
+                    android:layout_toRightOf="@+id/main_tribu_desc"
+                    android:background="@color/black_dynamic" />
 
             </RelativeLayout>
 
@@ -203,46 +107,48 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="32dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/secondary_background">
+
                 <TextView
                     android:id="@+id/posts_menu"
+                    style="@style/Kanit_Regular.Default.16"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:text="Ver publicaciones"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/filter_posts_background"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:gravity="center_vertical"
-                    style="@style/Kanit_Regular.Default.16"
-                    android:clickable="true"
-                    android:background="@drawable/filter_posts_background"
-                    android:drawablePadding="10dp"
-                    android:layout_marginEnd="10dp"
+                    android:text="Ver publicaciones"
                     app:drawableEndCompat="@drawable/filter" />
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp">
+                android:orientation="vertical">
+
                 <TextView
+                    style="@style/Kanit_Semi_Bold_Italic.Default.20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text="ACTIVIDAD RECIENTE"
-                    android:textAllCaps="true"
                     android:layout_marginBottom="10dp"
-                    style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+                    android:text="ACTIVIDAD RECIENTE"
+                    android:textAllCaps="true" />
 
                 <com.asdeporte.asdeportev2.ui.mitribu.adapters.EventTribuHorizontalView
                     android:id="@+id/tribu_hor_1"
@@ -260,27 +166,27 @@
                     android:layout_height="wrap_content" />
 
                 <com.google.android.material.button.MaterialButton
+                    style="@style/Kanit_Semibold.Orange.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
                     android:text="Ver todos"
-                    style="@style/Kanit_Semibold.Orange.14"
-                    android:textAllCaps="false"
-                    android:background="@android:color/transparent"/>
+                    android:textAllCaps="false" />
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="16dp"
-                android:background="@color/secondary_background"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="@color/secondary_background" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/posts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:overScrollMode="never"/>
+                android:overScrollMode="never" />
 
         </LinearLayout>
 

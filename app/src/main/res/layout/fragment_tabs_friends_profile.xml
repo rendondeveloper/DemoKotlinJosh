@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.mitribu.TabsFriendsProfileFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="Amigos sugeridos"
+        app:titleTextColor="@color/black_dynamic"
+        app:navigationIcon="@drawable/arrow_left"
+        app:navigationIconTint="@color/black_dynamic"
+        android:theme="@style/AsdToolbarTheme"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/black_lineal_border"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/tab_wall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="55dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tab_tribus"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/tab_wall_img"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/user_profile_active" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:maxLines="1"
+                android:text="Perfil"
+                android:textAlignment="center"
+                app:autoSizeMinTextSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_tribus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/tab_tribus_img"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/tribu_tab_tribu" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:maxLines="1"
+                android:text="Tribus"
+                android:textAlignment="center"
+                app:autoSizeMinTextSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tab_tribus"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/tabFriendsImg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                android:src="@drawable/friends" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:maxLines="1"
+                android:text="@string/txt_friends"
+                android:textAlignment="center"
+                app:autoSizeMinTextSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_more"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/post_options2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/more_horiz"
+                app:tint="@color/black_dynamic" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,8 +37,6 @@ class PostsAdapterView @JvmOverloads constructor(
         fun onMenu(event: EventData)
     }
 
-    private lateinit var listener: PostsAdapterListener
-
     private var isLiked = false
 
     init {
