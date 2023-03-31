@@ -114,13 +114,31 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.navigation_home -> showNavigationBar()
-                R.id.navigation_dashboard -> showNavigationBar()
-                R.id.navigation_tribu -> showNavigationBar()
-                R.id.navigation_more -> showNavigationBar()
-                R.id.navigation_notifications -> hideNavigationBar()
-
-                else -> hideNavigationBar()
+                R.id.navigation_home -> {
+                    showNavigationBar()
+                    showActionBar()
+                }
+                R.id.navigation_dashboard -> {
+                    showNavigationBar()
+                    showActionBar()
+                }
+                R.id.navigation_tribu -> {
+                    showNavigationBar()
+                    showActionBar()
+                }
+                R.id.navigation_more -> {
+                    showNavigationBar()
+                    showActionBar()
+                }
+                R.id.navigation_notifications -> {
+                    hideNavigationBar()
+                }
+                R.id.createTribeFragment -> {
+                    hideActionBar()
+                }
+                else -> {
+                    hideNavigationBar()
+                }
             }
         }
 
