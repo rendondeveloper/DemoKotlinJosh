@@ -114,6 +114,9 @@
         <action
             android:id="@+id/action_navigation_tribu_to_mitribuRequestFragment"
             app:destination="@id/mitribuRequestFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_createTribeFragment"
+            app:destination="@id/createTribeFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_new_post"
@@ -503,4 +506,9 @@
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.CompairFriendsFragment"
         android:label="fragment_compair_friends"
         tools:layout="@layout/fragment_compair_friends" />
+    <fragment
+        android:id="@+id/createTribeFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.CreateTribeFragment"
+        android:label="fragment_create_tribe"
+        tools:layout="@layout/fragment_create_tribe" />
 </navigation>

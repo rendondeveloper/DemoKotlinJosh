@@ -117,6 +117,8 @@ class PostsAdapterView @JvmOverloads constructor(
                         R.color.orange_as_light
                     )
                 )
+
+                binding.likeText.text = context.getString(R.string.you_like)
             }
         }
 

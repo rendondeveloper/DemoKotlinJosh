@@ -1,13 +1,10 @@
 package com.asdeporte.asdeportev2.ui.mitribu.subtabs
 
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
-import androidx.activity.result.PickVisualMediaRequest
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,13 +14,11 @@ import com.asdeporte.asdeportev2.databinding.FragmentTabTribuTribusBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.ChangeDefaultTribuDialog
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.AddTribuMemberAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
-import java.util.*
 
-class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventBottomSheet.EventBottomSheetListener,
-    TextToSpeech.OnInitListener,
+class TabTribuTribusFragment(private val flow: String = "") : Fragment(),
+    EventBottomSheet.EventBottomSheetListener,
     MiTribuRequestsFragment.MiTribuRequestsListener,
     JoinTribusFilterSheet.JoinTribusFilterSheetListener {
 
@@ -31,22 +26,8 @@ class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventB
     private val binding get() = _binding!!
 
     private lateinit var tribusAdapter: SmallTribuJoinAdapter
-    private lateinit var addTribuMemberAdapter: AddTribuMemberAdapter
 
     private var requestsFragment = MiTribuRequestsFragment()
-
-    private lateinit var tts: TextToSpeech
-
-    private val pickMedia =
-        registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
-            if (uri != null) {
-                binding.mediaContainerView.visibility = View.VISIBLE
-                binding.mediaContainerView.setImageURI(uri)
-                binding.mediaPickerView.visibility = View.GONE
-            } else {
-                print("")
-            }
-        }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -62,9 +43,6 @@ class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventB
 
         validFlow()
 
-        binding.homeTribus.visibility = View.VISIBLE
-        binding.createTribuView.visibility = View.GONE
-        binding.createTribuButtonsView.visibility = View.GONE
         binding.changeTribuButton.setOnClickListener {
             //ChangeDefaultTribuSheet.create(this@TabTribuTribusFragment, EventData("", "", "", "")).show(requireActivity().supportFragmentManager, "TabTribuTribusFragment")
             val alert = ChangeDefaultTribuDialog().apply {
@@ -83,41 +61,11 @@ class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventB
 
         // Create tribu
         binding.createTribuButton.setOnClickListener {
-
-            (activity as MainActivity).hideActionBar()
-
-            binding.homeTribus.visibility = View.GONE
-            binding.createTribuView.visibility = View.VISIBLE
-            binding.createTribuButtonsView.visibility = View.VISIBLE
-        }
-        binding.toolbarCreate.setOnClickListener {
-
-            (activity as MainActivity).showActionBar()
-
-            binding.homeTribus.visibility = View.VISIBLE
-            binding.createTribuView.visibility = View.GONE
-            binding.createTribuButtonsView.visibility = View.GONE
-        }
-        binding.cancelCreateButton.setOnClickListener {
-
-            (activity as MainActivity).showActionBar()
-
-            binding.homeTribus.visibility = View.VISIBLE
-            binding.createTribuView.visibility = View.GONE
-            binding.createTribuButtonsView.visibility = View.GONE
-        }
-
-        binding.createTribu.setOnClickListener {
-            tts.speak("Acabas de pasar el kilometro 1", TextToSpeech.QUEUE_FLUSH, null, "")
-        }
-
-        binding.mediaPickerView.setOnClickListener {
-            openMedia()
+            findNavController().safelyNavigate(R.id.action_navigation_tribu_to_createTribeFragment)
         }
 
         requestsFragment.listener = this
         binding.pendingRequests.setOnClickListener {
-            //findNavController().safelyNavigate(R.id.toRequests)
             findNavController().safelyNavigate(R.id.action_navigation_tribu_to_mitribuRequestFragment)
         }
 
@@ -129,15 +77,14 @@ class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventB
         setupAdapters()
     }
 
-    private fun validFlow(){
-        when(flow){
+    private fun validFlow() {
+        when (flow) {
             "friends" -> {
                 binding.txtTitle.text = getString(R.string.tribus).uppercase()
                 binding.pendingRequests.visibility = GONE
                 binding.txtDescription.visibility = GONE
                 binding.rlAddTribu.visibility = GONE
                 binding.lnOtherTribus.visibility = GONE
-                binding.createTribuButtonsView.visibility = GONE
             }
         }
     }
@@ -165,7 +112,6 @@ class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventB
         tribusAdapter = SmallTribuJoinAdapter().apply {
             onItemClick = {
                 findNavController().safelyNavigate(R.id.toJoinTribu)
-                //EventBottomSheet.create(this@TabTribuTribusFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
             }
         }
 
@@ -175,31 +121,6 @@ class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventB
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         tribusAdapter.setItems(items)
-
-        // More Tribus
-        val users = listOf(testEvent, testEvent, testEvent)
-        addTribuMemberAdapter = AddTribuMemberAdapter(requireContext()).apply {
-            onItemClick = {
-                //EventBottomSheet.create(this@TabTribuTribusFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
-            }
-        }
-
-        binding.moreTribusCreateView.adapter = addTribuMemberAdapter
-        binding.moreTribusCreateView.setHasFixedSize(true)
-        binding.moreTribusCreateView.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-
-        addTribuMemberAdapter.setItems(users)
-    }
-
-    /*
-     Listeners
-     */
-    override fun onInit(status: Int) {
-        if (status == TextToSpeech.SUCCESS) {
-            tts.language = Locale.getDefault()
-            tts.setPitch(1f)
-        }
     }
 
     override fun onOpenEvent(event: String) {
@@ -211,12 +132,6 @@ class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventB
     }
 
     override fun onRequestViewBack() {
-        binding.homeTribus.visibility = View.VISIBLE
-
-        binding.createTribuView.visibility = View.GONE
-        binding.createTribuButtonsView.visibility = View.GONE
-        binding.subFrames.visibility = View.GONE
-
         val fm = activity?.supportFragmentManager?.beginTransaction()
         fm?.remove(requestsFragment)
         fm?.commit()
@@ -228,22 +143,5 @@ class TabTribuTribusFragment(private val flow: String = "") : Fragment(), EventB
 
     override fun onCleanFilter() {
         //TODO("Not yet implemented")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        tts = TextToSpeech(requireContext(), this)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-
-        tts.stop()
-        tts.shutdown()
-    }
-
-    fun openMedia() {
-        pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
     }
 }
