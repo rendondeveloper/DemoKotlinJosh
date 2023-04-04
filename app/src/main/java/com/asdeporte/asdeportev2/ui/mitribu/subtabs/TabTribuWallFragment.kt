@@ -103,7 +103,7 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
     }
 
     fun initPosts() {
-        val items = listOf(testEvent, testVideoEvent, testEvent, testVideoEvent)
+        val items = listOf(testEvent, testEvent, testEvent, testEvent)
 
         // Feed
         postsAdapter = PostsAdapter().apply {
