@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,70 +14,86 @@
         android:layout_gravity="center_vertical">
 
         <LinearLayout
+            android:id="@+id/linearLayout10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/avatar_image"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:src="@drawable/avatar_dummy"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="12dp"
-                android:layout_marginEnd="16dp"
                 android:layout_gravity="center_vertical"
-                android:background="@color/white_dynamic"/>
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/white_dynamic"
+                android:src="@drawable/avatar_dummy" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
-                android:layout_marginEnd="50dp"
                 android:layout_gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="12dp"
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/Kanit_Semibold.Default.16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Los Aldeanos"
-                    style="@style/Kanit_Semibold.Default.16"/>
+                    android:text="Los Aldeanos" />
+
                 <TextView
+                    style="@style/Kanit_Regular.Default.16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sara López: ¡Hola equipo!"
-                    style="@style/Kanit_Regular.Default.16"/>
+                    android:text="Sara López: ¡Hola equipo!" />
+
                 <TextView
+                    style="@style/Kanit_Regular.Secondary.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hace 2 horas"
-                    style="@style/Kanit_Regular.Secondary.14"/>
+                    android:text="Hace 2 horas" />
 
             </LinearLayout>
+
             <View
                 android:id="@+id/update_dot"
                 android:layout_width="8dp"
                 android:layout_height="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="-30dp"
-                android:layout_marginBottom="12dp"
                 android:layout_gravity="center_vertical"
-                android:visibility="gone"
-                android:background="@drawable/simple_red_dot"/>
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/simple_red_dot"
+                android:visibility="gone" />
         </LinearLayout>
 
-    </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUnirme2"
+            style="@style/Kanit_Regular.Default.14"
+            android:layout_width="162dp"
+            android:layout_height="40dp"
+            android:background="@drawable/secondary_button"
+            android:paddingStart="7dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="0dp"
+            android:text="Unirme a grupo"
+            android:textAllCaps="false"
+            android:textColor="@color/black_dynamic"
+            app:backgroundTint="@color/black_dynamic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
 
-
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray_400"
-        android:layout_marginTop="12dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

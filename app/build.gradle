@@ -11,7 +11,7 @@ android {
         applicationId "com.asdeporte.asdeportev2"
         minSdk 26
         targetSdk 33
-        versionCode 13
+        versionCode 14
         versionName "2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

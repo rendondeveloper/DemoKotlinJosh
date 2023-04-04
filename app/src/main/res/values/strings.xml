@@ -296,6 +296,8 @@
     <string name="profile_shirt_size_m" translatable="false">M</string>
     <string name="profile_shirt_size_g" translatable="false">L</string>
     <string name="profile_shirt_size_xg" translatable="false">XL</string>
+    <string name="codigo_postal">Código postal</string>
+
 
     <string-array name="profile_gender_values">
         <item>@string/profile_male</item>
@@ -1136,4 +1138,6 @@
     <string name="txt_results_subtitle">Puedes compararte hasta con <b>10 competidores</b> que sean de la misma <b>rama y categoría</b></string>
     <string name="information_tribu">Información de tribu</string>
     <string name="tribus">Tribus</string>
+    <string name="update">Actualizaciones</string>
+    <string name="messages">Mensajes</string>
 </resources>

@@ -416,6 +416,28 @@
                         android:padding="15dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cpTextField"
+                    style="@style/MenuTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/codigo_postal"
+                    app:endIconDrawable="@drawable/arrow_down"
+                    app:endIconTint="@color/black_dynamic"
+                    app:hintTextColor="@color/black_dynamic">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/cpTextInput"
+                        style="@style/Kanit_Regular.Default.16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
             </LinearLayout>
 
         </LinearLayout>

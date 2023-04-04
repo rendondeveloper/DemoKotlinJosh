@@ -79,7 +79,6 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
         binding.tabView.getTabAt(0)?.orCreateBadge?.backgroundColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
         binding.tabView.getTabAt(1)?.orCreateBadge?.number = 2
         binding.tabView.getTabAt(1)?.orCreateBadge?.backgroundColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
-
         val typefaceSemiBold = ResourcesCompat.getFont(requireContext(), R.font.kanit_semibold)
         val typefaceRegular = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
 
@@ -89,6 +88,8 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding.createGroupButton.visibility = View.GONE
             binding.messagesView.visibility = View.VISIBLE
             binding.groupView.visibility = View.GONE
+            binding.txtTitle.visibility = View.GONE
+            binding.divider.visibility = View.GONE
         }
         binding.groupButton.setOnClickListener {
             binding.singleButton.typeface = typefaceRegular
@@ -96,6 +97,8 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding.createGroupButton.visibility = View.VISIBLE
             binding.messagesView.visibility = View.GONE
             binding.groupView.visibility = View.VISIBLE
+            binding.txtTitle.visibility = View.VISIBLE
+            binding.divider.visibility = View.VISIBLE
         }
 
         setupAdapters()
