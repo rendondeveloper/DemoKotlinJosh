@@ -72,7 +72,7 @@ class OnboardingActivity : AppCompatActivity() {
         viewPager.adapter = demoCollectionAdapter
 
         dotsIndicator = binding.dotsIndicator
-        dotsIndicator.selectedDotColor = ContextCompat.getColor(this, R.color.asd_pink)
+        dotsIndicator.selectedDotColor = ContextCompat.getColor(this, R.color.orange_as_light)
         dotsIndicator.attachTo(viewPager)
     }
 
