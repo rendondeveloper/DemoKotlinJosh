@@ -214,7 +214,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="Agregar Actividad" />
+                    android:text="Agregar actividad" />
 
             </LinearLayout>
 
@@ -276,7 +276,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="Agregar Foto o video" />
+                    android:text="Agregar foto o video" />
 
             </LinearLayout>
 
