@@ -7,21 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTribuProfileBinding
-import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.bitmap.FitCenter
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
 
 
-class TribuProfileFragment() : Fragment() {
+class TribuProfileFragment(val listener: () -> Unit) : Fragment() {
 
     private var _binding: FragmentTribuProfileBinding? = null
     private val binding get() = _binding!!
@@ -38,6 +30,10 @@ class TribuProfileFragment() : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.postsMenu.setOnClickListener {
+            listener()
+        }
 
         /*
         Glide.with(this)

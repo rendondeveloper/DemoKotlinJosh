@@ -1,4 +1,4 @@
-package com.asdeporte.asdeportev2.ui.mitribu.subtabs
+package com.asdeporte.asdeportev2.ui.mitribu
 
 import android.content.res.ColorStateList
 import android.os.Bundle
@@ -8,17 +8,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
-import com.asdeporte.asdeportev2.databinding.FragmentEventFiltersBinding
+import com.asdeporte.asdeportev2.databinding.FragmentFriendsFilterBinding
 
-class EventFiltersFragment : Fragment() {
+class FriendsFilterFragment : Fragment() {
 
-    lateinit var binding: FragmentEventFiltersBinding
+    lateinit var binding: FragmentFriendsFilterBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentEventFiltersBinding.inflate(inflater, container, false)
+        binding = FragmentFriendsFilterBinding.inflate(inflater, container, false)
         return binding.root
     }
 

@@ -33,21 +33,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <com.github.angads25.toggle.widget.LabeledSwitch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/all_check"
-        android:layout_width="52dp"
-        android:layout_height="32dp"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        app:colorOff="@color/light_orange_as"
-        app:colorOn="@color/orange_as_light"
+        android:textOff=""
+        android:scaleY="1"
+        android:scaleX="1.1"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:on="false"
-        app:textOff=""
-        app:textOn="" />
+        app:thumbElevation="2dp"
+        app:thumbTint="@color/white"
+        app:track="@drawable/track"
+        app:trackThickness="48dp"
+        app:trackTint="@color/label_secondary" />
 
     <View
         android:id="@+id/view6"

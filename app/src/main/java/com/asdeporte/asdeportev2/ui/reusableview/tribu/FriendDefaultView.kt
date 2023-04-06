@@ -13,9 +13,7 @@ import androidx.fragment.app.FragmentManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FriendDefaultViewBinding
 import com.asdeporte.asdeportev2.extensions.getVisibleFragment
-import com.asdeporte.asdeportev2.ui.mitribu.TabsFriendsProfileFragment
 import com.asdeporte.asdeportev2.ui.mitribu.subtabs.FriendMenuBottomSheet
-import com.asdeporte.asdeportev2.ui.mitribu.subtabs.TabTribuFriendsFragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.FitCenter
@@ -57,11 +55,12 @@ class FriendDefaultView @JvmOverloads constructor(
 
 
         binding.menuButton.setOnClickListener {
-            val friendsFragment = supportFragmentManager.getVisibleFragment("TabsFriendsProfileFragment")
+            val friendsFragment =
+                supportFragmentManager.getVisibleFragment("TabsFriendsProfileFragment")
             val miTribuFragment = supportFragmentManager.getVisibleFragment("MiTribuFragment")
-            if(friendsFragment || miTribuFragment){
+            if (friendsFragment || miTribuFragment) {
                 ModalBottomSheetMembers().show(supportFragmentManager, "MY_BOTTOM_SHEET")
-            }else{
+            } else {
                 FriendMenuBottomSheet().show(supportFragmentManager, "MY_BOTTOM_SHEET")
             }
         }
