@@ -1140,4 +1140,5 @@
     <string name="tribus">Tribus</string>
     <string name="update">Actualizaciones</string>
     <string name="messages">Mensajes</string>
+    <string name="txt_delete">Eliminar</string>
 </resources>

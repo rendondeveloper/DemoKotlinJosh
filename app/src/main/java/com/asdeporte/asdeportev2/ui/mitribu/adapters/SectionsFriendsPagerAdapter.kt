@@ -7,13 +7,19 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.TribuProfileFragment
 import com.asdeporte.asdeportev2.ui.mitribu.subtabs.*
 
-class SectionsFriendsPagerAdapter(private val context: Context, fm: FragmentManager): FragmentPagerAdapter(fm) {
+class SectionsFriendsPagerAdapter(
+    private val context: Context,
+    fm: FragmentManager,
+    val listener: () -> Unit
+): FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
 
         return when (position) {
             0 -> {
-                TribuProfileFragment()
+                TribuProfileFragment {
+                    listener()
+                }
             }
             1 -> {
                 TabTribuTribusFragment(flow = "friends")
