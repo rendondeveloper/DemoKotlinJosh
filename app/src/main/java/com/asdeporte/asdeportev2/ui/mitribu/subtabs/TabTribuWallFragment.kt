@@ -14,16 +14,19 @@ import androidx.annotation.MenuRes
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuWallBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.EventTribuHorizontalAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
+import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapterView
 import com.asdeporte.asdeportev2.ui.mitribu.post.NewPostPreviewSheet
 import com.asdeporte.asdeportev2.ui.mitribu.post.NewPostType
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.FilterHomePostsSheet
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.PostMenuOptionsSheet
+import com.asdeporte.hermes.adapters.ViewWrapper
 
 class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsSheetListener,
     NewPostPreviewSheet.NewPostPreviewSheetListener,
@@ -94,7 +97,7 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
 
             //showMenu(it, R.menu.home_menu)
             //FilterHomePostsSheet.create(this@TabTribuWallFragment)
-              //  .show(requireActivity().supportFragmentManager, "EventBottomSheet")
+            //  .show(requireActivity().supportFragmentManager, "EventBottomSheet")
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
@@ -103,7 +106,23 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
     }
 
     fun initPosts() {
-        val items = listOf(testVideoEvent, testEvent, testEvent, testEvent)
+        val items = listOf(
+            testVideoEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testVideoEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent
+        )
 
         // Feed
         postsAdapter = PostsAdapter().apply {
@@ -115,6 +134,20 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
                     .show(requireActivity().supportFragmentManager, "EventBottomSheet")
             }
         }
+
+
+        binding.posts.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    for (i in items.indices step 1) {
+                        (recyclerView.findViewHolderForAdapterPosition(i) as  ViewWrapper<PostsAdapterView>).view.pause()
+                    }
+                }
+            }
+
+        })
+        binding.nsvT.isSmoothScrollingEnabled
 
         binding.posts.adapter = postsAdapter
         binding.posts.setHasFixedSize(true)

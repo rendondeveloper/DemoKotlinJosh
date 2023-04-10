@@ -7,8 +7,10 @@
     tools:context=".ui.mitribu.MiTribuFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvT"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,9 +135,11 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/posts"
+                android:overScrollMode="always"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:overScrollMode="never" />
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="true"
+            />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
