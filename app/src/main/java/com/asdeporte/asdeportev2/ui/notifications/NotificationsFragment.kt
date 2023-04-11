@@ -110,25 +110,30 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
 
         for ((index, item) in items.withIndex()) {
-            if (index == 0) {
-                val holder = NotificationsTopStatusView(requireContext())
-                holder.bind(item)
-                binding.messagesLinear.addView(holder)
-            } else if (index == 3) {
-                val holder = UpdateUserRequestView(requireContext())
-                holder.bind(item)
-                binding.messagesLinear.addView(holder)
-            } else if (index == 4) {
-                val holder = NotificationsTopStatusView(requireContext())
-                holder.bind(item)
-                binding.messagesLinear.addView(holder)
-            } else {
-                val holder = UpdateUserView(requireContext())
-                holder.bind(item)
-                holder.setOnClickListener {
-                    findNavController().safelyNavigate(R.id.toChat)
+            when (index) {
+                0 -> {
+                    val holder = NotificationsTopStatusView(requireContext())
+                    holder.bind(item)
+                    binding.messagesLinear.addView(holder)
                 }
-                binding.messagesLinear.addView(holder)
+                3 -> {
+                    val holder = UpdateUserRequestView(requireContext())
+                    holder.bind(item)
+                    binding.messagesLinear.addView(holder)
+                }
+                4 -> {
+                    val holder = NotificationsTopStatusView(requireContext())
+                    holder.bind(item)
+                    binding.messagesLinear.addView(holder)
+                }
+                else -> {
+                    val holder = UpdateUserView(requireContext())
+                    holder.bind(item)
+                    holder.setOnClickListener {
+                        findNavController().safelyNavigate(R.id.toChat)
+                    }
+                    binding.messagesLinear.addView(holder)
+                }
             }
         }
 

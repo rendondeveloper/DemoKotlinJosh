@@ -241,7 +241,11 @@
     <fragment
         android:id="@+id/navigation_tribu_profile"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.TabsFriendsProfileFragment"
-        tools:layout="@layout/fragment_tabs_friends_profile" />
+        tools:layout="@layout/fragment_tabs_friends_profile" >
+        <action
+            android:id="@+id/action_navigation_tribu_profile_to_friendsFilterFragment"
+            app:destination="@id/friendsFilterFragment" />
+    </fragment>
 
 
     <fragment
@@ -511,4 +515,9 @@
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.CreateTribeFragment"
         android:label="fragment_create_tribe"
         tools:layout="@layout/fragment_create_tribe" />
+    <fragment
+        android:id="@+id/friendsFilterFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.FriendsFilterFragment"
+        android:label="fragment_friends_filter"
+        tools:layout="@layout/fragment_friends_filter" />
 </navigation>
