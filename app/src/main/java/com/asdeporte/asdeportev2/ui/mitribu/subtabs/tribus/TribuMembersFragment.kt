@@ -1,15 +1,13 @@
 package com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTribuMembersBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuResultAdapter
@@ -25,7 +23,11 @@ class TribuMembersFragment : Fragment(), FriendDefaultView.FriendDefaultViewList
     private lateinit var resultsdapter: TribuResultAdapter
     lateinit var membersViewPagerAdapter: MembersViewPagerAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         _binding = FragmentTribuMembersBinding.inflate(inflater, container, false)
         return binding.root
     }
