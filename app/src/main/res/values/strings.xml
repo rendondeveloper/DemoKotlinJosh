@@ -2,8 +2,8 @@
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDBVden0W9OtTSNx95Ey084AoS82bpWYHI</string>
     <string name="com.google.firebase.crashlytics.mapping_file_id">none</string>
 
-    <string name="app_name" translatable="false">Asdeporte V2</string>
-    <string name="applicationId_File_Provider" translatable="false">com.asdeporte.asdeportev2.fileprovider</string>
+    <string name="app_name" translatable="false">Asdeporte</string>
+    <string name="applicationId_File_Provider" translatable="false">es.as.deportesapp.fileprovider</string>
     <string name="retry">Reintentar</string>
     <string name="login">Log in</string>
     <string name="init_session">Iniciar sesión</string>

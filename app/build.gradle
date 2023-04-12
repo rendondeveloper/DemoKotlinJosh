@@ -40,7 +40,7 @@ android {
             applicationId = "com.asdeporte.asdeportev2"
         }
         prod {
-            applicationId = "com.asdeporte.asdeporte"
+            applicationId = "es.as.deportesapp"
         }
     }
 }
