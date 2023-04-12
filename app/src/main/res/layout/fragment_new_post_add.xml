@@ -1,74 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:theme="@style/Theme.AsdeporteV2"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:theme="@style/Theme.AsdeporteV2">
 
-        <RelativeLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:theme="@style/AsdToolbarTheme"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:title="@null">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/AsdToolbarTheme"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                app:contentInsetStart="0dp"
-                app:contentInsetStartWithNavigation="0dp"
-                app:title="@null">
+                android:layout_height="wrap_content">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/title_toolbar"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Tus actividades recientes" />
 
-                    <TextView
-                        android:id="@+id/title_toolbar"
-                        style="@style/Kanit_Regular.Default.16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:gravity="center"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Tus actividades recientes"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentEnd="true"/>
+                <ImageView
+                    android:id="@+id/back_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:src="@drawable/ic_close_line" />
 
-                    <ImageView
-                        android:id="@+id/back_image"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_close"
-                        android:layout_marginStart="16dp"
-                        android:clickable="true"
-                        android:background="?attr/selectableItemBackground"
-                        android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
 
-                </RelativeLayout>
-            </com.google.android.material.appbar.MaterialToolbar>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/gray_400" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray_400"
-                android:layout_below="@id/toolbar"
-                />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activities"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:overScrollMode="never"
+            android:paddingTop="10dp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/activitys"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:overScrollMode="never"
-                android:layout_below="@+id/toolbar"
-                android:paddingTop="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"/>
-
-        </RelativeLayout>
+    </RelativeLayout>
 
 </LinearLayout>

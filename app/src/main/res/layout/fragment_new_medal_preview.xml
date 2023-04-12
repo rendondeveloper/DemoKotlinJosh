@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mitribu.post.NewPostPreviewFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp">
+
+            <ImageView
+                android:id="@+id/event_image"
+                android:layout_width="73dp"
+                android:layout_height="65dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/event_tribu_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/event_image"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="RETO" />
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Abdominales hierro House" />
+
+                <TextView
+                    style="@style/Kanit_Regular.Secondary.12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="13 Septiembre 2022" />
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold.Secondary.14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Ciudad de México" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold.Secondary.14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/position_p"
+                    android:textAlignment="center" />
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold.Default.14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 de 1200"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/label_secondary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold.Secondary.14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    android:textAlignment="center" />
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold.Default.14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00:18:00 min"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchTextField"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_toStartOf="@+id/button_send"
+            android:hint="Escribe un comentario"
+            app:endIconMode="custom"
+            app:endIconTint="@color/black_dynamic"
+            app:hintTextColor="@color/black_dynamic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_view">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchTextInput"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/searchTextField">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_button"
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/secondary_button"
+                android:paddingHorizontal="@dimen/dimen_32dp"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black_dynamic"
+                app:backgroundTint="@color/black_dynamic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/post_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/post_button"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dimen_32dp"
+                android:text="@string/publish"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

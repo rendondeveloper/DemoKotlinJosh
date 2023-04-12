@@ -111,11 +111,9 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
      */
 
     override fun onSearch() {
-        println("onSearch")
     }
 
     override fun onFilters() {
-        println("onFilters")
     }
 
     override fun onDestroyView() {

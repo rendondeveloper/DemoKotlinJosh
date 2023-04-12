@@ -1,174 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_vertical"
-    android:padding="16dp"
-    tools:context=".LoginFragment">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
-        android:src="@drawable/asd_logo_large"
-        app:tint="@color/orange_as_light"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        style="@style/Kanit_Bold.Default.20"
-        android:textAlignment="center"
-        android:text="@string/glad_to_see_you"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailTextField"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/input_height"
-        android:hint="@string/email"
-        app:hintTextColor="@color/black_dynamic"
-        style="@style/LoginTextInputLayoutStyle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailTextInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Kanit_Regular.Default.16"
-            android:inputType="textEmailAddress"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordTextField"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/input_height"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="18dp"
-        android:hint="@string/password"
-        app:endIconMode="password_toggle"
-        app:hintTextColor="@color/black_dynamic"
-        style="@style/LoginTextInputLayoutStyle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordTextInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Kanit_Regular.Default.16"
-            android:inputType="textPassword"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/forgotText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="@string/no_password"
-        style="@style/Kanit_Bold.Orange.14"
-        android:textAlignment="viewEnd"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height"
-        style="@style/Kanit_Medium.Default.16"
-        android:textColor="@color/white"
-        android:background="@drawable/pill_background"
-        android:textAllCaps="false"
-        android:text="@string/init_session"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp">
-
-        <View
-            android:id="@+id/dividerLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/or"
-            android:layout_marginEnd="10dp"
-            android:background="@color/gray_400"/>
-
-        <TextView
-            android:id="@+id/or"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="O"/>
-
-        <View
-            android:id="@+id/dividerRight"
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/or"
-            android:layout_marginStart="10dp"
-            android:background="@color/gray_400"/>
-
-    </RelativeLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/registerButtonFacebook"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height"
-        android:layout_marginBottom="15dp"
-        style="@style/Kanit_Medium.Default.16"
-        android:textColor="@color/facebook"
-        app:iconTint="@color/facebook"
-        android:background="@drawable/facebook_button"
-        app:backgroundTint="@color/facebook"
-        android:text="@string/facebook_login"
-        android:textAllCaps="false"
-        android:paddingTop="0dp"
-        android:paddingBottom="0dp"
-        app:icon="@drawable/facebook_small"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/registerButtonGoogle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height"
-        style="@style/Kanit_Medium.Default.16"
-        android:textColor="@color/google"
-        app:iconTint="@null"
-        app:backgroundTint="@color/google"
-        android:background="@drawable/google_button"
-        android:text="@string/google_login"
-        android:textAllCaps="false"
-        android:paddingTop="0dp"
-        android:paddingBottom="0dp"
-        app:icon="@drawable/google_small"/>
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="32dp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal">
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/asd_logo_large"
+            app:tint="@color/orange_as_light" />
+
         <TextView
+            style="@style/Kanit_Semi_Bold.Default.24"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/no_account"
-            style="@style/Kanit_Regular.Default.14"/>
+            android:layout_marginBottom="44dp"
+            android:text="@string/glad_to_see_you"
+            android:textAlignment="center" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextField"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:hint="@string/email"
+            app:hintTextColor="@color/black_dynamic">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailTextInput"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextField"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/black_dynamic">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordTextInput"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
+            android:id="@+id/forgotText"
+            style="@style/Kanit_Bold.Orange.14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="38dp"
+            android:text="@string/no_password"
+            android:textAlignment="viewEnd" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            style="@style/Kanit_Medium.Default.16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/pill_background"
+            android:text="@string/init_session"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp">
+
+            <View
+                android:id="@+id/dividerLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/or"
+                android:background="@color/gray_400" />
+
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="O" />
+
+            <View
+                android:id="@+id/dividerRight"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/or"
+                android:background="@color/gray_400" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerButtonFacebook"
+            style="@style/Kanit_Medium.Default.16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/facebook_button"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="@string/facebook_login"
+            android:textAllCaps="false"
+            android:textColor="@color/facebook"
+            app:backgroundTint="@color/facebook"
+            app:icon="@drawable/facebook_small"
+            app:iconGravity="textStart"
+            app:iconTint="@color/facebook" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerButtonGoogle"
+            style="@style/Kanit_Medium.Default.16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/google_button"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="@string/google_login"
+            android:textAllCaps="false"
+            android:textColor="@color/google"
+            app:backgroundTint="@color/google"
+            app:icon="@drawable/google_small"
+            app:iconGravity="textStart"
+            app:iconTint="@null" />
+
+        <LinearLayout
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/register_you"
-            style="@style/Kanit_Bold.Orange.14"/>
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="5dp"
+                android:text="@string/no_account" />
+
+            <TextView
+                style="@style/Kanit_Bold.Orange.14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/register_you" />
+        </LinearLayout>
     </LinearLayout>
-
-
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>

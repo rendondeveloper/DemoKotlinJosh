@@ -9,26 +9,24 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.asdeporte.asdeportev2.ui.home.HomeFragment"
-        android:label="@string/explore"
         android:icon="@drawable/logo_asd"
-        tools:layout="@layout/fragment_home" >
+        android:label="@string/explore"
+        tools:layout="@layout/fragment_home">
 
         <action
             android:id="@+id/toNotificationsAction"
             app:destination="@+id/navigation_notifications"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/toEventDetailAction"
             app:destination="@+id/navigation_event_detail"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
 
     </fragment>
     <fragment
@@ -53,65 +51,72 @@
             app:destination="@+id/navigation_new_post"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
-            app:popExitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
-            />
+            app:popExitAnim="@anim/fade_out" />
         <action
             android:id="@+id/toNewPostPreview"
             app:destination="@+id/navigation_new_post_fragment"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
-            app:popExitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
-            />
+            app:popExitAnim="@anim/fade_out" />
         <action
             android:id="@+id/mainTribuAction"
             app:destination="@+id/navigation_tribu_main"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/profileTribuAction"
             app:destination="@+id/navigation_tribu_profile"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/toNotificationsAction"
             app:destination="@+id/navigation_notifications"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/toRequests"
             app:destination="@+id/navigation_mi_tribu_requests_fragment"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/toJoinTribu"
             app:destination="@+id/navigation_join_tribu_fragment"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/toUserProfile"
             app:destination="@+id/navigation_tribu_profile"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_newPostMediaFragment"
+            app:destination="@id/newPostMediaFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_tribeFiltersFragment"
+            app:destination="@id/tribeFiltersFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_tribeAdminFragment"
+            app:destination="@id/tribeAdminFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_mitribuRequestFragment"
+            app:destination="@id/mitribuRequestFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_to_createTribeFragment"
+            app:destination="@id/createTribeFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_new_post"
@@ -123,69 +128,87 @@
             app:destination="@+id/navigation_new_post_fragment"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
-            app:popExitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
-            />
+            app:popExitAnim="@anim/fade_out" />
 
     </fragment>
 
     <fragment
         android:id="@+id/navigation_tribu_main"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.TribuMainFragment"
-        tools:layout="@layout/fragment_tribu_main" >
+        tools:layout="@layout/fragment_tribu_main">
         <action
             android:id="@+id/detailsTribuAction"
             app:destination="@+id/navigation_tribu_details"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/profileTribuAction"
             app:destination="@+id/navigation_tribu_profile"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_tribeFiltersFragment"
+            app:destination="@id/tribeFiltersFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            app:popExitAnim="@anim/nav_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_tribeAdminFragment"
+            app:destination="@id/tribeAdminFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_navigation_new_post"
+            app:destination="@id/navigation_new_post" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_navigation_new_post_fragment"
+            app:destination="@id/navigation_new_post_fragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_newPostMediaFragment"
+            app:destination="@id/newPostMediaFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_navigation_new_post_fragment2"
+            app:destination="@id/navigation_new_post_fragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_main_to_inviteFriendsFragment"
+            app:destination="@id/inviteFriendsFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_tribu_details"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.TribuDetailsFragment"
-        tools:layout="@layout/fragment_tribu_details" >
+        tools:layout="@layout/fragment_tribu_details">
         <action
             android:id="@+id/editTribuAction"
             app:destination="@+id/navigation_tribu_edit_info"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/membersTribuAction"
             app:destination="@+id/navigation_tribu_members"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/eventsTribuAction"
             app:destination="@+id/navigation_tribu_events"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/resultsTribuAction"
             app:destination="@+id/navigation_tribu_results"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/navigation_tribu_edit_info"
@@ -198,16 +221,31 @@
     <fragment
         android:id="@+id/navigation_tribu_events"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.TribuEventsFragment"
-        tools:layout="@layout/fragment_tribu_details" />
+        tools:layout="@layout/fragment_tribu_details" >
+        <action
+            android:id="@+id/action_navigation_tribu_events_to_eventFiltersFragment"
+            app:destination="@id/eventFiltersFragment" />
+        <action
+            android:id="@+id/action_navigation_tribu_events_to_seeEventDetailFragment"
+            app:destination="@id/seeEventDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_tribu_results"
         android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.TribuResultsFragment"
-        tools:layout="@layout/fragment_tribu_details" />
+        tools:layout="@layout/fragment_tribu_details" >
+        <action
+            android:id="@+id/action_navigation_tribu_results_to_resultsDetailFragment"
+            app:destination="@id/resultsDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_tribu_profile"
-        android:name="com.asdeporte.asdeportev2.ui.mitribu.TribuProfileFragment"
-        tools:layout="@layout/fragment_tribu_profile" />
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.TabsFriendsProfileFragment"
+        tools:layout="@layout/fragment_tabs_friends_profile" >
+        <action
+            android:id="@+id/action_navigation_tribu_profile_to_friendsFilterFragment"
+            app:destination="@id/friendsFilterFragment" />
+    </fragment>
 
 
     <fragment
@@ -220,9 +258,8 @@
             app:destination="@+id/navigation_profile_details"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
     </fragment>
 
     <fragment
@@ -234,41 +271,36 @@
             app:destination="@+id/personal_history"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/to_personal_data"
             app:destination="@+id/personal_data"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/to_personal_dependents"
             app:destination="@+id/personal_dependents"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/to_personal_my_benefits"
             app:destination="@+id/personal_my_benefits"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/to_personal_wallet"
             app:destination="@+id/personal_wallet"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/personal_history"
@@ -300,9 +332,8 @@
             app:destination="@+id/wallet_add_balance"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/wallet_add_balance"
@@ -320,17 +351,14 @@
             app:destination="@+id/navigation_notifications_chat"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications_chat"
         android:name="com.asdeporte.asdeportev2.ui.notifications.ChatFragment"
-        tools:layout="@layout/fragment_chat"
-        >
-    </fragment>
+        tools:layout="@layout/fragment_chat" />
 
     <fragment
         android:id="@+id/navigation_new_post_fragment"
@@ -338,7 +366,13 @@
         tools:layout="@layout/fragment_new_post_add">
         <argument
             android:name="type"
-            app:argType="com.asdeporte.asdeportev2.ui.mitribu.post.NewPostType"/>
+            app:argType="com.asdeporte.asdeportev2.ui.mitribu.post.NewPostType" />
+        <action
+            android:id="@+id/action_navigation_new_post_fragment_to_newPostPreviewFragment"
+            app:destination="@id/newPostPreviewFragment" />
+        <action
+            android:id="@+id/action_navigation_new_post_fragment_to_newMedalPreviewFragment"
+            app:destination="@id/newMedalPreviewFragment" />
     </fragment>
 
     <fragment
@@ -351,18 +385,16 @@
             app:destination="@+id/navigation_tribu_profile"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
 
-    <action
+        <action
             android:id="@+id/toJoinTribu"
             app:destination="@+id/navigation_join_tribu_fragment"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
     </fragment>
 
     <fragment
@@ -375,9 +407,8 @@
             app:destination="@+id/navigation_tribu_profile"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
 
     </fragment>
 
@@ -391,9 +422,102 @@
             app:destination="@+id/navigation_tribu_profile"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
-            app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
-            />
+            app:popExitAnim="@anim/nav_slide_out_right" />
 
     </fragment>
+    <fragment
+        android:id="@+id/newPostPreviewFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.post.NewPostPreviewFragment"
+        android:label="fragment_new_post_preview"
+        tools:layout="@layout/fragment_new_post_preview" />
+    <fragment
+        android:id="@+id/newMedalPreviewFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.post.NewMedalPreviewFragment"
+        android:label="NewMedalPreviewFragment" />
+    <fragment
+        android:id="@+id/newPostMediaFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.post.NewPostMediaFragment"
+        android:label="fragment_new_post_media"
+        tools:layout="@layout/fragment_new_post_media" />
+    <fragment
+        android:id="@+id/tribeFiltersFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.post.TribeFiltersFragment"
+        android:label="fragment_tribe_filters"
+        tools:layout="@layout/fragment_tribe_filters" />
+    <fragment
+        android:id="@+id/tribeAdminFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.TribeAdminFragment"
+        android:label="TribeAdminFragment" >
+        <action
+            android:id="@+id/action_tribeAdminFragment_to_chooseAdminFragment"
+            app:destination="@id/chooseAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mitribuRequestFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.MitribuRequestFragment"
+        android:label="fragment_mitribu_request"
+        tools:layout="@layout/fragment_mitribu_request" />
+    <fragment
+        android:id="@+id/requestsReceivedFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.RequestsReceivedFragment"
+        android:label="fragment_requests_received"
+        tools:layout="@layout/fragment_requests_received" >
+        <action
+            android:id="@+id/action_requestsReceivedFragment_to_navigation_tribu_profile"
+            app:destination="@id/navigation_tribu_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestsSentFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.RequestsSentFragment"
+        android:label="fragment_requests_sent"
+        tools:layout="@layout/fragment_requests_sent" >
+        <action
+            android:id="@+id/action_requestsSentFragment_to_navigation_tribu_profile"
+            app:destination="@id/navigation_tribu_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventFiltersFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.EventFiltersFragment"
+        android:label="fragment_event_filters"
+        tools:layout="@layout/fragment_event_filters" />
+    <fragment
+        android:id="@+id/seeEventDetailFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.SeeEventDetailFragment"
+        android:label="fragment_see_event_detail"
+        tools:layout="@layout/fragment_see_event_detail" />
+    <fragment
+        android:id="@+id/inviteFriendsFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.InviteFriendsFragment"
+        android:label="fragment_invite_friends"
+        tools:layout="@layout/fragment_invite_friends" />
+    <fragment
+        android:id="@+id/chooseAdminFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.ChooseAdminFragment"
+        android:label="fragment_choose_admin"
+        tools:layout="@layout/fragment_choose_admin" />
+    <fragment
+        android:id="@+id/resultsDetailFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.ResultsDetailFragment"
+        android:label="fragment_results_detail"
+        tools:layout="@layout/fragment_results_detail" >
+        <action
+            android:id="@+id/action_resultsDetailFragment_to_compairFriendsFragment"
+            app:destination="@id/compairFriendsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/compairFriendsFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.tribus.CompairFriendsFragment"
+        android:label="fragment_compair_friends"
+        tools:layout="@layout/fragment_compair_friends" />
+    <fragment
+        android:id="@+id/createTribeFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.CreateTribeFragment"
+        android:label="fragment_create_tribe"
+        tools:layout="@layout/fragment_create_tribe" />
+    <fragment
+        android:id="@+id/friendsFilterFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.FriendsFilterFragment"
+        android:label="fragment_friends_filter"
+        tools:layout="@layout/fragment_friends_filter" />
 </navigation>

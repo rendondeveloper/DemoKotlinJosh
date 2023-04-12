@@ -1,126 +1,125 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="0dp"
     app:cardElevation="0dp"
     app:cardBackgroundColor="@color/white_dynamic">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/dimen_16dp">
 
         <TextView
+            android:id="@+id/textView"
+            style="@style/Kanit_Bold_Italic.Default.16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/my_last_goal"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@+id/tvDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            style="@style/Kanit_Regular.Secondary.12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Kanit_Bold_Italic.Default.16"
-            android:textAllCaps="true"
-            android:text="mi resultado más reciente"/>
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:text="SEP / 2023"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
 
         <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"/>
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/tvDate"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="@dimen/dimen_48dp"
+            android:layout_height="@dimen/dimen_48dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:src="@drawable/serial_dummy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/Kanit_Medium.Default.14"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginEnd="16dp"
+            android:textAllCaps="true"
+            android:text="Triatlon Astri la Paz"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/event_image"
+            app:layout_constraintTop_toTopOf="@+id/event_image" />
 
-            <ImageView
-                android:id="@+id/event_image"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:src="@drawable/empty_event_clear"/>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Kanit_Medium.Default.14"
-                    android:text="Triatlón astri la paz"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Kanit_Regular.Secondary.12"
-                    android:text="17 de septiembre del 2022"/>
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/Kanit_Regular.Secondary.12"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:text="@string/position"
+            app:layout_constraintBottom_toBottomOf="@+id/event_image"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Kanit_Regular.Secondary.14"
-                android:text="Categoría: "/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Kanit_Medium.Default.16"
-                android:layout_marginEnd="10dp"
-                android:text="5to"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Kanit_Regular.Secondary.14"
-                android:text="Categoría: "/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Kanit_Medium.Default.16"
-                android:text="5to"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvPositionValue"
+            style="@style/Kanit_Bold_Italic.Default.12"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_marginStart="4dp"
+            android:text="5to"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Kanit_Regular.Secondary.14"
-                android:text="Tiempo oficial: "/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Kanit_Medium.Default.16"
-                android:layout_marginEnd="10dp"
-                android:text="00:22:18"/>
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/Kanit_Regular.Secondary.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/time"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPositionValue"
+            app:layout_constraintStart_toEndOf="@+id/tvPositionValue"
+            app:layout_constraintTop_toTopOf="@+id/tvPositionValue" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ver detalles"
-                android:layout_gravity="end"
-                android:gravity="end"
-                style="@style/Kanit_Medium.Orange.14"
-                android:textAllCaps="false"
-                android:background="@android:color/transparent"/>
+        <TextView
+            android:id="@+id/tvTimeValue"
+            style="@style/Kanit_Bold_Italic.Default.12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="00:22:18"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
 
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/dimen_24dp"
+            android:layout_height="@dimen/dimen_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvName"
+            app:srcCompat="@drawable/arrow_right" />
 
-
-
-    </LinearLayout>
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

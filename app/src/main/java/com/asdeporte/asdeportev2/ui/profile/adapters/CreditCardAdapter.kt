@@ -25,13 +25,11 @@ class CreditCardAdapter : RecyclerViewAdapterBase<EventData, CreditCardView>() {
     override fun onBindViewHolder(holder: ViewWrapper<CreditCardView>, position: Int) {
         val item = items[position]
 
-        println("ProfileItemHomeAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
 
         holder.view.setOnClickListener {
-            println("CreditCardAdapter")
             onItemClick?.invoke(item)
         }
     }
@@ -55,7 +53,6 @@ class CreditCardView @JvmOverloads constructor(
 
         //binding.title.text = item.title
 
-        println("CreditCardView")
 
     }
 }

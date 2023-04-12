@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +8,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/create_tribu_buttons_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,121 +29,140 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
-                    android:background="@color/secondary_background"/>
+                    android:background="@color/secondary_background" />
 
-                <RelativeLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="14dp"
-                    android:paddingBottom="14dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp">
+                    android:layout_marginEnd="16dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp">
+
                     <TextView
+                        android:id="@+id/txt_title"
+                        style="@style/Kanit_Semi_Bold_Italic.Default.20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
                         android:text="Mis tribus"
                         android:textAllCaps="true"
-                        style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/pending_requests"
+                        style="@style/Kanit_Semibold.Default.14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
                         android:text="Solicitudes pendientes (2)"
-                        style="@style/Kanit_Semibold.Default.14"
-                        android:textColor="@color/orange_as_light"/>
-                </RelativeLayout>
+                        android:textColor="@color/orange_as_light"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
+                    android:id="@+id/txt_description"
+                    style="@style/Kanit_Regular.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="Todavía puedes unirte o crear una tribu"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    style="@style/Kanit_Regular.Default.14"/>
+                    android:text="Todavía puedes unirte o crear una tribu" />
 
                 <RelativeLayout
+                    android:id="@+id/rl_add_tribu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="14dp"
-                    android:paddingBottom="14dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp">
+                    android:layout_marginEnd="16dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/changeTribuButton"
+                        style="@style/Kanit_Regular.Default.14"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/button_height"
                         android:layout_alignParentStart="true"
-                        style="@style/Kanit_Regular.Default.14"
-                        android:textColor="@color/black_dynamic"
                         android:background="@drawable/secondary_button"
-                        app:backgroundTint="@color/black_dynamic"
+                        android:paddingStart="@dimen/dimen_12dp"
+                        android:paddingTop="0dp"
+                        android:paddingEnd="@dimen/dimen_12dp"
+                        android:paddingBottom="0dp"
                         android:text="Cambiar tribu principal"
                         android:textAllCaps="false"
-                        android:paddingTop="0dp"
-                        android:paddingBottom="0dp"
-                        android:paddingStart="7dp"
-                        android:paddingEnd="7dp"/>
+                        android:textColor="@color/black_dynamic"
+                        app:backgroundTint="@color/black_dynamic" />
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/create_tribu_button"
+                        style="@style/Kanit_Regular.Default.14"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/button_height"
-                        android:layout_toEndOf="@+id/changeTribuButton"
                         android:layout_marginStart="8dp"
-                        style="@style/Kanit_Regular.Default.14"
-                        android:textColor="@color/white"
+                        android:layout_toEndOf="@+id/changeTribuButton"
                         android:background="@drawable/pill_background"
-                        android:text="Crear tribu"
-                        android:textAllCaps="false"
+                        android:paddingStart="@dimen/dimen_16dp"
                         android:paddingTop="0dp"
+                        android:paddingEnd="@dimen/dimen_16dp"
                         android:paddingBottom="0dp"
-                        android:paddingStart="7dp"
-                        android:paddingEnd="7dp"/>
+                        android:text="@string/create_tribe"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
                 </RelativeLayout>
 
                 <com.asdeporte.asdeportev2.ui.reusableview.tribu.TribuBigView
                     android:id="@+id/defaultTribuView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"/>
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/gray" />
 
                 <com.asdeporte.asdeportev2.ui.reusableview.tribu.TribuBigView
                     android:id="@+id/secondTribuView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
-                    android:background="@color/secondary_background"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/secondary_background" />
 
                 <LinearLayout
+                    android:id="@+id/ln_other_tribus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginTop="20dp">
+                    android:orientation="vertical">
 
                     <TextView
+                        style="@style/Kanit_Semi_Bold_Italic.Default.20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
-                        android:text="Únete a otras tribus"
-                        android:textAllCaps="true"
                         android:layout_marginBottom="10dp"
-                        style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+                        android:text="Únete a otras tribus"
+                        android:textAllCaps="true" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -153,22 +171,22 @@
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/searchTextField"
+                            style="@style/LoginTextInputLayoutStyle"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/input_height"
                             android:layout_marginEnd="60dp"
-                            android:hint="@string/btn_search"
-                            app:endIconMode="custom"
+                            android:hint="@string/btn_search_tribes"
                             app:endIconDrawable="@drawable/ic_search"
-                            app:hintTextColor="@color/black_dynamic"
+                            app:endIconMode="custom"
                             app:endIconTint="@color/black_dynamic"
-                            style="@style/LoginTextInputLayoutStyle">
+                            app:hintTextColor="@color/black_dynamic">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/searchTextInput"
+                                style="@style/Kanit_Regular.Default.16"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:inputType="textPersonName"
-                                style="@style/Kanit_Regular.Default.16"/>
+                                android:inputType="textPersonName" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -180,7 +198,7 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/secondary_button"
                             android:backgroundTint="@color/black_dynamic"
-                            android:src="@drawable/filter"/>
+                            android:src="@drawable/filter" />
 
                     </LinearLayout>
 
@@ -191,270 +209,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:layout_marginLeft="@dimen/dimen_12dp"
                     android:clipToPadding="false"
                     android:paddingStart="16dp"
                     tools:ignore="RtlSymmetry" />
-
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/create_tribu_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/toolbar_create"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:title="Crear tribu"
-                    app:titleTextColor="@color/black_dynamic"
-                    app:navigationIcon="@drawable/arrow_left"
-                    app:navigationIconTint="@color/black_dynamic"
-                    android:theme="@style/AsdToolbarTheme"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="16dp"
-                    android:background="@color/secondary_background"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="20dp">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/nameTextField"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/input_height"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:hint="Nombre de la tribu"
-                        app:hintTextColor="@color/black_dynamic"
-                        style="@style/LoginTextInputLayoutStyle">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/nameTextInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textPersonName"
-                            style="@style/Kanit_Regular.Default.16"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/genderTextField"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/input_height"
-                        android:layout_marginBottom="10dp"
-                        android:hint="Privacidad"
-                        app:endIconDrawable="@drawable/arrow_down"
-                        app:endIconTint="@color/black_dynamic"
-                        app:hintTextColor="@color/black_dynamic"
-                        style="@style/MenuTextInputLayoutStyle">
-
-                        <AutoCompleteTextView
-                            android:id="@+id/genderTextInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="14dp"
-                            android:focusable="false"
-                            android:inputType="none"
-                            style="@style/Kanit_Regular.Default.16"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/shirtTextField"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/input_height"
-                        android:layout_marginBottom="10dp"
-                        android:hint="Deporte"
-                        app:endIconDrawable="@drawable/arrow_down"
-                        app:endIconTint="@color/black_dynamic"
-                        app:hintTextColor="@color/black_dynamic"
-                        style="@style/MenuTextInputLayoutStyle">
-
-                        <AutoCompleteTextView
-                            android:id="@+id/shirtTextInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="14dp"
-                            android:focusable="false"
-                            android:inputType="none"
-                            style="@style/Kanit_Regular.Default.16"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/emailTextField"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/input_height"
-                        android:layout_marginBottom="10dp"
-                        android:hint="Descripción de la tribu"
-                        app:hintTextColor="@color/black_dynamic"
-                        style="@style/LoginTextInputLayoutStyle">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/emailTextInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textMultiLine"
-                            style="@style/Kanit_Regular.Default.16"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/media_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:background="@drawable/post_upload_border">
-
-                        <LinearLayout
-                            android:id="@+id/media_picker_view"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:background="@drawable/post_upload_border_dashed"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_upload" />
-
-                            <TextView
-                                style="@style/Kanit_Medium.Default.12"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Foto de portada"
-                                android:textAlignment="center" />
-
-                            <TextView
-                                style="@style/Kanit_Regular.Default.10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="La imagen no debe pesar más de 5 MB"
-                                android:textAlignment="center" />
-
-                        </LinearLayout>
-
-                        <ImageView
-                            android:id="@+id/media_container_view"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:visibility="gone"/>
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="26dp"
-                        android:text="Añadir miembros:"
-                        style="@style/Kanit_Semibold.Default.16"/>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/searchMembersTextField"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/input_height"
-                        android:hint="@string/btn_search"
-                        app:endIconMode="custom"
-                        app:endIconDrawable="@drawable/ic_search"
-                        app:hintTextColor="@color/black_dynamic"
-                        app:endIconTint="@color/black_dynamic"
-                        style="@style/LoginTextInputLayoutStyle">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/searchMembersTextInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textPersonName"
-                            style="@style/Kanit_Regular.Default.16"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/moreTribusCreateView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:clipToPadding="false"
-                        tools:ignore="RtlSymmetry" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/create_tribu_buttons_view"
-        android:layout_width="match_parent"
-        android:layout_height="82dp"
-        android:orientation="horizontal"
-        android:background="@color/white_dynamic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="10dp"
-        android:paddingStart="39dp"
-        android:paddingEnd="39dp"
-        android:weightSum="2">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/cancel_create_button"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/button_height"
-            android:layout_weight="1"
-            android:text="@string/cancel"
-            android:background="@drawable/secondary_button"
-            app:backgroundTint="@color/black_dynamic"
-            android:textColor="@color/black_dynamic"
-            android:textAllCaps="false"
-            android:layout_marginEnd="5dp"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp"
-            android:paddingStart="7dp"
-            android:paddingEnd="7dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/create_tribu"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/button_height"
-            android:layout_weight="1"
-            android:text="Crear"
-            android:background="@drawable/pill_background"
-            android:textAllCaps="false"
-            android:layout_marginStart="5dp"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp"
-            android:paddingStart="7dp"
-            android:paddingEnd="7dp"/>
-
-    </LinearLayout>
-
-    <FrameLayout
-        android:id="@+id/sub_frames"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="gone"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.PopupMenu
-import android.widget.TextView
 import androidx.annotation.MenuRes
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FriendDefaultViewBinding
+import com.asdeporte.asdeportev2.extensions.getVisibleFragment
+import com.asdeporte.asdeportev2.ui.mitribu.subtabs.FriendMenuBottomSheet
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.FitCenter
@@ -27,15 +29,16 @@ class FriendDefaultView @JvmOverloads constructor(
     interface FriendDefaultViewListener {
         fun onOptionSelected(friendId: Int, option: FriendMenuOption)
     }
-    private lateinit var listener: FriendDefaultViewListener
 
-    private lateinit var binding: FriendDefaultViewBinding
+    private lateinit var listener: FriendDefaultViewListener
+    private var binding: FriendDefaultViewBinding
 
     init {
         binding = FriendDefaultViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun setData(listener: FriendDefaultViewListener) {
+    fun setData(listener: FriendDefaultViewListener, supportFragmentManager: FragmentManager) {
+
         //binding.numberEvents.text = events
         this.listener = listener
 
@@ -50,10 +53,17 @@ class FriendDefaultView @JvmOverloads constructor(
             .apply(requestOptions)
             .into(binding.personImage)
 
-        binding.menuButton.setOnClickListener {
-            showMenu(it, R.menu.default_frient_menu)
-        }
 
+        binding.menuButton.setOnClickListener {
+            val friendsFragment =
+                supportFragmentManager.getVisibleFragment("TabsFriendsProfileFragment")
+            val miTribuFragment = supportFragmentManager.getVisibleFragment("MiTribuFragment")
+            if (friendsFragment || miTribuFragment) {
+                ModalBottomSheetMembers().show(supportFragmentManager, "MY_BOTTOM_SHEET")
+            } else {
+                FriendMenuBottomSheet().show(supportFragmentManager, "MY_BOTTOM_SHEET")
+            }
+        }
     }
 
     private fun showMenu(v: View, @MenuRes menuRes: Int) {
@@ -64,7 +74,6 @@ class FriendDefaultView @JvmOverloads constructor(
         }
         popup.setOnMenuItemClickListener {
             // Respond to menu item click.
-            println("menu click: ${it.itemId}")
             if (it.title == "Enviar mensaje") {
                 listener.onOptionSelected(0, FriendMenuOption.MESSAGE)
             } else if (it.title == "Eliminar") {

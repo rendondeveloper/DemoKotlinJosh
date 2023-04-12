@@ -4,22 +4,17 @@ import android.app.AlertDialog
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.os.Build
 import android.os.Bundle
 import android.text.Html
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import com.asdeporte.asdeportev2.R
-import com.asdeporte.asdeportev2.data.responses.events.EventData
-import com.asdeporte.asdeportev2.databinding.NotificationsFilterDialogBinding
 import com.asdeporte.asdeportev2.databinding.SheetChangeDefaultTribuBinding
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class ChangeDefaultTribuDialog: DialogFragment() {
+class ChangeDefaultTribuDialog : DialogFragment() {
 
     private var _binding: SheetChangeDefaultTribuBinding? = null
+
     // This property is only valid between onCreateDialog and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -35,7 +30,10 @@ class ChangeDefaultTribuDialog: DialogFragment() {
             .create()
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        binding.descText.text = Html.fromHtml(resources.getString(R.string.select_tribu_main_desc), Html.FROM_HTML_MODE_LEGACY)
+        binding.descText.text = Html.fromHtml(
+            resources.getString(R.string.select_tribu_main_desc),
+            Html.FROM_HTML_MODE_LEGACY
+        )
 
         binding.firstTribu.setData()
         binding.secondTribu.setData()
@@ -52,6 +50,45 @@ class ChangeDefaultTribuDialog: DialogFragment() {
         binding.confirmButton.setOnClickListener {
             this.dismiss()
             this.onConfirmClick?.invoke(0)
+        }
+        binding.firstTribu.isSelected.observe(requireActivity()) {
+            if (it)
+                binding.confirmButton.setBackgroundColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.orange_as_light
+                    )
+                )
+            else {
+                if (binding.secondTribu.isSelected.value == false) {
+                    binding.confirmButton.setBackgroundColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            R.color.border_gray
+                        )
+                    )
+                }
+            }
+        }
+
+        binding.secondTribu.isSelected.observe(requireActivity()) {
+            if (it)
+                binding.confirmButton.setBackgroundColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.orange_as_light
+                    )
+                )
+            else {
+                if (binding.firstTribu.isSelected.value == false) {
+                    binding.confirmButton.setBackgroundColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            R.color.border_gray
+                        )
+                    )
+                }
+            }
         }
     }
 

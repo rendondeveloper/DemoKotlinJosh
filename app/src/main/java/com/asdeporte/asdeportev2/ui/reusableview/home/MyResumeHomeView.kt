@@ -3,12 +3,10 @@ package com.asdeporte.asdeportev2.ui.reusableview.home
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.MyResumeHomeViewBinding
-import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalBigAdapter
-import com.asdeporte.asdeportev2.ui.home.adapters.MyGalleyHomeAdapter
 
 class MyResumeHomeView @JvmOverloads constructor(
     context: Context,
@@ -24,8 +22,16 @@ class MyResumeHomeView @JvmOverloads constructor(
 
     fun setData(events: String) {
         //binding.numberEvents.text = events
+        binding.apply {
+            clInfo.setOnClickListener {
+                if (llInfo.visibility == View.GONE) {
+                    llInfo.visibility = View.VISIBLE
+                    ivRow.setImageResource(R.drawable.arrow_up)
+                } else {
+                    llInfo.visibility = View.GONE
+                    ivRow.setImageResource(R.drawable.arrow_down_line)
+                }
+            }
+        }
     }
-
-
-
 }

@@ -22,8 +22,10 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AsdeporteV2"
@@ -45,7 +47,7 @@
             android:name=".ui.access.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.AsdeporteV2.NoActionBar"/>
+            android:theme="@style/Theme.AsdeporteV2.NoActionBar" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="false" />
@@ -57,13 +59,13 @@
             android:name=".ui.onboarding.OnboardingActivity"
             android:exported="false"
             android:label="@string/title_activity_onboarding"
-            android:theme="@style/Theme.AsdeporteV2.FullScreen"/>
+            android:theme="@style/Theme.AsdeporteV2.FullScreen" />
         <activity
             android:name=".ui.inscription.InscriptionActivity"
             android:exported="false"
             android:label="@string/title_activity_inscription"
             android:parentActivityName=".ui.MainActivity"
-            android:theme="@style/Theme.AsdeporteV2.NoActionBar" >
+            android:theme="@style/Theme.AsdeporteV2.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
@@ -73,7 +75,7 @@
             android:exported="false"
             android:label="@string/title_activity_inscription"
             android:parentActivityName=".ui.inscription.InscriptionActivity"
-            android:theme="@style/Theme.AsdeporteV2.NoActionBar" >
+            android:theme="@style/Theme.AsdeporteV2.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.inscription.InscriptionActivity" />
@@ -129,5 +131,4 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
     </application>
-
 </manifest>

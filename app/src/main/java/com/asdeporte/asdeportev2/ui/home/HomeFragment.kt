@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentHomeBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalAdapter
 import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalBigAdapter
 import com.asdeporte.asdeportev2.ui.inscription.InscriptionActivity
@@ -38,16 +39,18 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
     _binding = FragmentHomeBinding.inflate(inflater, container, false)
     val root: View = binding.root
 
-    binding.latestResult.setData("47")
+    //binding.latestResult.setData("47")
     binding.sliderHome.setData("47")
-
+    binding.serialsGrid.setData("47")
     //binding.nextRace.setData("")
 
     binding.latestResult.setOnClickListener {
       EventBottomSheet.create(this, testEvent).show(requireActivity().supportFragmentManager, "EventBottomSheet")
     }
 
-    binding.galleryHome.setData("")
+    binding.resumeHome.setData("47")
+
+    //binding.galleryHome.setData("")
 
     setupAdapters()
 
@@ -59,33 +62,64 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
   private fun setupAdapters() {
     val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
 
-    // Top events
+    // Estelares
     binding.topEventsTitle.setTitle("Estelares")
     eventsHorizontalBigAdapter = EventsHorizontalBigAdapter().apply {
       onItemClick = {
         EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
       }
     }
-
     binding.topEvents.adapter = eventsHorizontalBigAdapter
     binding.topEvents.setHasFixedSize(true)
     binding.topEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-
-
     eventsHorizontalBigAdapter.setItems(items)
 
-    // More events
+    // Eventos cerca de mi
     binding.moreEventsTitle.setTitle("Eventos cerca de mi")
     eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
       onItemClick = {
         EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
       }
     }
-
     binding.moreEvents.adapter = eventsHorizontalAdapter
     binding.moreEvents.setHasFixedSize(true)
     binding.moreEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+    eventsHorizontalAdapter.setItems(items)
 
+    // Recomendados para mi
+    binding.recomendedForMeTitle.setTitle("Recomendados para mi")
+    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
+      onItemClick = {
+        EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+      }
+    }
+    binding.recomendedForMeEvents.adapter = eventsHorizontalAdapter
+    binding.recomendedForMeEvents.setHasFixedSize(true)
+    binding.recomendedForMeEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+    eventsHorizontalAdapter.setItems(items)
+
+    // Los 10 + populares
+    binding.topTenTitle.setTitle("Los 10 + populares")
+    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
+      onItemClick = {
+        EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+      }
+    }
+    binding.topTenEvents.adapter = eventsHorizontalAdapter
+    binding.topTenEvents.setHasFixedSize(true)
+    binding.topTenEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+    eventsHorizontalAdapter.setItems(items)
+
+    // Este fin de semana
+    binding.weekendTitle.setTitle("Este fin de semana")
+    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
+      onItemClick = {
+        EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+      }
+    }
+    binding.weekendEvents.adapter = eventsHorizontalAdapter
+    binding.weekendEvents.setHasFixedSize(true)
+    binding.weekendEvents.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
     eventsHorizontalAdapter.setItems(items)
 
 
@@ -97,7 +131,7 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
 
   override fun onOpenEvent(event: String) {
     // open event
-    findNavController().navigate(R.id.toEventDetailAction)
+    findNavController().safelyNavigate(R.id.toEventDetailAction)
   }
 
   @OptIn(ExperimentalCoroutinesApi::class)
@@ -106,11 +140,9 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
   }
 
   override fun onSearch() {
-    println("onSearch")
   }
 
   override fun onFilters() {
-    println("onFilters")
   }
 
   override fun onDestroyView() {

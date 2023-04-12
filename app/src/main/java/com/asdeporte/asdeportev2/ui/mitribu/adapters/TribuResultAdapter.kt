@@ -1,6 +1,7 @@
 package com.asdeporte.asdeportev2.ui.mitribu.adapters
 
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.ui.reusableview.tribu.TribuResultView
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
@@ -16,18 +17,12 @@ class TribuResultAdapter : RecyclerViewAdapterBase<EventData, TribuResultView>()
     override fun onBindViewHolder(holder: ViewWrapper<TribuResultView>, position: Int) {
         val item = items[position]
 
-        println("TribuResultAdapter onBindViewHolder")
         holder.view.apply {
-            bind(item)
+            bind(item, (context as AppCompatActivity).supportFragmentManager)
         }
 
         holder.view.setOnClickListener {
-            println("onItemClick")
             onItemClick?.invoke(item)
         }
-    }
-
-    override fun getItemCount(): Int {
-        return super.getItemCount()
     }
 }

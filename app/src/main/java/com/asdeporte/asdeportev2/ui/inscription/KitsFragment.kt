@@ -30,7 +30,7 @@ class KitsFragment : Fragment() {
 
         binding.topEvent.bind(testEvent)
         /*binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().safelyNavigate(R.id.action_SecondFragment_to_FirstFragment)
         }*/
 
         binding.addressView.setupToHome()

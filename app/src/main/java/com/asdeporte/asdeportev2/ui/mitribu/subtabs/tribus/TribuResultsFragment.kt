@@ -5,18 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTribuResultsBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuResultAdapter
+import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuEventsAdapter
 
 class TribuResultsFragment : Fragment() {
 
     private var _binding: FragmentTribuResultsBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var resultsdapter: TribuResultAdapter
+    private lateinit var resultsdapter: TribuEventsAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentTribuResultsBinding.inflate(inflater, container, false)
@@ -44,9 +47,9 @@ class TribuResultsFragment : Fragment() {
             "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80")
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
 
-        resultsdapter = TribuResultAdapter().apply {
-            onItemClick = {
-                //EventBottomSheet.create(this@TabTribuTribusFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+        resultsdapter = TribuEventsAdapter().apply {
+            onDetailClick = {
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_results_to_resultsDetailFragment)
             }
         }
 

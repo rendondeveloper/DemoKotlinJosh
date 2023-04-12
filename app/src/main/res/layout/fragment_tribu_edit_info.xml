@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mitribu.subtabs.tribus.TribuEditInfoFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/AsdToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:title="Editar información"
-        app:titleTextColor="@color/black_dynamic"
+        app:menu="@menu/friends_menu"
         app:navigationIcon="@drawable/arrow_left"
         app:navigationIconTint="@color/black_dynamic"
-        android:theme="@style/AsdToolbarTheme"/>
+        app:title="@string/information_tribu"
+        app:titleTextColor="@color/black_dynamic" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/create_tribu_buttons_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
             android:id="@+id/create_tribu_view"
@@ -36,7 +37,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="16dp"
-                android:background="@color/secondary_background"/>
+                android:background="@color/secondary_background" />
 
             <RelativeLayout
                 android:id="@+id/cardView"
@@ -49,39 +50,38 @@
                     android:id="@+id/profile_image"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:src="@drawable/avatarman"
-                    android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
-                    app:civ_circle_background_color="@color/white_dynamic"/>
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/avatar_dummy"
+                    app:civ_circle_background_color="@color/white_dynamic" />
 
                 <LinearLayout
                     android:id="@+id/profile_data"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="start"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_toEndOf="@id/profile_image">
+                    android:layout_toEndOf="@id/profile_image"
+                    android:gravity="start"
+                    android:orientation="vertical">
 
                     <TextView
+                        style="@style/Kanit_Semi_Bold.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Corredores Narvarte"
-                        style="@style/Kanit_Bold.Default.16"
-                        android:maxLines="2"/>
+                        android:maxLines="2"
+                        android:text="Corredores Narvarte" />
 
                     <TextView
+                        style="@style/Kanit_Regular.Default.10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Administrador"
                         android:background="@drawable/pill_background_light_gray"
                         android:backgroundTint="@color/dark_blue"
-                        style="@style/Kanit_Regular.Default.14"
-                        android:textColor="@color/white"
-                        android:paddingStart="5dp"
-                        android:paddingEnd="5dp"/>
+                        android:paddingHorizontal="@dimen/dimen_12dp"
+                        android:text="Administrador"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
@@ -94,128 +94,126 @@
                 android:paddingStart="88dp">
 
                 <TextView
+                    style="@style/Kanit_Medium.Default.12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Corredores Narvarte"
-                    style="@style/Kanit_Medium.Default.12" />
+                    android:text="Público" />
+
                 <TextView
+                    style="@style/Kanit_Medium.Default.12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" • "
-                    style="@style/Kanit_Medium.Default.12" />
+                    android:layout_marginHorizontal="@dimen/dimen_8dp"
+                    android:text="•" />
+
                 <TextView
+                    style="@style/Kanit_Medium.Default.12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="205 miembros"
-                    style="@style/Kanit_Medium.Default.12" />
+                    android:text="205 miembros" />
+
                 <TextView
+                    style="@style/Kanit_Medium.Default.12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" • "
-                    style="@style/Kanit_Medium.Default.12" />
+                    android:layout_marginHorizontal="@dimen/dimen_8dp"
+                    android:text="•" />
+
                 <TextView
+                    style="@style/Kanit_Medium.Default.12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Running"
-                    style="@style/Kanit_Medium.Default.12" />
+                    android:text="Running" />
 
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/secondary_background"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/nameTextField"
+                    style="@style/LoginTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/text_18"
                     android:layout_marginBottom="10dp"
                     android:hint="Nombre de la tribu"
-                    app:hintTextColor="@color/black_dynamic"
-                    style="@style/LoginTextInputLayoutStyle">
+                    app:hintTextColor="@color/black_dynamic">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/nameTextInput"
+                        style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        style="@style/Kanit_Regular.Default.16"/>
+                        android:inputType="textPersonName" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/genderTextField"
+                    style="@style/MenuTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
                     android:layout_marginBottom="10dp"
                     android:hint="Privacidad"
                     app:endIconDrawable="@drawable/arrow_down"
                     app:endIconTint="@color/black_dynamic"
-                    app:hintTextColor="@color/black_dynamic"
-                    style="@style/MenuTextInputLayoutStyle">
+                    app:hintTextColor="@color/black_dynamic">
 
                     <AutoCompleteTextView
                         android:id="@+id/genderTextInput"
+                        style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="14dp"
                         android:focusable="false"
                         android:inputType="none"
-                        style="@style/Kanit_Regular.Default.16"/>
+                        android:padding="14dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/shirtTextField"
+                    style="@style/MenuTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
                     android:layout_marginBottom="10dp"
                     android:hint="Deporte"
                     app:endIconDrawable="@drawable/arrow_down"
                     app:endIconTint="@color/black_dynamic"
-                    app:hintTextColor="@color/black_dynamic"
-                    style="@style/MenuTextInputLayoutStyle">
+                    app:hintTextColor="@color/black_dynamic">
 
                     <AutoCompleteTextView
                         android:id="@+id/shirtTextInput"
+                        style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="14dp"
                         android:focusable="false"
                         android:inputType="none"
-                        style="@style/Kanit_Regular.Default.16"/>
+                        android:padding="14dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/emailTextField"
+                    style="@style/LoginTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
                     android:layout_marginBottom="10dp"
                     android:hint="Descripción de la tribu"
-                    app:hintTextColor="@color/black_dynamic"
-                    style="@style/LoginTextInputLayoutStyle">
+                    app:hintTextColor="@color/black_dynamic">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/emailTextInput"
+                        style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        style="@style/Kanit_Regular.Default.16"/>
+                        android:inputType="textMultiLine" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -243,14 +241,14 @@
                             android:src="@drawable/ic_upload" />
 
                         <TextView
-                            style="@style/Kanit_Medium.Default.12"
+                            style="@style/Kanit_Semi_Bold.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Foto de portada"
+                            android:text="Cambiar foto de portada"
                             android:textAlignment="center" />
 
                         <TextView
-                            style="@style/Kanit_Regular.Default.10"
+                            style="@style/Kanit_Regular.Default.14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="La imagen no debe pesar más de 5 MB"
@@ -262,34 +260,35 @@
                         android:id="@+id/media_container_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
 
                 </RelativeLayout>
 
                 <TextView
+                    style="@style/Kanit_Semibold.Default.16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="26dp"
-                    android:text="Añadir miembros:"
-                    style="@style/Kanit_Semibold.Default.16"/>
+                    android:layout_marginTop="@dimen/dimen_24dp"
+                    android:layout_marginBottom="@dimen/dimen_24dp"
+                    android:text="Añadir miembros:" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/searchMembersTextField"
+                    style="@style/LoginTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/input_height"
                     android:hint="@string/btn_search"
-                    app:endIconMode="custom"
                     app:endIconDrawable="@drawable/ic_search"
-                    app:hintTextColor="@color/black_dynamic"
+                    app:endIconMode="custom"
                     app:endIconTint="@color/black_dynamic"
-                    style="@style/LoginTextInputLayoutStyle">
+                    app:hintTextColor="@color/black_dynamic">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/searchMembersTextInput"
+                        style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        style="@style/Kanit_Regular.Default.16"/>
+                        android:inputType="textPersonName" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -303,5 +302,52 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/create_tribu_buttons_view"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white_dynamic"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="39dp"
+        android:paddingEnd="39dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_create_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/secondary_button"
+            android:paddingStart="7dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="0dp"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/black_dynamic"
+            app:backgroundTint="@color/black_dynamic" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_tribu"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/pill_background"
+            android:paddingStart="7dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="0dp"
+            android:text="Actualizar"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

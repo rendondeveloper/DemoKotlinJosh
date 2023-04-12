@@ -1,105 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mitribu.MiTribuFragment" >
+    tools:context=".ui.mitribu.MiTribuFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvT"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/open_main_tribu"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:background="@color/dark_blue"
                 android:clickable="true">
-                
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/main_tribu_image"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/avatarman"
-                    android:layout_margin="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/avatar_tribu_dummy"
+                    app:civ_border_color="@color/gray_400"
                     app:civ_border_width="1dp"
                     app:civ_circle_background_color="@color/white_dynamic"
-                    app:civ_border_color="@color/gray_400"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/main_placeholder"
-                    android:layout_width="wrap_content"
-                    android:layout_height="15dp"
-                    android:text="Tribu principal"
                     style="@style/Kanit_Regular.Default.12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Tribu principal"
                     android:textColor="@color/white"
-                    android:layout_marginTop="12dp"
-                    android:layout_toEndOf="@+id/main_tribu_image"
-                    android:layout_alignParentTop="true"/>
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                    app:layout_constraintStart_toEndOf="@+id/main_tribu_image"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="15dp"
-                    android:text="Corredores Coyoacán"
                     style="@style/Kanit_Regular.Default.12"
-                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/main_placeholder"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_toEndOf="@+id/main_tribu_image"
-                    android:layout_below="@+id/main_placeholder"/>
+                    android:text="Corredores Coyoacán"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                    app:layout_constraintStart_toEndOf="@+id/main_tribu_image"
+                    app:layout_constraintTop_toBottomOf="@+id/main_placeholder" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
+                    android:id="@+id/imageView7"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="18dp"
                     android:gravity="center_vertical"
                     android:src="@drawable/arrow_right"
-                    app:tint="@color/white"
-                    android:layout_alignParentEnd="true"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
 
-            </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/secondary_background"/>
+                android:layout_height="@dimen/dimen_16dp"
+                android:background="@color/secondary_background" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.tribu.PublishHomeView
                 android:id="@+id/publish_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/secondary_background"
                 android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:background="@color/secondary_background">
+                android:paddingBottom="16dp">
+
                 <TextView
                     android:id="@+id/filter_posts"
+                    style="@style/Kanit_Regular.Default.16"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:text="Ver publicaciones"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/filter_posts_background"
+                    android:clickable="true"
+                    android:layout_marginVertical="@dimen/dimen_8dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:gravity="center_vertical"
-                    style="@style/Kanit_Regular.Default.16"
-                    android:clickable="true"
-                    android:background="@drawable/filter_posts_background"
-                    android:drawablePadding="10dp"
-                    android:layout_marginEnd="10dp"
+                    android:text="Ver publicaciones"
                     app:drawableEndCompat="@drawable/filter" />
             </RelativeLayout>
 
@@ -107,20 +127,19 @@
                 android:id="@+id/events"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:overScrollMode="never"
                 android:clipToPadding="false"
+                android:overScrollMode="never"
                 android:paddingStart="10dp"
+                android:visibility="gone"
                 tools:ignore="RtlSymmetry" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:background="@color/secondary_background"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/posts"
+                android:overScrollMode="always"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:overScrollMode="never"/>
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="true"
+            />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

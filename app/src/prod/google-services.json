@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "281753952636",
+    "firebase_url": "https://asdeporte-app.firebaseio.com",
+    "project_id": "asdeporte-app",
+    "storage_bucket": "asdeporte-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281753952636:android:5364e9360e66856756c4f9",
+        "android_client_info": {
+          "package_name": "com.asdeporte.asdeportev2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281753952636-7k9h2nhgkpin1ck46jg7e6e7qje8ghfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqQggw3y1reGojAhnvsMvG3rFl8Rj77Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281753952636-7k9h2nhgkpin1ck46jg7e6e7qje8ghfp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281753952636-lf1bddpqb6b83s9popqhocau6k1d94c4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.asdeporte.iosapp",
+                "app_store_id": "1447680650"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281753952636:android:6092c9806f061ab8",
+        "android_client_info": {
+          "package_name": "es.as.deportesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281753952636-7k9h2nhgkpin1ck46jg7e6e7qje8ghfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqQggw3y1reGojAhnvsMvG3rFl8Rj77Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281753952636-7k9h2nhgkpin1ck46jg7e6e7qje8ghfp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281753952636-lf1bddpqb6b83s9popqhocau6k1d94c4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.asdeporte.iosapp",
+                "app_store_id": "1447680650"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281753952636:android:0ddb367eeda35d52",
+        "android_client_info": {
+          "package_name": "es.as.deportesapp.develop.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281753952636-7k9h2nhgkpin1ck46jg7e6e7qje8ghfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqQggw3y1reGojAhnvsMvG3rFl8Rj77Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281753952636-7k9h2nhgkpin1ck46jg7e6e7qje8ghfp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281753952636-lf1bddpqb6b83s9popqhocau6k1d94c4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.asdeporte.iosapp",
+                "app_store_id": "1447680650"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,30 +1,19 @@
 package com.asdeporte.asdeportev2.ui.mitribu.subtabs
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.ActionBar.LayoutParams
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentMiTribuRequestsBinding
-import com.asdeporte.asdeportev2.databinding.FragmentTribuMainBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuUserRequestAdapter
-import com.asdeporte.asdeportev2.ui.mitribu.post.NewPostAudience
-import com.asdeporte.asdeportev2.ui.mitribu.post.NewPostPreviewSheet
-import com.asdeporte.asdeportev2.ui.mitribu.post.NewPostType
-import com.asdeporte.asdeportev2.ui.reusableview.tribu.TribuUserRequestView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.RequestOptions
 
 class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilterSheetListener {
     private var _binding: FragmentMiTribuRequestsBinding? = null
@@ -33,6 +22,7 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
     interface MiTribuRequestsListener {
         fun onRequestViewBack()
     }
+
     lateinit var listener: MiTribuRequestsListener
 
     private lateinit var requestAdapter: TribuUserRequestAdapter
@@ -44,17 +34,16 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         _binding = FragmentMiTribuRequestsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         (activity as MainActivity).hideActionBar()
-        /*binding.toolbar.setNavigationOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
-        }*/
-
-
         return root
     }
 
@@ -63,14 +52,11 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
 
         binding.toolbarRequests.setOnClickListener {
             (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
-            //val fm = activity?.supportFragmentManager?.beginTransaction()
-            //fm?.detach(this)
-            //fm?.commit()
-            //listener.onRequestViewBack()
         }
 
         binding.filterButton.setOnClickListener {
-            JoinTribusFilterSheet.create(this@MiTribuRequestsFragment).show(requireActivity().supportFragmentManager, "MiTribuRequestsFragment")
+            JoinTribusFilterSheet.create(this@MiTribuRequestsFragment)
+                .show(requireActivity().supportFragmentManager, "MiTribuRequestsFragment")
         }
 
         setupAdapters()
@@ -78,26 +64,29 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
 
 
     fun setupAdapters() {
-        val testEvent = EventData("123",
+        val testEvent = EventData(
+            "123",
             "7, 14 y 21K by WomanUp",
             "https://d3cnkhyiyh0ve2.cloudfront.net/upload%2F2021%2F6%2Fimg_1625774286890_21K-WUp-logo-A-jul-6.jpg",
-            "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80")
+            "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80"
+        )
         val requests = listOf(testEvent, testEvent, testEvent)
 
         // Requests send
         requestAdapter = TribuUserRequestAdapter().apply {
             onItemClick = {
-                findNavController().navigate(R.id.toUserProfile)
+                findNavController().safelyNavigate(R.id.toUserProfile)
             }
         }
 
-        binding.requestsList.adapter = requestAdapter
+        /*binding.requestsList.adapter = requestAdapter
         binding.requestsList.setHasFixedSize(true)
-        binding.requestsList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.requestsList.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         requestAdapter.setItems(requests)
 
-        /*binding.requestsListView.removeAllViews()
+        binding.requestsListView.removeAllViews()
         for (event in requests) {
             val requestView = TribuUserRequestView(requireContext())
             requestView.bind(event, false)
@@ -107,17 +96,27 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
         }*/
 
         // More Tribus
-        val tribus = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
+        val tribus = listOf(
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent,
+            testEvent
+        )
         tribusAdapter = SmallTribuJoinAdapter().apply {
             onItemClick = {
-                println("toJoinTribu")
-                findNavController().navigate(R.id.toJoinTribu)
+                findNavController().safelyNavigate(R.id.toJoinTribu)
             }
         }
 
         binding.moreTribus.adapter = tribusAdapter
         binding.moreTribus.setHasFixedSize(true)
-        binding.moreTribus.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.moreTribus.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         tribusAdapter.setItems(tribus)
     }

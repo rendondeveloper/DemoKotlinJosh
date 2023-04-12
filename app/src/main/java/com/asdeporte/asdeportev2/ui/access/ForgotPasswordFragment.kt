@@ -34,10 +34,12 @@ class ForgotPasswordFragment : Fragment() {
 
         binding.toolbar.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white_dynamic))
         binding.toolbar.setTitleTextColor(ContextCompat.getColor(requireContext(), R.color.black_dynamic))
-        binding.toolbar.title = "Ingresar"
+        binding.toolbar.title = getString(R.string.init_session)
         binding.toolbar.navigationIcon = ContextCompat.getDrawable(requireContext(), R.drawable.arrow_left)
         binding.toolbar.setNavigationOnClickListener {
-            //activity?.supportFragmentManager?.popBackStack()
+            findNavController().popBackStack()
+        }
+        binding.initSesionButton.setOnClickListener {
             findNavController().popBackStack()
         }
 
@@ -92,18 +94,14 @@ class ForgotPasswordFragment : Fragment() {
                     if (response.isSuccessful) {
                         onGetUser(UserCall.GeneralResult(true, response.body()?.data?.message))
                     } else {
-                        println("Error: ${response.code()}")
                         val error = RetrofitHelper.getMessageException(response.errorBody()?.charStream()?.readText())
-                        println("Error message: ${error.message}")
                         onGetUser(UserCall.GeneralResult(false, error.message))
                     }
                 }
             } catch (e: HttpException) {
-                println("Exception ${e.message}")
                 onGetUser(UserCall.GeneralResult(false, e.message()))
             } catch (e: Throwable) {
                 onGetUser(UserCall.GeneralResult(false, e.localizedMessage))
-                println(e.localizedMessage)
             }
         }
 

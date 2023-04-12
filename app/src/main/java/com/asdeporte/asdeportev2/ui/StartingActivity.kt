@@ -25,19 +25,13 @@ class StartingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val userid = SharedPreferencesAsd.getUserId(this) ?: ""
-        println("getUserid: $userid")
 
         binding.motionLayout.setTransitionListener(object : MotionLayout.TransitionListener {
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
-                println("onTransitionCompleted")
                 //startActivity(Intent(this@StartingActivity, MainActivity::class.java))
             }
 
             override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
-                println("onTransitionChange p0: $p0")
-                println("onTransitionChange p1: $p1")
-                println("onTransitionChange p2: $p2")
-                println("onTransitionChange p3: $p3")
                 //0.9882739
                 if (p3 > 0.83 && !openedNext) {
                     openedNext = true
@@ -50,11 +44,11 @@ class StartingActivity : AppCompatActivity() {
             }
 
             override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
-                println("onTransitionStarted")
+                //TODO("Not yet implemented")
             }
 
             override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
-                println("onTransitionTrigger")
+                //TODO("Not yet implemented")
             }
         })
 

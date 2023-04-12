@@ -5,11 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.databinding.FragmentJoinTribuBinding
 import com.asdeporte.asdeportev2.databinding.FragmentMiTribuRequestsBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
+import com.asdeporte.asdeportev2.ui.alert.AlertDialog
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuUserRequestAdapter
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class JoinTribuFragment : Fragment() {
     private var _binding: FragmentJoinTribuBinding? = null
@@ -22,7 +25,7 @@ class JoinTribuFragment : Fragment() {
 
         (activity as MainActivity).hideActionBar()
         binding.toolbar.setNavigationOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
+            findNavController().popBackStack()
         }
 
 
@@ -33,7 +36,7 @@ class JoinTribuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.toolbar.setOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
+            findNavController().popBackStack()
         }
 
         //binding.filterButton.setOnClickListener {
@@ -41,11 +44,18 @@ class JoinTribuFragment : Fragment() {
         //}
 
         binding.notNowButton.setOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
+            findNavController().popBackStack()
         }
 
         binding.joinButton.setOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
+            val alert = AlertDialog(
+                title = "Unirme a grupo",
+                message = "Se te notificará cuando el administrador del grupo acepte tu solicitud").apply {
+                onCancelClick = {
+                    findNavController().popBackStack()
+                }
+            }
+            alert.show(requireActivity().supportFragmentManager, this.tag)
         }
 
     }

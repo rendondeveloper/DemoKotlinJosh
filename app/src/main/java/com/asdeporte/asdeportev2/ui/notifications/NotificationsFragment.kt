@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentNotificationsBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.notifications.adapter.*
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
@@ -60,7 +61,6 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
 
         binding.tabView.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                println("onTabSelected ${tab?.position}")
                 if (tab?.position == 0) {
                     binding.updatesScroll.visibility = View.VISIBLE
                     binding.messagesScroll.visibility = View.GONE
@@ -79,7 +79,6 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
         binding.tabView.getTabAt(0)?.orCreateBadge?.backgroundColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
         binding.tabView.getTabAt(1)?.orCreateBadge?.number = 2
         binding.tabView.getTabAt(1)?.orCreateBadge?.backgroundColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
-
         val typefaceSemiBold = ResourcesCompat.getFont(requireContext(), R.font.kanit_semibold)
         val typefaceRegular = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
 
@@ -89,6 +88,8 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding.createGroupButton.visibility = View.GONE
             binding.messagesView.visibility = View.VISIBLE
             binding.groupView.visibility = View.GONE
+            binding.txtTitle.visibility = View.GONE
+            binding.divider.visibility = View.GONE
         }
         binding.groupButton.setOnClickListener {
             binding.singleButton.typeface = typefaceRegular
@@ -96,6 +97,8 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding.createGroupButton.visibility = View.VISIBLE
             binding.messagesView.visibility = View.GONE
             binding.groupView.visibility = View.VISIBLE
+            binding.txtTitle.visibility = View.VISIBLE
+            binding.divider.visibility = View.VISIBLE
         }
 
         setupAdapters()
@@ -107,25 +110,30 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
 
         for ((index, item) in items.withIndex()) {
-            if (index == 0) {
-                val holder = NotificationsTopStatusView(requireContext())
-                holder.bind(item)
-                binding.messagesLinear.addView(holder)
-            } else if (index == 3) {
-                val holder = UpdateUserRequestView(requireContext())
-                holder.bind(item)
-                binding.messagesLinear.addView(holder)
-            } else if (index == 4) {
-                val holder = NotificationsTopStatusView(requireContext())
-                holder.bind(item)
-                binding.messagesLinear.addView(holder)
-            } else {
-                val holder = UpdateUserView(requireContext())
-                holder.bind(item)
-                holder.setOnClickListener {
-                    findNavController().navigate(R.id.toChat)
+            when (index) {
+                0 -> {
+                    val holder = NotificationsTopStatusView(requireContext())
+                    holder.bind(item)
+                    binding.messagesLinear.addView(holder)
                 }
-                binding.messagesLinear.addView(holder)
+                3 -> {
+                    val holder = UpdateUserRequestView(requireContext())
+                    holder.bind(item)
+                    binding.messagesLinear.addView(holder)
+                }
+                4 -> {
+                    val holder = NotificationsTopStatusView(requireContext())
+                    holder.bind(item)
+                    binding.messagesLinear.addView(holder)
+                }
+                else -> {
+                    val holder = UpdateUserView(requireContext())
+                    holder.bind(item)
+                    holder.setOnClickListener {
+                        findNavController().safelyNavigate(R.id.toChat)
+                    }
+                    binding.messagesLinear.addView(holder)
+                }
             }
         }
 
@@ -169,11 +177,11 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
     }
 
     override fun onSearch() {
-        println("onSearch")
+        //TODO("Not yet implemented")
     }
 
     override fun onFilters() {
-        println("onFilters")
+        //TODO("Not yet implemented")
     }
 
     override fun onDestroyView() {

@@ -91,7 +91,7 @@ class WalletAddBalanceFragment : Fragment(), WalletNewCardSheet.NewCardSheetList
     private fun setupCards() {
         creditCardAdapter = CreditCardAdapter().apply {
             onItemClick = {
-                println("do nothing")
+                //TODO("Not yet implemented")
             }
         }
 

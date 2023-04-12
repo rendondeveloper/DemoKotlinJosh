@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentPersonalDependantsBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.ProfileDependantAdapter
 
@@ -44,8 +45,7 @@ class PersonalDependentsFragment : Fragment() {
 
         dependantsAdapter = ProfileDependantAdapter().apply {
             onItemClick = {
-                println("onItemClick")
-                findNavController().navigate(R.id.to_personal_history)
+                findNavController().safelyNavigate(R.id.to_personal_history)
             }
         }
 

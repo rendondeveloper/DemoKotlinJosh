@@ -33,11 +33,26 @@
                 android:layout_marginEnd="16dp"
                 android:orientation="vertical">
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="32dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/gray_400"
+                    android:backgroundTint="@color/gray_400"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="@dimen/dimen_4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/text_18"
                     android:layout_marginBottom="24dp"
                     android:text="Filtros"
                     style="@style/Kanit_Semibold.Default.16"/>
@@ -95,7 +110,7 @@
                         android:layout_width="0dp"
                         android:layout_height="@dimen/button_height"
                         android:layout_weight="1"
-                        android:text="@string/clean"
+                        android:text="@string/clean_filters"
                         android:background="@drawable/secondary_button"
                         app:backgroundTint="@color/black_dynamic"
                         android:textColor="@color/black_dynamic"
@@ -135,6 +150,5 @@
 
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

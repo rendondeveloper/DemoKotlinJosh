@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.databinding.SheetAdminTribuBinding
 import com.asdeporte.asdeportev2.databinding.SheetJoinTribusFilterBinding
+import com.asdeporte.asdeportev2.ui.alert.AlertDialog
+import com.asdeporte.asdeportev2.ui.notifications.NotificationsFilterDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class AdminTribuSheet : BottomSheetDialogFragment() {
@@ -41,8 +44,18 @@ class AdminTribuSheet : BottomSheetDialogFragment() {
         }
 
         binding.abandomTribu.setOnClickListener {
-            listener.onAbandom()
-            this.dismiss()
+            val alert = AlertDialog(
+                title = "Abandonar tribu",
+                message = "Antes de abandonar la tribu, por favor selecciona al nuevo administrador",
+                isButtonAction = true).apply {
+                onConfirmClick = {
+                    findNavController().popBackStack()
+                }
+                onCancelClick = {
+                    this.dismiss()
+                }
+            }
+            alert.show(requireActivity().supportFragmentManager, this.tag)
         }
 
         binding.deleteTribu.setOnClickListener {

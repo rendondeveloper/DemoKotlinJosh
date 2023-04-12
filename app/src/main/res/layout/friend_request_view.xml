@@ -1,99 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardElevation="0dp"
+    android:layout_marginTop="@dimen/dimen_16dp"
+    android:layout_marginBottom="@dimen/dimen_4dp"
+    android:layout_marginHorizontal="@dimen/dimen_16dp">
 
     <RelativeLayout
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/event_tribu_background"
+        android:padding="@dimen/dimen_8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/event_tribu_background"
-        android:elevation="0dp"
-        android:paddingTop="2dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/person_image"
             android:layout_width="88dp"
             android:layout_height="88dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
-            android:layout_centerInParent="true"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
-            android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/person_image"
-            android:layout_alignParentTop="true">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Aarón Méndez"
-                android:gravity="center_vertical"
-                style="@style/Kanit_Medium.Default.20"
-                android:maxLines="2"/>
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <TextView
+                style="@style/Kanit_Bold_Italic.Default.20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="8 amigos en común"
-                style="@style/Kanit_Regular.Secondary.14"/>
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="Aarón Méndez" />
+
+            <TextView
+                style="@style/Kanit_Regular.Secondary.14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8 amigos en común" />
 
             <LinearLayout
                 android:id="@+id/action_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="@dimen/dimen_4dp"
                 android:weightSum="2">
+
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/reject_button"
+                    style="@style/Kanit_Regular.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/button_height"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
                     android:layout_weight="1"
-                    style="@style/Kanit_Regular.Default.14"
-                    android:textColor="@color/black_dynamic"
                     android:background="@drawable/secondary_button"
-                    app:backgroundTint="@color/black_dynamic"
-                    android:text="Eliminar"
-                    android:textAllCaps="false"
-                    android:layout_marginEnd="8dp"
-                    android:paddingTop="0dp"
-                    android:paddingBottom="0dp"
                     android:paddingStart="7dp"
-                    android:paddingEnd="7dp"/>
+                    android:paddingTop="0dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="0dp"
+                    android:text="Descartar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black_dynamic"
+                    app:backgroundTint="@color/black_dynamic" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/accept_button"
+                    style="@style/Kanit_Regular.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/button_height"
                     android:layout_weight="1"
-                    style="@style/Kanit_Regular.Default.14"
-                    android:textColor="@color/white"
                     android:background="@drawable/pill_background"
+                    android:paddingStart="7dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="0dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
                     android:text="Agregar"
                     android:textAllCaps="false"
-                    android:paddingTop="0dp"
-                    android:paddingBottom="0dp"
-                    android:paddingStart="7dp"
-                    android:paddingEnd="7dp"/>
+                    android:textColor="@color/white" />
             </LinearLayout>
 
         </LinearLayout>
 
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

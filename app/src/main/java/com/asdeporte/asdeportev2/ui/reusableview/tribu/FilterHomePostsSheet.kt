@@ -27,7 +27,6 @@ class FilterHomePostsSheet : BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FilterHomePostSheetBinding.inflate(inflater)
-        println("FilterHomePostsSheet")
 
         return binding.root
     }
@@ -35,7 +34,6 @@ class FilterHomePostsSheet : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        println("FilterHomePostsSheet")
         //binding.parentView.layoutParams.max
 
 

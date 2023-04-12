@@ -34,7 +34,6 @@ class UpdateUserAdapter : RecyclerViewAdapterBase<EventData, UpdateUserView>() {
     override fun onBindViewHolder(holder: ViewWrapper<UpdateUserView>, position: Int) {
         val item = items[position]
 
-        println("UpdateUserAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
@@ -70,7 +69,6 @@ class UpdateUserView constructor(context: Context): RelativeLayout(context) {
                     .skipMemoryCache(true))
             .into(binding.avatarImage)
 
-        println("UpdateUserView")
 
     }
 }
@@ -96,7 +94,6 @@ class UpdateUserRequestView constructor(context: Context): RelativeLayout(contex
                     .skipMemoryCache(true))
             .into(binding.avatarImage)
 
-        println("UpdateUserView")
 
     }
 }
@@ -121,7 +118,6 @@ class MessageCellView constructor(context: Context): RelativeLayout(context) {
                     .skipMemoryCache(true))
             .into(binding.avatarImage)
 
-        println("UpdateUserView")
 
     }
 }
@@ -146,7 +142,6 @@ class MessageGroupCellView constructor(context: Context): RelativeLayout(context
                     .skipMemoryCache(true))
             .into(binding.avatarImage)
 
-        println("UpdateUserView")
 
     }
 }

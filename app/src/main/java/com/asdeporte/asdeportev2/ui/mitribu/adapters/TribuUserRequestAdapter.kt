@@ -16,7 +16,6 @@ class TribuUserRequestAdapter : RecyclerViewAdapterBase<EventData, TribuUserRequ
     override fun onBindViewHolder(holder: ViewWrapper<TribuUserRequestView>, position: Int) {
         val item = items[position]
 
-        println("TribuUserRequestAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, true)
         }

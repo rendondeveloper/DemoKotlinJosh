@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mitribu.MiTribuFragment" >
+    tools:context=".ui.mitribu.subtabs.MiTribuRequestsFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,41 +24,42 @@
                 android:id="@+id/toolbar_requests"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fillColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:title="Solicitudes pendientes"
-                app:titleTextColor="@color/black_dynamic"
+                app:menu="@menu/friends_menu"
                 app:navigationIcon="@drawable/arrow_left"
                 app:navigationIconTint="@color/black_dynamic"
-                android:theme="@style/AsdToolbarTheme"/>
+                app:title="Solicitudes pendientes"
+                app:titleTextColor="@color/black_dynamic" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:background="@color/secondary_background"/>
+                android:background="@color/secondary_background" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:endColor="@android:color/transparent"
-                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-                app:tabSelectedTextColor="@color/black_dynamic"
-                app:tabTextColor="@color/label_secondary"
-                app:tabMode="fixed"
                 app:flow_horizontalAlign="start"
-                app:tabGravity="fill">
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Recibidas" />
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/black_dynamic"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/label_secondary">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Enviadas" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recibidas" />
 
             </com.google.android.material.tabs.TabLayout>
 
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp" />
 
             <LinearLayout
                 android:id="@+id/requests_list_view"
@@ -77,29 +77,29 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:orientation="vertical"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:background="@color/secondary_background"/>
+                android:background="@color/secondary_background" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="20dp">
+                android:orientation="vertical">
 
                 <TextView
+                    style="@style/Kanit_Semi_Bold_Italic.Default.20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text="Únete a otras tribus"
-                    android:textAllCaps="true"
                     android:layout_marginBottom="10dp"
-                    style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+                    android:text="Únete a otras tribus"
+                    android:textAllCaps="true" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -108,22 +108,22 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/searchTextField"
+                        style="@style/LoginTextInputLayoutStyle"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/input_height"
                         android:layout_marginEnd="60dp"
                         android:hint="@string/btn_search"
-                        app:endIconMode="custom"
                         app:endIconDrawable="@drawable/ic_search"
-                        app:hintTextColor="@color/black_dynamic"
+                        app:endIconMode="custom"
                         app:endIconTint="@color/black_dynamic"
-                        style="@style/LoginTextInputLayoutStyle">
+                        app:hintTextColor="@color/black_dynamic">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/searchTextInput"
+                            style="@style/Kanit_Regular.Default.16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textPersonName"
-                            style="@style/Kanit_Regular.Default.16"/>
+                            android:inputType="textPersonName" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -135,11 +135,9 @@
                         android:layout_marginTop="5dp"
                         android:background="@drawable/secondary_button"
                         android:backgroundTint="@color/black_dynamic"
-                        android:src="@drawable/filter"/>
+                        android:src="@drawable/filter" />
 
                 </LinearLayout>
-
-
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -152,9 +150,5 @@
                 tools:ignore="RtlSymmetry" />
 
         </LinearLayout>
-
     </ScrollView>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTribuNewPostBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.EventTribuHorizontalAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
@@ -51,13 +52,13 @@ class TribuNewPostFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheet
             val bundle = Bundle()
             bundle.putBoolean("fromNewPost", true)
             bundle.putSerializable("type", NewPostType.ACTIVITY)
-            findNavController().navigate(R.id.toNewActivityPost, bundle)
+            findNavController().safelyNavigate(R.id.toNewActivityPost, bundle)
         }
         binding.addMedal.setOnClickListener {
             val bundle = Bundle()
             bundle.putBoolean("fromNewPost", true)
             bundle.putSerializable("type", NewPostType.MEDAL)
-            findNavController().navigate(R.id.toNewActivityPost, bundle)
+            findNavController().safelyNavigate(R.id.toNewActivityPost, bundle)
         }
         binding.addMedia.setOnClickListener {
             NewPostPreviewSheet.create(this@TribuNewPostFragment, NewPostType.MEDIA).show(requireActivity().supportFragmentManager, "EventBottomSheet")
@@ -73,7 +74,6 @@ class TribuNewPostFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheet
      Listeners
      */
     override fun onAudienceSelected(audience: NewPostAudience?) {
-        println("onAudienceSelected: $audience")
         when (audience) {
             NewPostAudience.PUBLIC -> {
                 binding.audienceImage.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_world))
@@ -81,7 +81,7 @@ class TribuNewPostFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheet
             }
             NewPostAudience.FRIENDS -> {
                 binding.audienceImage.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_friends_audience))
-                binding.audienceTitle.text = "Amigos"
+                binding.audienceTitle.text = getString(R.string.txt_friends)
             }
             NewPostAudience.PRIVATE -> {
                 binding.audienceImage.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_user_audience))

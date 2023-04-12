@@ -3,7 +3,6 @@ package com.asdeporte.asdeportev2.ui.reusableview.tribu
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import com.asdeporte.asdeportev2.R
@@ -22,23 +21,31 @@ class TribuEventstView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
     private lateinit var binding: TribuEventsViewBinding
+    interface TribuEventsListener {
+        fun onDetail(event: EventData)
+    }
+
     init {
         binding = TribuEventsViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun bind(item: EventData) {
+    fun bind(item: EventData,
+             listener: TribuEventsListener,) {
 
         var requestOptions = RequestOptions()
             .placeholder(ContextCompat.getDrawable(context, R.drawable.placeholder_img))
             .diskCacheStrategy(DiskCacheStrategy.NONE)
             .skipMemoryCache(true)
         requestOptions = requestOptions.transforms(FitCenter(), RoundedCorners(8))
+
         Glide.with(this)
             .load("https://picsum.photos/150/150")
             .centerCrop()
             .apply(requestOptions)
             .into(binding.eventImage)
 
-
+        binding.btnDetail.setOnClickListener {
+            listener.onDetail(item)
+        }
     }
 }

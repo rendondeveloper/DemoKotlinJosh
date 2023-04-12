@@ -11,6 +11,7 @@
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_search"
         android:title="Search"
+        android:iconTint="@color/white"
         app:showAsAction="always"/>
 
     <item

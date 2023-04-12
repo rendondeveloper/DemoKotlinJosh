@@ -37,12 +37,10 @@ class TribuUserRequestView @JvmOverloads constructor(
             .into(binding.tribuLogo)
 
         binding.rejectButton.setOnClickListener {
-            println("rejectButton")
             binding.actionButtons.visibility = View.INVISIBLE
         }
 
         binding.acceptButton.setOnClickListener {
-            println("acceptButton")
             binding.actionButtons.visibility = View.INVISIBLE
         }
 
@@ -57,7 +55,6 @@ class TribuUserRequestView @JvmOverloads constructor(
     }
 
     fun hideButtons() {
-        println("hideButtons")
         binding.actionButtons.visibility = View.INVISIBLE
     }
 }

@@ -60,7 +60,6 @@ class ModalityUserView @JvmOverloads constructor(
 
         distanceAdapter = ModalityItemAdapter().apply {
             onItemClick = {
-                println("onItemClick: $it")
                 //EventBottomSheet.create(this@ModalityUserView, it).show(context.supportFragmentManager, "EventBottomSheet")
                 //binding.distanceDetailsView.visibility = View.VISIBLE
 

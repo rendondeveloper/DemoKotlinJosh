@@ -30,7 +30,6 @@ class NewPostMedalAdapter : RecyclerViewAdapterBase<EventData, NewPostMedalView>
     override fun onBindViewHolder(holder: ViewWrapper<NewPostMedalView>, position: Int) {
         val item = items[position]
 
-        println("PostsAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, this@NewPostMedalAdapter)
         }

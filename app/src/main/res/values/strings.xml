@@ -16,8 +16,13 @@
     <string name="forgot_we_help">No te preocupes, podemos ayudarte.</string>
     <string name="forgot_recover_pass">Recuperar mi contraseña</string>
     <string name="forgot_email_send_title">¡Revisa tu correo!</string>
-    <string name="forgot_email_send_desc">Te hemos enviado un correo con las instrucciones para recuperar tu contraseña. Si el correo que te enviamos no lo puedes ver, revisa tu Spam.</string>
-    <string name="glad_to_see_you">Nos alegra verte de nuevo.</string>
+    <string name="forgot_email_send_desc">Te hemos enviado un correo con las instrucciones para recuperar tu contraseña. Si el correo que te enviamos no lo puedes ver, revisa tu spam.</string>
+    <string name="glad_to_see_you">¡Nos alegra verte de nuevo!</string>
+
+    <!-- Register -->
+    <string name="finish">Finalizar</string>
+    <string name="enter_email">Correo electrónico</string>
+    <string name="enter_password">Contraseña</string>
     <string name="register_you">Regístrate</string>
     <string name="register_create">Crea tu cuenta</string>
     <string name="register_create_end_it">Finaliza tu registro</string>
@@ -27,8 +32,10 @@
     <string name="birthdate">Fecha de nacimiento</string>
     <string name="password_confirm">Confirma tu contraseña</string>
     <string name="register_you_ex">¡Regístrate!</string>
-    <string name="accept_terms">Acepto los <u><b>Términos y Condiciones</b></u></string>
-    <string name="accept_politics">He leído y entendido la <u><b>Politica de privacidad</b></u></string>
+    <string name="accept_terms">Acepto los</string>
+    <string name="accept_conditions">Términos y Condiciones</string>
+    <string name="accept_politics">He leído y entendido la</string>
+    <string name="politics">Política de privacidad</string>
     <string name="accept_politics_codere">He leído y acepto todos los documentos antes mencionados</string>
     <string name="accept_politics_codere_warning">Debes aceptar los términos y condiciones</string>
     <string name="have_account">¿Ya tienes una cuenta?</string>
@@ -142,7 +149,7 @@
     <string name="continue_word">Continuar</string>
     <string name="file_saved">Archivo guardado</string>
     <string name="file_not_saved">No se pudo guardar el archivo</string>
-    <string name="preview"><u>Previsualizar</u></string>
+    <string name="preview">Previsualizar</string>
 
     <string name="rate_app_title">Calificar</string>
     <string name="rate_app_subtitle">Si te esta gustando AsDeporte, ¿te gustaría calificarnos? No te tomará más de un minuto.</string>
@@ -265,6 +272,7 @@
     <string name="profile_height">Altura</string>
     <string name="profile_weight">Peso</string>
     <string name="profile_gender">Género</string>
+    <string name="profile_sex">Sexo</string>
     <string name="profile_female">Femenino</string>
     <string name="profile_male">Masculino</string>
     <string name="profile_saved_success">Datos guardados correctamente</string>
@@ -288,6 +296,8 @@
     <string name="profile_shirt_size_m" translatable="false">M</string>
     <string name="profile_shirt_size_g" translatable="false">L</string>
     <string name="profile_shirt_size_xg" translatable="false">XL</string>
+    <string name="codigo_postal">Código postal</string>
+
 
     <string-array name="profile_gender_values">
         <item>@string/profile_male</item>
@@ -1085,5 +1095,50 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="onboarding1">Inscríbete a nuestros eventos de manera fácil y rápida</string>
+    <string name="onboarding2">Accede a contenido exclusivo</string>
+    <string name="onboarding3">Da seguimiento a tu desempeño</string>
 
+    <string name="title_select_country">Selecciona un país</string>
+    <string name="title_select_state">Selecciona un estado</string>
+    <string name="my_last_goal">mi resultado más reciente</string>
+    <string name="position">Posición:</string>
+    <string name="time">Tiempo</string>
+    <string name="my_tribe">Mi Tribu:</string>
+    <string name="like">Me gusta</string>
+    <string name="you_like">Te gusta</string>
+    <string name="share_instructions">Di algo sobre esta publicación</string>
+    <string name="share">Compartir</string>
+    <string name="share_message">Compartir en un mensaje</string>
+    <string name="share_in_group">Compartir en un grupo</string>
+    <string name="share_in_trabe">Compartir en una tribu</string>
+    <string name="more_options">Más opciones</string>
+    <string name="publish">Publicar</string>
+    <string name="position_p">Posición</string>
+    <string name="load_image">Cargar imagen</string>
+    <string name="image_recomendation_one">Imagen: No pesar más de 5MB</string>
+    <string name="image_recomendation_two">Vídeo: No pesar más de 10MB</string>
+    <string name="write_comment">Escribe un comentario</string>
+    <string name="create_tribe">Crear tribu</string>
+    <string name="give_admin">Ceder la administración a</string>
+    <string name="txt_all">Todos</string>
+    <string name="txt_friends">Amigos</string>
+    <string name="txt_me">Solo yo</string>
+    <string name="txt_send_msg">Enviar mensaje</string>
+    <string name="see_events">Ver eventos</string>
+    <string name="clean_filters">Limpiar filtros</string>
+    <string name="received_name_dummy"><b>Aarón Méndez</b> ya forma parte de <b>Corredores Narvarte</b></string>
+    <string name="title_my_tribe">La <b>comunidad</b> para todos los <b>Atletas</b>  donde pueden <b>compartir</b> e interactuar  con otros miembros con la misma pasión hacia el <b>deporte.</b></string>
+    <string name="txt_see_demo"><u>Ver demo</u></string>
+    <string name="txt_know_more_data">Conocer más contenido</string>
+    <string name="txt_blog_text">Entrenamiento, nutrición, histórias motivacionales y más contenido de video para corredores</string>
+    <string name="txt_event_detail">Detalle de evento</string>
+    <string name="invite_members">Invitar miembros</string>
+    <string name="invite">Invitar</string>
+    <string name="txt_results_subtitle">Puedes compararte hasta con <b>10 competidores</b> que sean de la misma <b>rama y categoría</b></string>
+    <string name="information_tribu">Información de tribu</string>
+    <string name="tribus">Tribus</string>
+    <string name="update">Actualizaciones</string>
+    <string name="messages">Mensajes</string>
+    <string name="txt_delete">Eliminar</string>
 </resources>

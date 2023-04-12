@@ -26,7 +26,6 @@ class EventsHorizontalBigAdapter : RecyclerViewAdapterBase<EventData, EventsHori
     override fun onBindViewHolder(holder: ViewWrapper<EventsHorizontalView>, position: Int) {
         val item = items[position]
 
-        println("EventsHorizontalBigAdapter onBindViewHolder")
         holder.view.apply {
             bind(item, isBig = true)
         }
@@ -50,7 +49,6 @@ class EventsHorizontalAdapter : RecyclerViewAdapterBase<EventData, EventsHorizon
     override fun onBindViewHolder(holder: ViewWrapper<EventsHorizontalView>, position: Int) {
         val item = items[position]
 
-        println("EventsHorizontalAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
@@ -96,7 +94,7 @@ class EventsHorizontalView @JvmOverloads constructor(
                 height = resources.getDimensionPixelSize(R.dimen.event_card_normal_height)
             }
         }
-
+        /*
         Glide.with(this)
             .load("https://picsum.photos/600/900")
             .centerCrop()
@@ -107,6 +105,7 @@ class EventsHorizontalView @JvmOverloads constructor(
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .skipMemoryCache(true))
             .into(binding.eventBackground)
+         */
 
         Glide.with(this)
             .load("https://d3cnkhyiyh0ve2.cloudfront.net/upload%2F2022%2F5%2Fimg_1655144427045_TUP-Marquesa-22-logo-nvo-jun-13.JPG")
@@ -118,7 +117,6 @@ class EventsHorizontalView @JvmOverloads constructor(
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .skipMemoryCache(true))
             .into(binding.eventLogo)
-        println("EventsHorizontalView")
 
     }
 }

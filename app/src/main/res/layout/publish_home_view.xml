@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:orientation="vertical">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginVertical="@dimen/dimen_8dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
 
@@ -26,36 +27,43 @@
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:foregroundGravity="center_vertical"
-                android:src="@drawable/avatarman"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/white"/>
+                android:src="@drawable/avatar_dummy"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
 
             <RelativeLayout
                 android:id="@+id/thinking_view"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/border_dark_white"
                 android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/profile_image">
+                android:layout_toEndOf="@id/profile_image"
+                android:background="@drawable/border_dark_white">
 
                 <TextView
+                    style="@style/Kanit_Regular.Secondary.16"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
-                    style="@style/Kanit_Regular.Secondary.16"
                     android:gravity="center_vertical"
-                    android:text="Escribe tu comentario"/>
+                    android:text="Escribe tu comentario" />
 
             </RelativeLayout>
 
         </RelativeLayout>
-        
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_8dp"
+            android:layout_marginVertical="@dimen/dimen_12dp"
+            android:background="@color/secondary_background" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
             android:orientation="horizontal"
             android:weightSum="3">
 
@@ -64,43 +72,47 @@
                 android:layout_width="0dp"
                 android:layout_height="65dp"
                 android:layout_weight="1"
-                android:orientation="vertical"
+                android:background="@drawable/post_activity_background"
                 android:gravity="center"
-                android:background="@drawable/post_activity_background">
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/post_activity"/>
+                    android:src="@drawable/post_activity" />
+
                 <TextView
+                    style="@style/Kanit_Regular.Default.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    style="@style/Kanit_Regular.Default.14"
-                    android:textColor="@color/orange_as_light"
-                    android:text="Actividad"/>
+                    android:text="Actividad"
+                    android:textColor="@color/orange_as_light" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/medal_view"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/post_medal_background"
                 android:gravity="center"
-                android:background="@drawable/post_medal_background">
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/post_medal"/>
+                    android:src="@drawable/post_medal" />
+
                 <TextView
+                    style="@style/Kanit_Regular.Default.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    style="@style/Kanit_Regular.Default.14"
-                    android:textColor="@color/pink"
-                    android:text="Medalla"/>
+                    android:text="Medalla"
+                    android:textColor="@color/pink" />
             </LinearLayout>
 
             <LinearLayout
@@ -108,20 +120,22 @@
                 android:layout_width="0dp"
                 android:layout_height="65dp"
                 android:layout_weight="1"
-                android:orientation="vertical"
+                android:background="@drawable/post_media_background"
                 android:gravity="center"
-                android:background="@drawable/post_media_background">
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/post_media"/>
+                    android:src="@drawable/post_media" />
+
                 <TextView
+                    style="@style/Kanit_Regular.Default.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    style="@style/Kanit_Regular.Default.14"
-                    android:textColor="@color/yellow"
-                    android:text="Foto/video"/>
+                    android:text="Foto/video"
+                    android:textColor="@color/yellow" />
             </LinearLayout>
 
 

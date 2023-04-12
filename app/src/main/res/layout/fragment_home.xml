@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/secondary_background"
-    tools:context=".ui.home.HomeFragment" >
+    tools:context=".ui.home.HomeFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="50dp">
+            android:orientation="vertical">
 
             <!--<View
                 android:id="@+id/extendedNavBar"
@@ -28,9 +26,9 @@
                 android:layout_height="120dp"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginBottom="-120dp"
-                android:background="@color/orange_as_light"/>-->
+                android:background="@color/orange_as_light"/>
 
-            <!--<com.asdeporte.asdeportev2.ui.reusableview.home.MyNextRaceView
+            <com.asdeporte.asdeportev2.ui.reusableview.home.MyNextRaceView
                 android:id="@+id/nextRace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />-->
@@ -38,23 +36,33 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyLatestResultView
                 android:id="@+id/latestResult"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
+                android:layout_height="wrap_content" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyResumeHomeView
                 android:id="@+id/resumeHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="@dimen/dimen_24dp" />
 
-            <com.asdeporte.asdeportev2.ui.reusableview.home.MyGalleryHomeView
+            <!--<com.asdeporte.asdeportev2.ui.reusableview.home.MyGalleryHomeView
                 android:id="@+id/galleryHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"/>-->
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.SliderHomeView
                 android:id="@+id/sliderHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.SerialsGridView
+                android:id="@+id/serialsGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.PartnersGridView
+                android:id="@+id/partnersGrid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp" />
@@ -62,30 +70,29 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.SearEventBigView
                 android:id="@+id/searchEvent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
+                android:layout_height="wrap_content" />
 
-            <!--<com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
+            <com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
                 android:id="@+id/searchTribu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>-->
+                android:layout_marginTop="16dp"/>
 
             <LinearLayout
                 android:id="@+id/eventsView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_marginTop="16dp"
                 android:background="@color/white_dynamic"
-                android:layout_marginTop="16dp">
+                android:orientation="vertical">
 
                 <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
                     android:id="@+id/topEventsTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"/>
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/topEvents"
@@ -100,7 +107,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"/>
+                    android:layout_marginEnd="20dp" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/moreEvents"
                     android:layout_width="match_parent"
@@ -109,16 +117,106 @@
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
 
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
+                    android:id="@+id/recomendedForMeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recomendedForMeEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
+                    android:id="@+id/topTenTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/topTenEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
+                    android:id="@+id/experiencesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/experiencesEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
+                    android:id="@+id/weekendTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weekendEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView
+                    android:id="@+id/myTribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32dp" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.BlogView
+                    android:id="@+id/blog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loginButton"
+                        style="@style/Kanit_Medium.Default.16"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="@dimen/dimen_42dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_marginBottom="36dp"
+                        android:background="@drawable/pill_background"
+                        android:paddingTop="0dp"
+                        android:text="@string/txt_know_more_data"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@null" />
+
+                </LinearLayout>
+
+                <!--<com.asdeporte.asdeportev2.ui.reusableview.home.PlansView
+                    android:id="@+id/plans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32dp" />-->
+
             </LinearLayout>
-
-            <com.asdeporte.asdeportev2.ui.reusableview.PartnersGridView
-                android:id="@+id/partnersGrid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
-
         </LinearLayout>
-
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

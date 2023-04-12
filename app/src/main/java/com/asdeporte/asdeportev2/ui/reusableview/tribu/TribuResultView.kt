@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.TribuResultViewBinding
+import com.asdeporte.asdeportev2.ui.access.ModalBottomSheetCountry
+import com.asdeporte.asdeportev2.ui.mitribu.subtabs.FriendMenuBottomSheet
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.FitCenter
@@ -29,7 +32,7 @@ class TribuResultView @JvmOverloads constructor(
         binding = TribuResultViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun bind(item: EventData) {
+    fun bind(item: EventData, fragmentManager: FragmentManager) {
 
         isAdmin = Random.nextBoolean()
 
@@ -55,11 +58,20 @@ class TribuResultView @JvmOverloads constructor(
             .apply(requestOptions)
             .into(binding.eventImage)
 
-        if (isAdmin) {
+        if (isAdmin)
             binding.adminBadge.visibility = View.VISIBLE
-        } else {
+         else
             binding.adminBadge.visibility = View.GONE
-        }
 
+        binding.optionsButton.setOnClickListener {
+            item.isAmigo?.let { isAmigo ->
+                if(isAmigo){
+                    FriendMenuBottomSheet().show(fragmentManager, "MY_BOTTOM_SHEET")
+                }else{
+                    ModalBottomSheetMembers("add").show(fragmentManager, "MY_BOTTOM_SHEET")
+                }
+            }
+
+        }
     }
 }

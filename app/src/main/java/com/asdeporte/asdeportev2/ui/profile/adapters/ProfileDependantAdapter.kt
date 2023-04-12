@@ -29,13 +29,11 @@ class ProfileDependantAdapter : RecyclerViewAdapterBase<EventData, ProfileDepend
     override fun onBindViewHolder(holder: ViewWrapper<ProfileDependantView>, position: Int) {
         val item = items[position]
 
-        println("ProfileDependantAdapter onBindViewHolder")
         holder.view.apply {
             bind(item)
         }
 
         holder.view.setOnClickListener {
-            println("ProfileDependantAdapter")
             onItemClick?.invoke(item)
         }
     }

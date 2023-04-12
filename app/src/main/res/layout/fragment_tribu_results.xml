@@ -13,7 +13,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:title="Resultados"
+        app:title="@string/results"
+        app:menu="@menu/friends_menu"
         app:titleTextColor="@color/black_dynamic"
         app:navigationIcon="@drawable/arrow_left"
         app:navigationIconTint="@color/black_dynamic"
@@ -48,7 +49,7 @@
                     android:id="@+id/tribu_logo"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:src="@drawable/avatarman"
+                    android:src="@drawable/avatar_dummy"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
                     app:civ_circle_background_color="@color/white_dynamic"/>
@@ -138,7 +139,7 @@
                         android:background="@drawable/event_tribu_background"
                         android:drawablePadding="10dp"
                         android:layout_marginEnd="10dp"
-                        app:drawableEndCompat="@drawable/filter" />
+                        app:drawableEndCompat="@drawable/ic_filter" />
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView

@@ -14,6 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:title="Ver tribu"
+        app:menu="@menu/friends_menu"
         app:titleTextColor="@color/black_dynamic"
         app:navigationIcon="@drawable/arrow_left"
         app:navigationIconTint="@color/black_dynamic"
@@ -44,7 +45,7 @@
                 android:id="@+id/tribu_logo"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:src="@drawable/avatarman"
+                android:src="@drawable/avatar_dummy"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
                 app:civ_circle_background_color="@color/white_dynamic"/>
@@ -63,7 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Corredores Narvarte"
-                    style="@style/Kanit_Bold.Default.16"
+                    style="@style/Kanit_Semi_Bold.Default.16"
                     android:maxLines="2"/>
 
                 <TextView
@@ -84,7 +85,8 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/secondary_background"/>
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:background="@color/gray_text"/>
 
 
         <RelativeLayout
@@ -110,7 +112,7 @@
                 android:gravity="center_vertical"
                 android:layout_marginStart="15dp"
                 style="@style/Kanit_Regular.Default.16"
-                android:text="Información de tribu" />
+                android:text="@string/information_tribu" />
 
             <ImageButton
                 android:layout_width="32dp"
@@ -184,7 +186,7 @@
                 android:gravity="center_vertical"
                 android:layout_marginStart="15dp"
                 style="@style/Kanit_Regular.Default.16"
-                android:text="Próximos eventos" />
+                android:text="@string/explore_next_events" />
 
             <ImageButton
                 android:layout_width="32dp"
@@ -221,7 +223,7 @@
                 android:gravity="center_vertical"
                 android:layout_marginStart="15dp"
                 style="@style/Kanit_Regular.Default.16"
-                android:text="Resultados" />
+                android:text="@string/result" />
 
             <ImageButton
                 android:layout_width="32dp"
@@ -232,10 +234,13 @@
                 android:background="@android:color/transparent"
                 android:src="@drawable/arrow_right"
                 app:tint="@color/black_dynamic"/>
-
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:background="@color/secondary_background"/>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

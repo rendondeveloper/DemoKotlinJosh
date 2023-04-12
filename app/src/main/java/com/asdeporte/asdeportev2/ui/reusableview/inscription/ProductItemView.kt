@@ -26,7 +26,6 @@ class ProductItemView @JvmOverloads constructor(
     }
 
     private fun setupAction() {
-        println("setupToHome")
 
         binding.addButton.setOnClickListener {
             if (isAdded) {

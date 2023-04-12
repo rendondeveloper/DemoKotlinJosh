@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentPersonalHistoryBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
 import com.github.mikephil.charting.animation.Easing
@@ -60,7 +61,6 @@ class PersonalHistoryFragment : Fragment() {
 
         binding.tabView.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                println("onTabSelected ${tab?.position}")
                 if (tab?.position == 0) {
                     binding.statisticsView.visibility = View.VISIBLE
                     binding.eventsView.visibility = View.GONE
@@ -151,7 +151,6 @@ class PersonalHistoryFragment : Fragment() {
         // the chart.
         for (i in 0 until count) {
             val value = (Math.random() * range + range / 5).toFloat()
-            println("setData value: $value")
             entries.add(PieEntry(
                     values[i],
                     titles[i % titles.size]
@@ -192,8 +191,7 @@ class PersonalHistoryFragment : Fragment() {
     private fun setupEvents() {
         eventsAdapter = EventHistoryAdapter().apply {
             onItemClick = {
-                println("onItemClick")
-                findNavController().navigate(R.id.to_personal_history)
+                findNavController().safelyNavigate(R.id.to_personal_history)
             }
         }
 

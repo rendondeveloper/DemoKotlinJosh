@@ -48,31 +48,26 @@ class WalletNewCardSheet : BottomSheetDialogFragment() {
         setupCard()
 
         binding.nameTextInput.setOnFocusChangeListener { v, hasFocus ->
-            println("year $hasFocus")
             if (hasFocus && !isFront) {
                 toggleCard()
             }
         }
         binding.numberTextInput.setOnFocusChangeListener { v, hasFocus ->
-            println("year $hasFocus")
             if (hasFocus && !isFront) {
                 toggleCard()
             }
         }
         binding.monthTextInput.setOnFocusChangeListener { v, hasFocus ->
-            println("year $hasFocus")
             if (hasFocus && !isFront) {
                 toggleCard()
             }
         }
         binding.yearTextInput.setOnFocusChangeListener { v, hasFocus ->
-            println("year $hasFocus")
             if (hasFocus && !isFront) {
                 toggleCard()
             }
         }
         binding.cvvTextInput.setOnFocusChangeListener { v, hasFocus ->
-            println("vcc $hasFocus")
             if (hasFocus && isFront) {
                 toggleCard()
             }

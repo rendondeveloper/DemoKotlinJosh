@@ -29,7 +29,7 @@
                 android:id="@+id/profile_image"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:src="@drawable/avatarman"
+                android:src="@drawable/avatar_dummy"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
                 app:civ_circle_background_color="@color/white_dynamic"/>
@@ -74,10 +74,10 @@
             android:paddingStart="88dp">
 
             <TextView
+                style="@style/Kanit_Medium.Default.12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Corredores Narvarte"
-                style="@style/Kanit_Medium.Default.12" />
+                android:text="Público" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

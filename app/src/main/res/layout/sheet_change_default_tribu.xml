@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/dialog_background"
@@ -12,58 +9,60 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="27dp">
+
         <TextView
+            style="@style/Kanit_Semi_Bold.Default.16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Kanit_Medium.Default.18"
             android:text="Cambiar Tribu Principal" />
+
         <ImageButton
             android:id="@+id/cancel_button"
             android:layout_width="27dp"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_close"
+            android:layout_alignParentEnd="true"
             android:background="@android:color/transparent"
-            android:layout_alignParentEnd="true"/>
+            android:src="@drawable/ic_close_line" />
     </RelativeLayout>
 
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/gray_400"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"/>
+        android:layout_marginBottom="12dp"
+        android:background="@color/gray_400" />
 
     <TextView
         android:id="@+id/desc_text"
+        style="@style/Kanit_Regular.Default.14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Kanit_Regular.Default.14"
         android:layout_marginBottom="16dp"
         android:text="@string/select_tribu_main_desc" />
 
     <com.asdeporte.asdeportev2.ui.reusableview.tribu.TribuListView
         android:id="@+id/firstTribu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <com.asdeporte.asdeportev2.ui.reusableview.tribu.TribuListView
         android:id="@+id/secondTribu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/confirm_button"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height"
+        android:layout_height="@dimen/dimen_48dp"
         android:layout_marginTop="26dp"
-        android:text="@string/btn_save"
-        android:background="@drawable/pill_background"
-        android:textAllCaps="false"
-        android:paddingTop="0dp"
-        android:paddingBottom="0dp"
+        android:backgroundTint="@color/border_gray"
         android:paddingStart="7dp"
-        android:paddingEnd="7dp"/>
+        android:paddingTop="0dp"
+        android:paddingEnd="7dp"
+        android:paddingBottom="0dp"
+        android:text="@string/btn_save"
+        android:textAllCaps="false" />
 
 
 </LinearLayout>

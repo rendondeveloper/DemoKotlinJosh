@@ -73,7 +73,7 @@
             android:id="@+id/image_me"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/avatarman"
+            android:src="@drawable/avatar_dummy"
             android:layout_gravity="end|bottom"
             android:layout_marginBottom="20dp"
             app:civ_border_width="0dp"

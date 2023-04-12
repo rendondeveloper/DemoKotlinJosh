@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentProfileDetailsBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.ProfileItemDetailAdapter
 
@@ -38,7 +39,7 @@ class ProfileDetailsFragment : Fragment() {
             startActivity(Intent(requireActivity(), SuscriptionActivity::class.java))
         }*/
         /*requireActivity().onBackPressedDispatcher.addCallback {
-            println("onBackPressedDispatcher")
+
         }*/
 
         setupAdapter()
@@ -49,13 +50,13 @@ class ProfileDetailsFragment : Fragment() {
         profileItemAdapter = ProfileItemDetailAdapter().apply {
             onItemClick = {
                 when (it.type) {
-                    MoreItem.HISTORIC -> { findNavController().navigate(R.id.to_personal_history) }
-                    MoreItem.PERSONALDATA -> { findNavController().navigate(R.id.to_personal_data) }
-                    MoreItem.MYDEPENDENTS -> { findNavController().navigate(R.id.to_personal_dependents) }
-                    MoreItem.BENEFITS -> { findNavController().navigate(R.id.to_personal_my_benefits) }
-                    MoreItem.WALLET -> { findNavController().navigate(R.id.to_personal_wallet) }
+                    MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.to_personal_history) }
+                    MoreItem.PERSONALDATA -> { findNavController().safelyNavigate(R.id.to_personal_data) }
+                    MoreItem.MYDEPENDENTS -> { findNavController().safelyNavigate(R.id.to_personal_dependents) }
+                    MoreItem.BENEFITS -> { findNavController().safelyNavigate(R.id.to_personal_my_benefits) }
+                    MoreItem.WALLET -> { findNavController().safelyNavigate(R.id.to_personal_wallet) }
                     else -> {
-                        println("do nothing")
+                        //TODO("Not yet implemented")
                     }
                 }
             }

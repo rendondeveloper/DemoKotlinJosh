@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="25 miembros"
-                        style="@style/Kanit_Bold.Secondary.12" />
+                        style="@style/Kanit_Regular.Secondary.12" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Running"
-                        style="@style/Kanit_Medium.Secondary.12" />
+                        style="@style/Kanit_Regular.Secondary.12" />
 
                 </LinearLayout>
 

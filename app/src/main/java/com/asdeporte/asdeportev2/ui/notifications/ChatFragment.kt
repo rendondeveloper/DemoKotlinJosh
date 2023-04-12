@@ -88,7 +88,7 @@ class ChatFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
      */
 
     override fun onOpenEvent(event: String) {
-        // open video
+        //TODO("Not yet implemented")
     }
 
     override fun onOpenInscription(event: String) {
@@ -96,11 +96,11 @@ class ChatFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
     }
 
     override fun onSearch() {
-        println("onSearch")
+        //TODO("Not yet implemented")
     }
 
     override fun onFilters() {
-        println("onFilters")
+        //TODO("Not yet implemented")
     }
 
     override fun onDestroyView() {

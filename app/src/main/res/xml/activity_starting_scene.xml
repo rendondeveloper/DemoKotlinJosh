@@ -59,16 +59,23 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@+id/logo"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:transitionEasing="linear" />
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/logo"
+            android:id="@+id/asdeporte"
+            android:layout_marginTop="52dp" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/logo"
+            android:id="@+id/asdeporte"
+            android:layout_marginTop="52dp" />
     </ConstraintSet>
 </MotionScene>

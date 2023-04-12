@@ -36,7 +36,7 @@
                 android:id="@+id/dependant_logo"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/avatarman"
+                android:src="@drawable/avatar_dummy"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="8dp"
                 app:civ_circle_background_color="@color/white_dynamic"/>

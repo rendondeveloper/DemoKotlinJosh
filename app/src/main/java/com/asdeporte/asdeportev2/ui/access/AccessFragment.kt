@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentAccessBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 
 class AccessFragment : Fragment() {
 
@@ -31,18 +32,18 @@ class AccessFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         /*binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            findNavController().safelyNavigate(R.id.action_FirstFragment_to_SecondFragment)
         }*/
         binding.previus.setOnClickListener {
             requireActivity().finish()
         }
 
         binding.registerButton.setOnClickListener {
-            findNavController().navigate(R.id.action_to_RegisterFragment)
+            findNavController().safelyNavigate(R.id.action_to_RegisterFragment)
         }
 
         binding.loginText.setOnClickListener {
-            findNavController().navigate(R.id.action_to_LoginFragment)
+            findNavController().safelyNavigate(R.id.action_to_LoginFragment)
         }
     }
 

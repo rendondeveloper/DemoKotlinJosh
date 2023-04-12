@@ -41,11 +41,9 @@ class LoginActivity : AppCompatActivity() {
 
     /* Loading */
     fun showLoading() {
-        println("showLoading")
         binding.loadingBar.visibility = View.VISIBLE
     }
     fun hideLoading() {
-        println("hideLoading")
         binding.loadingBar.visibility = View.GONE
     }
 

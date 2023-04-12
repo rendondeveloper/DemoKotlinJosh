@@ -34,14 +34,12 @@ class EventBottomSheet : BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = EventBottomSheetBinding.inflate(inflater)
-        println("EventBottomSheet event: $event")
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        println("EventBottomSheet event: $event")
 
         Glide.with(this)
             //.load("https://file-examples.com/storage/fe0358100863d05afed02d2/2017/04/file_example_MP4_480_1_5MG.mp4")
