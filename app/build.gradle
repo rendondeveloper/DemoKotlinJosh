@@ -6,14 +6,11 @@ plugins {
 
 android {
     compileSdk 33
-
     defaultConfig {
-        applicationId "com.asdeporte.asdeportev2"
         minSdk 26
         targetSdk 33
         versionCode 15
         versionName "2.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -22,9 +19,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        /*debug {
-            applicationIdSuffix ".debug"
-        }*/
+        debug {
+            minifyEnabled false
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -37,6 +34,15 @@ android {
         viewBinding true
     }
     namespace 'com.asdeporte.asdeportev2'
+    flavorDimensions "type"
+    productFlavors {
+        dev {
+            applicationId = "com.asdeporte.asdeportev2"
+        }
+        prod {
+            applicationId = "com.asdeporte.asdeporte"
+        }
+    }
 }
 
 dependencies {
