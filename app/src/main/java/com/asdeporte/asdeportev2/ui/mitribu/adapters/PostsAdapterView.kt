@@ -32,7 +32,6 @@ class PostsAdapterView @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyle) {
     private var binding: PostHomeViewBinding
     private lateinit var bottomSheetShare: ModalBottomSheetShare
-    lateinit var player: ExoPlayer
 
     interface PostsAdapterListener {
         fun onItem(event: EventData)
@@ -43,7 +42,6 @@ class PostsAdapterView @JvmOverloads constructor(
 
     init {
         binding = PostHomeViewBinding.inflate(LayoutInflater.from(context), this, true)
-        player = ExoPlayer.Builder(context).build()
     }
 
     fun bind(
@@ -131,13 +129,12 @@ class PostsAdapterView @JvmOverloads constructor(
             if (it) {
                 binding.postImage.visibility = GONE
                 binding.videoPlayerView.visibility = VISIBLE
-                binding.videoPlayerView.player = player
+                binding.videoPlayerView.player = ExoPlayer.Builder(context).build()
                 val mediaItem =
                     MediaItem.fromUri("https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd")
-                player.addMediaItem(mediaItem)
-                player.prepare()
-                player.stop()
-                player.volume = 0f
+                (binding.videoPlayerView.player as ExoPlayer).addMediaItem(mediaItem)
+                (binding.videoPlayerView.player as ExoPlayer).prepare()
+                (binding.videoPlayerView.player as ExoPlayer).play()
             } else {
                 binding.postImage.visibility = VISIBLE
                 binding.videoPlayerView.visibility = GONE
@@ -146,9 +143,23 @@ class PostsAdapterView @JvmOverloads constructor(
 
     }
 
+    fun release() {
+        binding.videoPlayerView.player?.release()
+    }
+
     fun pause() {
-        if (player.isPlaying){
-            player.pause()
+        binding.videoPlayerView.player?.let {
+            if(it.isPlaying){
+                it.pause()
+            }
+        }
+    }
+
+    fun stop() {
+        binding.videoPlayerView.player?.let {
+            if(it.isPlaying){
+                it.stop()
+            }
         }
     }
 

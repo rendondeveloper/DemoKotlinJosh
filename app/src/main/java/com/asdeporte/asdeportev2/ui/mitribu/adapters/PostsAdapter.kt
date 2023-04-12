@@ -1,15 +1,12 @@
 package com.asdeporte.asdeportev2.ui.mitribu.adapters
 
-import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
-import com.google.android.exoplayer2.ExoPlayer
 
 
 class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
@@ -63,8 +60,7 @@ class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
 
     override fun onViewDetachedFromWindow(holder: ViewWrapper<PostsAdapterView>) {
         super.onViewDetachedFromWindow(holder)
-        holder.view.pause()
-
+        holder.view.stop()
     }
     override fun onBindViewHolder(
         holder: ViewWrapper<PostsAdapterView>,
@@ -72,7 +68,5 @@ class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
         payloads: MutableList<Any>
     ) {
         super.onBindViewHolder(holder, position, payloads)
-
-
     }
 }
