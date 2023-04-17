@@ -107,11 +107,11 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
 
     fun initPosts() {
         val items = listOf(
-            testVideoEvent,
             testEvent,
-            testVideoEvent,
             testEvent,
-            testVideoEvent,
+            testEvent,
+            testEvent,
+            testEvent,
             testEvent,
             testEvent
         )

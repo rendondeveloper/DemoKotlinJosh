@@ -134,7 +134,7 @@ class PostsAdapterView @JvmOverloads constructor(
                     MediaItem.fromUri("https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd")
                 (binding.videoPlayerView.player as ExoPlayer).addMediaItem(mediaItem)
                 (binding.videoPlayerView.player as ExoPlayer).prepare()
-                (binding.videoPlayerView.player as ExoPlayer).play()
+                (binding.videoPlayerView.player as ExoPlayer).pause()
             } else {
                 binding.postImage.visibility = VISIBLE
                 binding.videoPlayerView.visibility = GONE
