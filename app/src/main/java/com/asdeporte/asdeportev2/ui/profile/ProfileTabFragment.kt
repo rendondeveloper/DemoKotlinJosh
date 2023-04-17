@@ -28,6 +28,7 @@ enum class MoreItem {
     CONTACT,
     // Details
     HISTORIC,
+    BADGES,
     PERSONALDATA,
     MYDEPENDENTS,
     BENEFITS,
@@ -93,6 +94,7 @@ class ProfileTabFragment : Fragment() {
 
         val menuItems = listOf(
             ProfileMenuItem("Experiencias", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_tent), MoreItem.EXPERIENCES),
+            ProfileMenuItem("Medallero", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_challenge), MoreItem.BADGES),
             ProfileMenuItem("Retos", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_challenge), MoreItem.CHALLENGES),
             ProfileMenuItem("Mis lugares", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_place), MoreItem.MYPLACES),
             ProfileMenuItem("Nutrición", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_apple), MoreItem.NUTRITION),

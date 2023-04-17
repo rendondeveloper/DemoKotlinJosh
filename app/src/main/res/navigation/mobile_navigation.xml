@@ -301,6 +301,9 @@
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/nav_slide_in_left"
             app:popExitAnim="@anim/nav_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_profile_details_to_badge"
+            app:destination="@id/to_badge_fragment" />
     </fragment>
     <fragment
         android:id="@+id/personal_history"
@@ -520,4 +523,8 @@
         android:name="com.asdeporte.asdeportev2.ui.mitribu.FriendsFilterFragment"
         android:label="fragment_friends_filter"
         tools:layout="@layout/fragment_friends_filter" />
+    <fragment
+        android:id="@+id/to_badge_fragment"
+        android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalBadgeFragment"
+        android:label="PersonalBadgeFragment" />
 </navigation>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/cardView"
+        android:layout_width="157dp"
+        android:layout_height="240dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/dependant_card_background"
+        android:elevation="0dp"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/corners_top_secondary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/badge_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/avatar_dummy"
+                app:civ_circle_background_color="@color/white_dynamic" />
+
+            <TextView
+                android:id="@+id/badge_year"
+                style="@style/Kanit_Semibold.Default.10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:maxLines="1"
+                android:text="2023" />
+
+            <TextView
+                android:id="@+id/badge_name_short"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:maxLines="3"
+                android:text="Triatlón Internacional Manzanillo 2023" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_button_height"
+                android:background="@drawable/secondary_button"
+                android:layout_marginTop="12dp"
+                android:paddingTop="0dp"
+                android:text="Detalles"
+                android:textAllCaps="false"
+                android:textColor="@color/black_dynamic"
+                app:backgroundTint="@color/black_dynamic" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
