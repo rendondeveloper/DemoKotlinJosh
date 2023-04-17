@@ -52,6 +52,7 @@ class ProfileDetailsFragment : Fragment() {
                 when (it.type) {
                     MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.to_personal_history) }
                     MoreItem.PERSONALDATA -> { findNavController().safelyNavigate(R.id.to_personal_data) }
+                    MoreItem.BADGES -> { findNavController().navigate(R.id.to_badge_fragment) }
                     MoreItem.MYDEPENDENTS -> { findNavController().safelyNavigate(R.id.to_personal_dependents) }
                     MoreItem.BENEFITS -> { findNavController().safelyNavigate(R.id.to_personal_my_benefits) }
                     MoreItem.WALLET -> { findNavController().safelyNavigate(R.id.to_personal_wallet) }
@@ -74,6 +75,12 @@ class ProfileDetailsFragment : Fragment() {
                 "Encuentra toda la información sobre tus competencias",
                 ContextCompat.getDrawable(requireContext(), R.drawable.profile_graph),
                 MoreItem.HISTORIC
+            ),
+            ProfileMenuItem(
+                "Medallero",
+                "Revisa tus estadísticas para mejorar tu rendimiento",
+                ContextCompat.getDrawable(requireContext(), R.drawable.profile_graph),
+                MoreItem.BADGES
             ),
             ProfileMenuItem(
                 "Datos Personales",
