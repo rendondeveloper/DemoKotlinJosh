@@ -79,7 +79,7 @@ class ProfileDetailsFragment : Fragment() {
             ProfileMenuItem(
                 "Medallero",
                 "Revisa tus estadísticas para mejorar tu rendimiento",
-                ContextCompat.getDrawable(requireContext(), R.drawable.profile_graph),
+                ContextCompat.getDrawable(requireContext(), R.drawable.ic_badge),
                 MoreItem.BADGES
             ),
             ProfileMenuItem(
