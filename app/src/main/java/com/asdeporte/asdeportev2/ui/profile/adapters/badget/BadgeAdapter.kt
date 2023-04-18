@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import com.asdeporte.asdeportev2.R
-import com.asdeporte.asdeportev2.data.responses.events.EventData
-import com.asdeporte.asdeportev2.databinding.GoalBadgedBinding
-import com.asdeporte.asdeportev2.ui.profile.adapters.CreditCardView
+import com.asdeporte.asdeportev2.databinding.BadgeGoalBinding
 import com.asdeporte.asdeportev2.utils.dpToPx
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
@@ -38,35 +36,36 @@ class BadgeAdapter : RecyclerViewAdapterBase<BadgeModel, GoalBadgedCardView>() {
         }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }
+
 class GoalBadgedCardView @JvmOverloads constructor(
-    context: Context,
-    attrs: AttributeSet? = null,
-    defStyle: Int = 0
+        context: Context,
+        attrs: AttributeSet? = null,
+        defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private var binding: GoalBadgedBinding
+    private var binding: BadgeGoalBinding
 
     init {
-        binding =  GoalBadgedBinding.inflate(LayoutInflater.from(context), this, true)
+        binding = BadgeGoalBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun bind(item: BadgeModel) {  var requestOptions = RequestOptions()
-            .placeholder(ContextCompat.getDrawable(context, R.drawable.placeholder_img))
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .skipMemoryCache(true)
+    fun bind(item: BadgeModel) {
+        var requestOptions = RequestOptions()
+                .placeholder(ContextCompat.getDrawable(context, R.drawable.placeholder_img))
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+
         requestOptions = requestOptions.transforms(FitCenter(), RoundedCorners(dpToPx(8)))
         binding.apply {
             badgeNameShort.text = item.nameShort
-            badgeYear .text = item.year
+            badgeYear.text = item.year
             Glide.with(context)
-                    .load(badgeImage)
+                    .load(item.image ?: item.imageResource?.let { ContextCompat.getDrawable(context, it) })
                     .centerCrop()
                     .apply(requestOptions)
                     .into(binding.badgeImage)
+
         }
     }
 }

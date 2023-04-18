@@ -1,5 +1,7 @@
 package com.asdeporte.asdeportev2.ui.profile.adapters.badget
 
+import androidx.annotation.DrawableRes
+
 data class BadgeModel(
         val year: String,
         val nameShort: String,
@@ -8,5 +10,7 @@ data class BadgeModel(
         val fullName: String,
         val position: String,
         val time: String,
-        val image: String,
+        val image: String ?= null,
+        @DrawableRes
+        val imageResource: Int ?= null,
 )

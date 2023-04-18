@@ -27,35 +27,35 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
             android:paddingHorizontal="12dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/dependant_logo"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/avatar_dummy"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="8dp"
-                app:civ_circle_background_color="@color/white_dynamic"/>
+                android:src="@drawable/avatar_dummy"
+                app:civ_circle_background_color="@color/white_dynamic" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Imelda Ramírez"
-                android:gravity="center_horizontal"
                 style="@style/Kanit_Semibold.Default.16"
-                android:maxLines="2"/>
-
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Hijo"
+                android:maxLines="2"
+                android:text="Imelda Ramírez" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginVertical="12dp"
-                style="@style/Kanit_Regular.Default.12"/>
+                android:gravity="center_horizontal"
+                android:text="Hijo" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -66,78 +66,82 @@
                     android:id="@+id/divider"
                     android:layout_width="1dp"
                     android:layout_height="16dp"
-                    android:background="@color/gray_600"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true"
+                    android:background="@color/gray_600" />
 
                 <LinearLayout
                     android:layout_width="58dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_alignEnd="@+id/divider"
                     android:layout_marginEnd="8dp"
-                    android:gravity="center_horizontal">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <TextView
+                        style="@style/Kanit_Regular.Secondary.10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Edad"
-                        style="@style/Kanit_Regular.Secondary.10"/>
+                        android:text="Edad" />
+
                     <TextView
+                        style="@style/Kanit_Medium.Default.18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="10"
-                        style="@style/Kanit_Medium.Default.18"/>
+                        android:text="10" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="58dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_alignStart="@+id/divider"
                     android:layout_marginStart="8dp"
-                    android:gravity="center_horizontal">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <TextView
+                        style="@style/Kanit_Regular.Secondary.10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Eventos"
-                        style="@style/Kanit_Regular.Secondary.10"/>
+                        android:text="Eventos" />
+
                     <TextView
+                        style="@style/Kanit_Medium.Default.18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="12"
-                        style="@style/Kanit_Medium.Default.18"/>
+                        android:text="12" />
                 </LinearLayout>
 
             </RelativeLayout>
 
             <com.google.android.material.button.MaterialButton
+                style="@style/Kanit_Regular.Default.14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_button_height"
-                style="@style/Kanit_Regular.Default.14"
-                android:textColor="@color/black_dynamic"
+                android:layout_marginBottom="12dp"
                 android:background="@drawable/secondary_button"
-                app:backgroundTint="@color/black_dynamic"
+                android:paddingStart="7dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="0dp"
                 android:text="Ver perfil"
                 android:textAllCaps="false"
-                android:layout_marginBottom="12dp"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
-                android:paddingStart="7dp"
-                android:paddingEnd="7dp"/>
+                android:textColor="@color/black_dynamic"
+                app:backgroundTint="@color/black_dynamic" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/reject_button"
+                style="@style/Kanit_Regular.Orange.14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_button_height"
-                style="@style/Kanit_Regular.Orange.14"
-                android:background="@android:color/transparent"
-                android:text="Eliminar"
                 android:layout_marginBottom="12dp"
-                android:textAllCaps="false"
-                android:padding="0dp"/>
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:text="Eliminar"
+                android:textAllCaps="false" />
 
         </LinearLayout>
 

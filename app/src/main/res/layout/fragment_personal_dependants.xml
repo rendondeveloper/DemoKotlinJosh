@@ -61,7 +61,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:layout_marginHorizontal="16dp"/>
+                android:layout_marginHorizontal="16dp"
+                tools:listitem="@layout/badge_goal" />
 
             <View
                 android:layout_width="match_parent"

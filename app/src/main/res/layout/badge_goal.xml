@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -46,8 +46,8 @@
                 style="@style/Kanit_Semibold.Default.10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
                 android:maxLines="1"
                 android:text="2023" />
 
@@ -62,10 +62,10 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Kanit_Regular.Default.14"
-                android:layout_width="match_parent"
+                android:layout_width="90dp"
                 android:layout_height="@dimen/small_button_height"
-                android:background="@drawable/secondary_button"
                 android:layout_marginTop="12dp"
+                android:background="@drawable/secondary_button"
                 android:paddingTop="0dp"
                 android:text="Detalles"
                 android:textAllCaps="false"

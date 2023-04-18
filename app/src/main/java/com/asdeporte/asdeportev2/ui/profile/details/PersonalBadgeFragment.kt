@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.databinding.FragmentBadgesBinding
+import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeAdapter
 import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeModel
@@ -43,9 +43,10 @@ class PersonalBadgeFragment : Fragment() {
 
         binding.badgesGrid.adapter = badgeAdapter
         binding.badgesGrid.setHasFixedSize(true)
-        binding.badgesGrid.layoutManager = GridLayoutManager(context, 2, LinearLayoutManager.HORIZONTAL, false)
+        binding.badgesGrid.layoutManager = GridLayoutManager(context, 2)
 
-        val badge = BadgeModel("", "", "", "", "", "", "", "")
+        val badge = BadgeModel("2023", "Circuito de Las Estaciones PRIMAVERA 2023", "CDMX", "12/02/2023",
+                "Circuito de Las Estaciones PRIMAVERA 2023", "2323", "10:23", imageResource = R.drawable.badge_dummy)
         val items = listOf(badge, badge, badge, badge)
         badgeAdapter.setItems(items)
 
