@@ -1,7 +1,6 @@
 package com.asdeporte.asdeportev2.ui.onboarding
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,16 +10,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.ActivityOnboarding2Binding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.access.LoginActivity
-import com.google.android.material.snackbar.Snackbar
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class OnboardingActivity : AppCompatActivity() {
@@ -72,7 +67,7 @@ class OnboardingActivity : AppCompatActivity() {
         viewPager.adapter = demoCollectionAdapter
 
         dotsIndicator = binding.dotsIndicator
-        dotsIndicator.selectedDotColor = ContextCompat.getColor(this, R.color.orange_as_light)
+        //dotsIndicator.selectedDotColor = ContextCompat.getColor(this, R.color.orange_as_light)
         dotsIndicator.attachTo(viewPager)
     }
 
