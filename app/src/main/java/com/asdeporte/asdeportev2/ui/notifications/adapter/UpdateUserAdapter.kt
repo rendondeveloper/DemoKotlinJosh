@@ -1,28 +1,20 @@
 package com.asdeporte.asdeportev2.ui.notifications.adapter
 
 import android.content.Context
-import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import androidx.core.view.updateLayoutParams
-import com.asdeporte.asdeportev2.R
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.data.responses.events.EventData
-import com.asdeporte.asdeportev2.databinding.MessageCellViewBinding
-import com.asdeporte.asdeportev2.databinding.MessageGroupCellViewBinding
-import com.asdeporte.asdeportev2.databinding.NotificationsTopStatusViewBinding
-import com.asdeporte.asdeportev2.databinding.UpdateUserRequestViewBinding
-import com.asdeporte.asdeportev2.databinding.UpdateUserViewBinding
+import com.asdeporte.asdeportev2.databinding.*
+import com.asdeporte.asdeportev2.ui.alert.AlertDialog
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import io.ktor.http.websocket.*
-import kotlin.random.Random
 
 class UpdateUserAdapter : RecyclerViewAdapterBase<EventData, UpdateUserView>() {
 
@@ -142,6 +134,16 @@ class MessageGroupCellView constructor(context: Context): RelativeLayout(context
                     .skipMemoryCache(true))
             .into(binding.avatarImage)
 
+        binding.btnUnirme2.setOnClickListener{
+            val alert = AlertDialog(
+                title = "Unirme a grupo",
+                message = "Se te notificará cuando el administrador del grupo acepte tu solicitud").apply {
+                onCancelClick = {
+                    findNavController().popBackStack()
+                }
+            }
+            alert.show((context as AppCompatActivity).supportFragmentManager, "")
+        }
 
     }
 }

@@ -7,12 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.databinding.FragmentJoinTribuBinding
-import com.asdeporte.asdeportev2.databinding.FragmentMiTribuRequestsBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.alert.AlertDialog
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuUserRequestAdapter
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+
 
 class JoinTribuFragment : Fragment() {
     private var _binding: FragmentJoinTribuBinding? = null
