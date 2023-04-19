@@ -17,6 +17,7 @@ import com.asdeporte.asdeportev2.databinding.FragmentChatBinding
 import com.asdeporte.asdeportev2.databinding.FragmentNotificationsBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
+import com.asdeporte.asdeportev2.ui.mitribu.subtabs.FriendMenuBottomSheet
 import com.asdeporte.asdeportev2.ui.notifications.adapter.*
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
 import com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
@@ -46,16 +47,15 @@ class ChatFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
             //findNavController().popBackStack(R.id.navigation_home, true)
             (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
         }
-        /*binding.toolbar.setOnMenuItemClickListener {
+        binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.filter_menu -> {
-                    // Handle favorite icon press
-                    filterAlert()
+                    NotificationChatBottomSheet().show(requireActivity().supportFragmentManager, "MY_BOTTOM_SHEET")
                     true
                 }
                 else -> false
             }
-        }*/
+        }
 
         binding.buttonSend.setOnClickListener {
             messages.add(MessageModel.getNew())
