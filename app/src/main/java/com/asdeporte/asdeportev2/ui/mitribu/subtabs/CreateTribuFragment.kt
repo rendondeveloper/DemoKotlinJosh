@@ -10,17 +10,13 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentCreateTribeBinding
-import com.asdeporte.asdeportev2.databinding.FragmentTabTribuTribusBinding
-import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.AddTribuMemberAdapter
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
 import java.util.*
 
-class CreateTribeFragment : Fragment(), TextToSpeech.OnInitListener {
+class CreateTribuFragment : Fragment(), TextToSpeech.OnInitListener {
     lateinit var binding:FragmentCreateTribeBinding
 
     private lateinit var tts: TextToSpeech

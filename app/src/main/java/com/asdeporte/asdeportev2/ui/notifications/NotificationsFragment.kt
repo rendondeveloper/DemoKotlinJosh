@@ -102,6 +102,10 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding.divider.visibility = View.VISIBLE
         }
 
+        binding.createGroupButton.setOnClickListener{
+            findNavController().safelyNavigate(R.id.createGroupFragment)
+        }
+
         setupAdapters()
 
         return root

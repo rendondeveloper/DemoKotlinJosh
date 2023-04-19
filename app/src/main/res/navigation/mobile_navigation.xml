@@ -356,6 +356,9 @@
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/nav_slide_in_left"
             app:popExitAnim="@anim/nav_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
     </fragment>
 
     <fragment
@@ -515,7 +518,7 @@
         tools:layout="@layout/fragment_compair_friends" />
     <fragment
         android:id="@+id/createTribeFragment"
-        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.CreateTribeFragment"
+        android:name="com.asdeporte.asdeportev2.ui.mitribu.subtabs.CreateTribuFragment"
         android:label="fragment_create_tribe"
         tools:layout="@layout/fragment_create_tribe" />
     <fragment
@@ -527,4 +530,9 @@
         android:id="@+id/to_badge_fragment"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalBadgeFragment"
         android:label="PersonalBadgeFragment" />
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.asdeporte.asdeportev2.ui.notifications.CreateGroupFragment"
+        android:label="fragment_create_group"
+        tools:layout="@layout/fragment_create_group" />
 </navigation>

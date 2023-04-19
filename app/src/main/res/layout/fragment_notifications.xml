@@ -147,7 +147,7 @@
                     android:background="@drawable/pill_background"
                     android:textAllCaps="false"
                     android:visibility="gone"
-                    android:text="Crear un grupo"/>
+                    android:text="@string/create_group"/>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/searchTextField"

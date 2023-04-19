@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fillViewport="true"
-    tools:context=".ui.mitribu.subtabs.CreateTribeFragment">
+    tools:context=".ui.mitribu.subtabs.CreateTribuFragment">
 
     <LinearLayout
         android:id="@+id/create_tribu_buttons_view"

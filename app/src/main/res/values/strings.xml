@@ -1141,4 +1141,5 @@
     <string name="update">Actualizaciones (2)</string>
     <string name="messages">Mensajes (3)</string>
     <string name="txt_delete">Eliminar</string>
+    <string name="create_group">Crear un grupo</string>
 </resources>
