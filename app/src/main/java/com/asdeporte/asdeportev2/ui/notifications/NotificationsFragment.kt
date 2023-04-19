@@ -74,11 +74,12 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
         })
-
+        /*
         binding.tabView.getTabAt(0)?.orCreateBadge?.number = 5
         binding.tabView.getTabAt(0)?.orCreateBadge?.backgroundColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
         binding.tabView.getTabAt(1)?.orCreateBadge?.number = 2
         binding.tabView.getTabAt(1)?.orCreateBadge?.backgroundColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
+         */
         val typefaceSemiBold = ResourcesCompat.getFont(requireContext(), R.font.kanit_semibold)
         val typefaceRegular = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
 
