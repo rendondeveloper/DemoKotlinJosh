@@ -36,7 +36,12 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyLatestResultView
                 android:id="@+id/latestResult"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.MyNextCompetitionView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyResumeHomeView
                 android:id="@+id/resumeHome"
@@ -76,7 +81,7 @@
                 android:id="@+id/searchTribu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp" />
 
             <LinearLayout
                 android:id="@+id/eventsView"

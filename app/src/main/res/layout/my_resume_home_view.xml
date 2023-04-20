@@ -50,6 +50,7 @@
                 android:layout_marginStart="@dimen/dimen_16dp"
                 android:layout_marginEnd="@dimen/dimen_16dp"
                 android:text="Ernesto Torres"
+                android:textAllCaps="true"
                 app:layout_constraintEnd_toStartOf="@+id/ivRow"
                 app:layout_constraintStart_toEndOf="@+id/profile_image"
                 app:layout_constraintTop_toTopOf="@+id/profile_image" />
@@ -84,14 +85,43 @@
             android:orientation="vertical"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@+id/clInfo"
-            tools:layout_editor_absoluteX="@dimen/dimen_16dp">
+            tools:layout_editor_absoluteX="@dimen/dimen_16dp"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Kanit_Bold_Italic.Default.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mi score"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    style="@style/Kanit_Medium.Orange.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Ver detalles" />
+
+            </LinearLayout>
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.EventMyScoreView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
 
             <TextView
                 style="@style/Kanit_Bold_Italic.Default.14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_16dp"
-                android:text="mi personal best"
+                android:text="Mi personal best"
                 android:textAllCaps="true" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
@@ -104,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="mi historial"
+                android:text="Mi historial"
                 android:textAllCaps="true" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
@@ -117,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="mis próximas metas"
+                android:text="Mis próximas metas"
                 android:textAllCaps="true" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventProgressGoal
@@ -125,23 +155,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/Kanit_Medium.Orange.14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:background="@android:color/transparent"
-                    android:gravity="end"
-                    android:text="Ver detalles"
-                    android:textAllCaps="false" />
-
-            </LinearLayout>
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

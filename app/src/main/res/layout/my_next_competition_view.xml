@@ -1,0 +1,346 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white_dynamic"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_16dp">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Kanit_Bold_Italic.Default.16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mi próxima competencia"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <ImageView
+                android:id="@+id/event_image"
+                android:layout_width="@dimen/dimen_48dp"
+                android:layout_height="@dimen/dimen_48dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:src="@drawable/next_competition_dummy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/Kanit_Medium.Default.14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Triatlón San Luis Potosí"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/event_image"
+                app:layout_constraintTop_toTopOf="@+id/event_image" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/Kanit_Regular.Secondary.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 de octubre 2023"
+                app:layout_constraintBottom_toBottomOf="@+id/event_image"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/Kanit_Regular.Secondary.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="San Luis Potosí"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvName"
+                app:srcCompat="@drawable/arrow_right" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:background="@drawable/event_tribu_background"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_16dp">
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:text="Tu evento comienza en:"
+                android:textColor="#2B2826"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/daysView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Kanit_Regular.Default.10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/dias"
+                        android:textColor="@color/label_primary"
+                        android:textFontWeight="500" />
+
+                    <LinearLayout
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/dark_blue"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/dark_blue"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hoursView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Kanit_Regular.Default.10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/horas"
+                        android:textColor="@color/label_primary"
+                        android:textFontWeight="500" />
+
+                    <LinearLayout
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/dark_blue"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/dark_blue"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/minutesView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Kanit_Regular.Default.10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/minutos"
+                        android:textColor="@color/label_primary"
+                        android:textFontWeight="500" />
+
+                    <LinearLayout
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/dark_blue"
+                            android:gravity="center"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/dark_blue"
+                            android:gravity="center"
+                            android:text="9"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/secondsView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Kanit_Regular.Default.10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/segundos"
+                        android:textColor="@color/label_primary"
+                        android:textFontWeight="500" />
+
+                    <LinearLayout
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/dark_blue"
+                            android:gravity="center"
+                            android:text="4"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/dark_blue"
+                            android:gravity="center"
+                            android:text="6"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

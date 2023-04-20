@@ -1146,4 +1146,8 @@
     <string name="badge_event_one">Medio Maratón por el Amor y la Paz 2023</string>
     <string name="badge_event_two">Medio Maratón por el Amor y la Paz 2023</string>
     <string name="badge_event_three">Medio Maratón por el Amor y la Paz 2023</string>
+    <string name="dias">Días</string>
+    <string name="segundos">Segundos</string>
+    <string name="minutos">Minutos</string>
+    <string name="horas">Horas</string>
 </resources>
