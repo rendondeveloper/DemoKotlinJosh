@@ -14,6 +14,7 @@ import com.asdeporte.asdeportev2.databinding.FragmentNotificationsBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.notifications.adapter.*
+import com.asdeporte.asdeportev2.ui.profile.adapters.dialog.BadgeDetailDialog
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
 import com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
 import com.google.android.material.tabs.TabLayout
@@ -165,11 +166,8 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
     }
 
     fun filterAlert() {
-        val alert = NotificationsFilterDialog().apply {
+        val alert = BadgeDetailDialog().apply {
             onConfirmClick = {
-
-            }
-            onCancelClick = {
 
             }
         }

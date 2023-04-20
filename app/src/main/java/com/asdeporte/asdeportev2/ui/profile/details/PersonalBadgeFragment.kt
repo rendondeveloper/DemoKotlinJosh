@@ -18,10 +18,13 @@ import com.asdeporte.asdeportev2.databinding.FragmentBadgesBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeAdapter
 import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeModel
+import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeFilterSheet
+import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeShareSheet
+import com.asdeporte.asdeportev2.ui.profile.adapters.dialog.BadgeDetailDialog
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 
-class PersonalBadgeFragment : Fragment() {
+class PersonalBadgeFragment : Fragment(), BadgeFilterSheet.EventBottomSheetListenerBadge, BadgeShareSheet.EventBottomSheetListenerBadgeShare {
 
     private lateinit var binding: FragmentBadgesBinding
 
@@ -49,6 +52,9 @@ class PersonalBadgeFragment : Fragment() {
 
     private fun setupBadges() {
 
+        binding.buttonFilter.setOnClickListener {
+            BadgeFilterSheet.create(this).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+        }
 
         demoCollectionAdapter = BadgeCollectionAdapter(this)
         viewPager = binding.pagerBadge
@@ -72,7 +78,14 @@ class PersonalBadgeFragment : Fragment() {
         dotsIndicator.attachTo(viewPager)
 
         badgeAdapter = BadgeAdapter().apply {
-            onItemClick = {}
+            onItemClick = {
+                val alert = BadgeDetailDialog().apply {
+                    onConfirmClick = {
+
+                    }
+                }
+                alert.show(requireActivity().supportFragmentManager, "")
+            }
         }
 
         binding.badgesGrid.adapter = badgeAdapter
@@ -83,6 +96,12 @@ class PersonalBadgeFragment : Fragment() {
                 "Circuito de Las Estaciones PRIMAVERA 2023", "2323", "10:23", imageResource = R.drawable.badge_dummy)
         val items = listOf(badge, badge, badge, badge)
         badgeAdapter.setItems(items)
+    }
+
+    override fun onOpenEvent(event: String) {
+    }
+
+    override fun onOpenEventShare(event: String) {
     }
 }
 

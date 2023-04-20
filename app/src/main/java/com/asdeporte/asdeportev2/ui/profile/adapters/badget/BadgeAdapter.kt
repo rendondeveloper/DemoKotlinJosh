@@ -28,11 +28,7 @@ class BadgeAdapter : RecyclerViewAdapterBase<BadgeModel, GoalBadgedCardView>() {
         val item = items[position]
 
         holder.view.apply {
-            bind(item)
-        }
-
-        holder.view.setOnClickListener {
-            onItemClick?.invoke(item)
+            bind(item, onItemClick)
         }
     }
 }
@@ -49,7 +45,7 @@ class GoalBadgedCardView @JvmOverloads constructor(
         binding = BadgeGoalBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun bind(item: BadgeModel) {
+    fun bind(item: BadgeModel, callback : ((item: BadgeModel) -> Unit)? = null) {
         var requestOptions = RequestOptions()
                 .placeholder(ContextCompat.getDrawable(context, R.drawable.placeholder_img))
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
@@ -57,6 +53,9 @@ class GoalBadgedCardView @JvmOverloads constructor(
 
         requestOptions = requestOptions.transforms(FitCenter(), RoundedCorners(dpToPx(8)))
         binding.apply {
+            buttonDetail.setOnClickListener{
+                callback?.invoke(item)
+            }
             badgeNameShort.text = item.nameShort
             badgeYear.text = item.year
             Glide.with(context)
