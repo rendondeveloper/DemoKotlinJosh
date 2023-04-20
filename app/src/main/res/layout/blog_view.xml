@@ -10,7 +10,6 @@
         style="@style/Kanit_Bold_Italic.Default.24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_32dp"
         android:text="BLOG"
         android:textAlignment="center" />
 
