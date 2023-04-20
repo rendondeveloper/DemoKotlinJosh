@@ -5,16 +5,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.*
 import com.asdeporte.asdeportev2.ui.alert.AlertDialog
+import com.asdeporte.asdeportev2.ui.notifications.NotificationChatGroupBottomSheet
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
-import io.ktor.http.websocket.*
 
 class UpdateUserAdapter : RecyclerViewAdapterBase<EventData, UpdateUserView>() {
 
@@ -113,7 +114,7 @@ class MessageCellView constructor(context: Context): RelativeLayout(context) {
 
     }
 }
-class MessageGroupCellView constructor(context: Context): RelativeLayout(context) {
+class MessageGroupCellView constructor(context: Context, val isSuggested: Boolean = true): RelativeLayout(context) {
 
     private lateinit var binding: MessageGroupCellViewBinding
 
@@ -134,6 +135,11 @@ class MessageGroupCellView constructor(context: Context): RelativeLayout(context
                     .skipMemoryCache(true))
             .into(binding.avatarImage)
 
+        binding.btnUnirme2.isVisible =  isSuggested
+        binding.imgMore.isVisible =  !isSuggested
+        binding.imgMore.setOnClickListener {
+            NotificationChatGroupBottomSheet().show((context as AppCompatActivity).supportFragmentManager, "MY_BOTTOM_SHEET")
+        }
         binding.btnUnirme2.setOnClickListener{
             val alert = AlertDialog(
                 title = "Unirme a grupo",

@@ -82,22 +82,28 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
          */
         val typefaceSemiBold = ResourcesCompat.getFont(requireContext(), R.font.kanit_semibold)
         val typefaceRegular = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
-
+        binding.singleButton.setTextColor(resources.getColor(R.color.orange_as_light))
         binding.singleButton.setOnClickListener {
+            binding.singleButton.setTextColor(resources.getColor(R.color.orange_as_light))
+            binding.groupButton.setTextColor(resources.getColor(R.color.black))
             binding.singleButton.typeface = typefaceSemiBold
             binding.groupButton.typeface = typefaceRegular
             binding.createGroupButton.visibility = View.GONE
             binding.messagesView.visibility = View.VISIBLE
             binding.groupView.visibility = View.GONE
+            binding.groupViewSuggested.visibility = View.GONE
             binding.txtTitle.visibility = View.GONE
             binding.divider.visibility = View.GONE
         }
         binding.groupButton.setOnClickListener {
+            binding.singleButton.setTextColor(resources.getColor(R.color.black))
+            binding.groupButton.setTextColor(resources.getColor(R.color.orange_as_light))
             binding.singleButton.typeface = typefaceRegular
             binding.groupButton.typeface = typefaceSemiBold
             binding.createGroupButton.visibility = View.VISIBLE
             binding.messagesView.visibility = View.GONE
             binding.groupView.visibility = View.VISIBLE
+            binding.groupViewSuggested.visibility = View.VISIBLE
             binding.txtTitle.visibility = View.VISIBLE
             binding.divider.visibility = View.VISIBLE
         }
@@ -112,9 +118,10 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
     }
 
     private fun setupAdapters() {
-        val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
+        val items = listOf(testEvent, testEvent)
+        val itemsSuggested = listOf(testEvent, testEvent, testEvent, testEvent)
 
-        for ((index, item) in items.withIndex()) {
+        for ((index, item) in itemsSuggested.withIndex()) {
             when (index) {
                 0 -> {
                     val holder = NotificationsTopStatusView(requireContext())
@@ -142,18 +149,29 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             }
         }
 
-        for ((index, item) in items.withIndex()) {
+        for ((index, item) in itemsSuggested.withIndex()) {
             val holder = MessageCellView(requireContext())
             holder.bind(item)
+            holder.setOnClickListener {
+                findNavController().safelyNavigate(R.id.toChat)
+            }
             binding.messagesView.addView(holder)
         }
 
         for ((index, item) in items.withIndex()) {
-            val holder = MessageGroupCellView(requireContext())
+            val holder = MessageGroupCellView(requireContext(),false)
             holder.bind(item)
+            holder.setOnClickListener {
+                findNavController().safelyNavigate(R.id.toChat)
+            }
             binding.groupView.addView(holder)
         }
 
+        for ((index, item) in itemsSuggested.withIndex()) {
+            val holder = MessageGroupCellView(requireContext())
+            holder.bind(item)
+            binding.groupViewSuggested.addView(holder)
+        }
 
     }
 
