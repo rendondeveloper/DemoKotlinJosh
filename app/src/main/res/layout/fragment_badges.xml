@@ -82,22 +82,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView39">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/badges_next"
+            <FrameLayout
+                android:id="@+id/pager_container"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@+id/button_show_more"
-                app:layout_constraintTop_toBottomOf="@+id/searchTextField"
-                android:layout_marginHorizontal="16dp" />
+                android:layout_height="240dp"
+                android:clipChildren="false">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/pager_badge"
+                    android:layout_width="match_parent"
+                    android:clipToPadding="false"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    />
+            </FrameLayout>
 
             <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
                 android:id="@+id/dots_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"
-                app:dotsColor="@color/white"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                app:dotsColor="@color/orange_as_light"
                 app:dotsCornerRadius="8dp"
                 app:dotsSize="8dp"
                 app:dotsSpacing="5dp"
@@ -180,7 +186,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/badges_grid"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="500dp"
             android:layout_marginTop="17dp"
             android:layout_marginBottom="17dp"
             app:layout_constraintBottom_toTopOf="@+id/button_show_more"
