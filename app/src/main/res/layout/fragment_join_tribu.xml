@@ -27,7 +27,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:title="Unirme a otras tribus"
-                app:menu="@menu/friends_menu"
                 app:titleTextColor="@color/black_dynamic"
                 app:navigationIcon="@drawable/arrow_left"
                 app:navigationIconTint="@color/black_dynamic"

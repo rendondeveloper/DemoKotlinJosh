@@ -93,7 +93,7 @@ class LoginFragment : Fragment() {
             try {
                 val response = quotesApi.makeLogin(Locale.getDefault().isO3Language, body)
                 withContext(Dispatchers.Main) {
-                    (activity as LoginActivity).hideLoading()
+                    //(activity as LoginActivity).hideLoading()
                     if (response.isSuccessful) {
                         onGetUser(UserCall.UserResult(response.body()?.data, null))
                     } else {

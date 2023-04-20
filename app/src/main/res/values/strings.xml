@@ -1002,6 +1002,7 @@
     <string name="hermes_ratings_card_title">Resultados preliminares</string>
     <string name="hermes_ratings_card_subtitle">Aquí podrás consultar la lista de resultados del evento virtual</string>
 
+    <string name="cart_title">Carrito</string>
     <!-- Notifications -->
     <string name="notifications_title">Notificaciones</string>
     <!-- Tutorials -->

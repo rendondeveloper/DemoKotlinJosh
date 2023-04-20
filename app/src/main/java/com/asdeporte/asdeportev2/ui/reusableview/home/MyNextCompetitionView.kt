@@ -12,7 +12,7 @@ class MyNextCompetitionView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: MyNextCompetitionViewBinding
+    private var binding: MyNextCompetitionViewBinding? = null
 
     init {
         binding = MyNextCompetitionViewBinding.inflate(LayoutInflater.from(context), this, true)

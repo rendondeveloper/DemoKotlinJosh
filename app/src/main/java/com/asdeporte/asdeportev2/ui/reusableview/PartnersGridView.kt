@@ -19,7 +19,7 @@ class PartnersGridView @JvmOverloads constructor(
     }
     private lateinit var listener: PartnersGridViewListener
 
-    private lateinit var binding: PartnersGridViewBinding
+    private var binding: PartnersGridViewBinding? = null
 
     init {
         binding = PartnersGridViewBinding.inflate(LayoutInflater.from(context), this, true)

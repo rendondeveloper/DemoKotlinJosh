@@ -12,7 +12,7 @@ class EventMyScoreView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: EventMyScoreViewBinding
+    private var binding: EventMyScoreViewBinding? = null
 
     init {
         binding = EventMyScoreViewBinding.inflate(LayoutInflater.from(context), this, true)

@@ -32,12 +32,7 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
     NewPostPreviewSheet.NewPostPreviewSheetListener,
     FilterHomePostsSheet.FilterHomePostsSheetListener {
 
-    private var _binding: FragmentTabTribuWallBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
+    private var binding: FragmentTabTribuWallBinding? = null
     private lateinit var postsAdapter: PostsAdapter
     private lateinit var eventsAdapter: EventTribuHorizontalAdapter
 
@@ -59,45 +54,41 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentTabTribuWallBinding.inflate(inflater, container, false)
-        return binding.root
+    ): View? {
+        binding = FragmentTabTribuWallBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.openMainTribu.setOnClickListener {
-            //TribuMainFragment
-            findNavController().safelyNavigate(R.id.mainTribuAction)
-        }
+        binding?.apply {
+            openMainTribu.setOnClickListener {
+                findNavController().safelyNavigate(R.id.mainTribuAction)
+            }
 
-        binding.publishView.setOnClickListener {
-            //findNavController().safelyNavigate(R.id.toNewPost)
-        }
-        binding.publishView.findViewById<RelativeLayout>(R.id.thinking_view).setOnClickListener {
-            findNavController().safelyNavigate(R.id.toNewPost)
-        }
-        binding.publishView.findViewById<LinearLayout>(R.id.activity_view).setOnClickListener {
-            val bundle = Bundle()
-            bundle.putSerializable("type", NewPostType.ACTIVITY)
-            findNavController().safelyNavigate(R.id.toNewPostPreview, bundle)
-        }
-        binding.publishView.findViewById<LinearLayout>(R.id.medal_view).setOnClickListener {
-            val bundle = Bundle()
-            bundle.putSerializable("type", NewPostType.MEDAL)
-            findNavController().safelyNavigate(R.id.toNewPostPreview, bundle)
-        }
-        binding.publishView.findViewById<LinearLayout>(R.id.media_view).setOnClickListener {
-            findNavController().safelyNavigate(R.id.action_navigation_tribu_to_newPostMediaFragment)
-        }
-
-        binding.filterPosts.setOnClickListener {
-            findNavController().safelyNavigate(R.id.action_navigation_tribu_to_tribeFiltersFragment)
-
-            //showMenu(it, R.menu.home_menu)
-            //FilterHomePostsSheet.create(this@TabTribuWallFragment)
-            //  .show(requireActivity().supportFragmentManager, "EventBottomSheet")
+            publishView.setOnClickListener {
+                //findNavController().safelyNavigate(R.id.toNewPost)
+            }
+            publishView.findViewById<RelativeLayout>(R.id.thinking_view)?.setOnClickListener {
+                findNavController().safelyNavigate(R.id.toNewPost)
+            }
+            publishView.findViewById<LinearLayout>(R.id.activity_view)?.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putSerializable("type", NewPostType.ACTIVITY)
+                findNavController().safelyNavigate(R.id.toNewPostPreview, bundle)
+            }
+            publishView.findViewById<LinearLayout>(R.id.medal_view)?.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putSerializable("type", NewPostType.MEDAL)
+                findNavController().safelyNavigate(R.id.toNewPostPreview, bundle)
+            }
+            publishView.findViewById<LinearLayout>(R.id.media_view)?.setOnClickListener {
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_to_newPostMediaFragment)
+            }
+            filterPosts.setOnClickListener {
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_to_tribeFiltersFragment)
+            }
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
@@ -128,7 +119,7 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
         }
 
 
-        binding.posts.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        binding?.posts?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
@@ -139,11 +130,11 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
             }
 
         })
-        binding.nsvT.isSmoothScrollingEnabled
+        binding?.nsvT?.isSmoothScrollingEnabled
 
-        binding.posts.adapter = postsAdapter
-        binding.posts.setHasFixedSize(true)
-        binding.posts.layoutManager =
+        binding?.posts?.adapter = postsAdapter
+        binding?.posts?.setHasFixedSize(true)
+        binding?.posts?.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         //Handler(Looper.getMainLooper()).postDelayed({
@@ -157,9 +148,9 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
             }
         }
 
-        binding.events.adapter = eventsAdapter
-        binding.events.setHasFixedSize(true)
-        binding.events.layoutManager =
+        binding?.events?.adapter = eventsAdapter
+        binding?.events?.setHasFixedSize(true)
+        binding?.events?.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         //Handler(Looper.getMainLooper()).postDelayed({
@@ -202,6 +193,6 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
 }

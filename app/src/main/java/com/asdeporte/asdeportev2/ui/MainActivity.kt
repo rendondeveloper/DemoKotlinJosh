@@ -1,7 +1,6 @@
 package com.asdeporte.asdeportev2.ui
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
@@ -17,8 +16,6 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -28,51 +25,17 @@ import com.asdeporte.asdeportev2.data.RetrofitHelper
 import com.asdeporte.asdeportev2.data.api.UserApi
 import com.asdeporte.asdeportev2.data.calls.UserCall
 import com.asdeporte.asdeportev2.databinding.ActivityMainBinding
-import com.asdeporte.asdeportev2.utils.Constants
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.utils.SharedPreferencesAsd
 import com.asdeporte.hermes.Hermes
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-/*import com.google.firebase.FirebaseApp
-import com.sportmaniac.core_copernico.ioc.CCServiceFactory
-import com.sportmaniac.core_copernico.ioc.DefaultServiceFactory
-import com.sportmaniac.core_proxy.ioc.CPServiceFactory
-import com.sportmaniac.core_sportmaniacs.ioc.CSServiceFactory
-import com.sportmaniac.core_virtual.ioc.CVServiceFactory
-import com.sportmaniac.view_commons.ViewCommonsApp
-import com.sportmaniac.view_live.ViewLiveApp
-import com.sportmaniac.view_rankings.ViewRankingsApp
-import com.sportmaniac.view_virtual.ViewVirtualApp*/
 import kotlinx.coroutines.*
 import retrofit2.HttpException
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    //Sportmaniacs
-    // URL a la API de Copérnico, en principio no hace falta cambiarlo
-    private val COPERNICO_API = "https://public-api.copernico.cloud/api/"
-    // URL al socket de Copérnico, en principio no hace falta cambiarlo
-    private val SOCKET_ENDPOINT = "http://socket.sportmaniacs.com:4321/"
-    // URL para la API de Sportmaniacs
-    private val SPORTMANIACS_API = "https://api-aws.sportmaniacs.com/api/"
-    //    private static final String BASE_SPORTMANIACS = "https://api-tests.sportmaniacs.com/api/";
-    //    private static final String BASE_SPORTMANIACS = "https://api-tests.sportmaniacs.com/api/";
-    private val VIRTUAL_API = "https://api.copernico.cloud/api/"
-    // URL para la consulta de inscripciones de Sportmaniacs (puede ser "")
-    private val STORAGE_API = "https://api.copernico.cloud/storage/"
-    //
-    val RACES_GROUP = "asdeporte"
-
-    /*private var coreVirtualServiceModule: CVServiceFactory? = null
-    private var coreCopernicoFactory: CCServiceFactory? = null
-    private var coreSportmaniacsFactory: CSServiceFactory? = null
-    private var coreProxyFactory: CPServiceFactory? = null
-
-    var viewLiveApp: ViewLiveApp? = null
-    var viewRankingsApp: ViewRankingsApp? = null
-    private var viewCommonsApp: ViewCommonsApp? = null
-    var viewVirtualApp: ViewVirtualApp? = null
-    private var analyticsService: AnalyticsEmpty? = null*/
+    private lateinit var navController: NavController
 
     init {
         myInstance = this
@@ -97,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         val navView: BottomNavigationView = binding.navView
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        navController = findNavController(R.id.nav_host_fragment_activity_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
@@ -283,7 +246,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.tribu_menu, menu)
+        menuInflater.inflate(R.menu.home_menu, menu)
         return true
     }
 
@@ -300,19 +263,16 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.navigation_profile -> {
-                Navigation.findNavController(this, R.id.nav_host_fragment_activity_main).navigate(R.id.profileTribuAction)
-                //findNavController().safelyNavigate(R.id.detailsTribuAction)
+                navController.safelyNavigate(R.id.profileTribuAction)
                 true
             }
             R.id.navigation_notifications -> {
-                Navigation.findNavController(this, R.id.nav_host_fragment_activity_main).navigate(R.id.toNotificationsAction)
-                //findNavController().safelyNavigate(R.id.detailsTribuAction)
+                navController.safelyNavigate(R.id.toNotificationsAction)
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
 
-        //Navigation.findNavController(this, R.id.nav_host_fragment_activity_main).navigate(R.id.toNotificationsAction)
     }
     fun showTribuTab() {
         Navigation.findNavController(this, R.id.nav_host_fragment_activity_main).navigate(R.id.navigation_tribu)

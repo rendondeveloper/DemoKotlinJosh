@@ -42,18 +42,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
         binding.toolbar.title = "Notificaciones"
         binding.toolbar.navigationIcon = ContextCompat.getDrawable(requireContext(), R.drawable.navigation_back)
         binding.toolbar.setNavigationOnClickListener {
-            //findNavController().popBackStack(R.id.navigation_home, true)
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
-        }
-        binding.toolbar.setOnMenuItemClickListener {
-            when (it.itemId) {
-                R.id.filter_menu -> {
-                    // Handle favorite icon press
-                    filterAlert()
-                    true
-                }
-                else -> false
-            }
+            findNavController().popBackStack()
         }
 
         binding.updatesScroll.visibility = View.VISIBLE

@@ -14,15 +14,15 @@ class MyResumeHomeView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: MyResumeHomeViewBinding
+    private var binding: MyResumeHomeViewBinding? = null
 
     init {
         binding = MyResumeHomeViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
     fun setData(events: String) {
-        //binding.numberEvents.text = events
-        binding.apply {
+        binding?.apply {
+            //numberEvents.text = events
             clInfo.setOnClickListener {
                 if (llInfo.visibility == View.GONE) {
                     llInfo.visibility = View.VISIBLE

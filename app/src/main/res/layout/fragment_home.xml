@@ -187,11 +187,6 @@
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
 
-                <!--<com.asdeporte.asdeportev2.ui.reusableview.home.PlansView
-                    android:id="@+id/plans"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_32dp" />-->
 
             </LinearLayout>
 

@@ -25,9 +25,7 @@ import com.asdeporte.asdeportev2.ui.reusableview.tribu.PostMenuOptionsSheet
 class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener,
     FilterHomePostsSheet.FilterHomePostsSheetListener,
     PostMenuOptionsSheet.PostMenuOptionsSheetListener {
-    private var _binding: FragmentTribuMainBinding? = null
-
-    private val binding get() = _binding!!
+    private var binding: FragmentTribuMainBinding? = null
 
     private lateinit var postsAdapter: PostsAdapter
 
@@ -42,65 +40,66 @@ class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener,
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentTribuMainBinding.inflate(inflater, container, false)
-        return binding.root
+    ): View? {
+        binding = FragmentTribuMainBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).hideActionBar()
-        binding.toolbar.setNavigationOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
-        }
-        binding.detailsTribuButton.setOnClickListener {
-            findNavController().safelyNavigate(R.id.detailsTribuAction)
-        }
-        binding.tribuAdminButton.setOnClickListener {
-            findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_tribeAdminFragment)
-            //AdminTribuSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "TribuMainFragment")
-        }
+        binding?.apply {
+            toolbar.setNavigationOnClickListener {
+                (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
+            }
+            detailsTribuButton.setOnClickListener {
+                findNavController().safelyNavigate(R.id.detailsTribuAction)
+            }
+            tribuAdminButton.setOnClickListener {
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_tribeAdminFragment)
+                //AdminTribuSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "TribuMainFragment")
+            }
 
-        binding.filterPosts.setOnClickListener {
-            findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_tribeFiltersFragment)
-            //FilterHomePostsSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "EventBottomSheet")
-        }
+            filterPosts.setOnClickListener {
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_tribeFiltersFragment)
+                //FilterHomePostsSheet.create(this@TribuMainFragment).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+            }
 
-        binding.publishView.findViewById<RelativeLayout>(R.id.thinking_view).setOnClickListener {
-            findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_navigation_new_post)
-        }
+            publishView.findViewById<RelativeLayout>(R.id.thinking_view).setOnClickListener {
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_navigation_new_post)
+            }
 
-        binding.publishView.findViewById<LinearLayout>(R.id.activity_view).setOnClickListener {
-            val bundle = Bundle()
-            bundle.putSerializable("type", NewPostType.ACTIVITY)
-            findNavController().safelyNavigate(
-                R.id.action_navigation_tribu_main_to_navigation_new_post_fragment,
-                bundle
-            )
-        }
+            publishView.findViewById<LinearLayout>(R.id.activity_view).setOnClickListener {
+                val bundle = Bundle()
+                bundle.putSerializable("type", NewPostType.ACTIVITY)
+                findNavController().safelyNavigate(
+                    R.id.action_navigation_tribu_main_to_navigation_new_post_fragment,
+                    bundle
+                )
+            }
 
-        binding.inviteFriendsButton.setOnClickListener {
-            findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_inviteFriendsFragment)
-        }
+            inviteFriendsButton.setOnClickListener {
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_inviteFriendsFragment)
+            }
 
-        binding.publishView.findViewById<LinearLayout>(R.id.medal_view).setOnClickListener {
-            val bundle = Bundle()
-            bundle.putSerializable("type", NewPostType.MEDAL)
-            findNavController().safelyNavigate(
-                R.id.action_navigation_tribu_main_to_navigation_new_post_fragment2,
-                bundle
-            )
-        }
+            publishView.findViewById<LinearLayout>(R.id.medal_view).setOnClickListener {
+                val bundle = Bundle()
+                bundle.putSerializable("type", NewPostType.MEDAL)
+                findNavController().safelyNavigate(
+                    R.id.action_navigation_tribu_main_to_navigation_new_post_fragment2,
+                    bundle
+                )
+            }
 
-        binding.publishView.findViewById<LinearLayout>(R.id.media_view).setOnClickListener {
-            findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_newPostMediaFragment)
+            publishView.findViewById<LinearLayout>(R.id.media_view).setOnClickListener {
+                findNavController().safelyNavigate(R.id.action_navigation_tribu_main_to_newPostMediaFragment)
+            }
         }
-
         initPosts()
     }
 
-    fun initPosts() {
+    private fun initPosts() {
         val items = listOf(
             testEvent,
             testEvent,
@@ -121,11 +120,12 @@ class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener,
             }
 
         }
-
-        binding.posts.adapter = postsAdapter
-        binding.posts.setHasFixedSize(true)
-        binding.posts.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding?.apply {
+            posts.adapter = postsAdapter
+            posts.setHasFixedSize(true)
+            posts.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        }
 
         Handler(Looper.getMainLooper()).postDelayed(
             {
@@ -156,7 +156,7 @@ class TribuMainFragment : Fragment(), AdminTribuSheet.AdminTribuSheetListener,
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
 
     override fun onOptionSelected(option: String?) {

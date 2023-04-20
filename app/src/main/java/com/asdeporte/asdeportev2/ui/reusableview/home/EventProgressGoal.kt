@@ -13,7 +13,7 @@ class EventProgressGoal @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: EventProgressGoalBinding
+    private var binding: EventProgressGoalBinding? = null
 
     init {
         binding = EventProgressGoalBinding.inflate(LayoutInflater.from(context), this, true)

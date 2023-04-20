@@ -12,7 +12,7 @@ class SerialsGridView  @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: SerialsHomeViewBinding
+    private var binding: SerialsHomeViewBinding? = null
 
     init {
         binding = SerialsHomeViewBinding.inflate(LayoutInflater.from(context), this, true)

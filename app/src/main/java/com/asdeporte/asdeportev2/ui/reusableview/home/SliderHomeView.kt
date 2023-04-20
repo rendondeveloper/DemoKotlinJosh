@@ -18,7 +18,7 @@ class SliderHomeView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: SliderHomeViewBinding
+    private var binding: SliderHomeViewBinding? = null
     private var images = arrayOf(
         "https://images.unsplash.com/photo-1499438075715-fc23ef376ab9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1642&q=80",
         "https://images.unsplash.com/photo-1557685888-2d3621ddf615?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80",
@@ -42,26 +42,26 @@ class SliderHomeView @JvmOverloads constructor(
             .centerCrop()
             .into(binding.image)
          */
-
-        binding.firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
-
-        binding.firstButton.setOnClickListener {
-            binding.firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
-            binding.firstButton.typeface = typefaceBold
-            binding.secondButton.setTextColor(ContextCompat.getColor(context, R.color.white))
-            binding.secondButton.typeface = typefaceRegular
-            activeTag = 0
-            changeImage(activeTag)
+        binding?.apply {
+            firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
+            firstButton.setOnClickListener {
+                firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
+                firstButton.typeface = typefaceBold
+                secondButton.setTextColor(ContextCompat.getColor(context, R.color.white))
+                secondButton.typeface = typefaceRegular
+                activeTag = 0
+                changeImage(activeTag)
+            }
+            secondButton.setOnClickListener {
+                firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
+                firstButton.typeface = typefaceRegular
+                secondButton.setTextColor(ContextCompat.getColor(context, R.color.white))
+                secondButton.typeface = typefaceBold
+                activeTag = 1
+                changeImage(activeTag)
+            }
         }
 
-        binding.secondButton.setOnClickListener {
-            binding.firstButton.setTextColor(ContextCompat.getColor(context, R.color.white))
-            binding.firstButton.typeface = typefaceRegular
-            binding.secondButton.setTextColor(ContextCompat.getColor(context, R.color.white))
-            binding.secondButton.typeface = typefaceBold
-            activeTag = 1
-            changeImage(activeTag)
-        }
     }
 
     fun changeImage(position: Int) {

@@ -13,7 +13,7 @@ class EventTimeWidgetView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: EventTimeWidgetViewBinding
+    private var binding: EventTimeWidgetViewBinding? = null
 
     init {
         binding = EventTimeWidgetViewBinding.inflate(LayoutInflater.from(context), this, true)

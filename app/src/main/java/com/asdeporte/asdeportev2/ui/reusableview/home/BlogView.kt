@@ -12,14 +12,14 @@ class BlogView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: BlogViewBinding
+    private var binding: BlogViewBinding? = null
 
     init {
         binding = BlogViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
 
-    fun setTitle(title: String) {
+    fun setTitle(text: String) {
 
     }
 }

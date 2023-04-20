@@ -20,7 +20,7 @@ class SearEventBigView @JvmOverloads constructor(
     }
     private lateinit var listener: SearchTribuViewListener
 
-    private lateinit var binding: SearchEventBigViewBinding
+    private var binding: SearchEventBigViewBinding? = null
 
     init {
         binding = SearchEventBigViewBinding.inflate(LayoutInflater.from(context), this, true)

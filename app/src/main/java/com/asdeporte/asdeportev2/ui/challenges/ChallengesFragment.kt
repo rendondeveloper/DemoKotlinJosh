@@ -93,7 +93,7 @@ open class ChallengesFragment : Fragment() {
             try {
                 val response = quotesApi.getUser(null, Locale.getDefault().isO3Language, userid ?: "")
                 withContext(Dispatchers.Main) {
-                    (activity as MainActivity).hideLoading()
+                    //(activity as MainActivity).hideLoading()
                     if (response.isSuccessful) {
                         onGetUser(UserCall.UserResult(response.body()?.data, null))
                     } else {

@@ -90,7 +90,7 @@ class ForgotPasswordFragment : Fragment() {
             try {
                 val response = quotesApi.forgotPassword(Locale.getDefault().isO3Language, binding.emailTextInput.text.toString())
                 withContext(Dispatchers.Main) {
-                    (activity as LoginActivity).hideLoading()
+                    //(activity as LoginActivity).hideLoading()
                     if (response.isSuccessful) {
                         onGetUser(UserCall.GeneralResult(true, response.body()?.data?.message))
                     } else {

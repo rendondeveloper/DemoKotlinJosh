@@ -2,22 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/file"
-        android:title="Mis tribus" >
-        <!-- "file" submenu -->
-        <menu>
-            <item android:id="@+id/create_new"
-                android:title="Corredores Coyoacán" />
-            <item android:id="@+id/open"
-                android:title="Los Super Elite" />
-        </menu>
-    </item>
-
     <item
         android:id="@+id/navigation_search"
         android:icon="@drawable/ic_search"
         android:title="@string/btn_search"
         android:iconTint="@color/white"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="@string/notifications_title"
         app:showAsAction="ifRoom"/>
 
     <item

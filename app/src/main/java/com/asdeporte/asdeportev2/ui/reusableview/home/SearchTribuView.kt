@@ -18,23 +18,22 @@ class SearchTribuView @JvmOverloads constructor(
         fun onFilters()
     }
     private lateinit var listener: SearchTribuViewListener
-
-    private lateinit var binding: SearchTribuViewBinding
+    private var binding: SearchTribuViewBinding? = null
 
     init {
         binding = SearchTribuViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
     fun setData(listener: SearchTribuViewListener) {
-        //binding.numberEvents.text = events
-        this.listener = listener
+        binding?.apply {
+            searchView.setOnClickListener {
+                listener.onSearch()
+            }
+            filters.setOnClickListener {
+                listener.onFilters()
+            }
+        }
 
-        binding.searchView.setOnClickListener {
-            listener.onSearch()
-        }
-        binding.filters.setOnClickListener {
-            listener.onFilters()
-        }
     }
 
 }

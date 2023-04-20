@@ -39,7 +39,15 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.asdeporte.asdeportev2.ui.challenges.ChallengesFragment"
         android:label="@string/my_events"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/toNotificationsAction"
+            app:destination="@+id/navigation_notifications"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            app:popExitAnim="@anim/nav_slide_out_right" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_tribu"
@@ -253,6 +261,13 @@
         android:name="com.asdeporte.asdeportev2.ui.profile.ProfileTabFragment"
         android:label="Más"
         tools:layout="@layout/fragment_profile_tab">
+        <action
+            android:id="@+id/toNotificationsAction"
+            app:destination="@+id/navigation_notifications"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            app:popExitAnim="@anim/nav_slide_out_right" />
         <action
             android:id="@+id/detailProfileAction"
             app:destination="@+id/navigation_profile_details"

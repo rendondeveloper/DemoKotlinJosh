@@ -12,14 +12,14 @@ class MyTribeView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
-    private lateinit var binding: MyTribeViewBinding
+    private var binding: MyTribeViewBinding? = null
 
     init {
         binding = MyTribeViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
 
-    fun setTitle(title: String) {
+    fun setTitle(text: String) {
 
     }
 }
