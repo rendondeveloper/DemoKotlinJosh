@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/event_time_background"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.16"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Actividad"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:progress="95"
+                    android:progressDrawable="@drawable/custom_progress_bar_colors" />
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="95%"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_12dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:src="@drawable/arrow_top_border" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.16"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sueño"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:progress="75"
+                    android:progressDrawable="@drawable/custom_progress_bar_colors" />
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75%"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_12dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:src="@drawable/arrow_bottom_border" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.16"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="HRV"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:progress="85"
+                    android:progressDrawable="@drawable/custom_progress_bar_colors" />
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="85%"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_12dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:src="@drawable/arrow_bottom_border" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Kanit_Medium.Default.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:text="75%"
+                android:textSize="38dp" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"
+                android:src="@drawable/icon_admiracion" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

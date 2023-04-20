@@ -1142,4 +1142,8 @@
     <string name="messages">Mensajes (3)</string>
     <string name="txt_delete">Eliminar</string>
     <string name="create_group">Crear un grupo</string>
+    <string name="dias">Días</string>
+    <string name="segundos">Segundos</string>
+    <string name="minutos">Minutos</string>
+    <string name="horas">Horas</string>
 </resources>

@@ -40,20 +40,28 @@
                 android:text="13 octubre 2022" />
         </LinearLayout>
 
-
-        <ProgressBar
+        <com.zhouyou.view.seekbar.SignSeekBar
             android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="120dp"
-            android:layout_height="@dimen/dimen_8dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="17dp"
-            android:progress="50"
-            android:progressDrawable="@drawable/custom_progress_bar"
-            android:progressTint="#0095FF"
+            android:layout_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.468"
+            app:ssb_progress="67"
+            app:ssb_second_track_color="#0095FF"
+            app:ssb_show_sign="true"
+            app:ssb_sign_arrow_height="5dp"
+            app:ssb_sign_arrow_width="10dp"
+            app:ssb_sign_border_color="#ED3A3A"
+            app:ssb_sign_color="#ED3A3A"
+            app:ssb_sign_height="24dp"
+            app:ssb_sign_width="@dimen/dimen_36dp"
+            app:ssb_track_color="@color/white" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
