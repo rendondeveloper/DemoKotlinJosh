@@ -35,7 +35,6 @@ class BadgeAdapter : RecyclerViewAdapterBase<BadgeModel, GoalBadgedCardView>() {
             onItemClick?.invoke(item)
         }
     }
-
 }
 
 class GoalBadgedCardView @JvmOverloads constructor(
