@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="460dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.reusableview.home.SliderHomeView">
 
     <ImageView
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:text="Gran Fondo Adolfo Lagos izzi kardias 2022"
+            android:text="Gran Fondo Adolfo \n Lagos izzi kardias 2022"
             android:textColor="@color/white" />
 
         <TextView

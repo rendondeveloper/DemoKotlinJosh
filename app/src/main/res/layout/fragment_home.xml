@@ -11,8 +11,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,31 +37,32 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyLatestResultView
                 android:id="@+id/latestResult"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                tools:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:background="@color/secondary_background"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyNextCompetitionView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-            </com.asdeporte.asdeportev2.ui.reusableview.home.MyNextCompetitionView>
+                android:layout_height="match_parent"
+                tools:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:background="@color/secondary_background"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyResumeHomeView
                 android:id="@+id/resumeHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_24dp" />
+                android:layout_marginTop="@dimen/dimen_24dp"
+                tools:visibility="gone" />
 
             <!--<com.asdeporte.asdeportev2.ui.reusableview.home.MyGalleryHomeView
                 android:id="@+id/galleryHome"
@@ -70,18 +73,21 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.SliderHomeView
                 android:id="@+id/sliderHome"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                tools:visibility="gone" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.SerialsGridView
                 android:id="@+id/serialsGrid"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                tools:visibility="gone" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.PartnersGridView
                 android:id="@+id/partnersGrid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                tools:visibility="gone" />
 
             <LinearLayout
                 android:id="@+id/eventsView"
@@ -99,15 +105,13 @@
                 <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
                     android:id="@+id/topEventsTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="wrap_content" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/topEvents"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/black_dynamic"
                     android:clipToPadding="false"
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
@@ -115,14 +119,13 @@
                 <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
                     android:id="@+id/moreEventsTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="wrap_content" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/moreEvents"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/black_dynamic"
                     android:clipToPadding="false"
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
@@ -130,14 +133,13 @@
                 <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
                     android:id="@+id/recomendedForMeTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="wrap_content" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recomendedForMeEvents"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/black_dynamic"
                     android:clipToPadding="false"
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
@@ -145,14 +147,13 @@
                 <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
                     android:id="@+id/topTenTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="wrap_content" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/topTenEvents"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/black_dynamic"
                     android:clipToPadding="false"
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
@@ -160,14 +161,13 @@
                 <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
                     android:id="@+id/experiencesTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="wrap_content" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/experiencesEvents"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/black_dynamic"
                     android:clipToPadding="false"
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
@@ -175,26 +175,23 @@
                 <com.asdeporte.asdeportev2.ui.reusableview.home.EventsHeader
                     android:id="@+id/weekendTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="wrap_content" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/weekendEvents"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/black_dynamic"
                     android:clipToPadding="false"
                     android:paddingStart="10dp"
                     tools:ignore="RtlSymmetry" />
-
 
             </LinearLayout>
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView
                 android:id="@+id/myTribe"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_32dp">
+                android:layout_height="wrap_content">
 
             </com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView>
 
@@ -225,5 +222,7 @@
 
             </LinearLayout>
         </LinearLayout>
+
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

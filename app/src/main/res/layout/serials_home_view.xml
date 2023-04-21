@@ -11,10 +11,10 @@
         style="@style/Kanit_Bold_Italic.Default.24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/dimen_24dp"
-        android:text="SERIALES"
-        android:textAlignment="center" />
+        android:text="Seriales"
+        android:textAlignment="center"
+        android:textAllCaps="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,7 +38,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
 
@@ -52,7 +53,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
 
@@ -66,9 +68,11 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -87,7 +91,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
 
@@ -101,7 +106,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
 
@@ -115,9 +121,11 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -136,7 +144,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
 
@@ -150,7 +159,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
 
@@ -164,9 +174,11 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -185,7 +197,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
 
@@ -199,7 +212,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
 
@@ -213,9 +227,11 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/serial_dummy"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/serial_dummy" />
 
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
@@ -228,8 +244,11 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:src="@drawable/proximos_serial_dummy"/>
+                android:contentDescription="@string/todo"
+                android:src="@drawable/proximos_serial_dummy" />
 
         </androidx.cardview.widget.CardView>
+
     </LinearLayout>
+
 </LinearLayout>

@@ -21,14 +21,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/profile_image"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:foregroundGravity="center_vertical"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/avatar_dummy"
-                app:civ_border_color="@color/white"
-                app:civ_border_width="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="6dp"
+                android:contentDescription="@string/todo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tvName"
                 app:srcCompat="@drawable/arrow_down_line" />
@@ -47,7 +46,7 @@
                 style="@style/Kanit_Regular.Default.16"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_16dp"
+                android:layout_marginStart="@dimen/dimen_8dp"
                 android:layout_marginEnd="@dimen/dimen_16dp"
                 android:text="Ernesto Torres"
                 android:textAllCaps="true"
@@ -69,7 +68,7 @@
                 style="@style/Kanit_Regular.Default.12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginStart="@dimen/dimen_4dp"
                 android:text="Corredores Coyoacán"
                 app:layout_constraintBottom_toBottomOf="@+id/textView5"
                 app:layout_constraintEnd_toEndOf="@+id/tvName"
@@ -121,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_16dp"
-                android:text="Mi personal best"
+                android:text="@string/mi_personal_best"
                 android:textAllCaps="true" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
@@ -134,7 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Mi historial"
+                android:text="@string/mi_historial"
                 android:textAllCaps="true" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventTimeWidgetView
@@ -147,7 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Mis próximas metas"
+                android:text="@string/mis_proximas_metas"
                 android:textAllCaps="true" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventProgressGoal
