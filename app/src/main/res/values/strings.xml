@@ -1151,4 +1151,11 @@
     <string name="segundos">Segundos</string>
     <string name="minutos">Minutos</string>
     <string name="horas">Horas</string>
+    <string name="mi_proxima_competencia">Mi próxima competencia</string>
+    <string name="tu_evento_comienza_en">Tu evento comienza en:</string>
+    <string name="todo">TODO</string>
+    <string name="mi_personal_best">Mi personal best</string>
+    <string name="mi_historial">Mi historial</string>
+    <string name="mis_proximas_metas">Mis próximas metas</string>
+    <string name="tiempo">Tiempo:</string>
 </resources>

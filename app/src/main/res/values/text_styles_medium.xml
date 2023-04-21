@@ -58,6 +58,9 @@
     <style name="Kanit_Medium.Default.20" parent="Kanit_Medium.Default">
         <item name="android:textSize">@dimen/text_20</item>
     </style>
+    <style name="Kanit_Medium.Default.34" parent="Kanit_Medium.Default">
+        <item name="android:textSize">@dimen/text_34</item>
+    </style>
     <!-- Secondary color -->
     <style name="Kanit_Medium.Secondary.10" parent="Kanit_Medium.Secondary">
         <item name="android:textSize">@dimen/text_10</item>
