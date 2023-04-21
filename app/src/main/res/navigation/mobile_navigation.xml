@@ -544,10 +544,18 @@
     <fragment
         android:id="@+id/to_badge_fragment"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalBadgeFragment"
-        android:label="PersonalBadgeFragment" />
+        android:label="PersonalBadgeFragment" >
+        <action
+            android:id="@+id/action_to_badge_fragment_to_personalBadgePagerFragment"
+            app:destination="@id/personalBadgePagerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createGroupFragment"
         android:name="com.asdeporte.asdeportev2.ui.notifications.CreateGroupFragment"
         android:label="fragment_create_group"
         tools:layout="@layout/fragment_create_group" />
+    <fragment
+        android:id="@+id/personalBadgePagerFragment"
+        android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalBadgePagerFragment"
+        android:label="PersonalBadgePagerFragment" />
 </navigation>

@@ -24,7 +24,7 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.dialog.BadgeDetailDialog
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 
-class PersonalBadgeFragment : Fragment(), BadgeFilterSheet.EventBottomSheetListenerBadge, BadgeShareSheet.EventBottomSheetListenerBadgeShare {
+class PersonalBadgeFragment : Fragment(), BadgeFilterSheet.EventBottomSheetListenerBadge {
 
     private lateinit var binding: FragmentBadgesBinding
 
@@ -100,9 +100,6 @@ class PersonalBadgeFragment : Fragment(), BadgeFilterSheet.EventBottomSheetListe
 
     override fun onOpenEvent(event: String) {
     }
-
-    override fun onOpenEventShare(event: String) {
-    }
 }
 
 class BadgeCollectionAdapter(fragment: PersonalBadgeFragment) : FragmentStateAdapter(fragment) {
@@ -136,6 +133,11 @@ class BadgeObjectFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        view.setOnClickListener{
+            findNavController().navigate(R.id.personalBadgePagerFragment)
+        }
+
+
         arguments?.takeIf { it.containsKey("Title") }?.apply {
 
             val imageView: ImageView = view.findViewById(R.id.badge_image)
