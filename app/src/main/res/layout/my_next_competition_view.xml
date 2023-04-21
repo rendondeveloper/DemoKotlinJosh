@@ -128,20 +128,19 @@
                         style="@style/Kanit_Medium.Default.10"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/dias"
-                        android:textColor="@color/label_primary" />
+                        android:text="@string/dias" />
 
                     <LinearLayout
-                        android:layout_width="65dp"
+                        android:layout_width="55dp"
                         android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:weightSum="2">
 
                         <TextView
                             style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/dimen_16dp"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="5dp"
+                            android:layout_marginEnd="3dp"
                             android:layout_weight="1"
                             android:background="@color/dark_blue"
                             android:gravity="center"
@@ -150,17 +149,15 @@
 
                         <TextView
                             style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/dimen_16dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@color/dark_blue"
                             android:gravity="center"
                             android:text="0"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            android:textColor="@color/white" />
 
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -176,54 +173,48 @@
                         style="@style/Kanit_Medium.Default.10"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/horas"
-                        android:textColor="@color/label_primary" />
+                        android:text="@string/horas" />
 
                     <LinearLayout
-                        android:layout_width="65dp"
+                        android:layout_width="55dp"
                         android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:weightSum="2">
 
                         <TextView
                             style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/dimen_16dp"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="5dp"
+                            android:layout_marginEnd="3dp"
                             android:layout_weight="1"
                             android:background="@color/dark_blue"
                             android:gravity="center"
                             android:text="2"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/white" />
 
                         <TextView
                             style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/dimen_16dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@color/dark_blue"
                             android:gravity="center"
                             android:text="3"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            android:textColor="@color/white" />
 
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/Kanit_Extra_Bold.Default.20"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:layout_weight="0"
                     android:gravity="center"
                     android:text=":"
-                    android:textColor="@color/dark_blue"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/dark_blue" />
 
                 <LinearLayout
                     android:id="@+id/minutesView"
@@ -237,54 +228,48 @@
                         style="@style/Kanit_Medium.Default.10"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/minutos"
-                        android:textColor="@color/label_primary" />
+                        android:text="@string/minutos" />
 
                     <LinearLayout
-                        android:layout_width="65dp"
+                        android:layout_width="55dp"
                         android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:weightSum="2">
 
                         <TextView
                             style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/dimen_16dp"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="5dp"
+                            android:layout_marginEnd="3dp"
                             android:layout_weight="1"
                             android:background="@color/dark_blue"
                             android:gravity="center"
                             android:text="5"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/white" />
 
                         <TextView
                             style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/dimen_16dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@color/dark_blue"
                             android:gravity="center"
                             android:text="9"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            android:textColor="@color/white" />
 
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/Kanit_Extra_Bold.Default.20"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:layout_weight="0"
                     android:gravity="center"
                     android:text=":"
-                    android:textColor="@color/dark_blue"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/dark_blue" />
 
                 <LinearLayout
                     android:id="@+id/secondsView"
@@ -298,41 +283,36 @@
                         style="@style/Kanit_Medium.Default.10"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/segundos"
-                        android:textColor="@color/label_primary" />
+                        android:text="@string/segundos" />
 
                     <LinearLayout
-                        android:layout_width="65dp"
+                        android:layout_width="55dp"
                         android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:weightSum="2">
 
                         <TextView
                             style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/dimen_16dp"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="5dp"
+                            android:layout_marginEnd="3dp"
                             android:layout_weight="1"
                             android:background="@color/dark_blue"
                             android:gravity="center"
                             android:text="4"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/white" />
 
                         <TextView
                             style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="wrap_content"
+                            android:layout_width="@dimen/dimen_16dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@color/dark_blue"
                             android:gravity="center"
                             android:text="7"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            android:textColor="@color/white" />
 
+                    </LinearLayout>
 
                 </LinearLayout>
 

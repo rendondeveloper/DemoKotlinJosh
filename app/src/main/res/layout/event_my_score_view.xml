@@ -48,8 +48,8 @@
                     android:text="95%" />
 
                 <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
                     android:contentDescription="@string/todo"
                     android:src="@drawable/arrow_top_border" />
 
@@ -82,8 +82,8 @@
                     android:text="75%" />
 
                 <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
                     android:contentDescription="@string/todo"
                     android:src="@drawable/arrow_bottom_border" />
 
@@ -116,8 +116,8 @@
                     android:text="85%" />
 
                 <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
                     android:contentDescription="@string/todo"
                     android:src="@drawable/arrow_bottom_border" />
 
