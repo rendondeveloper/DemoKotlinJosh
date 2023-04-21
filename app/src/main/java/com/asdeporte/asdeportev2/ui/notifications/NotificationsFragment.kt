@@ -107,10 +107,10 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
     }
 
     private fun setupAdapters() {
-        val items = listOf(testEvent, testEvent)
-        val itemsSuggested = listOf(testEvent, testEvent, testEvent, testEvent)
+        val items = listOf(testEvent, testEvent,testEvent,testEvent,testEvent,testEvent,testEvent)
+        val itemsSuggested = listOf(testEvent, testEvent)
 
-        for ((index, item) in itemsSuggested.withIndex()) {
+        for ((index, item) in items.withIndex()) {
             when (index) {
                 0 -> {
                     val holder = NotificationsTopStatusView(requireContext())
@@ -124,7 +124,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
                 }
                 4 -> {
                     val holder = NotificationsTopStatusView(requireContext())
-                    holder.bind(item)
+                    holder.bind(item, true)
                     binding.messagesLinear.addView(holder)
                 }
                 else -> {
@@ -147,7 +147,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding.messagesView.addView(holder)
         }
 
-        for ((index, item) in items.withIndex()) {
+        for ((index, item) in itemsSuggested.withIndex()) {
             val holder = MessageGroupCellView(requireContext(),false)
             holder.bind(item)
             holder.setOnClickListener {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -13,7 +14,8 @@
         android:orientation="vertical"
         android:layout_gravity="center_vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -22,97 +24,117 @@
                 android:id="@+id/avatar_image"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:src="@drawable/avatar_dummy"
-                android:layout_marginTop="12dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginBottom="12dp"
-                android:layout_marginEnd="16dp"
-                android:layout_gravity="center_vertical"
-                app:civ_border_width="0pt"
-                app:civ_border_color="@color/white_dynamic"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
-                android:layout_marginEnd="50dp"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical">
+                android:src="@drawable/avatar_dummy"
+                app:civ_border_color="@color/white_dynamic"
+                app:civ_border_width="0pt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sandra Paz comentó tu publicación"
-                    style="@style/Kanit_Semibold.Default.16"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Hace un momento"
-                    style="@style/Kanit_Regular.Secondary.14"/>
 
-            </LinearLayout>
+            <TextView
+                android:id="@+id/textView44"
+                style="@style/Kanit_Semibold.Default.14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Sandra Paz, te envió solicitud de amistad"
+                app:layout_constraintEnd_toStartOf="@+id/update_dot"
+                app:layout_constraintStart_toEndOf="@+id/avatar_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
             <View
                 android:id="@+id/update_dot"
                 android:layout_width="8dp"
                 android:layout_height="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="-30dp"
-                android:layout_marginBottom="12dp"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/simple_red_dot"/>
-        </LinearLayout>
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/simple_red_dot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView44" />
 
-        <LinearLayout
-            android:id="@+id/requestButtons"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/deleteButton"
-                style="@style/Kanit_Regular.Default.16"
+            <TextView
+                android:id="@+id/textView45"
+                style="@style/Kanit_Regular.Secondary.12"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/tertiary_button"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
-                android:text="Rechazar"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                app:backgroundTint="@null" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Hace un momento"
+                app:layout_constraintEnd_toStartOf="@+id/update_dot"
+                app:layout_constraintStart_toEndOf="@+id/avatar_image"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/confirmButton"
-                style="@style/Kanit_Medium.Default.16"
+            <TextView
+                android:id="@+id/txtAddMember"
+                style="@style/Kanit_Regular.Default.12"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/pill_background"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
-                android:text="Aceptar"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Se agregó a Sandra Paz a tus amigos"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/update_dot"
+                app:layout_constraintStart_toEndOf="@+id/avatar_image"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lnButtons"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/update_dot"
+                app:layout_constraintStart_toEndOf="@+id/avatar_image"
+                app:layout_constraintTop_toBottomOf="@+id/textView45">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/deleteButton"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tertiary_button"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="Rechazar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@null" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/confirmButton"
+                    style="@style/Kanit_Medium.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/pill_background"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="Aceptar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
-
 
 
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/gray_400"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="21dp"
+        android:background="@color/gray_400" />
 
 
 </LinearLayout>

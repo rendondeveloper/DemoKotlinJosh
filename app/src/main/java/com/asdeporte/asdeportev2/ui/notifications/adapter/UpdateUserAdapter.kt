@@ -2,6 +2,7 @@ package com.asdeporte.asdeportev2.ui.notifications.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -87,6 +88,10 @@ class UpdateUserRequestView constructor(context: Context): RelativeLayout(contex
                     .skipMemoryCache(true))
             .into(binding.avatarImage)
 
+        binding.confirmButton.setOnClickListener{
+            binding.lnButtons.visibility = View.GONE
+            binding.txtAddMember.visibility = View.VISIBLE
+        }
 
     }
 }
@@ -162,8 +167,11 @@ class NotificationsTopStatusView constructor(context: Context): RelativeLayout(c
         binding = NotificationsTopStatusViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun bind(item: EventData) {
-
+    fun bind(item: EventData, passDay: Boolean = false) {
+        if(passDay){
+            binding.txtDay.text = "Esta semana"
+            binding.txtNotification.visibility = View.GONE
+        }
 
     }
 }

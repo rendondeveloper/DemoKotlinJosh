@@ -41,20 +41,22 @@
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/Kanit_Semibold.Default.16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sandra Paz comentó tu publicación"
-                    style="@style/Kanit_Semibold.Default.16"/>
+                    android:text="Sandra Paz" />
+
                 <TextView
+                    style="@style/Kanit_Regular.Default.16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="¡Mucho éxito!"
-                    style="@style/Kanit_Regular.Default.16"/>
+                    android:text="¡Hola!" />
+
                 <TextView
+                    style="@style/Kanit_Regular.Secondary.14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hace 1 hora"
-                    style="@style/Kanit_Regular.Secondary.14"/>
+                    android:text="Hace un momento" />
 
             </LinearLayout>
             <View
@@ -69,15 +71,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray_400"
-        android:layout_marginTop="12dp"/>
 
 
 </LinearLayout>

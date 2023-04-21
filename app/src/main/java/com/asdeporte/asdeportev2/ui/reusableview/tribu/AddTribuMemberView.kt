@@ -3,6 +3,7 @@ package com.asdeporte.asdeportev2.ui.reusableview.tribu
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -38,5 +39,10 @@ class AddTribuMemberView @JvmOverloads constructor(
                     .skipMemoryCache(true)
             )
             .into(binding.profileImage)
+
+        binding.addButton.setOnClickListener{
+            binding.addButton.visibility = View.GONE
+            binding.imgCheck.visibility = View.VISIBLE
+        }
     }
 }

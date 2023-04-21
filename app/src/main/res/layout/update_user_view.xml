@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -13,7 +14,8 @@
         android:orientation="vertical"
         android:layout_gravity="center_vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -22,46 +24,51 @@
                 android:id="@+id/avatar_image"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:src="@drawable/avatar_dummy"
-                android:layout_marginTop="12dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginBottom="12dp"
-                android:layout_marginEnd="16dp"
-                android:layout_gravity="center_vertical"
-                app:civ_border_width="0pt"
-                app:civ_border_color="@color/white_dynamic"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
-                android:layout_marginEnd="50dp"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical">
+                android:src="@drawable/avatar_dummy"
+                app:civ_border_color="@color/white_dynamic"
+                app:civ_border_width="0pt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sandra Paz comentó tu publicación"
-                    style="@style/Kanit_Semibold.Default.16"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Hace un momento"
-                    style="@style/Kanit_Regular.Secondary.14"/>
 
-            </LinearLayout>
+            <TextView
+                android:id="@+id/textView42"
+                style="@style/Kanit_Semibold.Default.14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:text="Adrián Gómez, aceptó ser tu amigo"
+                app:layout_constraintEnd_toStartOf="@+id/update_dot"
+                app:layout_constraintStart_toEndOf="@+id/avatar_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView43"
+                style="@style/Kanit_Regular.Secondary.14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Hace un momento"
+                app:layout_constraintEnd_toEndOf="@+id/textView42"
+                app:layout_constraintStart_toEndOf="@+id/avatar_image"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
             <View
                 android:id="@+id/update_dot"
                 android:layout_width="8dp"
                 android:layout_height="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="-30dp"
-                android:layout_marginBottom="12dp"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/simple_red_dot"/>
-        </LinearLayout>
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/simple_red_dot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView42" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

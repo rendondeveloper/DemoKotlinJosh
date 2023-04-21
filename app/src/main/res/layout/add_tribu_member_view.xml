@@ -38,11 +38,11 @@
             android:layout_toStartOf="@+id/add_button">
 
             <TextView
+                style="@style/Kanit_Semi_Bold.Default.16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lupe Olvera"
-                style="@style/Kanit_Semi_Bold.Default.16"
-                android:maxLines="1"/>
+                android:maxLines="1"
+                android:text="Sandra Paz" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -67,6 +67,18 @@
             android:layout_alignParentEnd="true"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"/>
+
+        <ImageView
+            android:id="@+id/imgCheck"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_check_orange" />
 
     </RelativeLayout>
 
