@@ -1,0 +1,16 @@
+<resources>
+    <declare-styleable name="BenefitsView">
+        <attr name="benefit_title" format="string"/>
+        <attr name="benefit_icon" format="string|reference"/>
+        <attr name="benefit_description" format="string"/>
+        <attr name="benefit_promotion" format="string"/>
+        <attr name="benefit_style_image" format="enum">
+            <enum name="small" value="0"/>
+            <enum name="medium" value="1"/>
+        </attr>
+        <attr name="benefit_background" format="enum">
+            <enum name="white" value="0"/>
+            <enum name="dark" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

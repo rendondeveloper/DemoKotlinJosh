@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileDetailsFragment">
+    tools:context=".ui.profile.details.PersonalMyBenefitsFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
@@ -17,8 +17,7 @@
         app:title="Mis beneficios"
         app:titleTextColor="@color/black_dynamic"
         app:navigationIcon="@drawable/arrow_left"
-        app:navigationIconTint="@color/black_dynamic"
-        android:theme="@style/AsdToolbarTheme"/>
+        app:navigationIconTint="@color/black_dynamic"/>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -33,17 +32,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="16dp"
-                android:background="@color/secondary_background"/>
-
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:endColor="@android:color/transparent"
-                app:tabSelectedTextColor="@color/black_dynamic"
+                app:tabSelectedTextColor="@color/orange_as_light"
                 app:tabTextColor="@color/label_secondary"
                 app:tabMode="fixed"
                 app:flow_horizontalAlign="start"
@@ -62,63 +56,214 @@
             </com.google.android.material.tabs.TabLayout>
 
             <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:benefit_icon="@drawable/check_circuclar"
+                    app:benefit_background="dark"
+                    app:benefit_style_image="medium"
+                    app:benefit_title="10% de descuento en eventos"
+                    app:benefit_description="Se aplicará el descuento de forma automática en eventos de AsDepote+."
+                    />
+                <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:benefit_icon="@drawable/check_circuclar"
+                    app:benefit_background="dark"
+                    app:benefit_style_image="medium"
+                    app:benefit_title="Recupera tu Dinero"
+                    app:benefit_description="¿No puedes competir? Recupera el costo de tu inscripción a tu WALLET."
+                    app:benefit_promotion="Consulta Términos y Condiciones"
+                    />
+                <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:benefit_icon="@drawable/check_circuclar"
+                    app:benefit_background="dark"
+                    app:benefit_style_image="medium"
+                    app:benefit_title="Seguro contra accidentes"
+                    app:benefit_description="En tus entrenamientos y Competencias estarás asegurado hasta con $35,000 "
+                    app:benefit_promotion="Consulta Términos y Condiciones"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/events_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginBottom="19dp">
 
-                <View
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="16dp"
-                    android:background="@color/secondary_background"
-                    android:layout_marginBottom="19dp"/>
-
-                <RelativeLayout
-                    android:id="@+id/events_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:background="@color/secondary_background"
-                    android:padding="16dp"
-                    android:layout_marginHorizontal="16dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Eventos"
-                        android:gravity="center_vertical"
-                        android:layout_alignParentStart="true"
-                        style="@style/Kanit_Regular.Default.16"/>
+                    android:layout_height="56dp">
 
                     <ImageView
+                        android:id="@+id/eventImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_events"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/eventTitle"
+                        style="@style/Kanit_Regular.Default.16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Eventos"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/eventImage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/eventAction"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_marginEnd="28dp"
                         android:src="@drawable/ic_add"
-                        android:layout_alignParentEnd="true"
-                        app:tint="@color/black_dynamic"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/black_dynamic" />
 
-                </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
                     android:id="@+id/event_items"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginHorizontal="16dp">
+                    android:layout_marginTop="6dp">
 
                     <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_style_image="small"
+                        app:benefit_title="Entrega de kit de competidor el mismo día"
+                        app:benefit_description="Te entregaremos tu kit completo con tu talla asegurada, hasta 15 minutos antes de tu arranque en la carpa Asdeporte Plus."
+                        />
+
                     <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_style_image="small"
+                        app:benefit_title="Recoge tu kit de competidor en un módulo exclusivo"
+                        app:benefit_description="Se aplicará el descuento de forma automática en eventos de AsDepote."
+                        />
+
                     <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_style_image="small"
+                        app:benefit_title="Talla de playera garantizada"
+                        app:benefit_description="Te entregaremos tu kit completo con tu talla asegurada, hasta 15 minutos antes de tu arranque en la carpa Asdeporte Plus."
+                        />
+
                     <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_style_image="small"
+                        app:benefit_title="30% de descuento en fotografías de tus eventos"
+                        app:benefit_description="Se aplicará el descuento de forma automática en eventos de AsDepote+."
+                        />
+
+                    <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_style_image="small"
+                        app:benefit_title="Plan de entrenamiento enfocado a tu deporte"
+                        app:benefit_description="Te entregaremos tu kit completo con tu talla asegurada, hasta 15 minutos antes de tu arranque en la carpa Asdeporte Plus."
+                        />
+
+                    <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_style_image="small"
+                        app:benefit_title="Preventa, post venta o inscripciones gratuitas"
+                        app:benefit_description="Se aplicará el descuento de forma automática en eventos de AsDepote+."
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/secondary_background"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/community_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="19dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <ImageView
+                        android:id="@+id/communityImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_community"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/communityTitle"
+                        style="@style/Kanit_Regular.Default.16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Tu comunidad"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/communityImage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/comunityAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="28dp"
+                        android:src="@drawable/ic_add"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/black_dynamic" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/community_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginHorizontal="16dp">
 
                 </LinearLayout>
 
@@ -131,36 +276,46 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="19dp">
 
-                <View
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="16dp"
-                    android:background="@color/secondary_background"
-                    android:layout_marginBottom="19dp"/>
-
-                <RelativeLayout
-                    android:id="@+id/health_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:background="@color/secondary_background"
-                    android:padding="16dp"
-                    android:layout_marginHorizontal="16dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Salud"
-                        android:gravity="center_vertical"
-                        android:layout_alignParentStart="true"
-                        style="@style/Kanit_Regular.Default.16"/>
+                    android:layout_height="56dp">
 
                     <ImageView
+                        android:id="@+id/healthImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_well_being"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/healthTitle"
+                        style="@style/Kanit_Regular.Default.16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Tu bienestar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/healthImage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/healthAction"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_marginEnd="28dp"
                         android:src="@drawable/ic_add"
-                        android:layout_alignParentEnd="true"
-                        app:tint="@color/black_dynamic"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/black_dynamic" />
 
-                </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
                     android:id="@+id/health_items"
@@ -169,19 +324,6 @@
                     android:orientation="vertical"
                     android:layout_marginTop="6dp"
                     android:layout_marginHorizontal="16dp">
-
-                    <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
