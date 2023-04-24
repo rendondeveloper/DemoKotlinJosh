@@ -52,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_height"
                 android:text="Agregar dependientes"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:background="@drawable/pill_background"
                 android:layout_marginHorizontal="16dp"/>

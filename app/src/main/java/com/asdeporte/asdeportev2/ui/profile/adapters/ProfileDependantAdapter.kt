@@ -5,11 +5,16 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.ViewDependantProfileBinding
 import com.asdeporte.asdeportev2.databinding.ViewEventHistoryBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
+import com.asdeporte.asdeportev2.ui.profile.details.BottomSheetDependents
 import com.asdeporte.asdeportev2.utils.dpToPx
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
@@ -31,10 +36,6 @@ class ProfileDependantAdapter : RecyclerViewAdapterBase<EventData, ProfileDepend
 
         holder.view.apply {
             bind(item)
-        }
-
-        holder.view.setOnClickListener {
-            onItemClick?.invoke(item)
         }
     }
     override fun getItemCount(): Int {
@@ -63,6 +64,11 @@ class ProfileDependantView @JvmOverloads constructor(
         //binding.title.text = "Astri Acapulco Cabo Marqués"
         //binding.place.text = "30 octubre 2022"
         //binding.date.text = "Estado de México, México"
-
+        binding.btnVerPerfil.setOnClickListener{
+            findNavController().safelyNavigate(R.id.action_personal_dependents_to_personalAddDependentsFragment)
+        }
+        binding.rejectButton.setOnClickListener{
+            BottomSheetDependents().show((context as AppCompatActivity).supportFragmentManager, "MY_BOTTOM_SHEET")
+        }
     }
 }

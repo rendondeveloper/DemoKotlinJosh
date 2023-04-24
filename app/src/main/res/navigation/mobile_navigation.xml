@@ -334,7 +334,11 @@
         android:id="@+id/personal_dependents"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalDependentsFragment"
         android:label="Mis Dependientes"
-        tools:layout="@layout/fragment_personal_dependants" />
+        tools:layout="@layout/fragment_personal_dependants" >
+        <action
+            android:id="@+id/action_personal_dependents_to_personalAddDependentsFragment"
+            app:destination="@id/personalAddDependentsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/personal_my_benefits"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalMyBenefitsFragment"
@@ -558,4 +562,9 @@
         android:id="@+id/personalBadgePagerFragment"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalBadgePagerFragment"
         android:label="PersonalBadgePagerFragment" />
+    <fragment
+        android:id="@+id/personalAddDependentsFragment"
+        android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalAddDependentsFragment"
+        android:label="fragment_personal_add_dependants"
+        tools:layout="@layout/fragment_personal_add_dependants" />
 </navigation>

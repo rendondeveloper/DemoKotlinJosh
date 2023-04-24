@@ -118,6 +118,7 @@
             </RelativeLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ver_perfil"
                 style="@style/Kanit_Regular.Default.14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_button_height"
@@ -134,7 +135,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/reject_button"
-                style="@style/Kanit_Regular.Orange.14"
+                style="@style/Kanit_Semi_Bold.Orange.14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_button_height"
                 android:layout_marginBottom="12dp"

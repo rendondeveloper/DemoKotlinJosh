@@ -43,12 +43,7 @@ class PersonalDependentsFragment : Fragment() {
 
     private fun setupData() {
 
-        dependantsAdapter = ProfileDependantAdapter().apply {
-            onItemClick = {
-                findNavController().safelyNavigate(R.id.to_personal_history)
-            }
-        }
-
+        dependantsAdapter = ProfileDependantAdapter()
         binding.dependantList.adapter = dependantsAdapter
         binding.dependantList.setHasFixedSize(true)
         //binding.dependantList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
@@ -57,6 +52,9 @@ class PersonalDependentsFragment : Fragment() {
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
         dependantsAdapter.setItems(items)
 
+        binding.addButton.setOnClickListener{
+            findNavController().safelyNavigate(R.id.action_personal_dependents_to_personalAddDependentsFragment)
+        }
     }
 
     override fun onDestroyView() {
