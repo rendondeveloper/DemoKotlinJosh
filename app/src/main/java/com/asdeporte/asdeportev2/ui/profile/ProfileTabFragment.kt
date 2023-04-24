@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentProfileTabBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
+import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.SuscriptionActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.ProfileItemHomeAdapter
 
@@ -60,6 +61,8 @@ class ProfileTabFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as MainActivity).hideActionBar()
 
         binding.subscribeButton.setOnClickListener {
             startActivity(Intent(requireActivity(), SuscriptionActivity::class.java))

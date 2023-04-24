@@ -88,6 +88,7 @@
     <string name="common_error">Ha ocurrido un error. Inténtelo de nuevo</string>
     <string name="try_again">Volver a intentar</string>
     <string name="empty_data_error">Debes introducir todos los datos</string>
+    <string name="username_text">Usuario</string>
     <string name="name_text">Nombre</string>
     <string name="name_address">Nombre de la dirección</string>
     <string name="first_surname">Apellido paterno</string>
@@ -800,6 +801,7 @@
     <string name="fmtri_form_curp">CURP*</string>
     <string name="fmtri_form_scholarship">Escolaridad*</string>
     <string name="fmtri_form_current_studying">Cursando actualmente*</string>
+    <string name="fmtri_height">Estatura</string>
     <string name="fmtri_form_weight">Peso (kg)*</string>
     <string name="fmtri_form_height">Estatura (cm)*</string>
     <string name="fmtri_form_blood_type">Tipo de Sangre*</string>
@@ -1158,4 +1160,5 @@
     <string name="mi_historial">Mi historial</string>
     <string name="mis_proximas_metas">Mis próximas metas</string>
     <string name="tiempo">Tiempo:</string>
+    <string name="personal_information">Información personal</string>
 </resources>
