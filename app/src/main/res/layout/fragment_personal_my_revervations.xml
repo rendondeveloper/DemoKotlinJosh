@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        >
+    <ImageView
+        android:id="@+id/eventImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_dummy_reservation_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/eventTitle"
+        style="@style/Kanit_Regular.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Spartan San Luis Potosí"
+        app:layout_constraintStart_toEndOf="@+id/eventImage"
+        app:layout_constraintTop_toTopOf="@+id/eventImage" />
+    <TextView
+        android:id="@+id/eventTitleAddress2"
+        style="@style/Kanit_Medium.Secondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="22 octubre 2022"
+        app:layout_constraintStart_toStartOf="@+id/eventTitle"
+        app:layout_constraintTop_toBottomOf="@+id/eventTitle" />
+    <TextView
+        android:id="@+id/eventTitleAddress1"
+        style="@style/Kanit_Regular.Secondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="La Joya Honda, San Luis Potosí"
+        app:layout_constraintStart_toStartOf="@+id/eventTitleAddress2"
+        app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress2" />
+    <ImageView
+        android:id="@+id/eventAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/black_dynamic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/secondary_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/eventAction"
+            app:layout_constraintStart_toStartOf="@+id/eventImage"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/eventImage2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dummy_reservation_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/eventTitle2"
+            style="@style/Kanit_Regular.Default.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Duatlón EDOMEX"
+            app:layout_constraintStart_toEndOf="@+id/eventImage2"
+            app:layout_constraintTop_toTopOf="@+id/eventImage2" />
+
+        <TextView
+            android:id="@+id/eventTitleAddress22"
+            style="@style/Kanit_Medium.Secondary.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="30 octubre 2022"
+            app:layout_constraintStart_toStartOf="@+id/eventTitle2"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitle2" />
+
+        <TextView
+            android:id="@+id/eventTitleAddress12"
+            style="@style/Kanit_Regular.Secondary.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado de México, México"
+            app:layout_constraintStart_toStartOf="@+id/eventTitleAddress22"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress22" />
+
+        <ImageView
+            android:id="@+id/eventAction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/black_dynamic" />
+
+        <LinearLayout
+            android:id="@+id/dummy_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress12">
+
+            <TextView
+                android:id="@+id/eventTitleNew"
+                style="@style/Kanit_Bold.Default.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Reservaciones" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/black_dynamic_border">
+
+                <ImageView
+                    android:id="@+id/eventImageItem1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_express"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/eventTitleItem1"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Fila Express"
+                    app:layout_constraintStart_toEndOf="@+id/eventImageItem1"
+                    app:layout_constraintTop_toTopOf="@+id/eventImageItem1" />
+
+                <TextView
+                    android:id="@+id/eventTitleAddress1Item1"
+                    style="@style/Kanit_Regular.Secondary.12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Viernes 16 de septiembre"
+                    app:layout_constraintStart_toStartOf="@+id/eventTitleItem1"
+                    app:layout_constraintTop_toBottomOf="@+id/eventTitleItem1" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/black_dynamic_border">
+
+                <ImageView
+                    android:id="@+id/eventImageItem2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_express"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/eventTitleItem2"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Plan de Entrenamiento"
+                    app:layout_constraintStart_toEndOf="@+id/eventImageItem2"
+                    app:layout_constraintTop_toTopOf="@+id/eventImageItem2" />
+
+                <TextView
+                    android:id="@+id/eventTitleAddress1Item2"
+                    style="@style/Kanit_Bold.Orange.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Descargar plan"
+                    app:layout_constraintStart_toStartOf="@+id/eventTitleItem2"
+                    app:layout_constraintTop_toBottomOf="@+id/eventTitleItem2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/black_dynamic_border">
+
+                <ImageView
+                    android:id="@+id/eventImageItem3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_express"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/eventTitleItem3"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Mismo día"
+                    app:layout_constraintStart_toEndOf="@+id/eventImageItem3"
+                    app:layout_constraintTop_toTopOf="@+id/eventImageItem3" />
+
+                <TextView
+                    android:id="@+id/eventTitleAddress1Item3"
+                    style="@style/Kanit_Regular.Secondary.12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Sábado 17 de septiembre"
+                    app:layout_constraintStart_toStartOf="@+id/eventTitleItem3"
+                    app:layout_constraintTop_toBottomOf="@+id/eventTitleItem3" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view16"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/secondary_background"
+            app:layout_constraintEnd_toEndOf="@+id/eventAction2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/eventImage2"
+            app:layout_constraintTop_toBottomOf="@+id/dummy_items" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/eventImage3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dummy_reservation_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/eventTitle3"
+            style="@style/Kanit_Regular.Default.16"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="5ta Carrera Fundación Royal Resorts"
+            app:layout_constraintEnd_toStartOf="@+id/eventAction3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/eventImage3"
+            app:layout_constraintTop_toTopOf="@+id/eventImage3" />
+        <TextView
+            android:id="@+id/eventTitleAddress23"
+            style="@style/Kanit_Medium.Secondary.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Cancún, Q.R., México"
+            app:layout_constraintStart_toStartOf="@+id/eventTitle3"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitle3" />
+        <TextView
+            android:id="@+id/eventTitleAddress13"
+            style="@style/Kanit_Regular.Secondary.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado de México, México"
+            app:layout_constraintStart_toStartOf="@+id/eventTitleAddress23"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress23" />
+        <ImageView
+            android:id="@+id/eventAction3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/black_dynamic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/secondary_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/eventAction3"
+            app:layout_constraintStart_toStartOf="@+id/eventImage3"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
