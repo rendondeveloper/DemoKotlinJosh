@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asdeporte.asdeportev2.BuildConfig
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentProfileDetailsBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
@@ -50,11 +51,8 @@ class ProfileDetailsFragment : Fragment() {
         profileItemAdapter = ProfileItemDetailAdapter().apply {
             onItemClick = {
                 when (it.type) {
-                    MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.to_personal_history) }
                     MoreItem.PERSONALDATA -> { findNavController().safelyNavigate(R.id.to_personal_data) }
-                    MoreItem.BADGES -> { findNavController().navigate(R.id.to_badge_fragment) }
                     MoreItem.MYDEPENDENTS -> { findNavController().safelyNavigate(R.id.to_personal_dependents) }
-                    MoreItem.BENEFITS -> { findNavController().safelyNavigate(R.id.to_personal_my_benefits) }
                     MoreItem.WALLET -> { findNavController().safelyNavigate(R.id.to_personal_wallet) }
                     else -> {
                         //TODO("Not yet implemented")
@@ -71,70 +69,97 @@ class ProfileDetailsFragment : Fragment() {
 
         val menuItems = listOf(
             ProfileMenuItem(
-                "Mi Histórico",
-                "Encuentra toda la información sobre tus competencias",
-                ContextCompat.getDrawable(requireContext(), R.drawable.profile_graph),
-                MoreItem.HISTORIC
-            ),
-            ProfileMenuItem(
-                "Medallero",
-                "Revisa tus estadísticas para mejorar tu rendimiento",
-                ContextCompat.getDrawable(requireContext(), R.drawable.ic_badge),
-                MoreItem.BADGES
-            ),
-            ProfileMenuItem(
+                "Configuración",
                 "Datos Personales",
-                "Gestiona tus datos personales",
+                null,
                 ContextCompat.getDrawable(requireContext(), R.drawable.profile_person),
                 MoreItem.PERSONALDATA
             ),
             ProfileMenuItem(
+                null,
                 "Mis Dependientes",
-                "Gestiona tus dependientes y permisos",
+                null,
                 ContextCompat.getDrawable(requireContext(), R.drawable.profile_persons),
                 MoreItem.MYDEPENDENTS
             ),
             ProfileMenuItem(
-                "Beneficios",
-                "Todo lo que Asdeporte tiene para ti",
-                ContextCompat.getDrawable(requireContext(), R.drawable.profile_star),
-                MoreItem.BENEFITS
-            ),
-            ProfileMenuItem(
+                null,
                 "Mis Metas",
-                "No te rindas y fíjate metas más altas",
+                null,
                 ContextCompat.getDrawable(requireContext(), R.drawable.profile_goals),
                 MoreItem.MYGOALS
             ),
             ProfileMenuItem(
-                "Wallet",
-                "Administra tus metodos de pago",
-                ContextCompat.getDrawable(requireContext(), R.drawable.profile_wallet),
-                MoreItem.WALLET
-            ),
-            ProfileMenuItem(
+                null,
                 "Suscripciones",
-                "Gestiona tus suscripciones",
+                null,
                 ContextCompat.getDrawable(requireContext(), R.drawable.profile_history_money),
                 MoreItem.SUBSCRIPTIONS
             ),
             ProfileMenuItem(
+                null,
+                "Método de pago y wallet",
+                null,
+                ContextCompat.getDrawable(requireContext(), R.drawable.profile_wallet),
+                MoreItem.WALLET
+            ),
+            ProfileMenuItem(
+                null,
                 "Facturación",
-                "Tus facturas siempre a la mano",
+                null,
                 ContextCompat.getDrawable(requireContext(), R.drawable.profile_doc),
                 MoreItem.BILLING
             ),
             ProfileMenuItem(
+                null,
+                "Idioma",
+                null,
+                ContextCompat.getDrawable(requireContext(), R.drawable.profile_language),
+                MoreItem.LANGUAGE
+            ),
+            ProfileMenuItem(
+                null,
+                "Cambiar contraseña",
+                null,
+                ContextCompat.getDrawable(requireContext(), R.drawable.profile_lock),
+                MoreItem.LOCK
+            ),
+            //SECCION ACTIVIDAD
+            ProfileMenuItem(
+                "Historial de actividad",
                 "Mis Compras",
-                "Lorem ipsum",
+                "Gestiona todas tus compras",
                 ContextCompat.getDrawable(requireContext(), R.drawable.profile_shop),
                 MoreItem.SHOPPING
             ),
             ProfileMenuItem(
+                null,
+                "Mis favoritos",
+                "Encuentra tus eventos y retos favoritos",
+                ContextCompat.getDrawable(requireContext(), R.drawable.profile_favorite),
+                MoreItem.FAVORITES
+            ),
+            //SESION
+            ProfileMenuItem(
+                "Sesión",
+                "Eliminar cuenta",
+                null,
+                ContextCompat.getDrawable(requireContext(), R.drawable.profile_delete),
+                MoreItem.DELETE
+            ),
+            ProfileMenuItem(
+                null,
                 "Cerrar sesión",
                 null,
                 ContextCompat.getDrawable(requireContext(), R.drawable.profile_exit),
                 MoreItem.SIGNOFF
+            ),
+            ProfileMenuItem(
+                "VERSIÓN ${BuildConfig.VERSION_NAME}",
+                null,
+                null,
+                null,
+                null
             ),
         )
         profileItemAdapter.setItems(menuItems)

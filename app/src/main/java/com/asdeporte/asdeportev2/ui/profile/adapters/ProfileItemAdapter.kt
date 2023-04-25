@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.isVisible
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.ViewEventHorizontalBinding
 import com.asdeporte.asdeportev2.databinding.ViewProfileItemBinding
@@ -54,9 +55,6 @@ class ProfileItemDetailAdapter : RecyclerViewAdapterBase<ProfileMenuItem, Profil
             onItemClick?.invoke(item)
         }
     }
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }
 
 class ProfileItemView @JvmOverloads constructor(
@@ -71,24 +69,41 @@ class ProfileItemView @JvmOverloads constructor(
         binding = ViewProfileItemBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    fun bind(item: ProfileMenuItem, isFromHome: Boolean) {
-        item.icon?.let {
-            binding.icon.setImageDrawable(it)
-        } ?: run {
-            binding.icon.visibility = View.GONE
+    fun bind(item: ProfileMenuItem, isFromHome: Boolean, backItem: ProfileMenuItem? = null) {
+
+        if (isFromHome) {
+            binding.viewSeparate.visibility = INVISIBLE
+            binding.viewTopSeparate.visibility = GONE
         }
 
-        binding.title.text = item.title
+        item.icon?.let {
+            binding.icon.setImageDrawable(it)
+            binding.icon.visibility = VISIBLE
+        } ?: run {
+            binding.icon.visibility = GONE
+        }
 
-        if (!isFromHome) {
-            val typefaceBold = ResourcesCompat.getFont(context, R.font.kanit_semibold)
-            binding.title.typeface = typefaceBold
+        item.section?.let {
+            binding.txtSection.text = it
+            binding.txtSection.visibility = VISIBLE
+            if (isFromHome) {
+                binding.viewTopSeparate.visibility = VISIBLE
+            }
+        } ?: run {
+            binding.txtSection.visibility = GONE
+        }
+        item.title?.let {
+            binding.title.text = it
+            binding.title.visibility = VISIBLE
+        } ?: run {
+            binding.title.visibility = GONE
         }
 
         item.subtitle?.let {
             binding.subtitle.text = it
+            binding.subtitle.visibility = VISIBLE
         } ?: run {
-            binding.subtitle.visibility = View.GONE
+            binding.subtitle.visibility = GONE
         }
 
 

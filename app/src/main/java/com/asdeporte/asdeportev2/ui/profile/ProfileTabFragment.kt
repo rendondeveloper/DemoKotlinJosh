@@ -20,12 +20,16 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.ProfileItemHomeAdapter
 enum class MoreItem {
     EXPERIENCES,
     CHALLENGES,
-    MYPLACES,
+    TRANING,
+    PHOTOS,
+    TUTORIALS,
+    FEEDBACK,
     NUTRITION,
     BLOG,
-    MYCAUSE,
     FAQ,
-    CONFIRMATIONLETTER,
+    TERMS,
+    PRIVACY,
+    ABOUT,
     CONTACT,
     // Details
     HISTORIC,
@@ -38,7 +42,11 @@ enum class MoreItem {
     SUBSCRIPTIONS,
     BILLING,
     SHOPPING,
-    SIGNOFF
+    SIGNOFF,
+    LANGUAGE,
+    LOCK,
+    DELETE,
+    FAVORITES
 }
 class ProfileTabFragment : Fragment() {
 
@@ -81,8 +89,9 @@ class ProfileTabFragment : Fragment() {
             onItemClick = {
                 //EventBottomSheet.create(this@ProfileTabFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
                 when (it.type) {
-                    //MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.to_personal_history) }
-                    //MoreItem.PERSONALDATA -> { findNavController().safelyNavigate(R.id.to_personal_data) }
+                    MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.personal_history) }
+                    MoreItem.BENEFITS -> { findNavController().safelyNavigate(R.id.personal_my_benefits) }
+                    MoreItem.BADGES -> { findNavController().navigate(R.id.to_badge_fragment) }
                     else -> {
                         //TODO("Not yet implemented")
                     }
@@ -96,16 +105,26 @@ class ProfileTabFragment : Fragment() {
 
 
         val menuItems = listOf(
-            ProfileMenuItem("Experiencias", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_tent), MoreItem.EXPERIENCES),
-            ProfileMenuItem("Medallero", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_challenge), MoreItem.BADGES),
-            ProfileMenuItem("Retos", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_challenge), MoreItem.CHALLENGES),
-            ProfileMenuItem("Mis lugares", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_place), MoreItem.MYPLACES),
-            ProfileMenuItem("Nutrición", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_apple), MoreItem.NUTRITION),
-            ProfileMenuItem("Blog", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_blog), MoreItem.BLOG),
-            ProfileMenuItem("Mi causa", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_cause), MoreItem.MYCAUSE),
-            ProfileMenuItem("Preguntas frecuentes", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_question), MoreItem.FAQ),
-            ProfileMenuItem("Recupera tu carta confirmación", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_letter), MoreItem.CONFIRMATIONLETTER),
-            ProfileMenuItem("Contacto", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_phone), MoreItem.CONTACT),
+            ProfileMenuItem(null,"Experiencias", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_tent), MoreItem.EXPERIENCES),
+            ProfileMenuItem(null,"Retos", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_challenge), MoreItem.CHALLENGES),
+            ProfileMenuItem(null,"Nutrición", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_nutrition), MoreItem.NUTRITION),
+            ProfileMenuItem(null,"Entrenamientos", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_training), MoreItem.TRANING),
+            ProfileMenuItem(null,"Blog", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_blog), MoreItem.BLOG),
+            //SECCION DATA
+            ProfileMenuItem("Data","Histórico", null, ContextCompat.getDrawable(requireContext(), R.drawable.profile_graph), MoreItem.HISTORIC),
+            ProfileMenuItem(null,"Medallero", null, ContextCompat.getDrawable(requireContext(), R.drawable.ic_badge), MoreItem.BADGES),
+            ProfileMenuItem(null,"Fotos", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_photos), MoreItem.PHOTOS),
+            ProfileMenuItem(null,"Mis Beneficios", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_benefits), MoreItem.BENEFITS),
+            //SECCION SOPORTE
+            ProfileMenuItem("Soporte","Tutoriales", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_tutorials), MoreItem.TUTORIALS),
+            ProfileMenuItem(null,"Preguntas frecuentes", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_question), MoreItem.FAQ),
+            ProfileMenuItem(null,"Contáctanos", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_phone), MoreItem.CONTACT),
+            ProfileMenuItem(null,"Feedback sobre la app", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_feedback), MoreItem.FEEDBACK),
+            //SECCION ASDEPORTE
+            ProfileMenuItem("Asdeporte","Sobre Asdeporte", null, ContextCompat.getDrawable(requireContext(), R.drawable.logo_asd_black), MoreItem.ABOUT),
+            ProfileMenuItem(null,"Términos y condiciones", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_terms), MoreItem.TERMS),
+            ProfileMenuItem(null,"Aviso de privacidad", null, ContextCompat.getDrawable(requireContext(), R.drawable.menu_privacy), MoreItem.PRIVACY),
+
         )
         profileItemAdapter.setItems(menuItems)
     }
@@ -118,7 +137,8 @@ class ProfileTabFragment : Fragment() {
 }
 
 data class ProfileMenuItem(
-    val title: String,
+    val section: String?,
+    val title: String?,
     val subtitle: String?,
     val icon: Drawable?,
     val type: MoreItem?
