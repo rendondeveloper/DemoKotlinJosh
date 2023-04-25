@@ -6,31 +6,36 @@ import kotlin.collections.ArrayList
 data class Message (
       var message: String? = null,
       var sender: UserChat? = null,
-      var createdAt: Date = Date(),
-      var hasImage: HasImage = HasImage.FALSE
+      var createdAt: Boolean = false,
+      var hasImage: HasImage = HasImage.FALSE,
+      var timestamp: Date = Date(),
 )
 
 class MessageModel {
       companion object {
+            fun getGroupMessages(): ArrayList<Message> = arrayListOf(
+                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), true, HasImage.TRUE, Date()),
+            )
             fun getMessages(): ArrayList<Message> = arrayListOf(
-                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), Date(), HasImage.TRUE),
-                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), Date(), HasImage.FALSE),
-                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), Date(), HasImage.TRUE),
-                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), Date(), HasImage.FALSE),
-                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), Date(), HasImage.TRUE),
-                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), Date(), HasImage.FALSE),
-                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), Date(), HasImage.TRUE),
-                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), Date(), HasImage.FALSE),
-                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), Date(), HasImage.TRUE),
-                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), Date(), HasImage.FALSE),
-                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), Date(), HasImage.TRUE),
-                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getMe(), Date(), HasImage.FALSE)
+                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), true, HasImage.TRUE, Date()),
+                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), false, HasImage.FALSE, Date()),
+                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), false, HasImage.TRUE, Date()),
+                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), false, HasImage.FALSE, Date()),
+                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), false, HasImage.TRUE, Date()),
+                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), false, HasImage.FALSE, Date()),
+                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), false, HasImage.TRUE, Date()),
+                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), false, HasImage.FALSE, Date()),
+                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), false, HasImage.TRUE, Date()),
+                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), false, HasImage.FALSE, Date()),
+                  Message("Tempor ex commodo culpa irure amet sunt tempor cupidatat ad anim pariatur quis et sit voluptate.", UserChatModel.getOther(), false, HasImage.TRUE, Date()),
+                  Message("Cupidatat ad id laborum id non.", UserChatModel.getMe(), false, HasImage.FALSE, Date()),
             )
             fun getNew(): Message = Message(
                   "Tempor velit commodo anim.",
                   UserChatModel.getMe(),
-                  Date(),
-                  HasImage.FALSE
+                  false,
+                  HasImage.FALSE,
+                  Date()
             )
       }
 }

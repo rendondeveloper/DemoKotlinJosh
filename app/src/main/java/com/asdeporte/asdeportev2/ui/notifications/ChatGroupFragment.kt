@@ -8,24 +8,24 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.models.MessageModel
-import com.asdeporte.asdeportev2.databinding.FragmentChatBinding
+import com.asdeporte.asdeportev2.databinding.FragmentChatGroupBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.notifications.adapter.*
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
 import com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
 
-class ChatFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, SearchTribuView.SearchTribuViewListener {
+class ChatGroupFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, SearchTribuView.SearchTribuViewListener {
 
-    private var binding: FragmentChatBinding? = null
-    private lateinit var chatAdapter: ChatAdapter
-    private val messages = MessageModel.getMessages()
+    private var binding: FragmentChatGroupBinding? = null
+    private lateinit var chatAdapter: ChatGroupAdapter
+    private val messages = MessageModel.getGroupMessages()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentChatBinding.inflate(inflater, container, false)
+        binding = FragmentChatGroupBinding.inflate(inflater, container, false)
         return binding?.root
     }
 
@@ -34,10 +34,7 @@ class ChatFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
 
         (activity as MainActivity).hideActionBar()
 
-        //binding.toolbar.title = "Notificaciones"
-        //binding.toolbar.navigationIcon = ContextCompat.getDrawable(requireContext(), R.drawable.navigation_back)
         binding?.chatBackImage?.setOnClickListener {
-            //findNavController().popBackStack(R.id.navigation_home, true)
             (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
         }
         binding?.toolbar?.setOnMenuItemClickListener {
@@ -49,7 +46,6 @@ class ChatFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
                 else -> false
             }
         }
-
         binding?.buttonSend?.setOnClickListener {
             messages.add(MessageModel.getNew())
             chatAdapter.notifyItemInserted(messages.count())
@@ -59,11 +55,7 @@ class ChatFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
     }
 
     private fun setupAdapters() {
-        chatAdapter = ChatAdapter(messages).apply {
-            /*onItemClick = {
-                EventBottomSheet.create(this@TribuMainFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
-            }*/
-        }
+        chatAdapter = ChatGroupAdapter(messages)
         binding?.recyclerGchat?.adapter = chatAdapter
         binding?.recyclerGchat?.setHasFixedSize(true)
         binding?.recyclerGchat?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)

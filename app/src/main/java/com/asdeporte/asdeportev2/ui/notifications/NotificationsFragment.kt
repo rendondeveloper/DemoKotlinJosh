@@ -152,7 +152,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             val holder = MessageGroupCellView(requireContext(),false)
             holder.bind(item)
             holder.setOnClickListener {
-                findNavController().safelyNavigate(R.id.toChat)
+                //findNavController().safelyNavigate(R.id.toChat)
             }
             binding.groupView.addView(holder)
         }

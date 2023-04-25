@@ -8,12 +8,88 @@
 
     <TextView
         android:id="@+id/date_other"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginBottom="16dp"
         android:text="6 de Noviembre"
-        android:layout_gravity="center"
-        style="@style/Kanit_Medium.Default.14"/>
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/date_other_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_32dp"
+            app:srcCompat="@drawable/default_photo_group" />
+
+        <TextView
+            style="@style/Kanit_Bold.Default.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Ernesto, Carlos, Lupe"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView36"
+            style="@style/Kanit_Medium.Default.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:text="Creaste este grupo"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView47"
+            style="@style/Kanit_Regular.Default.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="21 Noviembre 2022"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView49"
+            style="@style/Kanit_Medium.Default.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:text="14:00"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView48"
+            style="@style/Kanit_Regular.Default.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:text="Agregaste a Carlos Hurtado López al grupo"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView51"
+            style="@style/Kanit_Regular.Default.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginBottom="@dimen/dimen_50dp"
+            android:text="Agregaste a Lupe Olvera al grupo"
+            android:visibility="visible" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -557,7 +557,11 @@
         android:id="@+id/createGroupFragment"
         android:name="com.asdeporte.asdeportev2.ui.notifications.CreateGroupFragment"
         android:label="fragment_create_group"
-        tools:layout="@layout/fragment_create_group" />
+        tools:layout="@layout/fragment_create_group" >
+        <action
+            android:id="@+id/action_createGroupFragment_to_chatGroupFragment"
+            app:destination="@id/chatGroupFragment" />
+    </fragment>
     <fragment
         android:id="@+id/personalBadgePagerFragment"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalBadgePagerFragment"
@@ -567,4 +571,9 @@
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalAddDependentsFragment"
         android:label="fragment_personal_add_dependants"
         tools:layout="@layout/fragment_personal_add_dependants" />
+    <fragment
+        android:id="@+id/chatGroupFragment"
+        android:name="com.asdeporte.asdeportev2.ui.notifications.ChatGroupFragment"
+        android:label="ChatGroupFragment"
+        tools:layout="@layout/fragment_chat_group"/>
 </navigation>

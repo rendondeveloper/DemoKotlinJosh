@@ -7,26 +7,30 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentCreateGroupBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.notifications.adapter.ParticipantsAdapter
 
 class CreateGroupFragment: Fragment() {
-    private var _binding: FragmentCreateGroupBinding? = null
-    private val binding get() = _binding!!
+    private var binding: FragmentCreateGroupBinding? = null
     private lateinit var participantAdapter: ParticipantsAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = FragmentCreateGroupBinding.inflate(inflater, container, false)
-        //(activity as MainActivity).hideActionBar()
-        return binding.root
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentCreateGroupBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.toolbarCreate.setOnClickListener {
+        binding?.toolbarCreate?.setOnClickListener {
             findNavController().popBackStack()
             (activity as MainActivity).showActionBar()
         }
@@ -42,10 +46,19 @@ class CreateGroupFragment: Fragment() {
         )
         val users = listOf(testEvent, testEvent, testEvent)
         participantAdapter = ParticipantsAdapter(requireContext())
-        binding.listParticipants.adapter = participantAdapter
-        binding.listParticipants.setHasFixedSize(true)
-        binding.listParticipants.layoutManager =
+        binding?.listParticipants?.adapter = participantAdapter
+        binding?.listParticipants?.setHasFixedSize(true)
+        binding?.listParticipants?.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         participantAdapter.setItems(users)
+
+        binding?.create?.setOnClickListener{
+            findNavController().safelyNavigate(R.id.action_createGroupFragment_to_chatGroupFragment)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }
