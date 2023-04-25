@@ -575,5 +575,11 @@
         android:id="@+id/chatGroupFragment"
         android:name="com.asdeporte.asdeportev2.ui.notifications.ChatGroupFragment"
         android:label="ChatGroupFragment"
-        tools:layout="@layout/fragment_chat_group"/>
+        tools:layout="@layout/fragment_chat_group">
+    </fragment>
+    <fragment
+        android:id="@+id/editGroupFragment"
+        android:name="com.asdeporte.asdeportev2.ui.notifications.EditGroupFragment"
+        android:label="fragment_edit_group"
+        tools:layout="@layout/fragment_edit_group" />
 </navigation>

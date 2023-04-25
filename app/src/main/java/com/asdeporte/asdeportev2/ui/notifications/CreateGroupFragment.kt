@@ -32,7 +32,6 @@ class CreateGroupFragment: Fragment() {
 
         binding?.toolbarCreate?.setOnClickListener {
             findNavController().popBackStack()
-            (activity as MainActivity).showActionBar()
         }
         setupAdapters()
     }

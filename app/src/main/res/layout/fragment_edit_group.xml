@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".ui.notifications.EditGroupFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/create_buttons_view"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AsdToolbarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_close_line_small"
+            app:navigationIconTint="@color/black_dynamic"
+            app:title="@string/edit_group"
+            app:titleTextColor="@color/black_dynamic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:text="Si cambias el nombre o foto de perfil, éste será visible para todos los participantes. Foto de perfil: 200x200 pixeles" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="43dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/upload_image" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTextField"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Nombre del grupo"
+                app:hintTextColor="@color/black_dynamic">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameTextInput"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/create_buttons_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:elevation="@dimen/dimen_16dp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/dimen_16dp"
+                android:weightSum="2"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_create_button"
+                    android:layout_width="136dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/secondary_button"
+                    android:paddingStart="7dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="0dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black_dynamic"
+                    app:backgroundTint="@color/black_dynamic" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/create"
+                    android:layout_width="136dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/pill_background"
+                    android:paddingStart="7dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="0dp"
+                    android:text="Publicar"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

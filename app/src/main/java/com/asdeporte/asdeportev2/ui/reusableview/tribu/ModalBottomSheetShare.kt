@@ -64,6 +64,7 @@ class ModalBottomSheetShare : BottomSheetDialogFragment() {
             }
         })
         binding.lnShare.setOnClickListener {
+            this.dismiss()
             val iShare = Intent(Intent.ACTION_SEND)
             startActivity(Intent.createChooser(iShare, ""))
         }

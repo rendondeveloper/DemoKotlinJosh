@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.models.MessageModel
@@ -35,12 +36,12 @@ class ChatGroupFragment : Fragment(), EventBottomSheet.EventBottomSheetListener,
         (activity as MainActivity).hideActionBar()
 
         binding?.chatBackImage?.setOnClickListener {
-            (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
+            findNavController().popBackStack()
         }
         binding?.toolbar?.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.filter_menu -> {
-                    NotificationChatBottomSheet().show(requireActivity().supportFragmentManager, "MY_BOTTOM_SHEET")
+                    NotificationChatGroupBottomSheet().show(requireActivity().supportFragmentManager, "MY_BOTTOM_SHEET")
                     true
                 }
                 else -> false
