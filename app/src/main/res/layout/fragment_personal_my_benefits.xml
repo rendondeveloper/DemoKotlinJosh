@@ -31,6 +31,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+
+
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_view"
                 android:layout_width="match_parent"
@@ -40,6 +43,7 @@
                 app:tabTextColor="@color/label_secondary"
                 app:tabMode="fixed"
                 app:flow_horizontalAlign="start"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
                 app:tabGravity="fill">
 
                 <com.google.android.material.tabs.TabItem
@@ -53,20 +57,23 @@
                     android:text="Reservaciones" />
 
             </com.google.android.material.tabs.TabLayout>
+
+
             <LinearLayout
                 android:id="@+id/events_tab_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <LinearLayout
-                    android:layout_width="360dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_icon="@drawable/menu_benefits"
                         app:benefit_background="dark"
                         app:benefit_style_image="medium"
                         app:benefit_title="10% de descuento en eventos"
@@ -75,7 +82,7 @@
                     <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_icon="@drawable/profile_history_money"
                         app:benefit_background="dark"
                         app:benefit_style_image="medium"
                         app:benefit_title="Recupera tu Dinero"
@@ -85,7 +92,7 @@
                     <com.asdeporte.asdeportev2.ui.reusableview.profile.BenefitsView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:benefit_icon="@drawable/check_circuclar"
+                        app:benefit_icon="@drawable/menu_privacy"
                         app:benefit_background="dark"
                         app:benefit_style_image="medium"
                         app:benefit_title="Seguro contra accidentes"
@@ -99,11 +106,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginBottom="19dp">
+                    android:layout_marginTop="19dp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="56dp">
+                        android:layout_height="64dp">
 
                         <ImageView
                             android:id="@+id/eventImage"
@@ -118,21 +125,21 @@
 
                         <TextView
                             android:id="@+id/eventTitle"
-                            style="@style/Kanit_Regular.Default.16"
+                            style="@style/Kanit_Medium.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="8dp"
-                            android:text="Eventos"
+                            android:text="Tus Eventos"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/eventImage"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
                             android:id="@+id/eventAction"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="@dimen/dimen_24dp"
+                            android:layout_height="@dimen/dimen_24dp"
                             android:layout_marginEnd="28dp"
                             android:src="@drawable/ic_add"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -210,16 +217,18 @@
                     </LinearLayout>
 
                 </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"/>
                 <LinearLayout
                     android:id="@+id/community_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="19dp">
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="56dp">
+                        android:layout_height="64dp">
 
                         <ImageView
                             android:id="@+id/communityImage"
@@ -234,7 +243,7 @@
 
                         <TextView
                             android:id="@+id/communityTitle"
-                            style="@style/Kanit_Regular.Default.16"
+                            style="@style/Kanit_Medium.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -247,8 +256,8 @@
 
                         <ImageView
                             android:id="@+id/comunityAction"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="@dimen/dimen_24dp"
+                            android:layout_height="@dimen/dimen_24dp"
                             android:layout_marginEnd="28dp"
                             android:src="@drawable/ic_add"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -256,25 +265,19 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:tint="@color/black_dynamic" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                    <LinearLayout
-                        android:id="@+id/community_items"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginHorizontal="16dp">
-                    </LinearLayout>
+
                 </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"/>
                 <LinearLayout
                     android:id="@+id/health_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="19dp">
-
+                    android:orientation="vertical">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="56dp">
+                        android:layout_height="64dp">
 
                         <ImageView
                             android:id="@+id/healthImage"
@@ -289,7 +292,7 @@
 
                         <TextView
                             android:id="@+id/healthTitle"
-                            style="@style/Kanit_Regular.Default.16"
+                            style="@style/Kanit_Medium.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -302,8 +305,8 @@
 
                         <ImageView
                             android:id="@+id/healthAction"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="@dimen/dimen_24dp"
+                            android:layout_height="@dimen/dimen_24dp"
                             android:layout_marginEnd="28dp"
                             android:src="@drawable/ic_add"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -312,17 +315,6 @@
                             app:tint="@color/black_dynamic" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <LinearLayout
-                        android:id="@+id/health_items"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginHorizontal="16dp">
-
-                    </LinearLayout>
-
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -332,6 +324,7 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/reservation_tab_view"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <include

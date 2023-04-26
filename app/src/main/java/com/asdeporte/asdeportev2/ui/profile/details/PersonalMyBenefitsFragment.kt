@@ -37,23 +37,23 @@ class PersonalMyBenefitsFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        binding.eventAction.layoutParams.height = 80
-        binding.eventAction.layoutParams.width = 80
+        binding.eventAction.layoutParams.height = 40
+        binding.eventAction.layoutParams.width = 40
 
-        binding.healthAction.layoutParams.height = 80
-        binding.healthAction.layoutParams.width = 80
+        binding.healthAction.layoutParams.height = 40
+        binding.healthAction.layoutParams.width = 40
 
-        binding.comunityAction.layoutParams.height = 80
-        binding.comunityAction.layoutParams.width = 80
+        binding.comunityAction.layoutParams.height = 40
+        binding.comunityAction.layoutParams.width = 40
 
-        binding.reservationTabViewItem.eventAction.layoutParams.height = 80
-        binding.reservationTabViewItem.eventAction.layoutParams.width = 80
+        binding.reservationTabViewItem.eventAction.layoutParams.height = 40
+        binding.reservationTabViewItem.eventAction.layoutParams.width = 40
 
-        binding.reservationTabViewItem.eventAction2.layoutParams.height = 80
-        binding.reservationTabViewItem.eventAction2.layoutParams.width = 80
+        binding.reservationTabViewItem.eventAction2.layoutParams.height = 40
+        binding.reservationTabViewItem.eventAction2.layoutParams.width = 40
 
-        binding.reservationTabViewItem.eventAction3.layoutParams.height = 80
-        binding.reservationTabViewItem.eventAction3.layoutParams.width = 80
+        binding.reservationTabViewItem.eventAction3.layoutParams.height = 40
+        binding.reservationTabViewItem.eventAction3.layoutParams.width = 40
 
         setupData()
     }
@@ -81,8 +81,8 @@ class PersonalMyBenefitsFragment : Fragment() {
             clickAction = !clickAction
             binding.reservationTabViewItem.dummyItems.visibility = if(clickAction) View.VISIBLE else View.GONE
 
-            binding.reservationTabViewItem.eventAction2.layoutParams.height = 80
-            binding.reservationTabViewItem.eventAction2.layoutParams.width = 80
+            binding.reservationTabViewItem.eventAction2.layoutParams.height = 40
+            binding.reservationTabViewItem.eventAction2.layoutParams.width = 40
 
             if(clickAction){
                 binding.reservationTabViewItem.eventAction2.setImageDrawable(context?.getDrawable(R.drawable.ic_minus))
@@ -107,8 +107,8 @@ class PersonalMyBenefitsFragment : Fragment() {
                             }
                         })
                 binding.eventAction.setImageDrawable(context?.getDrawable(R.drawable.ic_minus))
-                binding.eventAction.layoutParams.height = 80
-                binding.eventAction.layoutParams.width = 80
+                binding.eventAction.layoutParams.height = 40
+                binding.eventAction.layoutParams.width = 40
             } else {
                 binding.eventItems.animate()
                         .alpha(0f)
@@ -120,8 +120,8 @@ class PersonalMyBenefitsFragment : Fragment() {
                             }
                         })
                 binding.eventAction.setImageDrawable(context?.getDrawable(R.drawable.ic_add))
-                binding.eventAction.layoutParams.height = 80
-                binding.eventAction.layoutParams.width = 80
+                binding.eventAction.layoutParams.height = 40
+                binding.eventAction.layoutParams.width = 40
             }
             click++
         }

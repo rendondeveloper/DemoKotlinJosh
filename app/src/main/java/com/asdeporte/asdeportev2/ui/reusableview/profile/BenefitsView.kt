@@ -1,6 +1,7 @@
 package com.asdeporte.asdeportev2.ui.reusableview.profile
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -97,17 +98,20 @@ class BenefitsView @JvmOverloads constructor(
             BACKGROUND_WHITE -> {
                 binding.clBenefits.setBackgroundColor(resources.getColor(R.color.white))
                 binding.benefitTitle.setTextColor(resources.getColor(R.color.black))
-                binding.benefitDescription.setTextColor(resources.getColor(R.color.black))
+                binding.benefitDescription.setTextColor(resources.getColor(R.color.label_secondary))
+                binding.benefitImage.setColorFilter(resources.getColor(R.color.orange_as_light))
             }
             BACKGROUND_DARK -> {
                 binding.clBenefits.setBackgroundColor(resources.getColor(R.color.black))
                 binding.benefitTitle.setTextColor(resources.getColor(R.color.white))
-                binding.benefitDescription.setTextColor(resources.getColor(R.color.white))
+                binding.benefitDescription.setTextColor(resources.getColor(R.color.label_secondary))
+                binding.benefitImage.setColorFilter(resources.getColor(R.color.white))
             }
             else -> {
                 binding.clBenefits.setBackgroundColor(resources.getColor(R.color.white))
                 binding.benefitTitle.setTextColor(resources.getColor(R.color.black))
-                binding.benefitTitle.setTextColor(resources.getColor(R.color.black))
+                binding.benefitDescription.setTextColor(resources.getColor(R.color.label_secondary))
+                binding.benefitImage.setColorFilter(resources.getColor(R.color.green))
             }
         }
     }
