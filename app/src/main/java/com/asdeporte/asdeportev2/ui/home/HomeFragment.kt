@@ -20,6 +20,7 @@ import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalBigAdapter
 import com.asdeporte.asdeportev2.ui.inscription.InscriptionActivity
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
 import com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
+import com.asdeporte.asdeportev2.utils.SharedPreferencesAsd
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, SearchTribuView.SearchTribuViewListener {
@@ -27,6 +28,8 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
   private var binding: FragmentHomeBinding? = null
   private lateinit var eventsHorizontalBigAdapter: EventsHorizontalBigAdapter
   private lateinit var eventsHorizontalAdapter: EventsHorizontalAdapter
+
+  //val opcHome = SharedPreferencesAsd.getUserId(requireContext())
 
   val testEvent = EventData("123",
     "7, 14 y 21K by WomanUp",

@@ -16,6 +16,7 @@ import com.asdeporte.asdeportev2.data.calls.UserCall
 import com.asdeporte.asdeportev2.databinding.FragmentLoginBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
+import com.asdeporte.asdeportev2.ui.mitribu.subtabs.FriendMenuBottomSheet
 import com.asdeporte.asdeportev2.utils.SharedPreferencesAsd
 //import com.sportmaniac.view_live.view.ActivityMap
 import kotlinx.coroutines.*
@@ -39,7 +40,9 @@ class LoginFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             //(activity as LoginActivity).showLoading()
             //makeLogin()
-            nextActivity()
+            //nextActivity()
+            LoginMenuBottomSheet().show(requireActivity().supportFragmentManager, "MY_BOTTOM_SHEET")
+
         }
 
         binding.registerButton.setOnClickListener {
