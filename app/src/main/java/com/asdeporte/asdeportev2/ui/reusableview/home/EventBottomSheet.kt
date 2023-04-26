@@ -41,9 +41,7 @@ class EventBottomSheet : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        Glide.with(this)
-            //.load("https://file-examples.com/storage/fe0358100863d05afed02d2/2017/04/file_example_MP4_480_1_5MG.mp4")
-            //.load("https://giphy.com/gifs/video-games-retro-classic-YWUpVw86AtIbe")
+        Glide.with(requireContext())
             .load(event.cover)
             .centerCrop()
             .into(binding.eventCover)
@@ -52,7 +50,6 @@ class EventBottomSheet : BottomSheetDialogFragment() {
         player = ExoPlayer.Builder(requireContext()).build()
         binding.videoPlayerView.player = player
         val mediaItem = MediaItem.fromUri("https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd")
-        //val mediaItem = MediaItem.fromUri("https://file-examples.com/storage/fe0358100863d05afed02d2/2017/04/file_example_MP4_480_1_5MG.mp4")
         player.addMediaItem(mediaItem)
         player.prepare()
         player.play()
@@ -61,7 +58,7 @@ class EventBottomSheet : BottomSheetDialogFragment() {
 
         binding.eventName.text = event.official_name
 
-        Glide.with(this)
+        Glide.with(requireContext())
             .load(event.logo)
             .centerCrop()
             .into(binding.eventImage)
@@ -73,17 +70,16 @@ class EventBottomSheet : BottomSheetDialogFragment() {
             this.dismiss()
             listener.onOpenEvent("")
         }
-
         binding.inscriptionButton.setOnClickListener {
             this.dismiss()
             listener.onOpenInscription("")
         }
-
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         player.stop()
+        player.release()
     }
 
 }

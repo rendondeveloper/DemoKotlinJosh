@@ -36,10 +36,10 @@
                 app:cardCornerRadius="4dp">
 
                 <ImageView
+                    android:id="@+id/img_logo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -51,10 +51,10 @@
                 app:cardCornerRadius="3dp">
 
                 <ImageView
+                    android:id="@+id/img_logo2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -66,10 +66,10 @@
                 app:cardCornerRadius="3dp">
 
                 <ImageView
+                    android:id="@+id/img_logo3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -89,10 +89,10 @@
                 app:cardCornerRadius="4dp">
 
                 <ImageView
+                    android:id="@+id/img_logo4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -104,10 +104,10 @@
                 app:cardCornerRadius="3dp">
 
                 <ImageView
+                    android:id="@+id/img_logo5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -119,10 +119,10 @@
                 app:cardCornerRadius="3dp">
 
                 <ImageView
+                    android:id="@+id/img_logo6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -142,10 +142,10 @@
                 app:cardCornerRadius="4dp">
 
                 <ImageView
+                    android:id="@+id/img_logo7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -157,10 +157,10 @@
                 app:cardCornerRadius="3dp">
 
                 <ImageView
+                    android:id="@+id/img_logo8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -172,10 +172,10 @@
                 app:cardCornerRadius="3dp">
 
                 <ImageView
+                    android:id="@+id/img_logo9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -195,10 +195,10 @@
                 app:cardCornerRadius="4dp">
 
                 <ImageView
+                    android:id="@+id/img_logo10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -210,10 +210,10 @@
                 app:cardCornerRadius="3dp">
 
                 <ImageView
+                    android:id="@+id/img_logo11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -225,10 +225,10 @@
                 app:cardCornerRadius="3dp">
 
                 <ImageView
+                    android:id="@+id/img_logo12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/serial_dummy" />
+                    android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
@@ -242,10 +242,10 @@
             app:cardCornerRadius="4dp">
 
             <ImageView
+                android:id="@+id/img_next"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/proximos_serial_dummy" />
+                android:contentDescription="@string/todo" />
 
         </androidx.cardview.widget.CardView>
 

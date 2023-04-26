@@ -19,7 +19,4 @@ class BlogView @JvmOverloads constructor(
     }
 
 
-    fun setTitle(text: String) {
-
-    }
 }

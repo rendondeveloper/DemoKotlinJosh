@@ -5,9 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.MyGalleryHomeViewBinding
-import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalBigAdapter
 import com.asdeporte.asdeportev2.ui.home.adapters.MyGalleyHomeAdapter
 
 class MyGalleryHomeView @JvmOverloads constructor(

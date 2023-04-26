@@ -2,12 +2,11 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.onboarding.OnboardingActivity"
-    android:id="@+id/content"
     android:background="@color/gray_600"
-    android:visibility="visible">
+    tools:context=".ui.onboarding.OnboardingActivity">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
@@ -18,26 +17,26 @@
         android:id="@+id/previus"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="@android:color/transparent"
         android:layout_gravity="start|top"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        app:tint="@color/white"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
         android:scaleType="fitXY"
+        android:src="@drawable/arrow_left"
         android:visibility="gone"
-        android:src="@drawable/arrow_left"/>
+        app:tint="@color/white" />
 
     <Button
         android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
         android:layout_gravity="start|bottom"
-        android:layout_marginBottom="20dp"
         android:layout_marginStart="20dp"
-        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:text="@string/skip"
         android:textAllCaps="false"
-        android:text="@string/skip"/>
+        android:textColor="@color/white" />
 
 
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
@@ -45,14 +44,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
-        android:layout_marginBottom="119dp"
         android:layout_marginStart="16dp"
+        android:layout_marginBottom="119dp"
         app:dotsColor="@color/white"
         app:dotsCornerRadius="8dp"
         app:dotsSize="8dp"
         app:dotsSpacing="5dp"
         app:dotsWidthFactor="2.5"
-        app:selectedDotColor="@color/orange_as_light"/>
+        app:selectedDotColor="@color/orange_as_light" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -62,10 +61,9 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/orange_as_light"
-        app:tint="@color/white"
         app:borderWidth="0dp"
-        app:srcCompat="@drawable/arrow_right" />
-
+        app:srcCompat="@drawable/arrow_right"
+        app:tint="@color/white" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -13,23 +13,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentHomeBinding
-import com.asdeporte.asdeportev2.databinding.FragmentTabTribuWallBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalAdapter
-import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalBigAdapter
 import com.asdeporte.asdeportev2.ui.inscription.InscriptionActivity
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
 import com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
-import com.asdeporte.asdeportev2.utils.SharedPreferencesAsd
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, SearchTribuView.SearchTribuViewListener {
 
   private var binding: FragmentHomeBinding? = null
-  private lateinit var eventsHorizontalBigAdapter: EventsHorizontalBigAdapter
   private lateinit var eventsHorizontalAdapter: EventsHorizontalAdapter
-
-  //val opcHome = SharedPreferencesAsd.getUserId(requireContext())
 
   val testEvent = EventData("123",
     "7, 14 y 21K by WomanUp",
@@ -48,10 +42,6 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    //binding.latestResult.setData("47")
-    //binding.nextRace.setData("")
-    //binding.galleryHome.setData("")
-    //binding.searchTribu.setData(this)
     binding?.sliderHome?.setData("47")
     binding?.serialsGrid?.setData("47")
     binding?.latestResult?.setOnClickListener {
@@ -66,15 +56,15 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
 
     // Estelares
     binding?.topEventsTitle?.setTitle("Estelares")
-    eventsHorizontalBigAdapter = EventsHorizontalBigAdapter().apply {
+    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
       onItemClick = {
         EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
       }
     }
-    binding?.topEvents?.adapter = eventsHorizontalBigAdapter
+    binding?.topEvents?.adapter = eventsHorizontalAdapter
     binding?.topEvents?.setHasFixedSize(true)
     binding?.topEvents?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-    eventsHorizontalBigAdapter.setItems(items)
+    eventsHorizontalAdapter.setItems(items)
 
     // Eventos cerca de mi
     binding?.moreEventsTitle?.setTitle("Eventos cerca de mi")
