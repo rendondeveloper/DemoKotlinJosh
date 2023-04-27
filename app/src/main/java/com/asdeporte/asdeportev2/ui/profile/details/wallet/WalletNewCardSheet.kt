@@ -12,15 +12,16 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.SheetWalletNewCardBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class WalletNewCardSheet : BottomSheetDialogFragment() {
 
     private var _binding: SheetWalletNewCardBinding? = null
     private val binding get() = _binding!!
-
     lateinit var frontAnim:AnimatorSet
     lateinit var backAnim: AnimatorSet
     var isFront =true
@@ -34,6 +35,24 @@ class WalletNewCardSheet : BottomSheetDialogFragment() {
     companion object {
         fun create(listener: NewCardSheetListener) = WalletNewCardSheet().apply {
             this.listener = listener
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        dialog?.let {
+            val bottomSheet: View? = it.findViewById(com.google.android.material.R.id.design_bottom_sheet)
+            bottomSheet?.layoutParams?.height = ViewGroup.LayoutParams.MATCH_PARENT
+            val view: View? = view
+            view?.post {
+                val parent: View = view.parent as View
+                val params: CoordinatorLayout.LayoutParams = parent.layoutParams as CoordinatorLayout.LayoutParams
+                val behavior: CoordinatorLayout.Behavior<*>? = params.behavior
+                val bottomSheetBehavior: BottomSheetBehavior<*>? = behavior as? BottomSheetBehavior<*>
+                bottomSheetBehavior?.peekHeight = view.measuredHeight
+                (bottomSheet?.parent as? View)?.setBackgroundColor(Color.TRANSPARENT)
+            }
         }
     }
 
@@ -57,12 +76,7 @@ class WalletNewCardSheet : BottomSheetDialogFragment() {
                 toggleCard()
             }
         }
-        binding.monthTextInput.setOnFocusChangeListener { v, hasFocus ->
-            if (hasFocus && !isFront) {
-                toggleCard()
-            }
-        }
-        binding.yearTextInput.setOnFocusChangeListener { v, hasFocus ->
+        binding.dateExpirationTextField.setOnFocusChangeListener { v, hasFocus ->
             if (hasFocus && !isFront) {
                 toggleCard()
             }
@@ -71,6 +85,12 @@ class WalletNewCardSheet : BottomSheetDialogFragment() {
             if (hasFocus && isFront) {
                 toggleCard()
             }
+        }
+        binding.cancelButton.setOnClickListener{
+            this.dismiss()
+        }
+        binding.confirmButton.setOnClickListener{
+            this.dismiss()
         }
     }
 
@@ -89,18 +109,18 @@ class WalletNewCardSheet : BottomSheetDialogFragment() {
 
     }
     private fun toggleCard() {
-        if (isFront) {
+        isFront = if (isFront) {
             frontAnim.setTarget(binding.frontCard)
             backAnim.setTarget(binding.backCard)
             frontAnim.start()
             backAnim.start()
-            isFront = false
+            false
         } else {
             frontAnim.setTarget(binding.backCard)
             backAnim.setTarget(binding.frontCard)
             backAnim.start()
             frontAnim.start()
-            isFront = true
+            true
         }
     }
 
@@ -112,4 +132,6 @@ class WalletNewCardSheet : BottomSheetDialogFragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

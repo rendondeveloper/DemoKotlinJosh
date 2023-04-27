@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentPersonalWalletBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.CreditCardAdapter
+import com.asdeporte.asdeportev2.ui.profile.adapters.HistoryAdapter
 import com.asdeporte.asdeportev2.ui.profile.details.wallet.WalletNewCardSheet
 
 class PersonalWalletFragment : Fragment(), WalletNewCardSheet.NewCardSheetListener {
@@ -22,6 +24,7 @@ class PersonalWalletFragment : Fragment(), WalletNewCardSheet.NewCardSheetListen
 
     //CreditCardAdapter
     private lateinit var creditCardAdapter: CreditCardAdapter
+    private lateinit var historyAdapter: HistoryAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentPersonalWalletBinding.inflate(inflater, container, false)
@@ -36,14 +39,14 @@ class PersonalWalletFragment : Fragment(), WalletNewCardSheet.NewCardSheetListen
             findNavController().popBackStack()
         }
 
-        setupCards()
-
         binding.addCard.setOnClickListener {
             WalletNewCardSheet.create(this).show(requireActivity().supportFragmentManager, "PersonalWalletFragment")
         }
         binding.addBalance.setOnClickListener {
             findNavController().safelyNavigate(R.id.toAddBalance)
         }
+        setupCards()
+        setupHistory()
     }
 
     private fun setupCards() {
@@ -52,15 +55,22 @@ class PersonalWalletFragment : Fragment(), WalletNewCardSheet.NewCardSheetListen
                 //TODO("Not yet implemented")
             }
         }
-
         binding.cardsList.adapter = creditCardAdapter
         binding.cardsList.setHasFixedSize(true)
         binding.cardsList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-
         val emptyEvent = EventData("", "", "", "")
         val items = listOf(emptyEvent, emptyEvent, emptyEvent, emptyEvent)
         creditCardAdapter.setItems(items)
+    }
 
+    private fun setupHistory() {
+        historyAdapter = HistoryAdapter()
+        binding.historyList.adapter = historyAdapter
+        binding.historyList.setHasFixedSize(true)
+        binding.historyList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        val emptyEvent = EventData("", "", "", "")
+        val items = listOf(emptyEvent, emptyEvent, emptyEvent, emptyEvent, emptyEvent)
+        historyAdapter.setItems(items)
     }
 
     /*
