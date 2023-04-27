@@ -79,8 +79,11 @@ class ProfileItemView @JvmOverloads constructor(
         item.icon?.let {
             binding.icon.setImageDrawable(it)
             binding.icon.visibility = VISIBLE
+            binding.imageView14.visibility = VISIBLE
         } ?: run {
             binding.icon.visibility = GONE
+            binding.imageView14.visibility = GONE
+            binding.viewSeparate.visibility = INVISIBLE
         }
 
         item.section?.let {
@@ -105,7 +108,6 @@ class ProfileItemView @JvmOverloads constructor(
         } ?: run {
             binding.subtitle.visibility = GONE
         }
-
 
     }
 }
