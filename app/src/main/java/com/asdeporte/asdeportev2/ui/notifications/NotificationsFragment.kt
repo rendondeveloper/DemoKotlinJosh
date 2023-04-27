@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
@@ -49,28 +50,37 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
 
         binding?.updatesScroll?.visibility = View.VISIBLE
         binding?.messagesScroll?.visibility = View.GONE
-
+        val tab1 = binding?.tabView?.getTabAt(0)
+        val tab2 = binding?.tabView?.getTabAt(1)
+        val tabView1 = (tab1?.view as ViewGroup).getChildAt(1) as TextView
+        val tabView2 = (tab2?.view as ViewGroup).getChildAt(1) as TextView
+        tabView1.setTextAppearance(R.style.SelectedTabText)
+        tabView2.setTextAppearance(R.style.CustomTabText)
         binding?.tabView?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                if (tab?.position == 0) {
-                    binding?.updatesScroll?.visibility = View.VISIBLE
-                    binding?.messagesScroll?.visibility = View.GONE
-                } else {
-                    binding?.updatesScroll?.visibility = View.GONE
-                    binding?.messagesScroll?.visibility = View.VISIBLE
+                tab?.let {
+                    val tabView = (tab.view as ViewGroup).getChildAt(1) as TextView
+                    tabView.setTextAppearance(R.style.SelectedTabText)
+                    if (tab.position == 0) {
+                        binding?.updatesScroll?.visibility = View.VISIBLE
+                        binding?.messagesScroll?.visibility = View.GONE
+                    } else {
+                        binding?.updatesScroll?.visibility = View.GONE
+                        binding?.messagesScroll?.visibility = View.VISIBLE
+                    }
                 }
+
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {}
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                tab?.let {
+                    val tabView = (tab.view as ViewGroup).getChildAt(1) as TextView
+                    tabView.setTextAppearance(R.style.CustomTabText)
+                }
+            }
         })
-        /*
-        binding.tabView.getTabAt(0)?.orCreateBadge?.number = 5
-        binding.tabView.getTabAt(0)?.orCreateBadge?.backgroundColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
-        binding.tabView.getTabAt(1)?.orCreateBadge?.number = 2
-        binding.tabView.getTabAt(1)?.orCreateBadge?.backgroundColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
-         */
         val typefaceSemiBold = ResourcesCompat.getFont(requireContext(), R.font.kanit_semibold)
         val typefaceRegular = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
         binding?.singleButton?.setTextColor(resources.getColor(R.color.orange_as_light))
