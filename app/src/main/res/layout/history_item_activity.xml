@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:background="@drawable/shape_gray">
+
+    <TextView
+        android:id="@+id/tvActivity"
+        style="@style/Kanit_Bold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="CORRER"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvActivityDate"
+        style="@style/Kanit_Regular.Default.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="31/01/2023 - 06:50 am"
+        android:textColor="@color/label_secondary"
+        app:layout_constraintEnd_toEndOf="@+id/tvActivity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvActivity"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivity" />
+
+    <TextView
+        android:id="@+id/tvActivityDateOfficial"
+        style="@style/Kanit_Regular.Default.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:text="Tiempo oficial"
+        android:textColor="@color/label_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvActivityDateOfficialDate"
+        style="@style/Kanit_Bold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="00:22:18 min"
+        app:layout_constraintEnd_toEndOf="@+id/tvActivityDateOfficial"
+        app:layout_constraintStart_toStartOf="@+id/tvActivityDateOfficial"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityDateOfficial" />
+
+    <TextView
+        android:id="@+id/tvActivityCalories"
+        style="@style/Kanit_Regular.Default.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Calorías"
+        android:textColor="@color/label_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityDate" />
+
+    <TextView
+        android:id="@+id/tvActivityCaloriesData"
+        style="@style/Kanit_Bold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="00:22:18 min"
+        app:layout_constraintStart_toStartOf="@+id/tvActivityCalories"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityCalories" />
+
+    <TextView
+        android:id="@+id/tvActivityRitmo"
+        style="@style/Kanit_Regular.Default.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="54dp"
+        android:text="Ritmo promedio"
+        android:textColor="@color/label_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/tvActivityDistance"
+        app:layout_constraintStart_toEndOf="@+id/tvActivityCalories"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityDate" />
+
+    <TextView
+        android:id="@+id/tvActivityRitmoData"
+        style="@style/Kanit_Bold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="5.5 Km"
+        app:layout_constraintStart_toStartOf="@+id/tvActivityRitmo"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityRitmo" />
+
+    <TextView
+        android:id="@+id/tvActivityDistance"
+        style="@style/Kanit_Regular.Default.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Distancia"
+        android:textColor="@color/label_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityDate" />
+
+    <TextView
+        android:id="@+id/tvActivityDistanceData"
+        style="@style/Kanit_Bold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="5.5 Km"
+        app:layout_constraintEnd_toEndOf="@+id/tvActivityDistance"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvActivityDistance"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityDistance" />
+
+    <ImageView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_graph_dummy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityRitmoData" />
+
+    <TextView
+        android:id="@+id/tvShowDetail"
+        style="@style/Kanit_Bold.Orange.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Ver detalles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/graph"
+        app:layout_constraintStart_toStartOf="@+id/graph"
+        app:layout_constraintTop_toBottomOf="@+id/graph" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,10 @@
             <enum name="dark" value="1"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="HistoryItem">
+        <attr name="history_item_title" format="string"/>
+        <attr name="history_item_calories" format="string"/>
+        <attr name="history_item_average" format="string"/>
+        <attr name="history_item_time" format="string"/>
+    </declare-styleable>
 </resources>

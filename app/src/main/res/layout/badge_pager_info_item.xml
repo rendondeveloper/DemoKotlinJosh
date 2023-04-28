@@ -16,39 +16,49 @@
             android:id="@+id/badge_image"
             android:layout_width="240dp"
             android:layout_height="200dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="62dp"
             android:src="@drawable/badge_next_dummy"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textCity"
-            style="@style/Kanit_Semibold.Secondary.12"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_weight="1"
-            android:text="CIUDAD DE MÉXICO"
-            app:layout_constraintEnd_toEndOf="@+id/badge_image"
-            app:layout_constraintHorizontal_bias="0.2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/badge_image" />
-
-        <TextView
-            android:id="@+id/textDate"
-            style="@style/Kanit_Semibold.Secondary.12"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_weight="1"
-            android:text="16/DICIEMBRE/22"
+        <LinearLayout
+            android:id="@+id/linearLayout18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.8"
-            app:layout_constraintStart_toStartOf="@+id/badge_image"
-            app:layout_constraintTop_toBottomOf="@+id/badge_image" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/badge_image">
+
+            <TextView
+                android:id="@+id/textCity"
+                style="@style/Kanit_Semibold.Secondary.12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="CDMX, México"
+                android:textAlignment="viewEnd"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_secondary_text" />
+
+            <TextView
+                android:id="@+id/textDate"
+                style="@style/Kanit_Semibold.Secondary.12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:text="16/NOVIEMBRE/23"
+                android:textAlignment="viewStart"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_secondary_text" />
+
+        </LinearLayout>
 
 
         <TextView
@@ -56,16 +66,17 @@
             style="@style/Kanit_Semi_Bold_Italic.Secondary.20"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="40dp"
             android:layout_weight="1"
             android:text="Medio Maratón por el Amor y la Paz 2023"
             android:textAlignment="center"
+            android:textAllCaps="true"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textCity" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout18" />
 
 
         <View
@@ -73,7 +84,7 @@
             android:layout_width="1dp"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:background="@color/gray_400"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,10 +94,10 @@
 
         <TextView
             android:id="@+id/textViewPosition"
-            style="@style/Kanit_Semibold.Default.12"
+            style="@style/Kanit_Regular.Default.12"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="32dp"
             android:layout_weight="1"
             android:text="Posición:"
             android:textColor="@color/white"
@@ -103,7 +114,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
-            android:text="6 de 1800"
+            android:text="1 de 1200"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/textViewPosition"
             app:layout_constraintStart_toStartOf="@+id/textViewPosition"
@@ -112,10 +123,10 @@
 
         <TextView
             android:id="@+id/textViewTime"
-            style="@style/Kanit_Semibold.Default.12"
+            style="@style/Kanit_Regular.Default.12"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="32dp"
             android:layout_weight="1"
             android:text="Tiempo:"
             android:textColor="@color/white"
@@ -131,7 +142,7 @@
             android:layout_height="21dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
-            android:text="02:10:22:00"
+            android:text="00:18:00"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/textViewTime"
             app:layout_constraintStart_toStartOf="@+id/textViewTime"
@@ -143,7 +154,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="33dp"
             android:layout_marginEnd="16dp"
             android:gravity="center"
             android:orientation="horizontal"
@@ -153,18 +164,19 @@
 
             <ImageView
                 android:id="@+id/share"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"
                 android:layout_marginEnd="12dp"
-                android:src="@drawable/ic_share_black"
-                app:tint="@color/label_secondary" />
+                android:src="@drawable/ic_share"
+                app:tint="@color/gray_text" />
 
             <TextView
                 android:id="@+id/textViewShare"
                 style="@style/Kanit_Semibold.Secondary.14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Compartir" />
+                android:text="Compartir"
+                android:textColor="@color/gray_text" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

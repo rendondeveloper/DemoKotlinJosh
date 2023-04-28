@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="163dp">
+
+    <TextView
+        android:id="@+id/tvActivity"
+        style="@style/Kanit_Medium.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:text="Actividad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view18"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/background_item_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/tvActivity"
+        app:layout_constraintStart_toEndOf="@+id/tvActivity"
+        app:layout_constraintTop_toTopOf="@+id/tvActivity" />
+
+    <View
+        android:id="@+id/view181"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/background_item_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/tvActivity"
+        app:layout_constraintEnd_toEndOf="@+id/view18"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view18"
+        app:layout_constraintTop_toTopOf="@+id/tvActivity"
+        app:layout_constraintVertical_bias="0.454" />
+
+    <TextView
+        android:id="@+id/tvActivityPercent"
+        style="@style/Kanit_Medium.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="95%"
+        app:layout_constraintBottom_toBottomOf="@+id/view18"
+        app:layout_constraintStart_toEndOf="@+id/view18"
+        app:layout_constraintTop_toTopOf="@+id/view18"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <ImageView
+        android:id="@+id/tvActivityPercentArrow"
+        android:src="@drawable/ic_arrow_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvActivityPercent"
+        app:layout_constraintStart_toEndOf="@+id/tvActivityPercent"
+        app:layout_constraintTop_toTopOf="@+id/tvActivityPercent" />
+
+
+    <TextView
+        android:id="@+id/tvSleep"
+        style="@style/Kanit_Medium.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Sueño"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivity" />
+
+    <View
+        android:id="@+id/view17"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:background="@drawable/background_item_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSleep"
+        app:layout_constraintStart_toStartOf="@+id/view18"
+        app:layout_constraintTop_toTopOf="@+id/tvSleep" />
+
+    <View
+        android:id="@+id/view171"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_item_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSleep"
+        app:layout_constraintEnd_toEndOf="@+id/view17"
+        app:layout_constraintStart_toStartOf="@+id/view17"
+        app:layout_constraintTop_toTopOf="@+id/tvSleep" />
+
+    <TextView
+        android:id="@+id/tvSleepPercent"
+        style="@style/Kanit_Medium.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="75%"
+        app:layout_constraintBottom_toBottomOf="@+id/view17"
+        app:layout_constraintStart_toEndOf="@+id/view17"
+        app:layout_constraintTop_toTopOf="@+id/view17" />
+
+    <ImageView
+        android:id="@+id/tvSleepPercentArrow"
+        android:src="@drawable/ic_arrow_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSleepPercent"
+        app:layout_constraintStart_toEndOf="@+id/tvSleepPercent"
+        app:layout_constraintTop_toTopOf="@+id/tvSleepPercent" />
+
+    <TextView
+        android:id="@+id/tvHrv"
+        style="@style/Kanit_Medium.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="HRV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSleep" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:background="@drawable/background_item_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHrv"
+        app:layout_constraintStart_toStartOf="@+id/view17"
+        app:layout_constraintTop_toTopOf="@+id/tvHrv" />
+
+    <View
+        android:id="@+id/view161"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/background_item_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHrv"
+        app:layout_constraintEnd_toEndOf="@+id/view16"
+        app:layout_constraintStart_toStartOf="@+id/view16"
+        app:layout_constraintTop_toTopOf="@+id/tvHrv" />
+
+    <TextView
+        android:id="@+id/tvHrvPercent"
+        style="@style/Kanit_Medium.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="65%"
+        app:layout_constraintBottom_toBottomOf="@+id/view16"
+        app:layout_constraintStart_toEndOf="@+id/view16"
+        app:layout_constraintTop_toTopOf="@+id/view16" />
+
+    <ImageView
+        android:id="@+id/tvHrvPercentArrow"
+        android:src="@drawable/ic_arrow_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHrvPercent"
+        app:layout_constraintStart_toEndOf="@+id/tvHrvPercent"
+        app:layout_constraintTop_toTopOf="@+id/tvHrvPercent" />
+
+
+    <TextView
+        android:id="@+id/tvScoreLabel"
+        style="@style/Kanit_Bold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="SCORE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvScore"
+        style="@style/Kanit_Bold.Default.36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:text="56%"
+        app:layout_constraintEnd_toEndOf="@+id/tvScoreLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvScoreLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreLabel" />
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/ic_help_history"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScore"
+        app:layout_constraintStart_toEndOf="@+id/tvScore"
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreLabel" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConnect"
+        style="@style/Kanit_Regular.Default.10"
+        android:layout_width="194dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/secondary_button"
+        android:text="Conecta tu dispositivo"
+        android:textAllCaps="false"
+        android:textColor="@color/black_dynamic"
+        app:backgroundTint="@color/black_dynamic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view16" />ç
+
+    <TextView
+        android:id="@+id/tvConnect"
+        android:textColor="@color/label_secondary"
+        style="@style/Kanit_Regular.Default.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Conectado a:"
+        app:layout_constraintBottom_toBottomOf="@+id/btnConnect"
+        app:layout_constraintStart_toEndOf="@+id/btnConnect"
+        app:layout_constraintTop_toTopOf="@+id/btnConnect" />
+
+    <ImageView
+        android:id="@+id/tvConnectStatus"
+        android:src="@drawable/ic_device_conected"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvConnect"
+        app:layout_constraintStart_toEndOf="@+id/tvConnect"
+        app:layout_constraintTop_toTopOf="@+id/tvConnect" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

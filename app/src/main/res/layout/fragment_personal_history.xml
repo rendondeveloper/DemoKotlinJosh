@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileDetailsFragment">
+    tools:context="com.asdeporte.asdeportev2.ui.profile.details.PersonalHistoryFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/AsdToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:title="Mi histórico"
-        app:titleTextColor="@color/black_dynamic"
         app:navigationIcon="@drawable/arrow_left"
         app:navigationIconTint="@color/black_dynamic"
-        android:theme="@style/AsdToolbarTheme"/>
+        app:title="Mi histórico"
+        app:titleTextColor="@color/black_dynamic" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,18 +35,137 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="16dp"
-                android:background="@color/secondary_background"/>
+                android:background="@color/secondary_background" />
+
+            <include layout="@layout/history_item_score" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/secondary_background" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_view_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:endColor="@android:color/transparent"
+                app:flow_horizontalAlign="start"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/orange_as_light"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/label_secondary">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Actividad" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sueño" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HRV" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <LinearLayout
+                android:id="@+id/llActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/history_item_activity" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <include layout="@layout/history_item_history" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <include layout="@layout/history_item_disciplines" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <include layout="@layout/history_item_average_force" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+
+                <include layout="@layout/history_item_calories_and_heart" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSleep"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Sueño" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llHrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/history_item_hrv_days" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
+
+                <include layout="@layout/history_item_recovery" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/secondary_background" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:endColor="@android:color/transparent"
-                app:tabSelectedTextColor="@color/black_dynamic"
-                app:tabTextColor="@color/label_secondary"
-                app:tabMode="fixed"
                 app:flow_horizontalAlign="start"
-                app:tabGravity="fill">
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/orange_as_light"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/label_secondary">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
@@ -68,185 +186,186 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Información personal"
-                    android:textAllCaps="true"
-                    android:textAlignment="center"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginHorizontal="16dp"
-                    style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+                    android:layout_height="16dp" />
 
-                <com.github.mikephil.charting.charts.PieChart
-                    android:id="@+id/pie_chart"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_margin="12dp"/>
+                <include
+                    android:id="@+id/sport_profile"
+                    layout="@layout/history_item_sport_profile" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="16dp"
-                    android:background="@color/secondary_background"/>
+                    android:layout_height="32dp" />
 
                 <TextView
+                    style="@style/Kanit_Semi_Bold_Italic.Default.20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TOTAL de eventos"
-                    android:textAllCaps="true"
-                    android:textAlignment="center"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="18dp"
                     android:layout_marginHorizontal="16dp"
-                    style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+                    android:layout_marginBottom="18dp"
+                    android:text="TOTAL DE EVENTOS"
+                    android:textAlignment="center"
+                    android:textAllCaps="true" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal">
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
                     <TextView
+                        style="@style/Kanit_Medium.Secondary.16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cantidad de eventos:"
                         android:layout_marginEnd="12dp"
-                        style="@style/Kanit_Medium.Secondary.16"/>
+                        android:text="Cantidad de eventos:" />
+
                     <TextView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:text="30"
+                        style="@style/Kanit_Regular.Secondary.12"
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/badge_circle_shape"
                         android:gravity="center"
-                        style="@style/Kanit_Medium.Default.20"
-                        android:background="@drawable/white_circle"
-                        app:backgroundTint="@color/green_dynamic"
-                        android:textColor="@color/white"/>
+                        android:text="30"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
                     android:weightSum="2">
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:layout_weight="1">
+                        android:orientation="vertical">
+
                         <TextView
+                            style="@style/Kanit_Bold.Default.36"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:text="25"
                             android:layout_centerInParent="true"
-                            android:gravity="center"
-                            style="@style/Kanit_Bold.Default.36"
                             android:background="@drawable/statistic_circle"
-                            android:textColor="@color/white"/>
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/white" />
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Carrera"
                             android:layout_centerInParent="true"
                             android:gravity="center"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Carrera" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:layout_weight="1">
+                        android:orientation="vertical">
+
                         <TextView
+                            style="@style/Kanit_Bold.Default.36"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:text="25"
                             android:layout_centerInParent="true"
-                            android:gravity="center"
-                            style="@style/Kanit_Bold.Default.36"
                             android:background="@drawable/statistic_circle"
-                            android:textColor="@color/white"/>
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/white" />
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bicicleta"
                             android:layout_centerInParent="true"
                             android:gravity="center"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Bicicleta" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginVertical="30dp"
+                    android:orientation="horizontal"
                     android:weightSum="2">
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:layout_weight="1">
+                        android:orientation="vertical">
+
                         <TextView
+                            style="@style/Kanit_Bold.Default.36"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:text="25"
                             android:layout_centerInParent="true"
-                            android:gravity="center"
-                            style="@style/Kanit_Bold.Default.36"
                             android:background="@drawable/statistic_circle"
-                            android:textColor="@color/white"/>
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/white" />
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Carrera"
                             android:layout_centerInParent="true"
                             android:gravity="center"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Carrera" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:layout_weight="1">
+                        android:orientation="vertical">
+
                         <TextView
+                            style="@style/Kanit_Bold.Default.36"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:text="25"
                             android:layout_centerInParent="true"
-                            android:gravity="center"
-                            style="@style/Kanit_Bold.Default.36"
                             android:background="@drawable/statistic_circle"
-                            android:textColor="@color/white"/>
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/white" />
+
                         <TextView
+                            style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Carrera de obstáculos"
                             android:layout_centerInParent="true"
                             android:gravity="center"
-                            style="@style/Kanit_Semibold.Default.16"/>
+                            android:text="Carrera de obstáculos" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!--<androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/pager"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />-->
+                    android:layout_height="32dp" />
 
-                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-                    android:id="@+id/dots_indicator"
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_dots_dummy" />
+
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    app:dotsColor="@color/white"
-                    app:dotsCornerRadius="8dp"
-                    app:dotsSize="8dp"
-                    app:dotsSpacing="5dp"
-                    app:dotsWidthFactor="2.5"
-                    app:selectedDotColor="@color/white"
-                    app:progressMode="true" />
+                    android:layout_height="32dp" />
 
             </LinearLayout>
 
@@ -259,29 +378,29 @@
                 android:paddingHorizontal="16dp">
 
                 <TextView
+                    style="@style/Kanit_Semi_Bold_Italic.Default.20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mis eventos"
-                    android:textAllCaps="true"
                     android:layout_marginVertical="24dp"
-                    style="@style/Kanit_Semi_Bold_Italic.Default.20"/>
+                    android:text="Mis eventos"
+                    android:textAllCaps="true" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray_400"/>
+                    android:background="@color/gray_400" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/events_list"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="77dp"
-                android:background="@color/secondary_background"/>
+                android:background="@color/secondary_background" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

@@ -15,14 +15,12 @@ import com.asdeporte.asdeportev2.databinding.FragmentPersonalHistoryBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
-import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
-import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
 import com.google.android.material.tabs.TabLayout
@@ -59,6 +57,19 @@ class PersonalHistoryFragment : Fragment() {
         binding.statisticsView.visibility = View.VISIBLE
         binding.eventsView.visibility = View.GONE
 
+
+        binding.tabViewMain.addOnTabSelectedListener(object  : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val index = tab?.position ?: 0
+                binding.llActivity.visibility = if(index == 0) View.VISIBLE else View.GONE
+                binding.llSleep.visibility = if(index == 1) View.VISIBLE else View.GONE
+                binding.llHrv.visibility = if(index == 2) View.VISIBLE else View.GONE
+
+            }
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+        })
+
         binding.tabView.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 if (tab?.position == 0) {
@@ -79,7 +90,7 @@ class PersonalHistoryFragment : Fragment() {
 
     private fun setupStatistics() {
 
-        chart = binding.pieChart
+        chart = binding.sportProfile.pieChart
         chart!!.setUsePercentValues(true)
         chart!!.description.isEnabled = false
         chart!!.setExtraOffsets(5f, 10f, 5f, 5f)
@@ -135,7 +146,7 @@ class PersonalHistoryFragment : Fragment() {
 
         setData(2, 10f)
 
-        binding.dotsIndicator.selectedDotColor = ContextCompat.getColor(requireContext(), R.color.asd_pink)
+        //binding.dotsIndicator.selectedDotColor = ContextCompat.getColor(requireContext(), R.color.asd_pink)
         //binding.dotsIndicator.attachTo(viewPager)
 
     }

@@ -46,14 +46,23 @@
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <ImageView
-            android:id="@+id/event_image"
-            android:layout_width="@dimen/dimen_48dp"
-            android:layout_height="@dimen/dimen_48dp"
+        <LinearLayout
+            android:id="@+id/lnImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginTop="@dimen/dimen_16dp"
+            android:background="@drawable/gray_border_corner_3"
+            android:orientation="vertical"
+            android:padding="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/view3" />
+            app:layout_constraintTop_toBottomOf="@+id/view3">
+
+            <ImageView
+                android:id="@+id/event_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvName"
@@ -65,8 +74,8 @@
             android:textAllCaps="true"
             android:text="Triatlon Astri la Paz"
             app:layout_constraintEnd_toStartOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/event_image"
-            app:layout_constraintTop_toTopOf="@+id/event_image" />
+            app:layout_constraintStart_toEndOf="@+id/lnImage"
+            app:layout_constraintTop_toTopOf="@+id/lnImage" />
 
         <TextView
             android:id="@+id/textView3"
@@ -74,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/position"
-            app:layout_constraintBottom_toBottomOf="@+id/event_image"
+            app:layout_constraintBottom_toBottomOf="@+id/lnImage"
             app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
 

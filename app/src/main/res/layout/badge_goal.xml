@@ -8,8 +8,7 @@
     <RelativeLayout
         android:id="@+id/cardView"
         android:layout_width="157dp"
-        android:layout_height="240dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="171dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/dependant_card_background"
         android:elevation="0dp"
@@ -21,29 +20,26 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="39dp"
             android:background="@drawable/corners_top_secondary" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingHorizontal="12dp">
+            android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/badge_image"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="34dp"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/avatar_dummy"
-                app:civ_circle_background_color="@color/white_dynamic" />
+                android:layout_marginTop="11dp"
+                android:src="@drawable/badge_dummy"/>
 
             <TextView
                 android:id="@+id/badge_year"
-                style="@style/Kanit_Semibold.Default.10"
+                style="@style/Kanit_Regular.Default.10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -53,17 +49,17 @@
 
             <TextView
                 android:id="@+id/badge_name_short"
-                style="@style/Kanit_Regular.Default.16"
+                style="@style/Kanit_Regular.Default.12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:maxLines="3"
+                android:maxLines="2"
                 android:text="Triatlón Internacional Manzanillo 2023" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_detail"
                 style="@style/Kanit_Regular.Default.14"
-                android:layout_width="90dp"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/small_button_height"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/secondary_button"

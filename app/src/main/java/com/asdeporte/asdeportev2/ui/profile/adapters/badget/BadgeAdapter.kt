@@ -60,7 +60,6 @@ class GoalBadgedCardView @JvmOverloads constructor(
             badgeYear.text = item.year
             Glide.with(context)
                     .load(item.image ?: item.imageResource?.let { ContextCompat.getDrawable(context, it) })
-                    .centerCrop()
                     .apply(requestOptions)
                     .into(binding.badgeImage)
 
