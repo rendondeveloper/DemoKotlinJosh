@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/white_dynamic"
-                android:orientation="vertical">
+                android:orientation="vertical" >
 
                 <com.asdeporte.asdeportev2.ui.reusableview.home.SearEventBigView
                     android:id="@+id/searchEvent"
@@ -196,6 +196,61 @@
                     app:backgroundTint="@null" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_blue"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dimen_36dp"
+                android:paddingVertical="40dp">
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold_Italic.Default.24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="Planes asd+"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="@style/Kanit_Regular.Default.12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Conoce y disfruta de los beneficios exclusivos que Asdeporte PLUS tiene para ti"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/dark_blue" />
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.PlanFreeView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp" />
+
+            </RelativeLayout>
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.PlanPlusView
+                android:id="@+id/planPlusView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginBottom="@dimen/dimen_32dp" />
+
         </LinearLayout>
 
     </ScrollView>

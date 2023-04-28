@@ -48,6 +48,7 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
       EventBottomSheet.create(this, testEvent).show(requireActivity().supportFragmentManager, "EventBottomSheet")
     }
     binding?.resumeHome?.setData("47")
+    binding?.planPlusView?.setData()
     setupAdapters()
   }
 

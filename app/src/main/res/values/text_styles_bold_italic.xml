@@ -73,6 +73,9 @@
     <style name="Kanit_Bold_Italic.Default.25" parent="Kanit_Bold_Italic.Default">
         <item name="android:textSize">@dimen/text_25</item>
     </style>
+    <style name="Kanit_Bold_Italic.Default.28" parent="Kanit_Bold_Italic.Default">
+        <item name="android:textSize">@dimen/text_28</item>
+    </style>
     <!-- Secondary color -->
     <style name="Kanit_Bold_Italic.Secondary.10" parent="Kanit_Bold_Italic.Secondary">
         <item name="android:textSize">@dimen/text_10</item>

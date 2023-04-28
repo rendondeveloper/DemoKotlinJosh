@@ -1162,4 +1162,6 @@
     <string name="mis_proximas_metas">Mis próximas metas</string>
     <string name="tiempo">Tiempo:</string>
     <string name="personal_information">Información personal</string>
+    <string name="free">Free</string>
+    <string name="mxn">MXN</string>
 </resources>
