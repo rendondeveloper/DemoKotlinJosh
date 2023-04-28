@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.databinding.NotificationChatBottomSheetBinding
 import com.asdeporte.asdeportev2.ui.alert.AlertDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment

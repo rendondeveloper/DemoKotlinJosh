@@ -18,7 +18,7 @@ import com.asdeporte.asdeportev2.databinding.SheetWalletNewCardBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class WalletNewCardSheet : BottomSheetDialogFragment() {
+class WalletNewCardSheet(private val isEdit: Boolean = false) : BottomSheetDialogFragment() {
 
     private var _binding: SheetWalletNewCardBinding? = null
     private val binding get() = _binding!!
@@ -63,6 +63,10 @@ class WalletNewCardSheet : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        if(isEdit){
+            setupEditCard()
+        }
 
         setupCard()
 
@@ -124,9 +128,14 @@ class WalletNewCardSheet : BottomSheetDialogFragment() {
         }
     }
 
-    /*
-     Listeners
-     */
+    private fun setupEditCard(){
+        binding.txtTitle.text = "Editar tarjeta"
+        binding.nameTextInput.setText("Fernando Velázquez")
+        binding.numberTextInput.setText("4039 2903 2019 2394")
+        binding.dateExpirationInput.setText( "12/25")
+        binding.cvvTextInput.setText("***")
+        binding.confirmButton.setText("Guardar")
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
