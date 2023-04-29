@@ -36,38 +36,37 @@
             app:endIconDrawable="@drawable/ic_search"
             app:endIconMode="custom"
             app:endIconTint="@color/black_dynamic"
-            app:hintTextColor="@color/black_dynamic">
+            app:hintTextColor="@color/label_secondary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/searchTextInput"
                 style="@style/Kanit_Regular.Default.16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white_dynamic"
+                android:background="@drawable/rounded_corners"
                 android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/sportTextField"
-            style="@style/MenuTextInputLayoutStyle"
+            style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="@dimen/input_height"
             android:layout_marginBottom="10dp"
             android:hint="Tipo de deporte"
             app:endIconDrawable="@drawable/arrow_down_sec"
+            app:endIconMode="custom"
             app:endIconTint="@color/black_dynamic"
-            app:hintTextColor="@color/black_dynamic">
+            app:hintTextColor="@color/label_secondary">
 
-            <AutoCompleteTextView
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/sportTextInput"
                 style="@style/Kanit_Regular.Default.16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white_dynamic"
-                android:focusable="false"
-                android:inputType="none"
-                android:padding="15dp" />
+                android:background="@drawable/rounded_corners"
+                android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,14 +80,14 @@
             app:endIconDrawable="@drawable/calendar_icon"
             app:endIconMode="custom"
             app:endIconTint="@color/black_dynamic"
-            app:hintTextColor="@color/black_dynamic">
+            app:hintTextColor="@color/label_secondary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/dateTextInput"
                 style="@style/Kanit_Regular.Default.16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white_dynamic"
+                android:background="@drawable/rounded_corners"
                 android:focusable="false"
                 android:inputType="date" />
 

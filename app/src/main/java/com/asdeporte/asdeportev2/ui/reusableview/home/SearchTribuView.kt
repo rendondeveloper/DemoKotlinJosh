@@ -4,8 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.SearchTribuViewBinding
+import com.asdeporte.asdeportev2.utils.TextUtils
 
 class SearchTribuView @JvmOverloads constructor(
     context: Context,
@@ -25,8 +25,10 @@ class SearchTribuView @JvmOverloads constructor(
     }
 
     fun setData(listener: SearchTribuViewListener) {
+        this.listener = listener
+        binding?.subtitle?.text = TextUtils().agregarNegrita("1500 Atletas han encontrado su tribu y ya están practicando su deporte favorito.","1500 Atletas")
         binding?.apply {
-            searchView.setOnClickListener {
+            searchTextField.setOnClickListener {
                 listener.onSearch()
             }
             filters.setOnClickListener {

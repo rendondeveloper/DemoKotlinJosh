@@ -24,7 +24,7 @@
             android:id="@+id/itemCard"
             android:layout_width="match_parent"
             android:layout_height="230dp"
-            app:cardBackgroundColor="@color/secondary_background"
+            app:cardBackgroundColor="@android:color/transparent"
             app:cardCornerRadius="4dp"
             app:cardElevation="0dp">
 
@@ -67,20 +67,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black_dynamic"
-            android:text="CDMX" />
+            android:text="CDMX"
+            android:textColor="@color/gray_secondary_text" />
 
         <TextView
             style="@style/Kanit_Semibold.Secondary.12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black_dynamic"
-            android:text="4 septiembre 2022" />
+            android:text="4 septiembre 2022"
+            android:textColor="@color/gray_secondary_text" />
 
         <TextView
             style="@style/Kanit_Medium.Secondary.12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Desde: $680" />
+            android:text="Desde: $680"
+            android:textColor="@color/gray_secondary_text" />
 
         <TextView
             style="@style/Kanit_Medium.Secondary.12"

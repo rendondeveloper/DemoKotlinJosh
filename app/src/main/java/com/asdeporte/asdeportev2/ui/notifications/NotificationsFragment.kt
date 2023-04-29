@@ -47,6 +47,16 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
         binding?.toolbar?.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
+        binding?.toolbar?.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.filter_menu -> {
+                    // Handle favorite icon press
+                    filterAlert()
+                    true
+                }
+                else -> false
+            }
+        }
 
         binding?.updatesScroll?.visibility = View.VISIBLE
         binding?.messagesScroll?.visibility = View.GONE
@@ -54,13 +64,13 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
         val tab2 = binding?.tabView?.getTabAt(1)
         val tabView1 = (tab1?.view as ViewGroup).getChildAt(1) as TextView
         val tabView2 = (tab2?.view as ViewGroup).getChildAt(1) as TextView
-        tabView1.setTextAppearance(R.style.SelectedTabText)
+        tabView1.setTextAppearance(R.style.SelectedBoldTabText)
         tabView2.setTextAppearance(R.style.CustomTabText)
         binding?.tabView?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.let {
                     val tabView = (tab.view as ViewGroup).getChildAt(1) as TextView
-                    tabView.setTextAppearance(R.style.SelectedTabText)
+                    tabView.setTextAppearance(R.style.SelectedBoldTabText)
                     if (tab.position == 0) {
                         binding?.updatesScroll?.visibility = View.VISIBLE
                         binding?.messagesScroll?.visibility = View.GONE
@@ -173,8 +183,11 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
     }
 
     fun filterAlert() {
-        val alert = BadgeDetailDialog().apply {
+        val alert = NotificationsFilterDialog().apply {
             onConfirmClick = {
+
+            }
+            onCancelClick = {
 
             }
         }

@@ -15,6 +15,7 @@ import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentHomeBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalAdapter
+import com.asdeporte.asdeportev2.ui.home.adapters.EventsHorizontalBigAdapter
 import com.asdeporte.asdeportev2.ui.inscription.InscriptionActivity
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
 import com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
@@ -23,6 +24,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, SearchTribuView.SearchTribuViewListener {
 
   private var binding: FragmentHomeBinding? = null
+  private lateinit var eventsHorizontalBigAdapter: EventsHorizontalBigAdapter
   private lateinit var eventsHorizontalAdapter: EventsHorizontalAdapter
 
   val testEvent = EventData("123",
@@ -49,6 +51,7 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
     }
     binding?.resumeHome?.setData("47")
     binding?.planPlusView?.setData()
+    binding?.myTribe?.setData(this)
     setupAdapters()
   }
 
@@ -57,15 +60,15 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
 
     // Estelares
     binding?.topEventsTitle?.setTitle("Estelares")
-    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
+    eventsHorizontalBigAdapter = EventsHorizontalBigAdapter().apply {
       onItemClick = {
         EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
       }
     }
-    binding?.topEvents?.adapter = eventsHorizontalAdapter
+    binding?.topEvents?.adapter = eventsHorizontalBigAdapter
     binding?.topEvents?.setHasFixedSize(true)
     binding?.topEvents?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-    eventsHorizontalAdapter.setItems(items)
+    eventsHorizontalBigAdapter.setItems(items)
 
     // Eventos cerca de mi
     binding?.moreEventsTitle?.setTitle("Eventos cerca de mi")
@@ -98,10 +101,10 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
         EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
       }
     }
-    binding?.topTenEvents?.adapter = eventsHorizontalAdapter
+    binding?.topTenEvents?.adapter = eventsHorizontalBigAdapter
     binding?.topTenEvents?.setHasFixedSize(true)
     binding?.topTenEvents?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-    eventsHorizontalAdapter.setItems(items)
+    eventsHorizontalBigAdapter.setItems(items)
 
     // Este fin de semana
     binding?.weekendTitle?.setTitle("Este fin de semana")

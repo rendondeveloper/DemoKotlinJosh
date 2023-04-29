@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginHorizontal="@dimen/dimen_25dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="12dp"
             android:layout_marginEnd="8dp"
             android:text="TENDENCIAS"
             android:textColor="@color/label_blog"
@@ -37,12 +37,12 @@
 
         <TextView
             android:id="@+id/textView12"
-            style="@style/Kanit_Regular.Default.16"
+            style="@style/Kanit_Medium.Default.16"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginHorizontal="@dimen/dimen_25dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:lines="2"
@@ -70,7 +70,7 @@
             android:id="@+id/imageView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="11dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/imageView10"
@@ -92,13 +92,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="11dp"
             android:lines="2"
             android:text="Lorem ipsum dolor sit amet consectetur. Ultrices condimentum nisl lorem eu justo lobortis ullamcorper sed. Eu a gravida mauris nunc placerat mauris. Orci placerat vulputate massa."
             android:textColor="@color/label_secondary"
             app:layout_constraintEnd_toEndOf="@+id/imageView11"
             app:layout_constraintStart_toStartOf="@+id/imageView10"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -114,18 +114,18 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/dimen_32dp"
                 android:layout_marginVertical="1dp"
                 android:background="@color/secondary_background"
-                android:elevation="-1dp">
+                android:elevation="-1dp"
+                app:cardCornerRadius="@dimen/dimen_32dp">
 
                 <TextView
                     style="@style/Kanit_Regular.Default.12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingVertical="1dp"
-                    android:paddingHorizontal="6dp"
                     android:background="@color/secondary_background"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="1dp"
                     android:text="Eventos" />
             </androidx.cardview.widget.CardView>
 

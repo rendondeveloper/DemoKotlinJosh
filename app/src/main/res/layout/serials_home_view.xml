@@ -30,22 +30,23 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginEnd="6dp"
                 android:layout_weight="1"
-                app:cardCornerRadius="4dp">
+                app:cardCornerRadius="3dp">
 
                 <ImageView
                     android:id="@+id/img_logo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="3dp">
@@ -54,13 +55,14 @@
                     android:id="@+id/img_logo2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="3dp">
@@ -69,6 +71,7 @@
                     android:id="@+id/img_logo3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
@@ -83,7 +86,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginEnd="6dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="4dp">
@@ -92,13 +95,14 @@
                     android:id="@+id/img_logo4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="3dp">
@@ -107,13 +111,14 @@
                     android:id="@+id/img_logo5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="3dp">
@@ -122,6 +127,7 @@
                     android:id="@+id/img_logo6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
@@ -136,7 +142,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginEnd="6dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="4dp">
@@ -145,13 +151,14 @@
                     android:id="@+id/img_logo7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="3dp">
@@ -160,13 +167,14 @@
                     android:id="@+id/img_logo8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="3dp">
@@ -175,6 +183,7 @@
                     android:id="@+id/img_logo9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
@@ -189,7 +198,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginEnd="6dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="4dp">
@@ -198,13 +207,14 @@
                     android:id="@+id/img_logo10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="3dp">
@@ -213,21 +223,23 @@
                     android:id="@+id/img_logo11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="76dp"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-                app:cardCornerRadius="3dp">
+                app:cardCornerRadius="4dp">
 
                 <ImageView
                     android:id="@+id/img_logo12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_4dp"
                     android:contentDescription="@string/todo" />
 
             </androidx.cardview.widget.CardView>
@@ -236,7 +248,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="68dp"
             android:layout_marginTop="@dimen/dimen_12dp"
             android:layout_marginBottom="@dimen/dimen_48dp"
             app:cardCornerRadius="4dp">
@@ -244,7 +256,8 @@
             <ImageView
                 android:id="@+id/img_next"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_4dp"
                 android:contentDescription="@string/todo" />
 
         </androidx.cardview.widget.CardView>

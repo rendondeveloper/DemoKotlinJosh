@@ -45,7 +45,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dimen_8dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen_4dp"
-                android:text="10% de descuento en inscripciones a eventos"
+                android:text="10% de descuento en inscripciones a \neventos"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -171,231 +171,231 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lnMore"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            tools:visibility="gone">
+            android:orientation="vertical"
+            android:visibility="gone">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/check_circuclar"
-                app:tint="@color/green" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Todas tus fotos compitiendo"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/check_circuclar"
+                    app:tint="@color/green" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:text="Performance de tu actividad física \ndiaria"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            tools:visibility="gone">
+                <ImageView
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_16dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_info" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/check_circuclar"
-                app:tint="@color/green" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Plan de entrenamiento enfocado a tu deporte"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/check_circuclar"
+                    app:tint="@color/green" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            tools:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plan de entrenamiento enfocado a tu deporte"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/check_circuclar"
-                app:tint="@color/green" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_4dp"
-                android:text="Performance de tu actividad física diaria"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="@dimen/dimen_16dp"
-                android:layout_height="@dimen/dimen_16dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/ic_info" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/check_circuclar"
+                    app:tint="@color/green" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:text="Poder crear o pertenecer a una tribu"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            tools:visibility="gone">
+                <ImageView
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_16dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_info" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/check_circuclar"
-                app:tint="@color/green" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_4dp"
-                android:text="Conexión con tus wearables"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="@dimen/dimen_16dp"
-                android:layout_height="@dimen/dimen_16dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/ic_info" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/check_circuclar"
+                    app:tint="@color/green" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preventas, post ventas o inscripciones gratuitas"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            tools:visibility="gone">
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/check_circuclar"
-                app:tint="@color/green" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Preventas, post ventas o inscripciones gratuitas"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/check_circuclar"
+                    app:tint="@color/green" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Acceso a todos los retos entrenamientos y clases"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            tools:visibility="gone">
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/check_circuclar"
-                app:tint="@color/green" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Acceso a todos los retos entrenamientos y clases"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/check_circuclar"
+                    app:tint="@color/green" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:text="Acceso a  blog, podcast y newsletter"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            tools:visibility="gone">
+                <ImageView
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_16dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_info" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/check_circuclar"
-                app:tint="@color/green" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_4dp"
-                android:text="Poder crear o pertenecer a una tribu"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="@dimen/dimen_16dp"
-                android:layout_height="@dimen/dimen_16dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/ic_info" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/check_circuclar"
+                    app:tint="@color/green" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:text="Conexión con tus wearables"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            tools:visibility="gone">
+                <ImageView
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_16dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_info" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/check_circuclar"
-                app:tint="@color/green" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_4dp"
-                android:text="Acceso a  blog, podcast y newsletter"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="@dimen/dimen_16dp"
-                android:layout_height="@dimen/dimen_16dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/ic_info" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/check_circuclar"
+                    app:tint="@color/green" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Todas tus fotos compitiendo"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
