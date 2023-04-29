@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dimen_16dp"
-    app:cardCornerRadius="@dimen/dimen_8dp">
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    android:foreground="@drawable/gray_card_corner">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -115,55 +116,52 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="1dp"
-                android:background="@color/secondary_background"
                 android:elevation="-1dp"
+                app:cardBackgroundColor="@color/secondary_background"
                 app:cardCornerRadius="@dimen/dimen_32dp">
 
                 <TextView
                     style="@style/Kanit_Regular.Default.12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/secondary_background"
-                    android:paddingHorizontal="6dp"
-                    android:paddingVertical="1dp"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="2dp"
                     android:text="Eventos" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/dimen_32dp"
-                android:background="@color/secondary_background"
                 android:layout_marginVertical="1dp"
-                android:layout_marginLeft="8dp"
-                android:elevation="-1dp">
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:elevation="-1dp"
+                app:cardBackgroundColor="@color/secondary_background"
+                app:cardCornerRadius="@dimen/dimen_32dp">
 
                 <TextView
                     style="@style/Kanit_Regular.Default.12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingVertical="1dp"
-                    android:paddingHorizontal="6dp"
-                    android:background="@color/secondary_background"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="2dp"
                     android:text="Entrenamiento" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/dimen_32dp"
-                android:background="@color/secondary_background"
                 android:layout_marginVertical="1dp"
-                android:layout_marginLeft="8dp"
-                android:elevation="-1dp">
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:elevation="-1dp"
+                app:cardBackgroundColor="@color/secondary_background"
+                app:cardCornerRadius="@dimen/dimen_32dp">
 
                 <TextView
                     style="@style/Kanit_Regular.Default.12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingVertical="1dp"
-                    android:paddingHorizontal="6dp"
-                    android:background="@color/secondary_background"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="2dp"
                     android:text="+3" />
             </androidx.cardview.widget.CardView>
 
