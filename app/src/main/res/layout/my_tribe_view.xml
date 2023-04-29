@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondary_background"
     android:orientation="vertical">
 
     <TextView
@@ -11,11 +12,195 @@
         style="@style/Kanit_Bold_Italic.Default.24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/secondary_background"
         android:padding="@dimen/dimen_20dp"
         android:text="MI TRIBU"
         android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dimen_16dp"
+        android:paddingVertical="@dimen/dimen_12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_48dp"
+                android:layout_height="@dimen/dimen_48dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/avatar_dummy" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold_Italic.Orange.12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_4dp"
+                    android:text="Corredores coyoacán"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_background"
+                    android:paddingHorizontal="@dimen/dimen_12dp"
+                    android:paddingVertical="2dp"
+                    android:text="Administrador"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"
+                android:layout_gravity="end|center_vertical"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/arrow_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:text="Privado" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_4dp"
+                android:layout_height="@dimen/dimen_4dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_circle"
+                app:tint="@color/label_secondary" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:text="205 miembros" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_4dp"
+                android:layout_height="@dimen/dimen_4dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_circle"
+                app:tint="@color/label_secondary" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Running" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Kanit_Medium.Default.16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_16dp"
+            android:paddingTop="@dimen/dimen_24dp"
+            android:text="Miembros que ya están participando" />
+
+        <com.asdeporte.asdeportev2.ui.reusableview.home.TribeItemListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dimen_16dp" />
+
+        <com.asdeporte.asdeportev2.ui.reusableview.home.TribeItemListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dimen_16dp" />
+
+        <com.asdeporte.asdeportev2.ui.reusableview.home.TribeItemListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dimen_16dp" />
+
+        <TextView
+            style="@style/Kanit_Medium.Orange.14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_24dp"
+            android:gravity="center"
+            android:text="Ver más" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_24dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Kanit_Medium.Default.16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_16dp"
+            android:paddingTop="@dimen/dimen_24dp"
+            android:text="Resultados" />
+
+        <com.asdeporte.asdeportev2.ui.reusableview.home.TribeResultsView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dimen_16dp" />
+
+        <com.asdeporte.asdeportev2.ui.reusableview.home.TribeResultsView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dimen_16dp" />
+
+        <com.asdeporte.asdeportev2.ui.reusableview.home.TribeResultsView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dimen_16dp" />
+
+        <TextView
+            style="@style/Kanit_Medium.Orange.14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_24dp"
+            android:gravity="center"
+            android:text="Ver más" />
+
+    </LinearLayout>
 
     <com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
         android:id="@+id/searchTribu"
@@ -34,6 +219,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="@dimen/dimen_16dp"
             android:layout_marginBottom="24dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_play_orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
@@ -56,11 +242,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/secondary_background" />
+        android:background="@color/secondary_background"
+        android:contentDescription="@string/todo" />
+
 </LinearLayout>

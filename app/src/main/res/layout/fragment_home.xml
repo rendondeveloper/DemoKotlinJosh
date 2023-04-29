@@ -56,20 +56,64 @@
                 android:id="@+id/sliderHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:visibility="gone" />
+                tools:visibility="gone">
 
-            <com.asdeporte.asdeportev2.ui.reusableview.home.SerialsGridView
-                android:id="@+id/serialsGrid"
+            </com.asdeporte.asdeportev2.ui.reusableview.home.SliderHomeView>
+
+            <LinearLayout
+                android:id="@+id/lnSeriales"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:visibility="visible" />
+                android:layout_height="match_parent"
+                android:background="@color/secondary_background"
+                android:orientation="vertical"
+                android:paddingHorizontal="22dp"
+                android:paddingTop="@dimen/dimen_24dp"
+                android:paddingBottom="@dimen/dimen_24dp">
+
+                <TextView
+                    android:id="@+id/title3"
+                    style="@style/Kanit_Bold_Italic.Default.24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Seriales"
+                    android:textAlignment="center"
+                    android:textAllCaps="true" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/serialsGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:background="@color/secondary_background"
+                    android:clipToPadding="false"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:foreground="@drawable/gray_card_corner"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="@dimen/dimen_8dp">
+
+                    <ImageView
+                        android:id="@+id/img_next2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/proximos_serial_dummy" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
 
             <com.asdeporte.asdeportev2.ui.reusableview.PartnersGridView
                 android:id="@+id/partnersGrid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                tools:visibility="gone" />
+                tools:visibility="visible" />
 
             <LinearLayout
                 android:id="@+id/eventsView"
@@ -173,9 +217,7 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView
                 android:id="@+id/myTribe"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView>
+                android:layout_height="wrap_content" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.BlogView
                 android:id="@+id/blog"
