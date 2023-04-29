@@ -45,11 +45,12 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="@dimen/dimen_24dp"
-            android:layout_height="@dimen/dimen_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
             android:layout_gravity="end|center_vertical"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/arrow_right" />
+            app:srcCompat="@drawable/arrow_right_rounded" />
 
     </LinearLayout>
 
@@ -70,12 +71,13 @@
             android:contentDescription="@string/todo"
             android:src="@drawable/icon_medalla" />
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="@dimen/dimen_42dp"
             android:layout_height="@dimen/dimen_42dp"
             android:layout_marginEnd="@dimen/dimen_8dp"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-            app:srcCompat="@drawable/avatar_send_dummy" />
+            android:src="@drawable/recibidas_dummy"
+            app:civ_border_color="#F3F4F6"
+            app:civ_border_width="1dp" />
 
         <LinearLayout
             android:layout_width="0dp"
