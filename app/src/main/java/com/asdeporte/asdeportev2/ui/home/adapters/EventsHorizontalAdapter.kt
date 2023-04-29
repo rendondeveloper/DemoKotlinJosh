@@ -5,13 +5,35 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import androidx.core.content.ContextCompat
 import androidx.core.view.updateLayoutParams
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.ViewEventHorizontalBinding
+import com.asdeporte.asdeportev2.utils.dpToPx
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.bitmap.FitCenter
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
+
+class EventsHorizontalBigAdapter : RecyclerViewAdapterBase<EventData, EventsHorizontalView>() {
+
+    var onItemClick: ((item: EventData) -> Unit)? = null
+
+    override fun onCreateItemView(parent: ViewGroup, viewType: Int): EventsHorizontalView =
+        EventsHorizontalView(parent.context)
+
+    override fun onBindViewHolder(holder: ViewWrapper<EventsHorizontalView>, position: Int) {
+        val item = items[position]
+
+        holder.view.apply {
+            bind(item, isBig = true)
+        }
+    }
+}
 
 class EventsHorizontalAdapter : RecyclerViewAdapterBase<EventData, EventsHorizontalView>() {
 
@@ -60,8 +82,12 @@ class EventsHorizontalView @JvmOverloads constructor(
             }
         }
 
+        var requestOptions = RequestOptions()
+        requestOptions = requestOptions.transforms(FitCenter(), RoundedCorners(dpToPx(9)))
         Glide.with(context)
             .load(R.drawable.events_dummy)
+            .centerCrop()
+            .apply(requestOptions)
             .into(binding.eventBackground)
 
     }

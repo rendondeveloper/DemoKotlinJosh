@@ -19,12 +19,12 @@
 
     <TextView
         android:id="@+id/subtitle"
+        style="@style/Kanit_Regular.Default.16"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="1500 Atletas han encontrado su tribu y ya están practicando su deporte favorito."
         android:textAlignment="center"
-        android:textColor="@color/gray_600"
         android:textSize="16dp"
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:layout_editor_absoluteX="20dp" />
@@ -53,53 +53,39 @@
         app:layout_constraintTop_toBottomOf="@+id/loginButton"
         tools:layout_editor_absoluteX="36dp" />
 
-    <RelativeLayout
-        android:id="@+id/searchLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/view15"
-        tools:layout_editor_absoluteX="16dp">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchTextField"
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/input_height"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Encuentra una tribu"
+        app:endIconDrawable="@drawable/ic_search"
+        app:endIconMode="custom"
+        app:endIconTint="@color/black_dynamic"
+        app:hintTextColor="@color/label_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/filters"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view15">
 
-        <RelativeLayout
-            android:id="@+id/searchView"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchTextInput"
+            style="@style/Kanit_Regular.Default.16"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="10dp"
-            android:layout_toLeftOf="@+id/filters"
-            android:background="@drawable/border_dark_white">
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:gravity="center_vertical"
-                android:text="Encuentra una tribu"
-                android:textColor="@color/gray_600"
-                android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageButton
-                android:id="@+id/search"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="1dp"
-                android:background="@drawable/corners_8_right"
-                android:src="@drawable/ic_search" />
-
-        </RelativeLayout>
-
-        <ImageButton
-            android:id="@+id/filters"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/border_dark_white"
-            android:src="@drawable/ic_filters" />
-
-    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/filters"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/border_dark_white"
+        android:src="@drawable/ic_filters"
+        app:layout_constraintBottom_toBottomOf="@+id/searchTextField"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -54,7 +54,8 @@
         app:flow_horizontalAlign="start"
         app:tabGravity="fill"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/black_dynamic"
+        app:tabSelectedTextColor="@color/orange_as_light"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
         app:tabTextColor="@color/label_secondary">
 
         <com.google.android.material.tabs.TabItem

@@ -19,7 +19,6 @@ import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeAdapter
 import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeModel
 import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeFilterSheet
-import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeShareSheet
 import com.asdeporte.asdeportev2.ui.profile.adapters.dialog.BadgeDetailDialog
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 

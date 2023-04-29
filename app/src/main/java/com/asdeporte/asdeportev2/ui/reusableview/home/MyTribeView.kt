@@ -16,14 +16,15 @@ class MyTribeView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
     private var binding: MyTribeViewBinding? = null
-
+    private lateinit var listener: SearchTribuView.SearchTribuViewListener
     init {
         binding = MyTribeViewBinding.inflate(LayoutInflater.from(context), this, true)
-        setData()
     }
 
 
-    fun setData() {
+    fun setData(listener: SearchTribuView.SearchTribuViewListener) {
+        this.listener = listener
+        binding?.searchTribu?.setData(listener)
         binding?.let {
             Glide.with(context)
                 .load(R.drawable.img_tribu_home)
