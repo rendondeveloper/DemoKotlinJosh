@@ -1,11 +1,13 @@
 package com.asdeporte.asdeportev2.ui.profile.details
 
 import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,22 +17,28 @@ import com.asdeporte.asdeportev2.databinding.FragmentPersonalHistoryBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
+import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
+import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.data.LineData
+import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
 import com.google.android.material.tabs.TabLayout
 
 class PersonalHistoryFragment : Fragment() {
 
-    private var _binding: FragmentPersonalHistoryBinding? = null
-    private val binding get() = _binding!!
-
+    private var binding: FragmentPersonalHistoryBinding? = null
     private var chart: PieChart? = null
+    private var lineChart: LineChart? = null
+    private var mTf: Typeface? = null
 
     private lateinit var eventsAdapter: EventHistoryAdapter
     val testEvent = EventData("123",
@@ -39,116 +47,124 @@ class PersonalHistoryFragment : Fragment() {
         "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80")
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentPersonalHistoryBinding.inflate(inflater, container, false)
-        return binding.root
+    ): View? {
+        binding = FragmentPersonalHistoryBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).hideActionBar()
-        binding.toolbar.setNavigationOnClickListener {
-            findNavController().popBackStack()
-        }
-
-        binding.statisticsView.visibility = View.VISIBLE
-        binding.eventsView.visibility = View.GONE
-
-
-        binding.tabViewMain.addOnTabSelectedListener(object  : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                val index = tab?.position ?: 0
-                binding.llActivity.visibility = if(index == 0) View.VISIBLE else View.GONE
-                binding.llSleep.visibility = if(index == 1) View.VISIBLE else View.GONE
-                binding.llHrv.visibility = if(index == 2) View.VISIBLE else View.GONE
-
+        binding?.apply {
+            toolbar.setNavigationOnClickListener {
+                findNavController().popBackStack()
             }
-            override fun onTabReselected(tab: TabLayout.Tab?) {}
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
-        })
+            statisticsView.visibility = View.VISIBLE
+            eventsView.visibility = View.GONE
 
-        binding.tabView.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                if (tab?.position == 0) {
-                    binding.statisticsView.visibility = View.VISIBLE
-                    binding.eventsView.visibility = View.GONE
-                } else {
-                    binding.statisticsView.visibility = View.GONE
-                    binding.eventsView.visibility = View.VISIBLE
+            tabViewMain.addOnTabSelectedListener(object  : TabLayout.OnTabSelectedListener {
+                override fun onTabSelected(tab: TabLayout.Tab?) {
+                    val index = tab?.position ?: 0
+                    llActivity.visibility = if(index == 0) View.VISIBLE else View.GONE
+                    llSleep.visibility = if(index == 1) View.VISIBLE else View.GONE
+                    llHrv.visibility = if(index == 2) View.VISIBLE else View.GONE
+
                 }
-            }
-            override fun onTabReselected(tab: TabLayout.Tab?) {}
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
-        })
+                override fun onTabReselected(tab: TabLayout.Tab?) {}
+                override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            })
 
+            tabView.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+                override fun onTabSelected(tab: TabLayout.Tab?) {
+                    if (tab?.position == 0) {
+                        statisticsView.visibility = View.VISIBLE
+                        eventsView.visibility = View.GONE
+                    } else {
+                        statisticsView.visibility = View.GONE
+                        eventsView.visibility = View.VISIBLE
+                    }
+                }
+                override fun onTabReselected(tab: TabLayout.Tab?) {}
+                override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            })
+        }
         setupStatistics()
         setupEvents()
+        setupCalories()
     }
 
+    private fun setupCalories(){
+        mTf = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
+        binding?.apply {
+            lineChart = caloriesHeart.lineChart
+            val frecuencia = ArrayList<Entry>()
+            frecuencia.add(Entry(0f, 150f))
+            frecuencia.add(Entry(10f, 300f))
+            frecuencia.add(Entry(30f, 450f))
+            frecuencia.add(Entry(50f, 600f))
+            frecuencia.add(Entry(60f, 600f))
+            val calorias = ArrayList<Entry>()
+            calorias.add(Entry(0f, 120f))
+            calorias.add(Entry(15f, 350f))
+            calorias.add(Entry(35f, 400f))
+            calorias.add(Entry(40f, 500f))
+            calorias.add(Entry(55f, 560f))
+            val lineFrecuencia = LineDataSet(frecuencia, "Frecuencia")
+            lineFrecuencia.color = Color.RED
+            lineFrecuencia.valueTextColor = Color.BLACK
+            val lineCalorias = LineDataSet(calorias, "Calorias")
+            lineCalorias.color = Color.BLACK
+            lineCalorias.valueTextColor = Color.BLACK
+            val lineDataSets = ArrayList<ILineDataSet>()
+            lineDataSets.add(lineFrecuencia)
+            lineDataSets.add(lineCalorias)
+            val lineData = LineData(lineDataSets)
+            lineChart?.data = lineData
+            lineChart?.description?.isEnabled = false
+            lineChart?.setDrawGridBackground(false)
+            val xAxis = lineChart?.xAxis
+            xAxis?.position = XAxis.XAxisPosition.BOTTOM
+            val yAxisLeft = lineChart?.axisLeft
+            yAxisLeft?.axisMinimum = 0f
+            val yAxisRight = lineChart?.axisRight
+            yAxisRight?.isEnabled = false
+            xAxis?.setDrawGridLines(false)
+            lineChart?.invalidate()
+        }
+    }
+
+
     private fun setupStatistics() {
-
-        chart = binding.sportProfile.pieChart
-        chart!!.setUsePercentValues(true)
-        chart!!.description.isEnabled = false
-        chart!!.setExtraOffsets(5f, 10f, 5f, 5f)
-
-        chart!!.dragDecelerationFrictionCoef = 0.95f
-
-        //chart!!.setCenterTextTypeface(tfLight)
-        //chart!!.centerText = generateCenterSpannableText()
-
-        chart!!.isDrawHoleEnabled = false
-        //chart!!.setHoleColor(Color.WHITE)
-
-        chart!!.setTransparentCircleColor(Color.WHITE)
-        chart!!.setTransparentCircleAlpha(110)
-
-        chart!!.setDrawCenterText(false)
-
-        chart!!.rotationAngle = 0f
-        // enable rotation of the chart by touch
-        // enable rotation of the chart by touch
-        chart!!.isRotationEnabled = true
-        chart!!.isHighlightPerTapEnabled = true
-
-        // chart.setUnit(" €");
-        // chart.setDrawUnitsInChart(true);
-
-        // add a selection listener
-
-        // chart.setUnit(" €");
-        // chart.setDrawUnitsInChart(true);
-
-        //chart!!.animateY(1400, Easing.EaseInOutQuad)
-        // chart.spin(2000, 0, 360);
-
-        // chart.spin(2000, 0, 360);
-        val l = chart!!.legend
-        l.verticalAlignment = Legend.LegendVerticalAlignment.TOP
-        l.horizontalAlignment = Legend.LegendHorizontalAlignment.RIGHT
-        l.orientation = Legend.LegendOrientation.VERTICAL
-        l.setDrawInside(false)
-        l.xEntrySpace = 7f
-        l.yEntrySpace = 0f
-        l.yOffset = 0f
-
-        // entry label styling
-
-        // entry label styling
-        chart?.setEntryLabelColor(Color.WHITE)
-        //chart!!.setEntryLabelTypeface(tfRegular)
-        chart?.setEntryLabelTextSize(12f)
-
-        chart?.setTouchEnabled(false)
-
-        setData(2, 10f)
-
-        //binding.dotsIndicator.selectedDotColor = ContextCompat.getColor(requireContext(), R.color.asd_pink)
-        //binding.dotsIndicator.attachTo(viewPager)
-
+        binding?.apply {
+            chart = sportProfile.pieChart
+            chart!!.setUsePercentValues(true)
+            chart!!.description.isEnabled = false
+            chart!!.setExtraOffsets(5f, 10f, 5f, 5f)
+            chart!!.dragDecelerationFrictionCoef = 0.95f
+            chart!!.isDrawHoleEnabled = false
+            chart!!.setTransparentCircleColor(Color.WHITE)
+            chart!!.setTransparentCircleAlpha(110)
+            chart!!.setDrawCenterText(false)
+            chart!!.rotationAngle = 0f
+            chart!!.isRotationEnabled = true
+            chart!!.isHighlightPerTapEnabled = true
+            val l = chart!!.legend
+            l.verticalAlignment = Legend.LegendVerticalAlignment.TOP
+            l.horizontalAlignment = Legend.LegendHorizontalAlignment.RIGHT
+            l.orientation = Legend.LegendOrientation.VERTICAL
+            l.setDrawInside(false)
+            l.xEntrySpace = 7f
+            l.yEntrySpace = 0f
+            l.yOffset = 0f
+            chart?.setEntryLabelColor(Color.WHITE)
+            chart?.setEntryLabelTextSize(12f)
+            chart?.setTouchEnabled(false)
+            setData(2, 10f)
+        }
     }
     private fun setData(count: Int, range: Float) {
         val values = arrayOf(7f, 3f)
@@ -206,9 +222,9 @@ class PersonalHistoryFragment : Fragment() {
             }
         }
 
-        binding.eventsList.adapter = eventsAdapter
-        binding.eventsList.setHasFixedSize(true)
-        binding.eventsList.layoutManager =
+        binding?.eventsList?.adapter = eventsAdapter
+        binding?.eventsList?.setHasFixedSize(true)
+        binding?.eventsList?.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
@@ -217,7 +233,7 @@ class PersonalHistoryFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
 
 }

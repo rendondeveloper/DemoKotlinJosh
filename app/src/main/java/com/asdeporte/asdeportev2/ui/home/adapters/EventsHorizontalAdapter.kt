@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import androidx.core.view.updateLayoutParams
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
@@ -71,6 +72,7 @@ class EventsHorizontalView @JvmOverloads constructor(
             binding.itemCard.updateLayoutParams {
                 height = resources.getDimensionPixelSize(R.dimen.event_card_big_height)
             }
+            binding.lnDesdePlus.orientation = LinearLayout.HORIZONTAL
         } else {
             binding.containerView.updateLayoutParams {
                 width = resources.getDimensionPixelSize(R.dimen.event_card_normal_width)
@@ -78,6 +80,7 @@ class EventsHorizontalView @JvmOverloads constructor(
             binding.itemCard.updateLayoutParams {
                 height = resources.getDimensionPixelSize(R.dimen.event_card_normal_height)
             }
+            binding.lnDesdePlus.orientation = LinearLayout.VERTICAL
         }
 
         var requestOptions = RequestOptions()

@@ -79,19 +79,30 @@
             android:text="4 septiembre 2022"
             android:textColor="@color/gray_secondary_text" />
 
-        <TextView
-            style="@style/Kanit_Medium.Secondary.12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Desde: $680"
-            android:textColor="@color/gray_secondary_text" />
+        <LinearLayout
+            android:id="@+id/lnDesdePlus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            style="@style/Kanit_Medium.Secondary.12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Plus: $580"
-            android:textColor="@color/gray_secondary_text" />
+            <TextView
+                android:id="@+id/txtDesde"
+                style="@style/Kanit_Medium.Secondary.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:text="Desde: $680"
+                android:textColor="@color/gray_secondary_text" />
+
+            <TextView
+                android:id="@+id/txtPlus"
+                style="@style/Kanit_Medium.Secondary.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plus: $580"
+                android:textColor="@color/gray_secondary_text" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
