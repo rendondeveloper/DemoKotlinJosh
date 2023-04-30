@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dimen_16dp"
+    android:paddingVertical="@dimen/dimen_12dp"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/dimen_42dp"
+            android:layout_height="@dimen/dimen_42dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:src="@drawable/avatar_send_dummy" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Kanit_Semi_Bold_Italic.Orange.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_4dp"
+                android:text="Corredores coyoacán"
+                android:textAllCaps="true" />
+
+            <TextView
+                style="@style/Kanit_Medium.Default.10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/badge_background"
+                android:paddingHorizontal="@dimen/dimen_12dp"
+                android:paddingVertical="2dp"
+                android:text="Administrador"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/arrow_right_rounded" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Kanit_Regular.Default.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:text="Privado" />
+
+        <ImageView
+            android:layout_width="@dimen/dimen_4dp"
+            android:layout_height="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_circle"
+            app:tint="@color/label_secondary" />
+
+        <TextView
+            style="@style/Kanit_Regular.Default.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:text="205 miembros" />
+
+        <ImageView
+            android:layout_width="@dimen/dimen_4dp"
+            android:layout_height="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_circle"
+            app:tint="@color/label_secondary" />
+
+        <TextView
+            style="@style/Kanit_Regular.Default.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Running" />
+
+    </LinearLayout>
+
+</LinearLayout>

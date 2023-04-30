@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dimen_16dp"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icon_dummy_results" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Kanit_Medium.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20va. Gran Carrera Internacional" />
+
+            <TextView
+                style="@style/Kanit_Medium.Default.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06 febrero 2023"
+                android:textColor="@color/label_secondary" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:layout_gravity="end|center_vertical"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/arrow_right_rounded" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_12dp"
+        android:background="@drawable/event_time_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dimen_16dp"
+        android:paddingVertical="@dimen/dimen_8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icon_medalla" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/dimen_42dp"
+            android:layout_height="@dimen/dimen_42dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:src="@drawable/recibidas_dummy"
+            app:civ_border_color="#F3F4F6"
+            app:civ_border_width="1dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Kanit_Regular.Default.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pocisión 1 de 1200"
+                android:textColor="@color/label_secondary" />
+
+            <TextView
+                style="@style/Kanit_Medium.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06 febrero 2023" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/gray_view" />
+
+</LinearLayout>
