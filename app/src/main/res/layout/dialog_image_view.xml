@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/ivClose"
         android:layout_width="@dimen/dimen_32dp"
         android:layout_height="@dimen/dimen_32dp"
@@ -20,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/ivPreview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

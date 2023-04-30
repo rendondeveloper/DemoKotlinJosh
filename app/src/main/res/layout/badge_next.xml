@@ -15,6 +15,7 @@
         android:layout_gravity="center">
 
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/badge_image"
             android:layout_width="80dp"
             android:layout_height="100dp"

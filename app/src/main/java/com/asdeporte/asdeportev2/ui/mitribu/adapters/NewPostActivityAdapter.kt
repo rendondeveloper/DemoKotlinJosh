@@ -1,26 +1,14 @@
 package com.asdeporte.asdeportev2.ui.mitribu.adapters
 
 import android.content.Context
-import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.widget.PopupMenu
-import androidx.annotation.MenuRes
-import androidx.core.content.ContextCompat
-import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.NewPostActivityViewBinding
-import com.asdeporte.asdeportev2.databinding.PostHomeViewBinding
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
 
 class NewPostActivityAdapter : RecyclerViewAdapterBase<EventData, NewPostActivityView>(),
     NewPostActivityView.PostsAdapterListener {
@@ -48,9 +36,6 @@ class NewPostActivityAdapter : RecyclerViewAdapterBase<EventData, NewPostActivit
         onPostClick?.invoke(event)
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }
 
 class NewPostActivityView @JvmOverloads constructor(
@@ -64,7 +49,6 @@ class NewPostActivityView @JvmOverloads constructor(
         fun onPreview(event: EventData)
         fun onPost(event: EventData)
     }
-    private lateinit var listener: PostsAdapterListener
 
     init {
         binding = NewPostActivityViewBinding.inflate(LayoutInflater.from(context), this, true)

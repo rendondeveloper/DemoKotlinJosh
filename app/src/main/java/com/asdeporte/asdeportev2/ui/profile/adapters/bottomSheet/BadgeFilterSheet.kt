@@ -24,7 +24,7 @@ class BadgeFilterSheet : BottomSheetDialogFragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = BadgeFilterBottomSheetBinding.inflate(inflater)
         return binding.root
     }

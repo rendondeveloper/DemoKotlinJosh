@@ -13,8 +13,8 @@ import com.asdeporte.asdeportev2.ui.mitribu.adapters.CompairFriendAdapter
 
 class CompairFriendsFragment : Fragment() {
 
-    lateinit var binding: FragmentCompairFriendsBinding
-    lateinit var compairFriendAdapter: CompairFriendAdapter
+    private lateinit var binding: FragmentCompairFriendsBinding
+    private lateinit var compairFriendAdapter: CompairFriendAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -50,11 +50,5 @@
             app:destination="@id/step_kit" />
     </fragment>
 
-    <fragment
-        android:id="@+id/resume_fragment"
-        android:name="com.asdeporte.asdeportev2.ui.inscription.ResumeFragment"
-        android:label="Pago"
-        tools:layout="@layout/activity_resume">
-    </fragment>
 
 </navigation>

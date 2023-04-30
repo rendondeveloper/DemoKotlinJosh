@@ -43,7 +43,7 @@ class TabsFriendsProfileFragment : Fragment() {
 
     private fun initTabs() {
         val sectionsPagerAdapter =
-            SectionsFriendsPagerAdapter(requireContext(), childFragmentManager) {
+            SectionsFriendsPagerAdapter(childFragmentManager) {
                 findNavController().safelyNavigate(R.id.action_navigation_tribu_profile_to_friendsFilterFragment)
             }
         viewPager = binding.viewPager

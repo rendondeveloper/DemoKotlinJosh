@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="163dp">
 
@@ -53,6 +52,7 @@
         app:layout_constraintVertical_bias="0.727" />
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/tvActivityPercentArrow"
         android:src="@drawable/ic_arrow_up"
         android:layout_width="wrap_content"
@@ -106,6 +106,7 @@
         app:layout_constraintTop_toTopOf="@+id/view17" />
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/tvSleepPercentArrow"
         android:src="@drawable/ic_arrow_down"
         android:layout_width="wrap_content"
@@ -158,6 +159,7 @@
         app:layout_constraintTop_toTopOf="@+id/view16" />
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/tvHrvPercentArrow"
         android:src="@drawable/ic_arrow_down"
         android:layout_width="wrap_content"
@@ -194,6 +196,7 @@
 
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
@@ -218,7 +221,7 @@
         app:backgroundTint="@color/black_dynamic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view16" />ç
+        app:layout_constraintTop_toBottomOf="@+id/view16" />
 
     <TextView
         android:id="@+id/tvConnect"
@@ -233,6 +236,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnConnect" />
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/tvConnectStatus"
         android:src="@drawable/ic_device_conected"
         android:layout_width="20dp"

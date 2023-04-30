@@ -10,7 +10,6 @@ import androidx.fragment.app.FragmentManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.TribuResultViewBinding
-import com.asdeporte.asdeportev2.ui.access.ModalBottomSheetCountry
 import com.asdeporte.asdeportev2.ui.mitribu.subtabs.FriendMenuBottomSheet
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy

@@ -53,6 +53,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageButton
+        android:contentDescription="imageBotton"
                 android:id="@+id/filter_button"
                 android:layout_width="65dp"
                 android:layout_height="48dp"
@@ -114,6 +115,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvName">
 
             <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                 android:id="@+id/compareTextInput"
                 style="@style/Kanit_Regular.Default.16"
                 android:layout_width="match_parent"

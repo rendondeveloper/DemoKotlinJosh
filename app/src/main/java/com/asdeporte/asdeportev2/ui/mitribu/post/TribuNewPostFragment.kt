@@ -12,17 +12,12 @@ import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTribuNewPostBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.EventTribuHorizontalAdapter
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.PostsAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class TribuNewPostFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheetListener, NewPostAudienceSheet.NewPostAudienceSheetListener {
 
     private var _binding: FragmentTribuNewPostBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var postsAdapter: PostsAdapter
-    private lateinit var eventsAdapter: EventTribuHorizontalAdapter
 
     val testEvent = EventData("123",
         "7, 14 y 21K by WomanUp",
@@ -64,12 +59,9 @@ class TribuNewPostFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheet
             NewPostPreviewSheet.create(this@TribuNewPostFragment, NewPostType.MEDIA).show(requireActivity().supportFragmentManager, "EventBottomSheet")
         }
 
-        initPosts()
         return root
     }
 
-    fun initPosts() {
-    }
     /*
      Listeners
      */
@@ -94,7 +86,7 @@ class TribuNewPostFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheet
         (activity as MainActivity).onBackPressedDispatcher.onBackPressed()
     }
 
-    fun exitDialog() {
+    private fun exitDialog() {
         MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogTheme)
             .setTitle("¿Salir sin publicar?")
             .setMessage("Tu publicación no se guardará")

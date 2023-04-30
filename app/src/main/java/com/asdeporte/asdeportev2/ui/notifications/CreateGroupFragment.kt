@@ -11,7 +11,6 @@ import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentCreateGroupBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
-import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.notifications.adapter.ParticipantsAdapter
 
 class CreateGroupFragment: Fragment() {

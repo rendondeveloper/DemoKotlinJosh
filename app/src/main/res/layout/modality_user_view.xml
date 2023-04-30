@@ -93,6 +93,7 @@
                 android:layout_marginHorizontal="8dp"
                 style="@style/Kanit_Semibold.Default.16"/>
             <ImageButton
+        android:contentDescription="imageBotton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
@@ -160,7 +161,8 @@
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginBottom="24dp"
                     android:weightSum="2"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -227,6 +229,7 @@
                     android:text="Elige tu talla de playera:"
                     style="@style/Kanit_Semibold.Default.16"/>
                 <ImageButton
+        android:contentDescription="imageBotton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAllCaps="false"

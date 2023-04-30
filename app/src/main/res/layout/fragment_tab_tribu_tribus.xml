@@ -14,17 +14,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/home_tribus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingBottom="80dp">
-
-            <LinearLayout
-                android:id="@+id/home_tribus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="visible">
 
                 <View
                     android:layout_width="match_parent"
@@ -75,7 +69,6 @@
                     style="@style/Kanit_Regular.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:text="Todavía puedes unirte o crear una tribu" />
@@ -159,7 +152,6 @@
                         style="@style/Kanit_Semi_Bold_Italic.Default.20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
                         android:layout_marginBottom="10dp"
                         android:text="Únete a otras tribus"
                         android:textAllCaps="true" />
@@ -191,6 +183,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <ImageButton
+        android:contentDescription="imageBotton"
                             android:id="@+id/filter_button"
                             android:layout_width="45dp"
                             android:layout_height="48dp"
@@ -214,6 +207,5 @@
                     android:paddingStart="16dp"
                     tools:ignore="RtlSymmetry" />
             </LinearLayout>
-        </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

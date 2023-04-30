@@ -63,7 +63,7 @@ class MiTribuRequestsFragment : Fragment(), JoinTribusFilterSheet.JoinTribusFilt
     }
 
 
-    fun setupAdapters() {
+    private fun setupAdapters() {
         val testEvent = EventData(
             "123",
             "7, 14 y 21K by WomanUp",

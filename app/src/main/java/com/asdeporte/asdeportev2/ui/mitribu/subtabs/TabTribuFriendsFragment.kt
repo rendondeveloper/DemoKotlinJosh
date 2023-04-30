@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -13,14 +14,11 @@ import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuFriendsBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.FriendRequestAdapter
-import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendDefaultView
-import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendMenuOption
 
-class TabTribuFriendsFragment(private val flow: String = "") : Fragment(), FriendDefaultView.FriendDefaultViewListener,
+class TabTribuFriendsFragment(private val flow: String = "") : Fragment(),
     MiTribuRequestsFragment.MiTribuRequestsListener {
     private var _binding: FragmentTabTribuFriendsBinding? = null
     private val binding get() = _binding!!
-    //private lateinit var tribusAdapter: SmallTribuJoinAdapter
     private lateinit var otherFriendsAdapter: FriendRequestAdapter
 
     private var requestsFragment = MiTribuRequestsFragment()
@@ -35,18 +33,18 @@ class TabTribuFriendsFragment(private val flow: String = "") : Fragment(), Frien
         super.onViewCreated(view, savedInstanceState)
 
         validFlow()
-        binding.homeTribus.visibility = View.VISIBLE
+        binding.homeTribus.visibility = VISIBLE
         requestsFragment.listener = this
         binding.pendingRequests.setOnClickListener {
             findNavController().safelyNavigate(R.id.toRequests)
         }
 
-        binding.friendPlaceholder1.setData(this, requireActivity().supportFragmentManager)
+        binding.friendPlaceholder1.setData(requireActivity().supportFragmentManager)
         binding.friendPlaceholder1.setOnClickListener {
             findNavController().safelyNavigate(R.id.toUserProfile)
         }
 
-        binding.friendPlaceholder2.setData(this, requireActivity().supportFragmentManager)
+        binding.friendPlaceholder2.setData(requireActivity().supportFragmentManager)
         binding.friendPlaceholder2.setOnClickListener {
             findNavController().safelyNavigate(R.id.toUserProfile)
         }
@@ -73,29 +71,19 @@ class TabTribuFriendsFragment(private val flow: String = "") : Fragment(), Frien
         otherFriendsAdapter = FriendRequestAdapter().apply {
             onItemClick = {
                 findNavController().safelyNavigate(R.id.toUserProfile)
-                //EventBottomSheet.create(this@TabTribuFriendsFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
             }
         }
 
         binding.moreFriends.adapter = otherFriendsAdapter
         binding.moreFriends.setHasFixedSize(true)
         binding.moreFriends.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-
         otherFriendsAdapter.setItems(items)
 
     }
 
-    /*
-     Listeners
-     */
-
-    override fun onOptionSelected(friendId: Int, option: FriendMenuOption) {
-    }
-
     override fun onRequestViewBack() {
-        binding.homeTribus.visibility = View.VISIBLE
-        binding.subFrames.visibility = View.GONE
-
+        binding.homeTribus.visibility = VISIBLE
+        binding.subFrames.visibility = GONE
         val fm = activity?.supportFragmentManager?.beginTransaction()
         fm?.remove(requestsFragment)
         fm?.commit()

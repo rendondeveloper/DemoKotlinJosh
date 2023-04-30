@@ -17,6 +17,7 @@
         android:padding="2dp">
 
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/event_logo"
             android:layout_width="56dp"
             android:layout_height="56dp"

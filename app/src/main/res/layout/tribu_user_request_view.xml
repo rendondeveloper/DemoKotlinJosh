@@ -14,17 +14,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!--<ImageView
-            android:id="@+id/tribu_logo"
-            android:layout_width="88dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/avatar_dummy"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/post_medal_background"/>-->
         <androidx.cardview.widget.CardView
             android:id="@+id/card_logo"
             android:layout_width="88dp"
@@ -38,6 +27,7 @@
             app:cardElevation="0dp">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/tribu_logo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

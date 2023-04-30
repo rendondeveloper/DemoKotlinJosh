@@ -17,6 +17,7 @@
         android:background="@drawable/gray_border_corner_3">
 
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/card_image"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -35,6 +36,7 @@
             style="@style/Kanit_Medium.Default.16"/>
 
         <ImageButton
+        android:contentDescription="imageBotton"
             android:id="@+id/selectedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

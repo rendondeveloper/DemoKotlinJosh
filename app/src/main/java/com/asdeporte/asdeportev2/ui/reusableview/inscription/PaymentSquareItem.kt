@@ -66,8 +66,6 @@ class PaymentSquareItem @JvmOverloads constructor(
 }
 
 enum class PaymentType {
-    CARD,
-    WALLET,
     PAYPAL,
     STORE,
     KUESKI,

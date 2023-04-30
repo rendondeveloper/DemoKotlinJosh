@@ -1,5 +1,6 @@
 package com.asdeporte.asdeportev2.ui.reusableview.history
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.widget.FrameLayout
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.HistoryItemBinding
 
+@SuppressLint("Recycle")
 class HistoryItem @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,

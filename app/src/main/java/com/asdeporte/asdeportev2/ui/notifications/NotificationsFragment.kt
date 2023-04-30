@@ -11,12 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
-import com.asdeporte.asdeportev2.databinding.FragmentCreateGroupBinding
 import com.asdeporte.asdeportev2.databinding.FragmentNotificationsBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.notifications.adapter.*
-import com.asdeporte.asdeportev2.ui.profile.adapters.dialog.BadgeDetailDialog
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet
 import com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
 import com.google.android.material.tabs.TabLayout
@@ -62,15 +60,15 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
         binding?.messagesScroll?.visibility = View.GONE
         val tab1 = binding?.tabView?.getTabAt(0)
         val tab2 = binding?.tabView?.getTabAt(1)
-        val tabView1 = (tab1?.view as ViewGroup).getChildAt(1) as TextView
-        val tabView2 = (tab2?.view as ViewGroup).getChildAt(1) as TextView
-        tabView1.setTextAppearance(R.style.SelectedBoldTabText)
-        tabView2.setTextAppearance(R.style.CustomTabText)
+        val tabView1 = tab1?.view?.getChildAt(1) as? TextView
+        val tabView2 = tab2?.view?.getChildAt(1) as? TextView
+        tabView1?.setTextAppearance(R.style.SelectedBoldTabText)
+        tabView2?.setTextAppearance(R.style.CustomTabText)
         binding?.tabView?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.let {
-                    val tabView = (tab.view as ViewGroup).getChildAt(1) as TextView
-                    tabView.setTextAppearance(R.style.SelectedBoldTabText)
+                    val tabView = tab.view.getChildAt(1) as? TextView
+                    tabView?.setTextAppearance(R.style.SelectedBoldTabText)
                     if (tab.position == 0) {
                         binding?.updatesScroll?.visibility = View.VISIBLE
                         binding?.messagesScroll?.visibility = View.GONE
@@ -156,7 +154,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             }
         }
 
-        for ((index, item) in itemsSuggested.withIndex()) {
+        for (item in itemsSuggested) {
             val holder = MessageCellView(requireContext())
             holder.bind(item)
             holder.setOnClickListener {
@@ -165,7 +163,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding?.messagesView?.addView(holder)
         }
 
-        for ((index, item) in itemsSuggested.withIndex()) {
+        for (item in itemsSuggested) {
             val holder = MessageGroupCellView(requireContext(),false)
             holder.bind(item)
             holder.setOnClickListener {
@@ -174,7 +172,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding?.groupView?.addView(holder)
         }
 
-        for ((index, item) in itemsSuggested.withIndex()) {
+        for (item in itemsSuggested) {
             val holder = MessageGroupCellView(requireContext())
             holder.bind(item)
             binding?.groupViewSuggested?.addView(holder)
@@ -182,7 +180,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
 
     }
 
-    fun filterAlert() {
+    private fun filterAlert() {
         val alert = NotificationsFilterDialog().apply {
             onConfirmClick = {
 

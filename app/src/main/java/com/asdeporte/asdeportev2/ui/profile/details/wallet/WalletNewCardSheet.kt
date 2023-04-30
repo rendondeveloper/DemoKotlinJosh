@@ -2,13 +2,9 @@ package com.asdeporte.asdeportev2.ui.profile.details.wallet
 
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
-import android.app.AlertDialog
-import android.app.Dialog
 import android.content.res.Resources
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,9 +18,9 @@ class WalletNewCardSheet(private val isEdit: Boolean = false) : BottomSheetDialo
 
     private var _binding: SheetWalletNewCardBinding? = null
     private val binding get() = _binding!!
-    lateinit var frontAnim:AnimatorSet
-    lateinit var backAnim: AnimatorSet
-    var isFront =true
+    private lateinit var frontAnim:AnimatorSet
+    private lateinit var backAnim: AnimatorSet
+    private var isFront =true
 
     interface NewCardSheetListener {
         fun onCardCreated()
@@ -134,7 +130,7 @@ class WalletNewCardSheet(private val isEdit: Boolean = false) : BottomSheetDialo
         binding.numberTextInput.setText("4039 2903 2019 2394")
         binding.dateExpirationInput.setText( "12/25")
         binding.cvvTextInput.setText("***")
-        binding.confirmButton.setText("Guardar")
+        binding.confirmButton.text = "Guardar"
     }
 
     override fun onDestroyView() {

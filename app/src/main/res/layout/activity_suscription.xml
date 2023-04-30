@@ -13,6 +13,7 @@
         android:background="@color/orange_as_light">
 
         <ImageView
+                android:contentDescription="@string/todo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
@@ -22,6 +23,7 @@
             android:src="@drawable/asd_logo_large" />
 
         <ImageButton
+        android:contentDescription="imageBotton"
             android:id="@+id/close"
             android:layout_width="20dp"
             android:layout_height="20dp"

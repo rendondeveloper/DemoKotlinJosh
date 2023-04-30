@@ -64,7 +64,7 @@ class NewPostAddFragment : Fragment(), NewPostPreviewSheet.NewPostPreviewSheetLi
         initPosts()
     }
 
-    fun initPosts() {
+    private fun initPosts() {
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
 
         when (type) {

@@ -2,7 +2,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/dialog_background"
@@ -17,7 +16,7 @@
         <TextView
             android:id="@+id/txtTitle"
             style="@style/Kanit_Semi_Bold_Italic.Default.24"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
@@ -25,10 +24,10 @@
             android:text="title" />
 
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/imgClose"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"

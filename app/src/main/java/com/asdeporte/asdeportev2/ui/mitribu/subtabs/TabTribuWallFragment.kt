@@ -1,6 +1,5 @@
 package com.asdeporte.asdeportev2.ui.mitribu.subtabs
 
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import android.widget.PopupMenu
 import android.widget.RelativeLayout
-import androidx.annotation.MenuRes
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -96,7 +93,7 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
         }, 1000)
     }
 
-    fun initPosts() {
+    private fun initPosts() {
         val items = listOf(
             testEvent,
             testEvent,
@@ -153,32 +150,10 @@ class TabTribuWallFragment : Fragment(), PostMenuOptionsSheet.PostMenuOptionsShe
         binding?.events?.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
-        //Handler(Looper.getMainLooper()).postDelayed({
         eventsAdapter.setItems(items)
-        //}, 1000)
 
     }
 
-    private fun showMenu(v: View, @MenuRes menuRes: Int) {
-        val popup = PopupMenu(requireContext(), v)
-        popup.menuInflater.inflate(menuRes, popup.menu)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            popup.setForceShowIcon(true)
-        }
-        popup.setOnMenuItemClickListener {
-            // Respond to menu item click.
-            return@setOnMenuItemClickListener true
-        }
-        popup.setOnDismissListener {
-            // Respond to popup being dismissed.
-        }
-        // Show the popup menu.
-        popup.show()
-    }
-
-    /*
-     Listeners
-     */
     override fun onApplyFilters() {
         //TODO("Not yet implemented")
     }

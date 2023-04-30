@@ -17,8 +17,6 @@ class ResumeItemView @JvmOverloads constructor(
 
     private var binding: ResumeItemViewBinding
 
-    private var isActive = false
-
     init {
         binding = ResumeItemViewBinding.inflate(LayoutInflater.from(context), this, true)
         setupListener()

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:theme="@style/Theme.AsdeporteV2">
 
-    <RelativeLayout
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AsdeporteV2">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -38,6 +35,7 @@
                     android:text="Tus actividades recientes" />
 
                 <ImageView
+                android:contentDescription="@string/todo"
                     android:id="@+id/back_image"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
@@ -69,4 +67,3 @@
 
     </RelativeLayout>
 
-</LinearLayout>

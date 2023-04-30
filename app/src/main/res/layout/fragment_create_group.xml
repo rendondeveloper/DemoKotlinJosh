@@ -118,6 +118,7 @@
                 app:hintTextColor="@color/black_dynamic">
 
                 <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                     android:id="@+id/genderTextInput"
                     style="@style/Kanit_Regular.Default.16"
                     android:layout_width="match_parent"

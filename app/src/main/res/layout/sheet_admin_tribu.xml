@@ -120,6 +120,7 @@
             android:gravity="center_horizontal"
             android:backgroundTint="@color/black_dynamic">
             <ImageView
+                android:contentDescription="@string/todo"
                 android:layout_width="20dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/user"
@@ -148,6 +149,7 @@
             android:gravity="center_horizontal"
             android:backgroundTint="@color/black_dynamic">
             <ImageView
+                android:contentDescription="@string/todo"
                 android:layout_width="20dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/exit"
@@ -176,6 +178,7 @@
             android:gravity="center_horizontal"
             android:backgroundTint="@color/black_dynamic">
             <ImageView
+                android:contentDescription="@string/todo"
                 android:layout_width="20dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/trash"

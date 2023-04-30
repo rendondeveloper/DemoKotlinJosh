@@ -68,6 +68,7 @@
                     style="@style/MenuTextInputLayoutStyle">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/cityTextInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -89,6 +90,7 @@
                     style="@style/MenuTextInputLayoutStyle">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/sportTextInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

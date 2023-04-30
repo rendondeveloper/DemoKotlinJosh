@@ -24,6 +24,7 @@
             android:layout_height="179dp">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/product_img"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
@@ -79,7 +80,6 @@
             android:textColor="@color/black_dynamic"
             android:background="@drawable/secondary_button"
             app:backgroundTint="@color/black_dynamic"
-            android:layout_alignParentStart="true"
             android:text="Agregar"
             android:textAllCaps="false"
             android:paddingTop="0dp"

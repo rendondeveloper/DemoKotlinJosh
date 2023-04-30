@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.databinding.FragmentEditGroupBinding
-import com.asdeporte.asdeportev2.ui.MainActivity
 
 class EditGroupFragment: Fragment() {
     private var binding: FragmentEditGroupBinding? = null

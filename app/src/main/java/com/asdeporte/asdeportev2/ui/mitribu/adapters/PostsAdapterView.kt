@@ -2,13 +2,9 @@ package com.asdeporte.asdeportev2.ui.mitribu.adapters
 
 import android.content.Context
 import android.graphics.PorterDuff
-import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.FrameLayout
-import android.widget.PopupMenu
-import androidx.annotation.MenuRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
@@ -23,7 +19,6 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
-
 
 class PostsAdapterView @JvmOverloads constructor(
     context: Context,
@@ -143,10 +138,6 @@ class PostsAdapterView @JvmOverloads constructor(
 
     }
 
-    fun release() {
-        binding.videoPlayerView.player?.release()
-    }
-
     fun pause() {
         binding.videoPlayerView.player?.let {
             if(it.isPlaying){
@@ -161,23 +152,6 @@ class PostsAdapterView @JvmOverloads constructor(
                 it.stop()
             }
         }
-    }
-
-    private fun showMenu(v: View, @MenuRes menuRes: Int) {
-        val popup = PopupMenu(context, v)
-        popup.menuInflater.inflate(menuRes, popup.menu)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            popup.setForceShowIcon(true)
-        }
-        popup.setOnMenuItemClickListener {
-            // Respond to menu item click.
-            return@setOnMenuItemClickListener true
-        }
-        popup.setOnDismissListener {
-            // Respond to popup being dismissed.
-        }
-        // Show the popup menu.
-        popup.show()
     }
 
 }

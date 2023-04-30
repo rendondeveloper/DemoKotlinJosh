@@ -237,7 +237,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:weightSum="2"
+                    android:baselineAligned="false">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -250,7 +251,6 @@
                             style="@style/Kanit_Bold.Default.36"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_centerInParent="true"
                             android:background="@drawable/statistic_circle"
                             android:gravity="center"
                             android:text="25"
@@ -260,7 +260,6 @@
                             style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
                             android:gravity="center"
                             android:text="Carrera" />
                     </LinearLayout>
@@ -276,7 +275,6 @@
                             style="@style/Kanit_Bold.Default.36"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_centerInParent="true"
                             android:background="@drawable/statistic_circle"
                             android:gravity="center"
                             android:text="25"
@@ -286,7 +284,6 @@
                             style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
                             android:gravity="center"
                             android:text="Bicicleta" />
                     </LinearLayout>
@@ -297,7 +294,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="30dp"
                     android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:weightSum="2"
+                    android:baselineAligned="false">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -310,7 +308,6 @@
                             style="@style/Kanit_Bold.Default.36"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_centerInParent="true"
                             android:background="@drawable/statistic_circle"
                             android:gravity="center"
                             android:text="25"
@@ -320,7 +317,6 @@
                             style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
                             android:gravity="center"
                             android:text="Carrera" />
                     </LinearLayout>
@@ -336,7 +332,6 @@
                             style="@style/Kanit_Bold.Default.36"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_centerInParent="true"
                             android:background="@drawable/statistic_circle"
                             android:gravity="center"
                             android:text="25"
@@ -346,7 +341,6 @@
                             style="@style/Kanit_Semibold.Default.16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
                             android:gravity="center"
                             android:text="Carrera de obstáculos" />
                     </LinearLayout>
@@ -357,6 +351,7 @@
                     android:layout_height="32dp" />
 
                 <ImageView
+                android:contentDescription="@string/todo"
                     android:layout_width="100dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"

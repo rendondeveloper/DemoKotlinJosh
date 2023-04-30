@@ -2,8 +2,6 @@ package com.asdeporte.asdeportev2.ui.mitribu.adapters
 
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
-import androidx.recyclerview.widget.RecyclerView
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
@@ -12,7 +10,7 @@ import com.asdeporte.hermes.adapters.ViewWrapper
 class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
     PostsAdapterView.PostsAdapterListener {
 
-   public var onItemClick: ((item: EventData) -> Unit)? = null
+    var onItemClick: ((item: EventData) -> Unit)? = null
     var onMenuClick: ((item: EventData) -> Unit)? = null
 
     override fun onCreateItemView(parent: ViewGroup, viewType: Int): PostsAdapterView =
@@ -32,30 +30,6 @@ class PostsAdapter : RecyclerViewAdapterBase<EventData, PostsAdapterView>(),
 
     override fun onMenu(event: EventData) {
         onMenuClick?.invoke(event)
-    }
-
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
-
-    override fun onViewAttachedToWindow(holder: ViewWrapper<PostsAdapterView>) {
-        super.onViewAttachedToWindow(holder)
-    }
-
-    override fun onDetachedFromRecyclerView(recyclerView: RecyclerView) {
-        super.onDetachedFromRecyclerView(recyclerView)
-    }
-
-    override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
-        super.onAttachedToRecyclerView(recyclerView)
-    }
-
-    override fun onViewRecycled(holder: ViewWrapper<PostsAdapterView>) {
-        super.onViewRecycled(holder)
-    }
-
-    override fun onFailedToRecycleView(holder: ViewWrapper<PostsAdapterView>): Boolean {
-        return super.onFailedToRecycleView(holder)
     }
 
     override fun onViewDetachedFromWindow(holder: ViewWrapper<PostsAdapterView>) {

@@ -22,16 +22,19 @@
         android:weightSum="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/tab_wall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/tab_wall_img"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -52,9 +55,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/tab_tribus_img"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -75,9 +80,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/tab_friends_img"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -98,9 +105,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/tab_privacy_img"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -121,9 +130,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/tab_profile_img"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"

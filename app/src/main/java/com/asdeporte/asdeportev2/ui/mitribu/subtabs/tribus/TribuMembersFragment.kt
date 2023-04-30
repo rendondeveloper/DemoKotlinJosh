@@ -10,18 +10,13 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.asdeporte.asdeportev2.databinding.FragmentTribuMembersBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.TribuResultAdapter
-import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendDefaultView
-import com.asdeporte.asdeportev2.ui.reusableview.tribu.FriendMenuOption
 import com.google.android.material.tabs.TabLayout
 
-class TribuMembersFragment : Fragment(), FriendDefaultView.FriendDefaultViewListener {
+class TribuMembersFragment : Fragment() {
 
     private var _binding: FragmentTribuMembersBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var resultsdapter: TribuResultAdapter
-    lateinit var membersViewPagerAdapter: MembersViewPagerAdapter
+    private lateinit var membersViewPagerAdapter: MembersViewPagerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -67,13 +62,6 @@ class TribuMembersFragment : Fragment(), FriendDefaultView.FriendDefaultViewList
                 binding.tabView.getTabAt(position)?.select()
             }
         })
-    }
-
-    /*
-     Listeners
-     */
-    override fun onOptionSelected(friendId: Int, option: FriendMenuOption) {
-        //TODO("Not yet implemented")
     }
 
     class MembersViewPagerAdapter(fragmentActivity: FragmentActivity) :

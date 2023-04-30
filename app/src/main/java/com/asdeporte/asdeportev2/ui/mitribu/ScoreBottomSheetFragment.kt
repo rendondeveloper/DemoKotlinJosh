@@ -22,7 +22,7 @@ class ScoreBottomSheetFragment : BottomSheetDialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = ScoreBottomSheetBinding.inflate(inflater, container, false)
         return binding.root
     }

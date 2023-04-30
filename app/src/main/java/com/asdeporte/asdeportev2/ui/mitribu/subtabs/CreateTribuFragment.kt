@@ -94,7 +94,7 @@ class CreateTribuFragment : Fragment(), TextToSpeech.OnInitListener {
         addTribuMemberAdapter.setItems(users)
     }
 
-    fun openMedia() {
+    private fun openMedia() {
         pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
     }
 

@@ -32,7 +32,7 @@ class NotificationsFilterDialog: DialogFragment() {
         return dialog
     }
 
-    fun setupListeners() {
+    private fun setupListeners() {
         _binding?.cancelButton?.setOnClickListener {
             this.dismiss()
         }

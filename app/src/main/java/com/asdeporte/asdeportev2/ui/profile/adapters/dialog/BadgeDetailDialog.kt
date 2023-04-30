@@ -7,7 +7,6 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import com.asdeporte.asdeportev2.databinding.BadgeDetailDialogBinding
-import com.asdeporte.asdeportev2.databinding.NotificationsFilterDialogBinding
 import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeShareSheet
 
 class BadgeDetailDialog: DialogFragment(),  BadgeShareSheet.EventBottomSheetListenerBadgeShare{
@@ -32,7 +31,7 @@ class BadgeDetailDialog: DialogFragment(),  BadgeShareSheet.EventBottomSheetList
         return dialog
     }
 
-    fun setupListeners() {
+    private fun setupListeners() {
         _binding?.confirmButton?.setOnClickListener {
             this.dismiss()
         }

@@ -1,23 +1,17 @@
 package com.asdeporte.asdeportev2.ui.notifications.adapter
 
-import android.R
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.asdeporte.asdeportev2.data.models.HasImage
 import com.asdeporte.asdeportev2.data.models.Message
 import com.asdeporte.asdeportev2.databinding.ItemChatMeBinding
 import com.asdeporte.asdeportev2.databinding.ItemChatOtherBinding
-import com.asdeporte.asdeportev2.ui.mitribu.TribuTabs
 import com.asdeporte.asdeportev2.ui.notifications.adapter.Const.HASIMAGE
 import com.asdeporte.asdeportev2.ui.notifications.adapter.Const.NOIMAGE
-import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
-import com.asdeporte.hermes.adapters.ViewWrapper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions

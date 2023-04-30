@@ -36,7 +36,7 @@ class PersonalBadgePagerFragment : Fragment(), BadgeShareSheet.EventBottomSheetL
         setupListeners()
     }
 
-    fun setupListeners() {
+    private fun setupListeners() {
         _binding.imageClosed.setOnClickListener {
             findNavController().popBackStack()
         }

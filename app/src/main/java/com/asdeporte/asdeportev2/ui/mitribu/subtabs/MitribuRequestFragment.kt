@@ -14,8 +14,8 @@ import com.google.android.material.tabs.TabLayout
 
 class MitribuRequestFragment : Fragment() {
 
-    lateinit var binding: FragmentMitribuRequestBinding
-    lateinit var requestsViewPagerAdapter: RequestsViewPagerAdapter
+    private lateinit var binding: FragmentMitribuRequestBinding
+    private lateinit var requestsViewPagerAdapter: RequestsViewPagerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

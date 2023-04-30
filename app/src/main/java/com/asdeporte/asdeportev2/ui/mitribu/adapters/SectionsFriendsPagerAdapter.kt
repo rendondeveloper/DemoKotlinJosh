@@ -1,6 +1,5 @@
 package com.asdeporte.asdeportev2.ui.mitribu.adapters
 
-import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -8,7 +7,6 @@ import com.asdeporte.asdeportev2.ui.mitribu.TribuProfileFragment
 import com.asdeporte.asdeportev2.ui.mitribu.subtabs.*
 
 class SectionsFriendsPagerAdapter(
-    private val context: Context,
     fm: FragmentManager,
     val listener: () -> Unit
 ): FragmentPagerAdapter(fm) {

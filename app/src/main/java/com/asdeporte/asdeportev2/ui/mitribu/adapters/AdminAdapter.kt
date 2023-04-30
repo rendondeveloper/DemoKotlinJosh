@@ -26,7 +26,4 @@ class AdminAdapter (val context: Context) : RecyclerViewAdapterBase<EventData, A
         }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

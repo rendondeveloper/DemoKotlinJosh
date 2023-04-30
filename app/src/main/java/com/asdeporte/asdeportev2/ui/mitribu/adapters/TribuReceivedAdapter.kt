@@ -5,9 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.ItemReceivedBinding
-import com.bumptech.glide.Glide
 
-class TribuReceivedAdapter(val requests: MutableList<EventData>, val listener: (EventData) -> Unit) :
+class TribuReceivedAdapter(private val requests: MutableList<EventData>, val listener: (EventData) -> Unit) :
     RecyclerView.Adapter<TribuReceivedAdapter.TribuReceivedViewHolder>() {
 
     override fun onCreateViewHolder(

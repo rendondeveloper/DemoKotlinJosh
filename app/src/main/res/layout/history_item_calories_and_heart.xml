@@ -20,6 +20,7 @@
 
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/ivgrap"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

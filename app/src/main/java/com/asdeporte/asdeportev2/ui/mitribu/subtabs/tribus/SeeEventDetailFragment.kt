@@ -12,19 +12,15 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentSeeEventDetailBinding
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.AddTribuMemberAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.FriendAdapter
-import com.asdeporte.asdeportev2.ui.mitribu.adapters.RequestsViewPagerAdapter
 import com.asdeporte.asdeportev2.ui.mitribu.subtabs.EventDetailsFragment
 import com.asdeporte.asdeportev2.ui.mitribu.subtabs.EventLocationFragment
-import com.asdeporte.asdeportev2.ui.mitribu.subtabs.RequestsReceivedFragment
-import com.asdeporte.asdeportev2.ui.mitribu.subtabs.RequestsSentFragment
 import com.google.android.material.tabs.TabLayout
 
 class SeeEventDetailFragment : Fragment() {
 
-    lateinit var binding: FragmentSeeEventDetailBinding
-    lateinit var eventsViewPagerAdapter: EventsViewPagerAdapter
+    private lateinit var binding: FragmentSeeEventDetailBinding
+    private lateinit var eventsViewPagerAdapter: EventsViewPagerAdapter
     private lateinit var friendAdapter: FriendAdapter
 
     override fun onCreateView(

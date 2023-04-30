@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.ItemSentBinding
 
-class TribuSentAdapter(val sent: MutableList<EventData>, val listener: (EventData) -> Unit) :
+class TribuSentAdapter(private val sent: MutableList<EventData>,private val listener: (EventData) -> Unit) :
     RecyclerView.Adapter<TribuSentAdapter.TribuSentViewHolder>() {
 
     override fun onCreateViewHolder(

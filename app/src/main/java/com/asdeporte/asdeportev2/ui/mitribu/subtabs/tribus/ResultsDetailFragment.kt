@@ -18,8 +18,8 @@ import com.google.android.material.tabs.TabLayout
 
 class ResultsDetailFragment : Fragment() {
 
-    lateinit var binding: FragmentResultsDetailBinding
-    lateinit var resultsViewPagerAdapter: ResultsViewPagerAdapter
+    private lateinit var binding: FragmentResultsDetailBinding
+    private lateinit var resultsViewPagerAdapter: ResultsViewPagerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

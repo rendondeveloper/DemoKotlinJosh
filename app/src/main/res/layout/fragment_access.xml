@@ -2,16 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/onboarding3"/>
 
     <ImageButton
+        android:contentDescription="imageBotton"
         android:id="@+id/previus"
         android:layout_width="30dp"
         android:layout_height="30dp"

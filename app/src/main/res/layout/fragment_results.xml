@@ -43,6 +43,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageButton
+        android:contentDescription="imageBotton"
                 android:id="@+id/filter_button"
                 android:layout_width="65dp"
                 android:layout_height="48dp"

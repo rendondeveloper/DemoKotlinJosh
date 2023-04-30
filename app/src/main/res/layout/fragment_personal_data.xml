@@ -144,6 +144,7 @@
                     app:hintTextColor="@color/black_dynamic">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/genderTextInput"
                         style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
@@ -189,6 +190,7 @@
                     app:hintTextColor="@color/black_dynamic">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/shirtTextInput"
                         style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
@@ -202,7 +204,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/weightTextField"
@@ -268,7 +271,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="10dp"
-                    android:weightSum="2">
+                    android:weightSum="2"
+                    android:baselineAligned="false">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/numberCodeTextField"
@@ -284,6 +288,7 @@
                         style="@style/MenuTextInputLayoutStyle">
 
                         <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                             android:id="@+id/numberCodeTextInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -360,6 +365,7 @@
                     android:layout_weight="1">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/countryTextInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -383,6 +389,7 @@
                     app:hintTextColor="@color/black_dynamic">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/stateTextInput"
                         style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"

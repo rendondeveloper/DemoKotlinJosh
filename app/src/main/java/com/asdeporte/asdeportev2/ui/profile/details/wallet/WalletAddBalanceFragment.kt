@@ -19,8 +19,7 @@ class WalletAddBalanceFragment : Fragment(), WalletNewCardSheet.NewCardSheetList
 
     private var _binding: FragmentWalletAddBalanceBinding? = null
     private val binding get() = _binding!!
-
-    var currentCustomAmount = ""
+    private var currentCustomAmount = ""
 
     //CreditCardAdapter
     private lateinit var creditCardAdapter: CreditCardAdapter
@@ -57,34 +56,39 @@ class WalletAddBalanceFragment : Fragment(), WalletNewCardSheet.NewCardSheetList
 
     private fun setCustomAmount(amount: String) {
         currentCustomAmount = amount
-        if (amount == binding.firstAmount.text) {
-            binding.firstAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.pill_background)
-            binding.firstAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.white_dynamic))
-            binding.secondAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.secondAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
-            binding.thirdAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.thirdAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
-        } else if (amount == binding.secondAmount.text) {
-            binding.firstAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.firstAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
-            binding.secondAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.pill_background)
-            binding.secondAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.white_dynamic))
-            binding.thirdAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.thirdAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
-        } else if (amount == binding.thirdAmount.text) {
-            binding.firstAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.firstAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
-            binding.secondAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.secondAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
-            binding.thirdAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.pill_background)
-            binding.thirdAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.white_dynamic))
-        } else {
-            binding.firstAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.firstAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
-            binding.secondAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.secondAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
-            binding.thirdAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
-            binding.thirdAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+        when (amount) {
+            binding.firstAmount.text -> {
+                binding.firstAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.pill_background)
+                binding.firstAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.white_dynamic))
+                binding.secondAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.secondAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+                binding.thirdAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.thirdAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+            }
+            binding.secondAmount.text -> {
+                binding.firstAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.firstAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+                binding.secondAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.pill_background)
+                binding.secondAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.white_dynamic))
+                binding.thirdAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.thirdAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+            }
+            binding.thirdAmount.text -> {
+                binding.firstAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.firstAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+                binding.secondAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.secondAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+                binding.thirdAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.pill_background)
+                binding.thirdAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.white_dynamic))
+            }
+            else -> {
+                binding.firstAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.firstAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+                binding.secondAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.secondAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+                binding.thirdAmount.background = ContextCompat.getDrawable(requireContext(), R.drawable.secondary_button)
+                binding.thirdAmount.setTextColor(ContextCompat.getColor(requireContext(), R.color.label_primary))
+            }
         }
     }
 

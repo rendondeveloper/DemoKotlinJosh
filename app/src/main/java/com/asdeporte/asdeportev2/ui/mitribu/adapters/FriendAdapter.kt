@@ -26,7 +26,4 @@ class FriendAdapter(val context: Context) : RecyclerViewAdapterBase<EventData, F
         }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

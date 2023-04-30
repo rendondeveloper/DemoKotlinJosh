@@ -24,7 +24,4 @@ class EventTribuHorizontalAdapter : RecyclerViewAdapterBase<EventData, EventTrib
         }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

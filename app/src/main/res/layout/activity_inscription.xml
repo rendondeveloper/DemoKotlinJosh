@@ -101,6 +101,7 @@
                     android:textColor="@color/white"/>
 
                 <ImageView
+                android:contentDescription="@string/todo"
                     android:layout_width="20dp"
                     android:layout_height="10dp"
                     android:src="@drawable/ic_arrow_up"
@@ -134,6 +135,7 @@
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:contentDescription="FloatingActionButton"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/imageBack"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/onboarding1"/>
+        android:scaleType="centerCrop"/>
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/imageOverlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

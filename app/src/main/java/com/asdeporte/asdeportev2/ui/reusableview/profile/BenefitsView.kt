@@ -1,7 +1,7 @@
 package com.asdeporte.asdeportev2.ui.reusableview.profile
 
+import android.annotation.SuppressLint
 import android.content.Context
-import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +9,7 @@ import android.widget.FrameLayout
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.BenefitsViewBinding
 
+@SuppressLint("Recycle")
 class BenefitsView @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,

@@ -1,12 +1,10 @@
 package com.asdeporte.asdeportev2.ui.mitribu.post
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.SheetNewPostPreviewBinding
@@ -80,7 +78,7 @@ class NewPostPreviewSheet : BottomSheetDialogFragment() {
         return root
     }
 
-    fun setupActivity() {
+    private fun setupActivity() {
         binding.topView.visibility = View.VISIBLE
         binding.dataView.visibility = View.VISIBLE
         binding.mediaView.visibility = View.GONE
@@ -95,7 +93,7 @@ class NewPostPreviewSheet : BottomSheetDialogFragment() {
             .apply(requestOptions)
             .into(binding.eventImage)
     }
-    fun setupMedal() {
+    private fun setupMedal() {
         binding.topView.visibility = View.VISIBLE
         binding.dataView.visibility = View.VISIBLE
         binding.mediaView.visibility = View.GONE
@@ -110,7 +108,7 @@ class NewPostPreviewSheet : BottomSheetDialogFragment() {
             .apply(requestOptions)
             .into(binding.eventImage)
     }
-    fun setupMedia() {
+    private fun setupMedia() {
         binding.topView.visibility = View.GONE
         binding.dataView.visibility = View.GONE
         binding.mediaView.visibility = View.VISIBLE

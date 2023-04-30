@@ -129,8 +129,7 @@
             android:background="@color/secondary_background"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout11"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_badges_next" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView41"
@@ -172,6 +171,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <ImageView
+                android:contentDescription="@string/todo"
             android:layout_width="14dp"
             android:layout_height="14dp"
             android:src="@drawable/ic_filter"

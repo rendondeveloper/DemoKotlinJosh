@@ -23,7 +23,7 @@ class BadgeShareSheet : BottomSheetDialogFragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = BadgeShareBottomSheetBinding.inflate(inflater)
         return binding.root
     }

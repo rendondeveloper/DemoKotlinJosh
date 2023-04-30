@@ -12,6 +12,7 @@
         android:layout_marginTop="32dp"
         >
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/eventImage"
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -50,6 +51,7 @@
         app:layout_constraintStart_toStartOf="@+id/eventTitleAddress2"
         app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress2" />
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/eventAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,6 +82,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/eventImage2"
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -122,6 +125,7 @@
             app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress22" />
 
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/eventAction2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -161,6 +165,7 @@
                 android:background="@drawable/black_dynamic_border">
 
                 <ImageView
+                android:contentDescription="@string/todo"
                     android:id="@+id/eventImageItem1"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
@@ -203,6 +208,7 @@
                 android:background="@drawable/black_dynamic_border">
 
                 <ImageView
+                android:contentDescription="@string/todo"
                     android:id="@+id/eventImageItem2"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
@@ -245,6 +251,7 @@
                 android:background="@drawable/black_dynamic_border">
 
                 <ImageView
+                android:contentDescription="@string/todo"
                     android:id="@+id/eventImageItem3"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
@@ -298,6 +305,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/eventImage3"
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -340,6 +348,7 @@
             app:layout_constraintStart_toStartOf="@+id/eventTitleAddress23"
             app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress23" />
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/eventAction3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

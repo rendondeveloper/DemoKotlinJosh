@@ -6,6 +6,7 @@
     android:background="@color/dark_blue">
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/image_closed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -17,135 +17,130 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:baselineAligned="false">
+
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/partner_border"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
+            <ImageView
+                android:id="@+id/socio1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:padding="10dp"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/partner_border"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/partner_border"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/partner_epura" />
-                </LinearLayout>
+            <ImageView
+                android:id="@+id/socio2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/partner_border"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+    </LinearLayout>
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/partner_aeromexico" />
-                </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:baselineAligned="false">
 
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/partner_border"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
+            <ImageView
+                android:id="@+id/socio3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/partner_border"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/partner_border"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/partner_santander" />
-                </LinearLayout>
+            <ImageView
+                android:id="@+id/socio4"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/partner_border"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+    </LinearLayout>
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/partner_gatorade" />
-                </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:baselineAligned="false">
 
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/partner_border"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
+            <ImageView
+                android:id="@+id/socio5"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:padding="10dp"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/partner_border"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/partner_border"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/partner_gmc" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/partner_border"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/partner_innova" />
-                </LinearLayout>
-
-            </LinearLayout>
-
+            <ImageView
+                android:id="@+id/socio6"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:padding="10dp"
+                android:scaleType="fitCenter"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

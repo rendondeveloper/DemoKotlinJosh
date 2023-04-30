@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.asdeporte.asdeportev2.databinding.LoginMenuBottomSheetBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
-import com.asdeporte.asdeportev2.utils.SharedPreferencesAsd
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class LoginMenuBottomSheet : BottomSheetDialogFragment() {

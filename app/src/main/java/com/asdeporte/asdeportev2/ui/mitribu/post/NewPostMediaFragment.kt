@@ -31,7 +31,7 @@ class NewPostMediaFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentNewPostMediaBinding.inflate(inflater)
         return binding.root
     }
@@ -106,7 +106,7 @@ class NewPostMediaFragment : Fragment() {
         }
     }
 
-    fun openMedia() {
+    private fun openMedia() {
         pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
     }
 }

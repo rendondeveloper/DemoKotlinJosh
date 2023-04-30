@@ -11,7 +11,6 @@ import com.asdeporte.asdeportev2.databinding.FragmentTribeAdminBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.alert.AlertDialog
-import com.asdeporte.asdeportev2.ui.notifications.NotificationsFilterDialog
 
 class TribeAdminFragment : Fragment() {
 
@@ -20,7 +19,7 @@ class TribeAdminFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentTribeAdminBinding.inflate(inflater, container, false)
         return binding.root
     }

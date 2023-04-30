@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:theme="@style/Theme.AsdeporteV2"
     app:behavior_peekHeight="90dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -69,6 +70,7 @@
                     style="@style/MenuTextInputLayoutStyle">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/cityTextInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -90,6 +92,7 @@
                     style="@style/MenuTextInputLayoutStyle">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/sportTextInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

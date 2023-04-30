@@ -5,7 +5,6 @@ import android.text.Html
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.asdeporte.asdeportev2.databinding.PlanPlusViewBinding
 

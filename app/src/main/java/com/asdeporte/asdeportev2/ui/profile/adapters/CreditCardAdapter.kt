@@ -3,15 +3,10 @@ package com.asdeporte.asdeportev2.ui.profile.adapters
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import androidx.core.content.res.ResourcesCompat
-import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.ViewCreditCardBinding
-import com.asdeporte.asdeportev2.databinding.ViewProfileItemBinding
-import com.asdeporte.asdeportev2.ui.profile.ProfileMenuItem
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
 
@@ -33,9 +28,7 @@ class CreditCardAdapter : RecyclerViewAdapterBase<EventData, CreditCardView>() {
             onItemClick?.invoke(item)
         }
     }
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
+
 }
 class CreditCardView @JvmOverloads constructor(
     context: Context,

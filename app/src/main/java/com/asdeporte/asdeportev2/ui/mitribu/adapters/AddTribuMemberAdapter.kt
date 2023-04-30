@@ -26,7 +26,4 @@ class AddTribuMemberAdapter(val context: Context) : RecyclerViewAdapterBase<Even
         }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

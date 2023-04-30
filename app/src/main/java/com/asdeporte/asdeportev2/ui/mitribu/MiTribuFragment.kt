@@ -13,10 +13,7 @@ import com.asdeporte.asdeportev2.ui.mitribu.adapters.SectionsPagerAdapter
 
 class MiTribuFragment : Fragment() {
     private var _binding: FragmentMiTribuBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
     private var activeTab = TribuTabs.WALL
     private lateinit var viewPager: ViewPager
 
@@ -32,7 +29,7 @@ class MiTribuFragment : Fragment() {
 
     private fun initTabs() {
 
-        val sectionsPagerAdapter = SectionsPagerAdapter(requireContext(), childFragmentManager)
+        val sectionsPagerAdapter = SectionsPagerAdapter(childFragmentManager)
         viewPager = binding.viewPager
         viewPager.offscreenPageLimit = 4 // not more scroll lag!
         viewPager.adapter = sectionsPagerAdapter

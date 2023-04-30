@@ -5,14 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
     tools:context=".ui.mitribu.post.NewPostPreviewFragment">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/top_view"
@@ -21,6 +16,7 @@
             android:layout_marginTop="60dp">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/event_image"
                 android:layout_width="73dp"
                 android:layout_height="65dp"
@@ -123,9 +119,7 @@
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginTop="@dimen/dimen_16dp"
-            android:layout_toStartOf="@+id/button_send"
             android:hint="Escribe un comentario"
             app:endIconMode="custom"
             app:endIconTint="@color/black_dynamic"
@@ -186,5 +180,4 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
 </LinearLayout>

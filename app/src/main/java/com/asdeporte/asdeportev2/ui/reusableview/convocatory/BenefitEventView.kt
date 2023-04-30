@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.asdeporte.asdeportev2.databinding.BenefitEventViewBinding
-import com.asdeporte.asdeportev2.databinding.TitleAndDescripctionViewBinding
 
 class BenefitEventView @JvmOverloads constructor(
     context: Context,

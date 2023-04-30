@@ -125,6 +125,7 @@
                     app:hintTextColor="@color/black_dynamic">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/genderTextInput"
                         style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
@@ -147,6 +148,7 @@
                     app:hintTextColor="@color/black_dynamic">
 
                     <AutoCompleteTextView
+                        tools:ignore="LabelFor"
                         android:id="@+id/shirtTextInput"
                         style="@style/Kanit_Regular.Default.16"
                         android:layout_width="match_parent"
@@ -195,6 +197,7 @@
                         android:orientation="vertical">
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_upload" />
@@ -216,6 +219,7 @@
                     </LinearLayout>
 
                     <ImageView
+                android:contentDescription="@string/todo"
                         android:id="@+id/media_container_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

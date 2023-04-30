@@ -48,6 +48,7 @@
                         android:padding="16dp">
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:layout_width="24dp"
                             android:layout_height="match_parent"
                             android:src="@drawable/ic_world"
@@ -95,6 +96,7 @@
                         android:padding="16dp">
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/ic_friends_audience"
@@ -141,6 +143,7 @@
                         android:padding="16dp">
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/ic_user_audience"

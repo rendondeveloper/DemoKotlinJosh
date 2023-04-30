@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.databinding.SheetAdminTribuBinding
-import com.asdeporte.asdeportev2.databinding.SheetJoinTribusFilterBinding
 import com.asdeporte.asdeportev2.ui.alert.AlertDialog
-import com.asdeporte.asdeportev2.ui.notifications.NotificationsFilterDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class AdminTribuSheet : BottomSheetDialogFragment() {

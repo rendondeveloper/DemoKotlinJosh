@@ -26,7 +26,4 @@ class ParticipantsAdapter(val context: Context) : RecyclerViewAdapterBase<EventD
         }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

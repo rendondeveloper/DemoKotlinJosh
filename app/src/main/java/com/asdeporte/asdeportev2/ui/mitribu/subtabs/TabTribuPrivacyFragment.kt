@@ -1,17 +1,11 @@
 package com.asdeporte.asdeportev2.ui.mitribu.subtabs
 
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.PopupMenu
-import android.widget.TextView
-import androidx.annotation.MenuRes
 import androidx.fragment.app.Fragment
-import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuPrivacyBinding
-import com.asdeporte.asdeportev2.ui.access.ModalBottomSheetCountry
 
 class TabTribuPrivacyFragment : Fragment() {
     private var _binding: FragmentTabTribuPrivacyBinding? = null
@@ -163,28 +157,6 @@ class TabTribuPrivacyFragment : Fragment() {
             }
         }
     }
-
-    private fun showMenu(v: TextView, @MenuRes menuRes: Int) {
-        val popup = PopupMenu(requireContext(), v)
-        popup.menuInflater.inflate(menuRes, popup.menu)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            popup.setForceShowIcon(true)
-        }
-        popup.setOnMenuItemClickListener {
-            // Respond to menu item click.
-            v.text = it.title
-            return@setOnMenuItemClickListener true
-        }
-        popup.setOnDismissListener {
-            // Respond to popup being dismissed.
-        }
-        // Show the popup menu.
-        popup.show()
-    }
-
-    /*
-     Listeners
-     */
 
     override fun onDestroyView() {
         super.onDestroyView()

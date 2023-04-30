@@ -101,11 +101,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            /*
             R.id.navigation_suscription -> {
                 startActivity(Intent(this, SuscriptionActivity::class.java))
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 true
             }
+             */
             R.id.navigation_tribu -> {
                 true
             }

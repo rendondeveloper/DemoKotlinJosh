@@ -23,6 +23,7 @@
             android:layout_marginEnd="@dimen/dimen_42dp">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:id="@+id/event_image"
                 android:layout_width="73dp"
                 android:layout_height="65dp"

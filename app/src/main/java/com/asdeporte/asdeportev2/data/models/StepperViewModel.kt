@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.aceinteract.android.stepper.StepperNavigationView
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 
 /**
  * View model for managing a stepper activity.
@@ -14,10 +13,6 @@ import kotlinx.coroutines.flow.StateFlow
 class StepperViewModel : ViewModel() {
 
     private val _stepperSettings = MutableStateFlow(StepperSettings())
-    /**
-     * Public immutable accessor for [_stepperSettings].
-     */
-    val stepperSettings: StateFlow<StepperSettings> get() = _stepperSettings
 
     /**
      * Update the settings of the stepper navigation.

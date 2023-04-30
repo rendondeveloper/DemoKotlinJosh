@@ -18,7 +18,7 @@ class SelectPaymentWalletItemView @JvmOverloads constructor(
 
     private var binding: SelectPaymentWalletItemViewBinding
 
-    var selectedItem = false
+    private var selectedItem = false
 
     init {
         binding = SelectPaymentWalletItemViewBinding.inflate(LayoutInflater.from(context), this, true)

@@ -118,6 +118,7 @@
                         android:layout_height="64dp">
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:id="@+id/eventImage"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -142,6 +143,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:id="@+id/eventAction"
                             android:layout_width="@dimen/dimen_24dp"
                             android:layout_height="@dimen/dimen_24dp"
@@ -236,6 +238,7 @@
                         android:layout_height="64dp">
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:id="@+id/communityImage"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -260,6 +263,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:id="@+id/comunityAction"
                             android:layout_width="@dimen/dimen_24dp"
                             android:layout_height="@dimen/dimen_24dp"
@@ -285,6 +289,7 @@
                         android:layout_height="64dp">
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:id="@+id/healthImage"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -309,6 +314,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
+                android:contentDescription="@string/todo"
                             android:id="@+id/healthAction"
                             android:layout_width="@dimen/dimen_24dp"
                             android:layout_height="@dimen/dimen_24dp"

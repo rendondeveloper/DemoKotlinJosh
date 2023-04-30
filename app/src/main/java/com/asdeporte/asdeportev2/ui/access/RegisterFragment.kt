@@ -26,7 +26,7 @@ class RegisterFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    var currentStep = 0
+    private var currentStep = 0
 
     private var datePicker: MaterialDatePicker<Long>? = null
 
@@ -126,12 +126,6 @@ class RegisterFragment : Fragment() {
         binding.stateTextInput.setOnClickListener {
             bottomSheetState.show(parentFragmentManager, "MY_BOTTOM_SHEET")
         }
-
-        //val feelings = resources.getStringArray(R.array.profile_level_values)
-        //val countries = arrayListOf("España", "México", "USA")
-        //val arrayAdapter = ArrayAdapter(requireContext(), R.layout.list_item, countries)
-        //binding.countryTextInput.setAdapter(arrayAdapter)//Aqui
-        //binding.stateTextInput.setAdapter(arrayAdapter)
 
     }
 

@@ -1,18 +1,10 @@
 package com.asdeporte.asdeportev2.ui.mitribu.subtabs
 
-import android.app.AlertDialog
-import android.app.Dialog
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.asdeporte.asdeportev2.databinding.SheetJoinTribusFilterBinding
-import com.asdeporte.asdeportev2.databinding.SheetNewPostAudienceBinding
-import com.asdeporte.asdeportev2.ui.MainActivity
-import com.asdeporte.asdeportev2.ui.mitribu.post.NewPostAudience
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class JoinTribusFilterSheet : BottomSheetDialogFragment() {

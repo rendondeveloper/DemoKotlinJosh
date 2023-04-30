@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
@@ -17,6 +16,7 @@ import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
 import com.chargebee.android.Chargebee
 import com.chargebee.android.exceptions.ChargebeeResult
+import timber.log.Timber
 
 class SuscriptionActivity : AppCompatActivity() {
 
@@ -79,10 +79,10 @@ class SuscriptionActivity : AppCompatActivity() {
             Chargebee.retrieveAllPlans(arrayOf("Mensual-Android")) {
                 when (it) {
                     is ChargebeeResult.Success -> {
-                        Log.i(javaClass.simpleName, "list Plans :  ${it.data}")
+                        Timber.i(javaClass.simpleName, "list Plans :  ${it.data}")
                     }
                     is ChargebeeResult.Error -> {
-                        Log.d(javaClass.simpleName, "Error :  ${it.exp.message}")
+                        Timber.d(javaClass.simpleName, "Error :  ${it.exp.message}")
                     }
                 }
             }
@@ -114,9 +114,6 @@ class SuscriptionAdapter : RecyclerViewAdapterBase<EventData, SuscriptionItemVie
         }*/
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }
 
 class SuscriptionItemView constructor(

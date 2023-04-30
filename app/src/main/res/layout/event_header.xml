@@ -22,11 +22,12 @@
         tools:text="Eventos cerca de mi" />
 
     <ImageButton
+        android:contentDescription="imageBotton"
         android:id="@+id/right"
         android:layout_width="30dp"
         android:layout_height="20dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/todo"
+
         android:scaleType="centerCrop"
         android:src="@drawable/arrow_right"
         android:visibility="gone"

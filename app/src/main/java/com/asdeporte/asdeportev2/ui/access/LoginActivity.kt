@@ -3,14 +3,10 @@ package com.asdeporte.asdeportev2.ui.access
 
 import android.graphics.Color
 import android.os.Bundle
-import android.view.View
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.ActivityLoginBinding
 
@@ -31,20 +27,6 @@ class LoginActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_login)
         appBarConfiguration = AppBarConfiguration(navController.graph)
 
-    }
-
-    /*override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_login)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
-    }*/
-
-    /* Loading */
-    fun showLoading() {
-        binding.loadingBar.visibility = View.VISIBLE
-    }
-    fun hideLoading() {
-        binding.loadingBar.visibility = View.GONE
     }
 
     override fun onBackPressed() {

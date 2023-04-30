@@ -4,7 +4,6 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
-        jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
         maven { url 'https://s3-eu-west-1.amazonaws.com/development.copernico.cloud/android'}
@@ -14,7 +13,6 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
         maven { url 'https://s3-eu-west-1.amazonaws.com/development.copernico.cloud/android'}

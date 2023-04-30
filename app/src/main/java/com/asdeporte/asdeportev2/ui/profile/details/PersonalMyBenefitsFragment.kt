@@ -20,9 +20,8 @@ class PersonalMyBenefitsFragment : Fragment() {
 
     private var _binding: FragmentPersonalMyBenefitsBinding? = null
     private val binding get() = _binding!!
-
-    var click = 0
-    var clickAction = false
+    private var click = 0
+    private var clickAction = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentPersonalMyBenefitsBinding.inflate(inflater, container, false)

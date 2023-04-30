@@ -30,6 +30,7 @@
         tools:text="Configuración" />
 
     <ImageView
+                android:contentDescription="@string/todo"
         android:id="@+id/imageView14"
         android:layout_width="@dimen/dimen_24dp"
         android:layout_height="@dimen/dimen_24dp"
@@ -51,6 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_section">
 
         <ImageView
+                android:contentDescription="@string/todo"
             android:id="@+id/icon"
             android:layout_width="25dp"
             android:layout_height="25dp"

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/event_tribu_background"
@@ -35,13 +36,15 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/dimen_8dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen_12dp"
-                android:contentDescription="@string/todo"
+
                 android:src="@drawable/check_circuclar"
                 app:tint="@color/green" />
 
@@ -59,13 +62,15 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/dimen_8dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen_12dp"
-                android:contentDescription="@string/todo"
+
                 android:src="@drawable/check_circuclar"
                 app:tint="@color/green" />
 
@@ -83,13 +88,15 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/dimen_8dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen_12dp"
-                android:contentDescription="@string/todo"
+
                 android:src="@drawable/check_circuclar"
                 app:tint="@color/green" />
 
@@ -106,13 +113,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:contentDescription="@string/todo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen_12dp"
-                android:contentDescription="@string/todo"
+
                 android:src="@drawable/check_circuclar"
                 app:tint="@color/green" />
 

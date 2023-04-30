@@ -18,7 +18,7 @@ class MembersFragment(private val isAmigo: Boolean) : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentMembersBinding.inflate(inflater, container, false)
         return binding.root
     }

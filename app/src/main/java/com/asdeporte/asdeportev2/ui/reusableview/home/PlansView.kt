@@ -18,8 +18,4 @@ class PlansView @JvmOverloads constructor(
         binding = PlansViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-
-    fun setTitle(title: String) {
-
-    }
 }

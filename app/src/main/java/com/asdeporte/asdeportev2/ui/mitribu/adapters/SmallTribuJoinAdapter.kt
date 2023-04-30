@@ -26,7 +26,4 @@ class SmallTribuJoinAdapter : RecyclerViewAdapterBase<EventData, TribuSmallView>
 
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

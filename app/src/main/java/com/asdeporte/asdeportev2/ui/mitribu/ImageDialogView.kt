@@ -2,13 +2,10 @@ package com.asdeporte.asdeportev2.ui.mitribu
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.res.Resources
 import android.graphics.Color
-import android.graphics.Rect
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.asdeporte.asdeportev2.databinding.DialogImageViewBinding

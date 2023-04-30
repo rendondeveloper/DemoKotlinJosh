@@ -51,6 +51,7 @@
                 android:layout_below="@+id/notice_view">
 
                 <ImageView
+                android:contentDescription="@string/todo"
                     android:id="@+id/card_image"
                     android:layout_width="40dp"
                     android:layout_height="40dp"

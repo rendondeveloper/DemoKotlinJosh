@@ -1,11 +1,5 @@
 package com.asdeporte.asdeportev2.data.responses.events
 
-
-data class EventResponse(
-    val code: Int?,
-    val data: EventData?,
-)
-
 data class EventData(
     val eventid: String?,
     val official_name: String?,

@@ -44,18 +44,13 @@ class NewPostMedalAdapter : RecyclerViewAdapterBase<EventData, NewPostMedalView>
         onPostClick?.invoke(event)
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }
 class NewPostMedalView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
-    private lateinit var binding: NewPostMedalViewBinding
-
-    private lateinit var listener: NewPostActivityView.PostsAdapterListener
+    private var binding: NewPostMedalViewBinding
 
     init {
         binding = NewPostMedalViewBinding.inflate(LayoutInflater.from(context), this, true)

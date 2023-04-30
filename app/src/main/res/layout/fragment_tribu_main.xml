@@ -88,6 +88,7 @@
                 </LinearLayout>
 
                 <ImageButton
+        android:contentDescription="imageBotton"
                     android:id="@+id/tribu_admin_button"
                     style="@style/Kanit_Regular.Default.14"
                     android:layout_width="wrap_content"

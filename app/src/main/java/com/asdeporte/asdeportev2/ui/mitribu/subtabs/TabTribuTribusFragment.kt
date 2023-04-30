@@ -12,7 +12,6 @@ import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentTabTribuTribusBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
-import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.mitribu.ChangeDefaultTribuDialog
 import com.asdeporte.asdeportev2.ui.mitribu.adapters.SmallTribuJoinAdapter
 import com.asdeporte.asdeportev2.ui.reusableview.home.EventBottomSheet

@@ -305,28 +305,11 @@
         <item>@string/profile_female</item>
     </string-array>
 
-    <string-array name="profile_level_values">
-        <item></item>
-        <item>@string/profile_level_beginner</item>
-        <item>@string/profile_level_intermediate</item>
-        <item>@string/profile_level_advanced</item>
-        <item>@string/profile_level_elite</item>
-    </string-array>
-
     <string-array name="profile_level_mandatory_values">
         <item>@string/profile_level_beginner</item>
         <item>@string/profile_level_intermediate</item>
         <item>@string/profile_level_advanced</item>
         <item>@string/profile_level_elite</item>
-    </string-array>
-
-    <string-array name="profile_shirt_values">
-        <item></item>
-        <item>@string/profile_shirt_size_xs</item>
-        <item>@string/profile_shirt_size_s</item>
-        <item>@string/profile_shirt_size_m</item>
-        <item>@string/profile_shirt_size_g</item>
-        <item>@string/profile_shirt_size_xg</item>
     </string-array>
 
     <string-array name="packages_shirt_values">
@@ -1164,4 +1147,19 @@
     <string name="personal_information">Información personal</string>
     <string name="free">Free</string>
     <string name="mxn">MXN</string>
+    <string name="textPrivacity">¿Quién puede ver lo que compartes?</string>
+    <string name="txtShare">Quién puede ver lo que compartes</string>
+    <string name="txtResults">¿Quién puede ver mis resultados?</string>
+    <string name="todos">Todos</string>
+    <string name="txtMetas">¿Quién puede ver mis metas?</string>
+    <string name="txtFeatures">¿Quién quieres que vea tus publicaciones futuras?</string>
+    <string name="txtFind">Cómo pueden encontrarte y contactarte los demás</string>
+    <string name="txtSend">¿Quién puede enviarte solicitudes de amistad?</string>
+    <string name="txtListFriends">¿Quién puede ver tu lista de amigos?</string>
+    <string name="txtSolo">Sólo yo</string>
+    <string name="txtTribus">¿Quién puede ver tu lista de tribus a las que perteneces?</string>
+    <string name="txtSearchDirections">¿Quién puede buscarte con la dirección de correo electrónico que proporcionaste?</string>
+    <string name="txtPublic">Limitar el público de publicaciones anteriores</string>
+    <string name="txtNext">¿Quién puede ver mis próximos eventos?</string>
+    <string name="txtDirection">Av. Universidad #424, Col. San Jerónimo, México.</string>
 </resources>

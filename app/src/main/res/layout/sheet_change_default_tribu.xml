@@ -17,6 +17,7 @@
             android:text="Cambiar Tribu Principal" />
 
         <ImageButton
+        android:contentDescription="imageBotton"
             android:id="@+id/cancel_button"
             android:layout_width="27dp"
             android:layout_height="match_parent"

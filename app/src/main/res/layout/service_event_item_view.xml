@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:paddingVertical="8dp"
     android:background="@color/white_dynamic">
 
@@ -21,61 +20,54 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/secondary_button"
-            android:backgroundTint="@color/dark_blue">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+            android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blue"
+                android:contentDescription="@string/todo"
+                android:padding="10dp"
+                android:src="@drawable/service_water_bottle" />
+
+            <ImageView
+            android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="-12dp"
+                android:layout_marginEnd="-10dp"
+                android:contentDescription="@string/todo"
+                android:rotation="270"
+                android:scaleType="fitXY"
+                android:src="@drawable/arrow_down"
+                app:tint="@color/dark_blue" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="9dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/dark_blue"
-                    android:padding="10dp"
-                    android:src="@drawable/service_water_bottle"/>
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/arrow_down"
-                    app:tint="@color/dark_blue"
-                    android:layout_marginStart="-12dp"
-                    android:layout_marginEnd="-10dp"
-                    android:scaleType="fitXY"
-                    android:rotation="270"/>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/title_view"
+                    style="@style/Kanit_Semi_Bold.Default.16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:layout_marginVertical="9dp"
-                    android:layout_marginHorizontal="8dp">
+                    android:text="Hidratación"
+                    android:textColor="@color/dark_blue" />
 
-                    <TextView
-                        android:id="@+id/title_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Hidratación"
-                        style="@style/Kanit_Semi_Bold.Default.16"
-                        android:textColor="@color/dark_blue"/>
-                    <TextView
-                        android:id="@+id/subtitle_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Durante la ruta"
-                        style="@style/Kanit_Regular.Default.14"
-                        android:textColor="@color/dark_blue" />
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/subtitle_view"
+                    style="@style/Kanit_Regular.Default.14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Durante la ruta"
+                    android:textColor="@color/dark_blue" />
 
             </LinearLayout>
-
 
         </LinearLayout>
 

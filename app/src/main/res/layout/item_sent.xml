@@ -114,6 +114,7 @@
                 android:layout_weight="1">
 
                 <ImageView
+                android:contentDescription="@string/todo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/photo_placeholder"
@@ -129,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Cycling "
-                    android:drawableEnd="@drawable/tab_retos"/>
+                    app:drawableEnd="@drawable/tab_retos"/>
 
             </LinearLayout>
 
@@ -177,6 +178,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                android:contentDescription="@string/todo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/tab_tribu"

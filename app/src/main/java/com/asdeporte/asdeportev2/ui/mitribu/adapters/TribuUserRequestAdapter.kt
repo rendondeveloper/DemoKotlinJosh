@@ -30,7 +30,4 @@ class TribuUserRequestAdapter : RecyclerViewAdapterBase<EventData, TribuUserRequ
         }
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-    }
 }

@@ -105,8 +105,8 @@ class BadgeCollectionAdapter(fragment: PersonalBadgeFragment) : FragmentStateAda
 
     override fun getItemCount(): Int = 3
 
-    var images = listOf(R.drawable.badge_next_dummy, R.drawable.badge_next_dummy, R.drawable.badge_next_dummy)
-    var titles = listOf(fragment.getString(R.string.badge_event_one),
+    private val images = listOf(R.drawable.badge_next_dummy, R.drawable.badge_next_dummy, R.drawable.badge_next_dummy)
+    private val titles = listOf(fragment.getString(R.string.badge_event_one),
             fragment.getString(R.string.badge_event_two),
             fragment.getString(R.string.badge_event_three))
 
