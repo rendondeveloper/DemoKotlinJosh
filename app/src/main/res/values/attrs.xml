@@ -19,4 +19,9 @@
         <attr name="history_item_average" format="string"/>
         <attr name="history_item_time" format="string"/>
     </declare-styleable>
+    <declare-styleable name="HistoryItemTwo">
+        <attr name="history_item_two_date" format="string"/>
+        <attr name="history_item_two_score" format="string"/>
+        <attr name="history_item_two_time" format="string"/>
+    </declare-styleable>
 </resources>

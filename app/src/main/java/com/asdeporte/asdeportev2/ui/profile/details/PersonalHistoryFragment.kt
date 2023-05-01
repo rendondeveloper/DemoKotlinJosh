@@ -20,6 +20,11 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
+import com.github.mikephil.charting.components.Legend.LegendForm
+import com.github.mikephil.charting.components.YAxis
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.data.LineData
+import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -30,8 +35,10 @@ import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
+import com.github.mikephil.charting.utils.EntryXComparator
 import com.github.mikephil.charting.utils.MPPointF
 import com.google.android.material.tabs.TabLayout
+import java.util.Collections
 
 class PersonalHistoryFragment : Fragment() {
 
@@ -39,6 +46,8 @@ class PersonalHistoryFragment : Fragment() {
     private var chart: PieChart? = null
     private var lineChart: LineChart? = null
     private var mTf: Typeface? = null
+
+    private var chartAverageSleep: PieChart? = null
 
     private lateinit var eventsAdapter: EventHistoryAdapter
     val testEvent = EventData("123",
@@ -93,6 +102,7 @@ class PersonalHistoryFragment : Fragment() {
             })
         }
         setupStatistics()
+        setupGraphicSleep()
         setupEvents()
         setupCalories()
     }
@@ -135,6 +145,30 @@ class PersonalHistoryFragment : Fragment() {
             xAxis?.setDrawGridLines(false)
             lineChart?.invalidate()
         }
+    }
+
+    private fun setupGraphicSleep(){
+        chartAverageSleep = binding.averageSleep.pieChartAverageSleep
+        chartAverageSleep!!.setUsePercentValues(true)
+        chartAverageSleep!!.description.isEnabled = false
+        chartAverageSleep?.setTouchEnabled(false)
+        chartAverageSleep!!.isRotationEnabled = true
+        chartAverageSleep!!.isHighlightPerTapEnabled = true
+        chartAverageSleep!!.isDrawHoleEnabled = false
+        chartAverageSleep
+
+        chartAverageSleep!!.legend.apply {
+            verticalAlignment = Legend.LegendVerticalAlignment.CENTER
+            horizontalAlignment = Legend.LegendHorizontalAlignment.RIGHT
+            orientation = Legend.LegendOrientation.VERTICAL
+            xEntrySpace = 34f
+            yEntrySpace = 0f
+            yOffset = 0f
+        }
+
+        //chartAverageSleep?.setEntryLabelTextSize(0f)
+        chartAverageSleep?.setDrawEntryLabels(false)
+        setDataSleep()
     }
 
 
@@ -213,6 +247,43 @@ class PersonalHistoryFragment : Fragment() {
         // undo all highlights
         chart!!.highlightValues(null)
         chart!!.invalidate()
+    }
+
+    private fun setDataSleep(){
+        val values = arrayOf(3.8f, 3f, 2f, 1.2f)
+        val titles = arrayOf(
+                "Sueño profundo 38.6%", "Sueño ligero 30.8%", "Sueño REM 22.5%", "Interrupciones 8.1%"
+        )
+
+        val entries = ArrayList<PieEntry>()
+
+        values.forEachIndexed { index, _ ->
+            entries.add(PieEntry(
+                    values[index], titles[index]
+            ))
+        }
+
+        val dataSet = PieDataSet(entries, "")
+        dataSet.setDrawIcons(false)
+        dataSet.sliceSpace = 3f
+        dataSet.iconsOffset = MPPointF(0f, 40f)
+        dataSet.selectionShift = 5f
+
+        val colors = ArrayList<Int>()
+        colors.add(ContextCompat.getColor(requireContext(), R.color.blue))
+        colors.add(ContextCompat.getColor(requireContext(), R.color.green))
+        colors.add(ContextCompat.getColor(requireContext(), R.color.yellow))
+        colors.add(ContextCompat.getColor(requireContext(), R.color.pink))
+        dataSet.colors = colors
+        val data = PieData(dataSet)
+        data.setValueFormatter(PercentFormatter())
+        data.setValueTextSize(0f)
+        data.setValueFormatter(PercentFormatter())
+        data.setValueTextColor(Color.WHITE)
+        chartAverageSleep!!.data = data
+
+        chartAverageSleep!!.highlightValues(null)
+        chartAverageSleep!!.invalidate()
     }
 
     private fun setupEvents() {

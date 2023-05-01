@@ -119,14 +119,30 @@
             <LinearLayout
                 android:id="@+id/llSleep"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Sueño" />
+                <include
+                    android:id="@+id/activitySleep"
+                    layout="@layout/history_item_activity_sleep" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
+
+                <include layout="@layout/history_item_history_two" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
+
+                <include
+                    android:id="@+id/averageSleep"
+                    layout="@layout/history_item_average_sleep" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
             </LinearLayout>
 
 
