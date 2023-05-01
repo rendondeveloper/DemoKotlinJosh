@@ -346,7 +346,7 @@
         tools:layout="@layout/fragment_personal_my_benefits" />
     <fragment
         android:id="@+id/personal_wallet"
-        android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalWalletFragment"
+        android:name="com.asdeporte.asdeportev2.ui.profile.details.wallet.PersonalWalletFragment"
         android:label="Wallet"
         tools:layout="@layout/fragment_personal_wallet">
         <action
@@ -582,4 +582,9 @@
         android:name="com.asdeporte.asdeportev2.ui.notifications.EditGroupFragment"
         android:label="fragment_edit_group"
         tools:layout="@layout/fragment_edit_group" />
+    <fragment
+        android:id="@+id/personalPhotosFragment"
+        android:name="com.asdeporte.asdeportev2.ui.profile.details.photos.PersonalPhotosFragment"
+        android:label="fragment_personal_photos"
+        tools:layout="@layout/fragment_personal_photos" />
 </navigation>

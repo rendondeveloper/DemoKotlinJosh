@@ -15,73 +15,91 @@
 
         <TextView
             android:id="@+id/txtTitle"
-            style="@style/Kanit_Semi_Bold_Italic.Default.24"
+            style="@style/Kanit_Semi_Bold.Default.16"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:text="title" />
 
         <ImageView
-                android:contentDescription="@string/todo"
             android:id="@+id/imgClose"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
+            android:contentDescription="@string/todo"
             android:elevation="1dp"
-            android:padding="8dp"
             android:src="@drawable/ic_close_line"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </LinearLayout>
+
+    <View
+        android:id="@+id/view22"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_11dp"
+        android:layout_weight="1"
+        android:background="@color/gray_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtMessage"
         style="@style/Kanit_Regular.Default.14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
         android:enabled="true"
         android:text="message" />
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/lnActions"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:background="@color/white_dynamic"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/cancel_button"
-            style="@style/Kanit_Medium.Default.14"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
-            android:layout_marginEnd="8dp"
-            android:layout_toStartOf="@+id/confirm_button"
-            android:background="@android:color/transparent"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/secondary_button"
+            android:paddingStart="7dp"
             android:paddingTop="0dp"
+            android:paddingEnd="7dp"
             android:paddingBottom="0dp"
             android:text="@string/cancel"
             android:textAllCaps="false"
-            android:textColor="@color/black"
-            app:backgroundTint="@null" />
+            android:textColor="@color/black_dynamic"
+            app:backgroundTint="@color/black_dynamic" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/confirm_button"
-            style="@style/Kanit_Medium.Default.16"
-            android:layout_width="120dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
-            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
             android:background="@drawable/pill_background"
+            android:paddingStart="7dp"
             android:paddingTop="0dp"
+            android:paddingEnd="7dp"
             android:paddingBottom="0dp"
             android:text="@string/btn_confirm"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
+            android:textAllCaps="false" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

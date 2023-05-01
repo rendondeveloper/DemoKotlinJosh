@@ -1,4 +1,4 @@
-package com.asdeporte.asdeportev2.ui.profile.details
+package com.asdeporte.asdeportev2.ui.profile.details.wallet
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,8 +14,6 @@ import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.CreditCardAdapter
 import com.asdeporte.asdeportev2.ui.profile.adapters.HistoryAdapter
-import com.asdeporte.asdeportev2.ui.profile.details.wallet.CardBottomSheet
-import com.asdeporte.asdeportev2.ui.profile.details.wallet.WalletNewCardSheet
 
 class PersonalWalletFragment : Fragment(), WalletNewCardSheet.NewCardSheetListener {
 

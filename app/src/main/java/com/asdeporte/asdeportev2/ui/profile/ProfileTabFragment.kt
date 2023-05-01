@@ -92,6 +92,7 @@ class ProfileTabFragment : Fragment() {
                     MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.personal_history) }
                     MoreItem.BENEFITS -> { findNavController().safelyNavigate(R.id.personal_my_benefits) }
                     MoreItem.BADGES -> { findNavController().navigate(R.id.to_badge_fragment) }
+                    MoreItem.PHOTOS -> { findNavController().navigate(R.id.personalPhotosFragment) }
                     else -> {
                         //TODO("Not yet implemented")
                     }

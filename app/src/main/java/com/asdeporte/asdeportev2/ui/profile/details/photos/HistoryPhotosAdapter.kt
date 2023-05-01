@@ -1,16 +1,19 @@
-package com.asdeporte.asdeportev2.ui.profile.adapters
+package com.asdeporte.asdeportev2.ui.profile.details.photos
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.SimpleAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.asdeporte.asdeportev2.data.responses.events.EventData
-import com.asdeporte.asdeportev2.databinding.ItemHistoryBinding
+import com.asdeporte.asdeportev2.databinding.ItemHistoryPhotosBinding
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
 
-class HistoryAdapter : RecyclerViewAdapterBase<EventData, HistoryView>() {
+class HistoryPhotosAdapter : RecyclerViewAdapterBase<EventData, HistoryView>() {
 
     var onItemClick: ((item: EventData) -> Unit)? = null
 
@@ -33,14 +36,21 @@ class HistoryView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private var binding: ItemHistoryBinding
+    private var binding: ItemHistoryPhotosBinding
 
     init {
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
-        binding = ItemHistoryBinding.inflate(LayoutInflater.from(context), this, true)
+        binding = ItemHistoryPhotosBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
     fun bind(item: EventData) {
-        //binding.title.text = item.title
+        val layoutHorizontalManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+        binding.rvPhotos.layoutManager = layoutHorizontalManager
+        val testEvent = EventData("", "", "", "")
+        val items = listOf(testEvent, testEvent, testEvent, testEvent)
+        val adapter = PhotosAdapter()
+        adapter.setItems(items)
+        binding.rvPhotos.setHasFixedSize(true)
+        binding.rvPhotos.adapter = adapter
     }
 }
