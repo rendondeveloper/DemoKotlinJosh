@@ -6,10 +6,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.SimpleAdapter
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.ItemHistoryPhotosBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.hermes.adapters.RecyclerViewAdapterBase
 import com.asdeporte.hermes.adapters.ViewWrapper
 
@@ -52,5 +56,9 @@ class HistoryView @JvmOverloads constructor(
         adapter.setItems(items)
         binding.rvPhotos.setHasFixedSize(true)
         binding.rvPhotos.adapter = adapter
+
+        binding.txtShowGallery.setOnClickListener{
+            findNavController().safelyNavigate(R.id.galleryPhotosFragment)
+        }
     }
 }

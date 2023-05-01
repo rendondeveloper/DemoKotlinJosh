@@ -587,4 +587,8 @@
         android:name="com.asdeporte.asdeportev2.ui.profile.details.photos.PersonalPhotosFragment"
         android:label="fragment_personal_photos"
         tools:layout="@layout/fragment_personal_photos" />
+    <fragment
+        android:id="@+id/galleryPhotosFragment"
+        android:name="com.asdeporte.asdeportev2.ui.profile.details.photos.GalleryPhotosFragment"
+        android:label="GalleryPhotosFragment" />
 </navigation>

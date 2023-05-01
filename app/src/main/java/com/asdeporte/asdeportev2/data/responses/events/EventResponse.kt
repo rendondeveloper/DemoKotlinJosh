@@ -6,7 +6,8 @@ data class EventData(
     val logo: String?,
     val cover: String?,
     val isAmigo: Boolean? = false,
-    val isVideo: Boolean? = false
+    val isVideo: Boolean? = false,
+    var isBuy: Boolean? = false
 )
 
 data class ScoreData(
