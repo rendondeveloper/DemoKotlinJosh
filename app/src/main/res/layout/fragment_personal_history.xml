@@ -166,7 +166,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="24dp"/>
 
-                <include layout="@layout/history_item_recovery" />
+                <include
+                    android:id="@+id/historyRecovery"
+                    layout="@layout/history_item_recovery" />
 
                 <View
                     android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 package com.asdeporte.asdeportev2.ui.profile.details
 
 import android.graphics.Color
+import android.graphics.DashPathEffect
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -20,6 +21,7 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
+import com.github.mikephil.charting.components.Legend.LegendForm
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
@@ -28,10 +30,12 @@ import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.formatter.IFillFormatter
 import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
+import com.github.mikephil.charting.utils.Utils
 import com.google.android.material.tabs.TabLayout
 
 class PersonalHistoryFragment : Fragment() {
@@ -43,6 +47,7 @@ class PersonalHistoryFragment : Fragment() {
 
     private var chartAverageSleep: PieChart? = null
     private var chartAverageSleepTwo: LineChart? = null
+    private var chartAverageRecovery: LineChart? = null
 
     private lateinit var eventsAdapter: EventHistoryAdapter
     val testEvent = EventData("123",
@@ -101,6 +106,7 @@ class PersonalHistoryFragment : Fragment() {
         setupGraphicSleepTwo()
         setupEvents()
         setupCalories()
+        setupGraphicRecovery()
     }
 
     private fun setupCalories(){
@@ -220,6 +226,80 @@ class PersonalHistoryFragment : Fragment() {
         //chartAverageSleep?.setEntryLabelTextSize(0f)
         chartAverageSleep?.setDrawEntryLabels(false)
         setDataSleep()
+    }
+
+
+    private fun setupGraphicRecovery(){
+        chartAverageRecovery =  binding!!.historyRecovery.lineChart
+        chartAverageRecovery!!.setBackgroundColor(Color.WHITE)
+        chartAverageRecovery!!.description.isEnabled = false
+        chartAverageRecovery!!.setTouchEnabled(false)
+        chartAverageRecovery!!.setDrawGridBackground(false)
+        chartAverageRecovery!!.isDragEnabled = false
+        chartAverageRecovery!!.setScaleEnabled(false)
+        chartAverageRecovery!!.setPinchZoom(false)
+        val xAxis = chartAverageRecovery!!.xAxis
+        xAxis.enableGridDashedLine(10f, 0f, 0f)
+        xAxis.setDrawGridLines(false)
+        xAxis.setDrawAxisLine(false)
+        xAxis.setDrawLabels(false)
+        val yAxis: YAxis = chartAverageRecovery!!.getAxisLeft()
+        chartAverageRecovery!!.axisRight.isEnabled = false
+        yAxis.enableGridDashedLine(10f, 0f, 100f)
+        yAxis.gridColor = R.color.white
+        yAxis.axisMaximum = 130f
+        yAxis.axisMinimum = 90f
+        yAxis.setDrawGridLines(true)
+        yAxis.setDrawLimitLinesBehindData(false)
+        xAxis.setDrawLimitLinesBehindData(false)
+
+        val values = java.util.ArrayList<Entry>()
+
+        values.add(Entry(20f, 106f))
+        values.add(Entry(50f, 100f))
+        values.add(Entry(80f, 96f))
+        values.add(Entry(110f, 101f))
+        values.add(Entry(140f, 106f))
+        values.add(Entry(170f, 110f))
+        values.add(Entry(200f, 120f))
+        values.add(Entry(230f, 110f))
+        values.add(Entry(270f, 96f))
+        values.add(Entry(300f, 106f))
+        values.add(Entry(310f, 110f))
+        values.add(Entry(320f, 120f))
+        values.add(Entry(340f, 110f))
+        values.add(Entry(370f, 100f))
+
+        val set1: LineDataSet = LineDataSet(values, "")
+        set1.setDrawIcons(false)
+        set1.enableDashedLine(10f, 0f, 0f)
+        set1.color = Color.BLACK
+        set1.setCircleColor(Color.TRANSPARENT)
+        set1.lineWidth = 4f
+        set1.circleRadius = 0f
+        set1.setDrawCircleHole(false)
+        set1.formLineWidth = 1f
+        set1.formLineDashEffect = DashPathEffect(floatArrayOf(10f, 5f), 0f)
+        set1.color = Color.parseColor("#FF6A00")
+        //set1.fillColor = Color.parseColor("#f5e6e6")
+        set1.formSize = 15f
+        set1.valueTextSize = 0f
+        set1.enableDashedHighlightLine(10f, 5f, 0f)
+        set1.setDrawFilled(true)
+        //set1.fillFormatter = IFillFormatter { dataSet, dataProvider -> chartAverageRecoveryt.getAxisLeft().getAxisMinimum() }
+        if (Utils.getSDKInt() >= 18) {
+            val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.background_graph)
+            set1.fillDrawable = drawable
+        } else {
+            set1.fillColor = Color.BLACK
+        }
+
+        val dataSets = java.util.ArrayList<ILineDataSet>()
+        dataSets.add(set1)
+        val data = LineData(dataSets)
+        chartAverageRecovery!!.data = data
+        val l = chartAverageRecovery!!.legend
+        l.form = LegendForm.LINE
     }
 
 
