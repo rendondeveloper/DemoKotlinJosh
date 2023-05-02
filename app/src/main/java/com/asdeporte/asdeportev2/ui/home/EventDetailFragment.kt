@@ -5,7 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.core.view.allViews
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
@@ -60,8 +64,8 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
             .apply(requestOptions)
             .into(binding.eventLogo)
 
-        val titles = listOf("Distancias y Categorías", "Inscripciones y Precios", "Beneficios Plus", "Ruta", "Programa del Evento", "Entrega de Kit", "Hospedaje y Turismo")
-        binding.tabView.setTabs(titles)
+        val titles = listOf("Distancias y Categorías", "Inscripciones y Precios", "Beneficios Plus", "Hospedaje y Turismo", "Ruta", "Programa del Evento", "Entrega de Kit")
+        binding.tabViews.setTabs(titles)
 
         binding.inscriptionButton.setOnClickListener {
             startActivity(Intent(requireContext(), InscriptionActivity::class.java))
@@ -82,6 +86,40 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
         view1.setData("¡La noche es tuya!", "Corre en esta increíble carrera nocturna en Santa Fe, donde pondrás a prueba tus límites disfrutando de la vista entre el equilibrio de la naturaleza y la bella arquitectura de gigantes edificios.")
         binding.contentView.addView(view1)
 
+        val tabview = binding.tabViews.allViews.find { it == it.findViewById(R.id.tab_view) }
+        /*
+        tabview?.allViews?.let { views ->
+            for(view in views) {
+                val tabContainer = view.allViews.find { it == it.findViewById(R.id.tab_container) }
+                tabContainer?.setOnClickListener{
+                    if(it.tag == 1){
+                        binding.contentView.removeAllViews()
+                        val view2 = BenefitEventView(requireContext())
+                        binding.contentView.addView(view2)
+                        val view3 = BenefitEventView(requireContext())
+                        binding.contentView.addView(view3)
+                    }
+                }
+            }
+        }
+         */
+
+
+
+
+        /*
+        val currentTab = tabview?.allViews?.find { it.tag == binding.tabViews.currentTab}
+        currentTab?.setOnClickListener{
+            if(it.tag == 2){
+                binding.contentView.removeAllViews()
+                val view2 = BenefitEventView(requireContext())
+                binding.contentView.addView(view2)
+                val view3 = BenefitEventView(requireContext())
+                binding.contentView.addView(view3)
+            }
+        }
+         */
+        /*
         val view2 = BenefitEventView(requireContext())
         binding.contentView.addView(view2)
         val view3 = BenefitEventView(requireContext())
@@ -94,7 +132,7 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
         val view5 = TitleAndDescripctionView(requireContext())
         view5.setData("¡La noche es tuya!", "Corre en esta increíble carrera nocturna en Santa Fe, donde pondrás a prueba tus límites disfrutando de la vista entre el equilibrio de la naturaleza y la bella arquitectura de gigantes edificios.")
         binding.contentView.addView(view5)
-
+         */
         //val item2 = BenefitsView(requireContext())
         //binding.contentView.addView(item2)
 

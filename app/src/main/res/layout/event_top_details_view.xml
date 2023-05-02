@@ -20,45 +20,49 @@
         <LinearLayout
             android:layout_width="130dp"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:orientation="vertical"
-            android:padding="8dp"
-            android:gravity="start|center_vertical">
+            android:padding="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                android:contentDescription="@string/todo"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/todo"
                     android:src="@drawable/ic_calendar" />
+
                 <TextView
+                    style="@style/Kanit_Medium.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Kanit_Medium.Default.14"
-                    android:text="17 sep 2022"/>
+                    android:text="17 sep 2022" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                    <ImageView
-                        android:contentDescription="@string/todo"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:src="@drawable/ic_time"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/Kanit_Medium.Default.14"
-                        android:text="19:00 hrs"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_time" />
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:00 hrs" />
 
             </LinearLayout>
 
@@ -72,8 +76,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:gravity="start|center_vertical"
+            android:orientation="vertical"
             android:padding="8dp">
 
             <LinearLayout
@@ -81,30 +85,33 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
+
                 <ImageView
-                android:contentDescription="@string/todo"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:layout_marginEnd="8dp"
-                    android:src="@drawable/ic_calendar"/>
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_calendar" />
+
                 <TextView
+                    style="@style/Kanit_Medium.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Kanit_Medium.Default.14"
-                    android:text="Santa Fe, Cuajimalpa, CDMX"
+                    android:ellipsize="end"
                     android:maxLines="1"
-                    android:ellipsize="end"/>
+                    android:text="Santa Fe, Cuajimalpa, CDMX" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
+                    style="@style/Kanit_Semi_Bold.Orange.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Kanit_Semi_Bold.Orange.14"
-                    android:text="¿Cómo llegar?"/>
+                    android:text="¿Cómo llegar?" />
 
             </LinearLayout>
 
@@ -119,49 +126,53 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="45dp"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginEnd="140dp"
-            android:padding="8dp"
-            android:gravity="start|center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_24dp"
                 android:orientation="horizontal">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     style="@style/Kanit_Regular.Secondary.14"
-                    android:layout_marginEnd="8dp"
-                    android:text="Dificultad:"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Dificultad:" />
+
+                <TextView
                     style="@style/Kanit_Medium.Default.14"
-                    android:text="Fácil"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fácil" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     style="@style/Kanit_Regular.Secondary.14"
-                    android:layout_marginEnd="8dp"
-                    android:text="Distancias:"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Distancias:" />
+
+                <TextView
                     style="@style/Kanit_Medium.Default.14"
-                    android:text="8, 16 y 24 km"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8, 16 y 24 km" />
 
             </LinearLayout>
 
@@ -171,29 +182,26 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_marginStart="-140dp"
-            android:background="@color/gray"/>
+            android:background="@color/gray"
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="140dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:gravity="center"
-            android:padding="8dp">
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="gone">
 
             <TextView
+                style="@style/Kanit_Semi_Bold.Orange.14"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                style="@style/Kanit_Semi_Bold.Orange.14"
                 android:gravity="center_horizontal"
-                android:text="Ver Entrenamientos"/>
+                android:text="Ver Entrenamientos" />
 
         </LinearLayout>
 
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray"/>
 
 </LinearLayout>
