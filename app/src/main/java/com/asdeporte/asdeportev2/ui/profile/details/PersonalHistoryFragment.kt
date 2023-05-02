@@ -20,11 +20,6 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
-import com.github.mikephil.charting.components.Legend.LegendForm
-import com.github.mikephil.charting.components.YAxis
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -35,10 +30,8 @@ import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
-import com.github.mikephil.charting.utils.EntryXComparator
 import com.github.mikephil.charting.utils.MPPointF
 import com.google.android.material.tabs.TabLayout
-import java.util.Collections
 
 class PersonalHistoryFragment : Fragment() {
 
@@ -148,7 +141,7 @@ class PersonalHistoryFragment : Fragment() {
     }
 
     private fun setupGraphicSleep(){
-        chartAverageSleep = binding.averageSleep.pieChartAverageSleep
+        chartAverageSleep = binding!!.averageSleep.pieChartAverageSleep
         chartAverageSleep!!.setUsePercentValues(true)
         chartAverageSleep!!.description.isEnabled = false
         chartAverageSleep?.setTouchEnabled(false)
