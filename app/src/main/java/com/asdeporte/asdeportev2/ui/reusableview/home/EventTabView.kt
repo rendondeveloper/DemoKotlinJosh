@@ -9,6 +9,7 @@ import android.widget.TextView
 import com.asdeporte.asdeportev2.R
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.view.allViews
 import com.asdeporte.asdeportev2.databinding.EventTabViewBinding
 
 
@@ -18,9 +19,8 @@ class EventTabView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var binding: EventTabViewBinding
-
-    private var currentTab = 0
+    private var binding: EventTabViewBinding
+    var currentTab = 0
 
     init {
         binding = EventTabViewBinding.inflate(LayoutInflater.from(context), this, true)
@@ -34,8 +34,8 @@ class EventTabView @JvmOverloads constructor(
         for ((index, title) in titles.withIndex()) {
             val inflater = LayoutInflater.from(context)
             val layout = inflater.inflate(R.layout.event_single_tab_view, null, false) as ConstraintLayout
-
             val tabContainer: RelativeLayout = layout.findViewById(R.id.tab_container) as RelativeLayout
+            tabContainer.tag = index
             val titleView: TextView = layout.findViewById(R.id.title_view) as TextView
             titleView.text = title
 
@@ -44,8 +44,9 @@ class EventTabView @JvmOverloads constructor(
                 titleView.setTextColor(ContextCompat.getColor(context, R.color.white))
             }
 
-            layout.setOnClickListener {
-                //if (currentTab)
+            tabContainer.setOnClickListener {
+                currentTab = it.tag as Int
+                removeSelected()
                 tabContainer.backgroundTintList = ContextCompat.getColorStateList(context, R.color.dark_blue)
                 titleView.setTextColor(ContextCompat.getColor(context, R.color.white))
             }
@@ -53,6 +54,15 @@ class EventTabView @JvmOverloads constructor(
             binding.tabView.addView(layout)
         }
 
+    }
+
+    private fun removeSelected(){
+        for(view in binding.tabView.allViews) {
+            val tabContainer = view.findViewById(R.id.tab_container) as? RelativeLayout
+            val titleView = view.findViewById(R.id.title_view) as? TextView
+            tabContainer?.backgroundTintList = ContextCompat.getColorStateList(context, R.color.white)
+            titleView?.setTextColor(ContextCompat.getColor(context, R.color.dark_blue))
+        }
     }
 
 }

@@ -11,16 +11,15 @@
 
     <TextView
         android:id="@+id/title_view"
+        style="@style/Kanit_Semi_Bold_Italic.Default.20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Title"
-        style="@style/Kanit_Semi_Bold_Italic.Default.20"
         android:textAllCaps="true"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/description_view"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/description_view" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
 
     <TextView
         android:id="@+id/description_view"

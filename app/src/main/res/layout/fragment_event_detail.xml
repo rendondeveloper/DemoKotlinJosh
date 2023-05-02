@@ -41,15 +41,15 @@
                 <RelativeLayout
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:padding="1dp"
-                    android:background="@drawable/event_border_5_white">
+                    android:background="@drawable/event_border_5_white"
+                    android:padding="1dp">
 
                     <ImageView
-                android:contentDescription="@string/todo"
                         android:id="@+id/event_logo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
+                        android:contentDescription="@string/todo"
                         android:src="@drawable/photo_placeholder" />
 
                 </RelativeLayout>
@@ -87,11 +87,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"/>
 
-            <com.asdeporte.asdeportev2.ui.reusableview.home.EventTabView
-                android:id="@+id/tab_view"
+            <View
+                android:id="@+id/view32"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/text_18"
+                android:background="@color/gray" />
+
+            <com.asdeporte.asdeportev2.ui.reusableview.home.EventTabView
+                android:id="@+id/tab_views"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:id="@+id/content_view"
@@ -184,6 +190,7 @@
             android:background="@drawable/pill_background"
             android:layout_marginEnd="16dp"
             android:textColor="@color/white"
+            android:textAllCaps="false"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"/>
 

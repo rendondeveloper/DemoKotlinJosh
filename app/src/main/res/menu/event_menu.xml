@@ -4,13 +4,13 @@
 
     <item
         android:id="@+id/navigation_search"
-        android:icon="@drawable/ic_favorite_border"
+        android:icon="@drawable/ic_favorite_white"
         android:title="Favorito"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_share"
+        android:icon="@drawable/ic_share_white"
         android:title="@string/share"
         app:showAsAction="ifRoom"/>
 
