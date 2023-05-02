@@ -21,6 +21,7 @@ import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
@@ -41,6 +42,7 @@ class PersonalHistoryFragment : Fragment() {
     private var mTf: Typeface? = null
 
     private var chartAverageSleep: PieChart? = null
+    private var chartAverageSleepTwo: LineChart? = null
 
     private lateinit var eventsAdapter: EventHistoryAdapter
     val testEvent = EventData("123",
@@ -96,6 +98,7 @@ class PersonalHistoryFragment : Fragment() {
         }
         setupStatistics()
         setupGraphicSleep()
+        setupGraphicSleepTwo()
         setupEvents()
         setupCalories()
     }
@@ -138,6 +141,61 @@ class PersonalHistoryFragment : Fragment() {
             xAxis?.setDrawGridLines(false)
             lineChart?.invalidate()
         }
+    }
+    private fun setupGraphicSleepTwo() {
+        chartAverageSleepTwo =  binding!!.activitySleep.graphSleep
+        chartAverageSleepTwo!!.setViewPortOffsets(0f, 0f, 0f, 0f)
+        chartAverageSleepTwo!!.description.isEnabled = false
+        chartAverageSleepTwo!!.setTouchEnabled(false)
+        chartAverageSleepTwo!!.isDragEnabled = false
+        chartAverageSleepTwo!!.setScaleEnabled(false)
+        chartAverageSleepTwo!!.setPinchZoom(false)
+        val x =  chartAverageSleepTwo!!.xAxis
+        x.isEnabled = false
+
+        val y: YAxis = chartAverageSleepTwo!!.axisLeft
+        y.setLabelCount(6, false)
+        y.textColor = Color.TRANSPARENT
+        y.setPosition(YAxis.YAxisLabelPosition.INSIDE_CHART)
+        y.setDrawGridLines(false)
+
+        chartAverageSleepTwo!!.axisRight.isEnabled = false
+        chartAverageSleepTwo!!.legend.isEnabled = false
+        chartAverageSleepTwo!!.clearAnimation()
+        chartAverageSleepTwo!!.invalidate()
+        val values = ArrayList<Entry>()
+        values.add(Entry(0f, 0f))
+        values.add(Entry(40f, 5f))
+        values.add(Entry(100f, 8f))
+        values.add(Entry(200f, 9f))
+        values.add(Entry(300f, 8f))
+        values.add(Entry(400f, 7f))
+        values.add(Entry(500f, 6f))
+        values.add(Entry(600f, 6f))
+        values.add(Entry(700f, 7f))
+        values.add(Entry(800f, 10f))
+        values.add(Entry(900f, 11f))
+        values.add(Entry(1000f, 11f))
+        values.add(Entry(1100f, 10f))
+        values.add(Entry(1500f, 8f))
+        values.add(Entry(1600f, 9f))
+
+        val set1: LineDataSet = LineDataSet(values, "DataSet 1")
+
+        set1.mode = LineDataSet.Mode.CUBIC_BEZIER
+        set1.setDrawFilled(true)
+        set1.setDrawCircles(false)
+        set1.lineWidth = 1.8f
+        set1.circleRadius = 4f
+        //set1.color = Color.rgb(51, 180, 105)
+        set1.color = Color.parseColor("#33B469")
+        set1.fillColor = Color.parseColor("#f5e6e6")
+        set1.fillAlpha = 100
+        set1.setDrawHorizontalHighlightIndicator(false)
+        val data = LineData(set1)
+        data.setValueTextSize(9f)
+        data.setDrawValues(false)
+        chartAverageSleepTwo!!.data = data
     }
 
     private fun setupGraphicSleep(){

@@ -118,6 +118,7 @@
 
             <LinearLayout
                 android:id="@+id/llSleep"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -143,11 +144,18 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="24dp"/>
-            </LinearLayout>
 
+                <include
+                    layout="@layout/history_item_average_time_sleep" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/llHrv"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">

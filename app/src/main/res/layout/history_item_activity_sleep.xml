@@ -237,18 +237,27 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tvTimeLabel"
             app:layout_constraintTop_toBottomOf="@+id/tvTimeLabel" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    <TextView
+        android:id="@+id/textview22"
+        style="@style/Kanit_Regular.Secondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Tu sueño"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clItemHistory" />
 
-    <com.github.mikephil.charting.charts.PieChart
+
+    <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/graph_sleep"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="-10dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
         android:scaleType="fitXY"
@@ -256,7 +265,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clItemHistory" />
+        app:layout_constraintTop_toBottomOf="@+id/textview22" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
