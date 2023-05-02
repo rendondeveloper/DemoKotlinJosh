@@ -166,14 +166,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-            <View
-                android:id="@+id/view32"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginVertical="@dimen/text_18"
-                android:background="@color/gray" />
-
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventTabView
                 android:id="@+id/tab_views"
                 android:layout_width="match_parent"
