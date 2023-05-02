@@ -1,224 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    tools:context=".ui.profile.details.PersonalBadgeFragment">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:theme="@style/AsdToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/arrow_left"
+        app:navigationIconTint="@color/black_dynamic"
+        app:title="Medallero"
+        app:titleTextColor="@color/black_dynamic" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.profile.details.PersonalBadgeFragment">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AsdToolbarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/arrow_left"
-            app:navigationIconTint="@color/black_dynamic"
-            app:title="Medallero"
-            app:titleTextColor="@color/black_dynamic" />
-        <View
-            android:id="@+id/view11"
-            android:layout_width="match_parent"
-            android:layout_height="16dp"
-            android:background="@color/secondary_background"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView38"
-            style="@style/Kanit_Semi_Bold_Italic.Default.20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="MI MEDALLRO"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view11" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout17"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="18dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView38">
-
-            <TextView
-                android:id="@+id/textView39"
-                style="@style/Kanit_Regular.Default.16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="12dp"
-                android:text="Total de medallas"
-                android:textAlignment="center"
-                android:textColor="#6C6C6C"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView40"
-                style="@style/Kanit_Bold.Default"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/badge_circle_shape"
-                android:gravity="center"
-                android:padding="2dp"
-                android:text="30"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout17">
-
-            <FrameLayout
-                android:id="@+id/pager_container"
+            <View
+                android:id="@+id/view11"
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:clipChildren="false">
+                android:layout_height="16dp"
+                android:background="@color/secondary_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/pager_badge"
+            <TextView
+                android:id="@+id/textView38"
+                style="@style/Kanit_Semi_Bold_Italic.Default.20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="MI MEDALLRO"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView38">
+
+                <TextView
+                    android:id="@+id/textView39"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:text="Total de medallas"
+                    android:textAlignment="center"
+                    android:textColor="#6C6C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    style="@style/Kanit_Bold.Default"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/badge_circle_shape_green"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="30"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout17">
+
+                <FrameLayout
+                    android:id="@+id/pager_container"
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
-                    android:layout_gravity="center"
-                    android:clipToPadding="false" />
-            </FrameLayout>
+                    android:clipChildren="false">
 
-            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-                android:id="@+id/dots_indicator"
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/pager_badge"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_gravity="center"
+                        android:clipToPadding="false" />
+                </FrameLayout>
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:dotsColor="@color/gray_secondary_text"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="8dp"
+                    app:dotsSpacing="5dp"
+                    app:dotsWidthFactor="2.5"
+                    app:selectedDotColor="@color/orange_as_light" />
+            </LinearLayout>
+            <View
+                android:id="@+id/view14"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/secondary_background"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView41"
+                style="@style/Kanit_Medium.Default.14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|bottom"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                app:dotsColor="@color/gray_secondary_text"
-                app:dotsCornerRadius="8dp"
-                app:dotsSize="8dp"
-                app:dotsSpacing="5dp"
-                app:dotsWidthFactor="2.5"
-                app:selectedDotColor="@color/orange_as_light" />
-        </LinearLayout>
-        <View
-            android:id="@+id/view14"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/secondary_background"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout11"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:padding="5dp"
+                android:text="Todas tus medallas"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view14" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/searchTextField"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="14dp"
+                android:hint="Buscar por nombre"
+                app:endIconDrawable="@drawable/ic_search"
+                app:endIconMode="custom"
+                app:endIconTint="@color/black_dynamic"
+                app:hintTextColor="@color/black_dynamic"
+                app:layout_constraintEnd_toStartOf="@+id/button_filter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView41">
 
-        <TextView
-            android:id="@+id/textView41"
-            style="@style/Kanit_Medium.Default.14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="18dp"
-            android:padding="5dp"
-            android:text="Todas tus medallas"
-            android:textAlignment="textStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view14" />
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/searchTextField"
-            style="@style/LoginTextInputLayoutStyle"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="14dp"
-            android:hint="Buscar por nombre"
-            app:endIconDrawable="@drawable/ic_search"
-            app:endIconMode="custom"
-            app:endIconTint="@color/black_dynamic"
-            app:hintTextColor="@color/black_dynamic"
-            app:layout_constraintEnd_toStartOf="@+id/button_filter"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView41">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/searchTextInput"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/searchTextInput"
-                style="@style/Kanit_Regular.Default.16"
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="@+id/button_filter"
+                app:layout_constraintEnd_toEndOf="@+id/button_filter"
+                app:layout_constraintStart_toStartOf="@+id/button_filter"
+                app:layout_constraintTop_toTopOf="@+id/button_filter" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_filter"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="0.2"
+                android:textColor="@color/black_dynamic"
+                app:backgroundTint="@color/black_dynamic"
+                android:background="@drawable/secondary_button"
+                app:layout_constraintBottom_toBottomOf="@+id/searchTextField"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/searchTextField"
+                app:layout_constraintVertical_bias="0.69" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/badges_grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName" />
+                android:layout_marginHorizontal="@dimen/dimen_8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_show_more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchTextField" />
 
-        </com.google.android.material.textfield.TextInputLayout>
-        <ImageView
-                android:contentDescription="@string/todo"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:src="@drawable/ic_filter"
-            app:layout_constraintBottom_toBottomOf="@+id/button_filter"
-            app:layout_constraintEnd_toEndOf="@+id/button_filter"
-            app:layout_constraintStart_toStartOf="@+id/button_filter"
-            app:layout_constraintTop_toTopOf="@+id/button_filter" />
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_filter"
-            android:layout_width="45dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:layout_weight="0.2"
-            android:textColor="@color/black_dynamic"
-            app:backgroundTint="@color/black_dynamic"
-            android:background="@drawable/secondary_button"
-            app:layout_constraintBottom_toBottomOf="@+id/searchTextField"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/searchTextField"
-            app:layout_constraintVertical_bias="0.69" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/badges_grid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="17dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_show_more"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchTextField" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_show_more"
-            style="@style/Kanit_Regular.Default.14"
-            android:layout_width="136dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="32dp"
-            android:layout_weight="0.2"
-            android:background="@drawable/pill_background"
-            android:text="Mostrar más"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_show_more"
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="136dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="32dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/pill_background"
+                android:text="Mostrar más"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

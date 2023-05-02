@@ -243,7 +243,7 @@
                         style="@style/Kanit_Regular.Secondary.12"
                         android:layout_width="34dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/badge_circle_shape"
+                        android:background="@drawable/badge_circle_shape_red"
                         android:gravity="center"
                         android:text="30"
                         android:textColor="@color/white" />

@@ -1,229 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/arrow_left"
+        app:navigationIconTint="@color/black_dynamic"
+        app:title="Galería Duatlón EDOMEX"
+        app:titleTextColor="@color/black_dynamic" />
+
+        <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.profile.details.photos.PersonalPhotosFragment">
+        android:fillViewport="true">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/arrow_left"
-            app:navigationIconTint="@color/black_dynamic"
-            app:title="Galería Duatlón EDOMEX"
-            app:titleTextColor="@color/black_dynamic" />
+            android:layout_height="match_parent"
+            tools:context=".ui.profile.details.photos.PersonalPhotosFragment">
 
-        <View
-            android:id="@+id/view11"
-            android:layout_width="match_parent"
-            android:layout_height="16dp"
-            android:background="@color/secondary_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view11">
-
-            <ImageView
-                android:id="@+id/eventImage"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/todo"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_dummy_reservation_1" />
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/secondary_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
+                android:id="@+id/linearLayout19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_12dp"
-                android:orientation="vertical">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view11">
 
-                <TextView
-                    android:id="@+id/eventTitle"
-                    style="@style/Kanit_Semi_Bold.Default.16"
+                <ImageView
+                    android:id="@+id/eventImage"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/todo"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_dummy_reservation_1" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Spartan San Luis Potosí" />
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/eventTitleAddress1"
-                    style="@style/Kanit_Regular.Secondary.12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="La Joya Honda, San Luis Potosí" />
+                    <TextView
+                        android:id="@+id/eventTitle"
+                        style="@style/Kanit_Semi_Bold.Default.16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Spartan San Luis Potosí" />
 
-                <TextView
-                    android:id="@+id/eventTitleAddress2"
-                    style="@style/Kanit_Medium.Secondary.12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="22 octubre 2022" />
+                    <TextView
+                        android:id="@+id/eventTitleAddress1"
+                        style="@style/Kanit_Regular.Secondary.12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="La Joya Honda, San Luis Potosí" />
+
+                    <TextView
+                        android:id="@+id/eventTitleAddress2"
+                        style="@style/Kanit_Medium.Secondary.12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="22 octubre 2022" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <View
-            android:id="@+id/view23"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/secondary_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout19" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/searchTextField"
-            style="@style/LoginTextInputLayoutStyle"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="12dp"
-            android:hint="Buscar por nombre"
-            app:endIconDrawable="@drawable/ic_search"
-            app:endIconMode="custom"
-            app:endIconTint="@color/black_dynamic"
-            app:hintTextColor="@color/black_dynamic"
-            app:layout_constraintEnd_toStartOf="@+id/button_filter2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view23">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/searchTextInput"
-                style="@style/Kanit_Regular.Default.16"
+            <View
+                android:id="@+id/view23"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName" />
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/secondary_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout19" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/searchTextField"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="12dp"
+                android:hint="Buscar por nombre"
+                app:endIconDrawable="@drawable/ic_search"
+                app:endIconMode="custom"
+                app:endIconTint="@color/black_dynamic"
+                app:hintTextColor="@color/black_dynamic"
+                app:layout_constraintEnd_toStartOf="@+id/button_filter2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view23">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_filter2"
-            android:layout_width="45dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:layout_weight="0.2"
-            android:background="@drawable/secondary_button"
-            android:textColor="@color/black_dynamic"
-            app:backgroundTint="@color/black_dynamic"
-            app:layout_constraintBottom_toBottomOf="@+id/searchTextField"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/searchTextField"
-            app:layout_constraintVertical_bias="0.69" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/searchTextInput"
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
 
-        <ImageView
-            android:id="@+id/imageView21"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_filter"
-            app:layout_constraintBottom_toBottomOf="@+id/button_filter2"
-            app:layout_constraintEnd_toEndOf="@+id/button_filter2"
-            app:layout_constraintStart_toStartOf="@+id/button_filter2"
-            app:layout_constraintTop_toTopOf="@+id/button_filter2" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/eventTitleAddress"
-            style="@style/Kanit_Regular.Default.14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="Selecciona las fotos que deseas descargar o activa la opción Seleccionar todas."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchTextField" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_filter2"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/secondary_button"
+                android:textColor="@color/black_dynamic"
+                app:backgroundTint="@color/black_dynamic"
+                app:layout_constraintBottom_toBottomOf="@+id/searchTextField"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/searchTextField"
+                app:layout_constraintVertical_bias="0.69" />
 
-        <CheckBox
-            android:id="@+id/radioSelectAll"
-            style="@style/Kanit_Regular.Default.14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:gravity="center_vertical"
-            android:text="Seleccionar todas (250 fotos)"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="1dp"
-            android:layout_marginEnd="16dp"
-            android:elevation="-1dp"
-            app:cardBackgroundColor="@color/green_two_view"
-            app:cardCornerRadius="@dimen/dimen_32dp"
-            app:layout_constraintBottom_toBottomOf="@+id/radioSelectAll"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/radioSelectAll">
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="@+id/button_filter2"
+                app:layout_constraintEnd_toEndOf="@+id/button_filter2"
+                app:layout_constraintStart_toStartOf="@+id/button_filter2"
+                app:layout_constraintTop_toTopOf="@+id/button_filter2" />
 
             <TextView
-                style="@style/Kanit_Regular.Default.12"
+                android:id="@+id/eventTitleAddress"
+                style="@style/Kanit_Regular.Default.14"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="2dp"
-                android:text="250"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Selecciona las fotos que deseas descargar o activa la opción Seleccionar todas."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchTextField" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_time_line"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="@dimen/dimen_16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioSelectAll" />
+            <CheckBox
+                android:id="@+id/radioSelectAll"
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:text="Seleccionar todas (250 fotos)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eventTitleAddress" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_gallery"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_time_line" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="1dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="-1dp"
+                app:cardBackgroundColor="@color/green_two_view"
+                app:cardCornerRadius="@dimen/dimen_32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/radioSelectAll"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/radioSelectAll">
 
-        <include
-            android:id="@+id/viewBottom"
-            layout="@layout/sheet_gallery"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_gallery" />
+                <TextView
+                    style="@style/Kanit_Regular.Default.12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="2dp"
+                    android:text="250"
+                    android:textColor="@color/white" />
+            </androidx.cardview.widget.CardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_time_line"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioSelectAll" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_time_line" />
+
+            <include
+                android:id="@+id/viewBottom"
+                layout="@layout/sheet_gallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_gallery" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

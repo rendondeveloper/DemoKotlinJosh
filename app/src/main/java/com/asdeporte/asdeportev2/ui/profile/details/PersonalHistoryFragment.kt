@@ -282,7 +282,6 @@ class PersonalHistoryFragment : Fragment() {
     private fun setupEvents() {
         eventsAdapter = EventHistoryAdapter().apply {
             onItemClick = {
-                findNavController().safelyNavigate(R.id.to_personal_history)
             }
         }
 

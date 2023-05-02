@@ -87,12 +87,11 @@ class ProfileTabFragment : Fragment() {
     private fun setupAdapter() {
         profileItemAdapter = ProfileItemHomeAdapter().apply {
             onItemClick = {
-                //EventBottomSheet.create(this@ProfileTabFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
                 when (it.type) {
-                    MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.personal_history) }
-                    MoreItem.BENEFITS -> { findNavController().safelyNavigate(R.id.personal_my_benefits) }
-                    MoreItem.BADGES -> { findNavController().navigate(R.id.to_badge_fragment) }
-                    MoreItem.PHOTOS -> { findNavController().navigate(R.id.personalPhotosFragment) }
+                    MoreItem.HISTORIC -> { findNavController().safelyNavigate(R.id.action_navigation_more_to_personal_history) }
+                    MoreItem.BENEFITS -> { findNavController().safelyNavigate(R.id.action_navigation_more_to_personal_my_benefits) }
+                    MoreItem.BADGES -> { findNavController().safelyNavigate(R.id.action_navigation_more_to_to_badge_fragment) }
+                    MoreItem.PHOTOS -> { findNavController().safelyNavigate(R.id.action_navigation_more_to_personalPhotosFragment) }
                     else -> {
                         //TODO("Not yet implemented")
                     }

@@ -117,7 +117,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             binding?.divider?.visibility = View.VISIBLE
         }
         binding?.createGroupButton?.setOnClickListener{
-            findNavController().safelyNavigate(R.id.createGroupFragment)
+            findNavController().safelyNavigate(R.id.action_navigation_notifications_to_createGroupFragment)
         }
         setupAdapters()
     }
@@ -167,7 +167,7 @@ class NotificationsFragment : Fragment(), EventBottomSheet.EventBottomSheetListe
             val holder = MessageGroupCellView(requireContext(),false)
             holder.bind(item)
             holder.setOnClickListener {
-                //findNavController().safelyNavigate(R.id.toChat)
+                findNavController().safelyNavigate(R.id.action_navigation_notifications_to_chatGroupFragment)
             }
             binding?.groupView?.addView(holder)
         }

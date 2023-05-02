@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_10dp"
             android:gravity="center"
-            android:text="Crear Tribu" />
+            android:text="@string/create_tribe" />
 
         <View
             android:layout_width="match_parent"
@@ -132,7 +132,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="@dimen/dimen_48dp"
             android:background="@drawable/pill_background"
-            android:text="Crear Tribu"
+            android:text="@string/create_tribe"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:backgroundTint="@null"

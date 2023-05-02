@@ -58,7 +58,7 @@ class HistoryView @JvmOverloads constructor(
         binding.rvPhotos.adapter = adapter
 
         binding.txtShowGallery.setOnClickListener{
-            findNavController().safelyNavigate(R.id.galleryPhotosFragment)
+            findNavController().safelyNavigate(R.id.action_personalPhotosFragment_to_galleryPhotosFragment)
         }
     }
 }
