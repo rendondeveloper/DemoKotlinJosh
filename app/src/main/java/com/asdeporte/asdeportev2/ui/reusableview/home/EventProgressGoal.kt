@@ -4,6 +4,10 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import android.widget.TextView
+import androidx.appcompat.widget.TooltipCompat
+import androidx.core.widget.TextViewCompat
+import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.EventProgressGoalBinding
 
 class EventProgressGoal @JvmOverloads constructor(
@@ -16,6 +20,7 @@ class EventProgressGoal @JvmOverloads constructor(
 
     init {
         binding = EventProgressGoalBinding.inflate(LayoutInflater.from(context), this, true)
+
     }
 
     fun setData(events: String) {

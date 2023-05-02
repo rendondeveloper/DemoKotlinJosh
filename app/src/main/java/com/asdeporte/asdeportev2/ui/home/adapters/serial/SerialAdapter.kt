@@ -49,7 +49,7 @@ class SerialCardView @JvmOverloads constructor(
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .skipMemoryCache(true)
 
-        requestOptions = requestOptions.transforms(FitCenter(), RoundedCorners(dpToPx(8)))
+        requestOptions = requestOptions.transforms(FitCenter(), RoundedCorners(dpToPx(4)))
         binding.apply {
             imgLogo.setOnClickListener{
                 callback?.invoke(item)

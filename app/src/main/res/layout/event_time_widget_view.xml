@@ -4,16 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:background="@android:color/transparent"
-    app:cardCornerRadius="2dp"
+    app:cardCornerRadius="3dp"
     app:cardElevation="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/event_time_background"
+        android:baselineAligned="false"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:baselineAligned="false">
+        android:weightSum="2">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -45,17 +45,17 @@
             android:paddingHorizontal="@dimen/dimen_12dp">
 
 
-                <TextView
-                    style="@style/Kanit_Regular.Secondary.12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tiempo" />
+            <TextView
+                style="@style/Kanit_Regular.Secondary.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tiempo" />
 
-                <TextView
-                    style="@style/Kanit_Medium.Default.16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1:10 min" />
+            <TextView
+                style="@style/Kanit_Medium.Default.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:10 min" />
 
 
         </LinearLayout>
