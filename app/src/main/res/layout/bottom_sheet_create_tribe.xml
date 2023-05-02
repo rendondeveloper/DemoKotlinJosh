@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/bottomSheetCreateTribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_rounded_top"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dimen_32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivLineGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_drag_handle"
+            app:tint="@color/label_secondary" />
+
+        <TextView
+            style="@style/Kanit_Medium.Default.16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="Crear Tribu" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:background="@color/gray_line" />
+
+        <TextView
+            style="@style/Kanit_Regular.Default.14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Tienes la opción de permanecer a 3 tribus como máximo y recuerda que al crear una Tribu, te vuelves administrador." />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchTextField"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="18dp"
+            android:hint="Nombre de Tribu"
+            app:endIconMode="custom"
+            app:endIconTint="@color/black_dynamic"
+            app:hintTextColor="@color/label_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="18dp"
+            android:hint="Tipo de deporte"
+            app:endIconDrawable="@drawable/arrow_down_sec"
+            app:endIconMode="custom"
+            app:endIconTint="@color/black_dynamic"
+            app:hintTextColor="@color/label_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchTextInput"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="18dp"
+            android:hint="Privacidad"
+            app:endIconDrawable="@drawable/arrow_down_sec"
+            app:endIconMode="custom"
+            app:endIconTint="@color/black_dynamic"
+            app:hintTextColor="@color/label_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="18dp"
+            android:hint="Descripción"
+            app:endIconMode="custom"
+            app:endIconTint="@color/black_dynamic"
+            app:hintTextColor="@color/label_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Kanit_Medium.Default.16"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="@dimen/dimen_48dp"
+            android:background="@drawable/pill_background"
+            android:text="Crear Tribu"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
