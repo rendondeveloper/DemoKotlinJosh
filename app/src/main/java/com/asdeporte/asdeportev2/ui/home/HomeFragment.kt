@@ -130,6 +130,18 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener, Sear
     binding?.topTenEvents?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
     eventsHorizontalBigAdapter.setItems(items)
 
+    // Experiencias y retos
+    binding?.experiencesTitle?.setTitle("Experiencias y Retos")
+    eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
+      onItemClick = {
+        EventBottomSheet.create(this@HomeFragment, it).show(requireActivity().supportFragmentManager, "EventBottomSheet")
+      }
+    }
+    binding?.experiencesEvents?.adapter = eventsHorizontalAdapter
+    binding?.experiencesEvents?.setHasFixedSize(true)
+    binding?.experiencesEvents?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+    eventsHorizontalAdapter.setItems(items)
+
     // Este fin de semana
     binding?.weekendTitle?.setTitle("Este fin de semana")
     eventsHorizontalAdapter = EventsHorizontalAdapter().apply {
