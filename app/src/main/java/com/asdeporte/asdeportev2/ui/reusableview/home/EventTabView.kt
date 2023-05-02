@@ -38,11 +38,12 @@ class EventTabView @JvmOverloads constructor(
             tabContainer.tag = index
             val titleView: TextView = layout.findViewById(R.id.title_view) as TextView
             titleView.text = title
-
+            /*
             if (currentTab == index) {
                 tabContainer.backgroundTintList = ContextCompat.getColorStateList(context, R.color.dark_blue)
                 titleView.setTextColor(ContextCompat.getColor(context, R.color.white))
             }
+             */
 
             tabContainer.setOnClickListener {
                 currentTab = it.tag as Int

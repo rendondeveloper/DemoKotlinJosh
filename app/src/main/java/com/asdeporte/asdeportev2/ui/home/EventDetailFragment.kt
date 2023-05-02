@@ -72,11 +72,14 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
         }
 
         setupContent()
+        /*
         binding.footerView.setData("Notas importantes", "• La edad mínima para participar es de 15 años cumplidos al 31 de diciembre del 2022.\n" +
                 "• La categoría será determinada por la edad que tenga el competidor al 31 de diciembre del 2022.\n" +
                 "• Se premiará con trofeo a los 3 primeros lugares INDIVIDUALES de la carrera PRESENCIAL, en cada distancia, como GANADORES ABSOLUTOS, en las ramas femenil y varonil, de acuerdo al TIEMPO OFICIAL de competencia.\n" +
                 "• Esto es, los 3 primeros hombres y las 3 primeras mujeres que crucen la meta en cada distancia y de manera INDIVIDUAL.\n" +
                 "• La carrera outdoor no tendrá premiación.")
+
+         */
     }
 
     private fun setupContent() {

@@ -22,70 +22,150 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="50dp">
-            
-            <ImageView
-                android:contentDescription="@string/todo"
-                android:id="@+id/banner_event"
+            android:paddingBottom="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp" />
+                android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:orientation="horizontal"
-                android:paddingStart="16dp"
-                android:paddingEnd="8dp"
-                android:background="@color/black">
+                <ImageView
+                    android:id="@+id/banner_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <RelativeLayout
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:background="@drawable/event_border_5_white"
-                    android:padding="1dp">
-
-                    <ImageView
-                        android:id="@+id/event_logo"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
-                        android:contentDescription="@string/todo"
-                        android:src="@drawable/photo_placeholder" />
-
-                </RelativeLayout>
-
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginHorizontal="8dp">
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/banner_event">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/textView63"
+                        style="@style/Kanit_Medium.Default.20"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="98dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="16dp"
+                        android:maxLines="2"
                         android:text="Tune Up City Santander, Santa fe"
                         android:textColor="@color/white"
-                        style="@style/Kanit_Medium.Default.20"
-                        android:maxLines="1"
-                        android:ellipsize="end"/>
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
-                        android:layout_width="match_parent"
+                        style="@style/Kanit_Regular.Default.12"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="98dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="12dp"
                         android:text="Carrera de ruta"
                         android:textColor="@color/white"
-                        style="@style/Kanit_Regular.Default.12"/>
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView63" />
 
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/event_logo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="-8dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/photo_placeholder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/banner_event" />
+
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="-8dp"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/dimen_32dp"
+                        android:layout_height="@dimen/dimen_32dp"
+                        android:src="@drawable/recibidas_dummy"
+                        app:civ_border_color="#F3F4F6"
+                        app:civ_border_width="1dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/dimen_32dp"
+                        android:layout_height="@dimen/dimen_32dp"
+                        android:layout_marginStart="-5dp"
+                        android:src="@drawable/avatar_send_dummy"
+                        app:civ_border_color="#F3F4F6"
+                        app:civ_border_width="1dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/dimen_32dp"
+                        android:layout_height="@dimen/dimen_32dp"
+                        android:layout_marginStart="-5dp"
+                        android:src="@drawable/activities_dummy"
+                        app:civ_border_color="#F3F4F6"
+                        app:civ_border_width="1dp" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen_32dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageCircleImageView"
+                            android:layout_width="@dimen/dimen_32dp"
+                            android:layout_height="@dimen/dimen_32dp"
+                            android:src="#FF5255"
+                            app:civ_border_color="#F3F4F6"
+                            app:civ_border_width="1dp" />
+
+                        <TextView
+                            style="@style/Kanit_Medium.Default.10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@id/imageCircleImageView"
+                            android:layout_alignTop="@id/imageCircleImageView"
+                            android:layout_alignEnd="@id/imageCircleImageView"
+                            android:layout_alignBottom="@id/imageCircleImageView"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="+4"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
 
-            <com.asdeporte.asdeportev2.ui.reusableview.home.EventTopDetailsView
-                android:id="@+id/top_details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"/>
+                <com.asdeporte.asdeportev2.ui.reusableview.home.EventTopDetailsView
+                    android:id="@+id/top_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
             <View
                 android:id="@+id/view32"
@@ -103,13 +183,7 @@
                 android:id="@+id/content_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"/>
-
-            <com.asdeporte.asdeportev2.ui.reusableview.convocatory.TitleAndDescripctionView
-                android:id="@+id/footer_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white_dynamic"/>
+                android:orientation="vertical" />
 
 
         </LinearLayout>
