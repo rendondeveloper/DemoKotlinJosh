@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -89,24 +90,57 @@ class HomeFragment : Fragment(), EventBottomSheet.EventBottomSheetListener,
 
         when (screenType) {
             "Free" -> {
+                println("Free")
                 binding?.myLatestResultView?.visibility = View.GONE
                 binding?.lineGrayOne?.visibility = View.GONE
                 binding?.myNextCompetitionView?.visibility = View.GONE
                 binding?.lineGrayTwo?.visibility = View.GONE
                 binding?.myResumeHomeView?.visibility = View.GONE
-                binding?.myTribe?.showScreenFree()
+                binding?.myTribe?.showScreen(screenType)
             }
 
             "FreeWithAccount" -> {
                 println("FreeWithAccount")
+                binding?.myLatestResultView?.visibility = View.GONE
+                binding?.lineGrayOne?.visibility = View.GONE
+                binding?.myNextCompetitionView?.visibility = View.GONE
+                binding?.lineGrayTwo?.visibility = View.GONE
+                binding?.myResumeHomeView?.visibility = View.GONE
+                binding?.planPlusViewFree?.visibility = View.GONE
+                binding?.planFreeView?.visibility = View.GONE
+                binding?.planPlusView?.visibility = View.VISIBLE
+                binding?.planPlusView?.findViewById<TextView>(R.id.tvPlanRecommended)?.visibility = View.GONE
+                binding?.myTribe?.showScreen(screenType)
             }
 
             "PlusNoData" -> {
                 println("PlusNoData")
+                binding?.myLatestResultView?.visibility = View.GONE
+                binding?.lineGrayOne?.visibility = View.GONE
+                binding?.myNextCompetitionView?.visibility = View.GONE
+                binding?.lineGrayTwo?.visibility = View.GONE
+                binding?.myResumeHomeView?.visibility = View.GONE
+                binding?.rvPlans?.visibility = View.GONE
+                binding?.llPlansTitle?.visibility = View.GONE
+                binding?.planPlusViewFree?.visibility = View.GONE
+                binding?.myTribe?.showScreen(screenType)
             }
 
             "PlusWithData" -> {
                 println("PlusWithData")
+                binding?.myNextCompetitionView?.visibility = View.GONE
+                binding?.lineGrayTwo?.visibility = View.GONE
+                binding?.rvPlans?.visibility = View.GONE
+                binding?.llPlansTitle?.visibility = View.GONE
+                binding?.planPlusViewFree?.visibility = View.GONE
+                binding?.myTribe?.showScreen(screenType)
+            }
+            "PlusWithDataNextComp" -> {
+                println("PlusWithDataNextComp")
+                binding?.rvPlans?.visibility = View.GONE
+                binding?.llPlansTitle?.visibility = View.GONE
+                binding?.planPlusViewFree?.visibility = View.GONE
+                binding?.myTribe?.showScreen(screenType)
             }
 
             else -> {

@@ -216,7 +216,7 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView
                 android:id="@+id/myTribe"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.BlogView
                 android:id="@+id/blog"
@@ -246,6 +246,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/llPlansTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/dark_blue"
@@ -274,6 +275,7 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/rvPlans"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/dimen_16dp">
@@ -285,19 +287,32 @@
                     android:background="@color/dark_blue" />
 
                 <com.asdeporte.asdeportev2.ui.reusableview.home.PlanFreeView
+                    android:id="@+id/planFreeView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/dimen_16dp" />
 
+                <com.asdeporte.asdeportev2.ui.reusableview.home.PlanPlusView
+                    android:id="@+id/planPlusView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginBottom="@dimen/dimen_32dp"
+                    android:visibility="gone"
+                    />
+
+
             </RelativeLayout>
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.PlanPlusView
-                android:id="@+id/planPlusView"
+                android:id="@+id/planPlusViewFree"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/dimen_16dp"
                 android:layout_marginTop="@dimen/dimen_16dp"
-                android:layout_marginBottom="@dimen/dimen_32dp" />
+                android:layout_marginBottom="@dimen/dimen_32dp"
+                />
 
         </LinearLayout>
 

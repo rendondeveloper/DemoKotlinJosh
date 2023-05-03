@@ -54,6 +54,11 @@ class LoginMenuBottomSheet : BottomSheetDialogFragment() {
                     editor.apply()
                     goToMainActivity()
                 }
+                btnPlusWDataNComp.setOnClickListener {
+                    editor.putString("screenType", "PlusWithDataNextComp")
+                    editor.apply()
+                    goToMainActivity()
+                }
             }
 
         }

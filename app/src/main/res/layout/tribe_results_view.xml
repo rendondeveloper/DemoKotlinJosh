@@ -89,7 +89,7 @@
                 style="@style/Kanit_Regular.Default.12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pocisión 1 de 1200"
+                android:text="Posición 1 de 1200"
                 android:textColor="@color/label_secondary" />
 
             <TextView

@@ -24,9 +24,12 @@
         android:background="@color/white"
         android:paddingHorizontal="18dp"
         android:paddingVertical="@dimen/dimen_24dp"
-        android:text="@string/my_tribe_description" />
+        android:textAlignment="center"
+        android:text="@string/my_tribe_description"
+        android:visibility="gone"/>
 
     <View
+        android:id="@+id/mytribeSeparator1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="18dp"
@@ -35,7 +38,8 @@
     <com.asdeporte.asdeportev2.ui.reusableview.home.TribeResumeView
         android:id="@+id/tribeResumeView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/tribeItemListView"
@@ -43,7 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_24dp"
         android:background="@color/white"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <TextView
             style="@style/Kanit_Medium.Default.16"
@@ -85,7 +90,8 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/dimen_24dp"
         android:background="@color/white"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <TextView
             style="@style/Kanit_Medium.Default.16"
@@ -124,9 +130,11 @@
     <com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
         android:id="@+id/searchTribuView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mytribeWatchDemo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white">
