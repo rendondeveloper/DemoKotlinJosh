@@ -26,8 +26,8 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loginButton.setOnClickListener {
-            //LoginMenuBottomSheet().show(requireActivity().supportFragmentManager, "MY_BOTTOM_SHEET")
-            nextActivity()
+            LoginMenuBottomSheet().show(requireActivity().supportFragmentManager, "MY_BOTTOM_SHEET")
+            // nextActivity()
         }
         binding.registerButton.setOnClickListener {
             findNavController().safelyNavigate(R.id.action_to_RegisterFragment)

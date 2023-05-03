@@ -16,11 +16,29 @@
         android:text="MI TRIBU"
         android:textAlignment="center" />
 
+    <TextView
+        android:id="@+id/tvMyTribeDescription"
+        style="@style/Kanit_Regular.Default.16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="@dimen/dimen_24dp"
+        android:text="@string/my_tribe_description" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="18dp"
+        android:background="@color/gray_line" />
+
     <com.asdeporte.asdeportev2.ui.reusableview.home.TribeResumeView
+        android:id="@+id/tribeResumeView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <LinearLayout
+        android:id="@+id/tribeItemListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_24dp"
@@ -62,6 +80,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/tribeResultsView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/dimen_24dp"
@@ -103,7 +122,7 @@
     </LinearLayout>
 
     <com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
-        android:id="@+id/searchTribu"
+        android:id="@+id/searchTribuView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -113,13 +132,13 @@
         android:background="@color/white">
 
         <ImageView
-            android:contentDescription="@string/todo"
             android:id="@+id/imageView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="@dimen/dimen_16dp"
             android:layout_marginBottom="24dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_play_orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
@@ -146,10 +165,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:contentDescription="@string/todo"
         android:id="@+id/imageView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/secondary_background" />
+        android:background="@color/secondary_background"
+        android:contentDescription="@string/todo" />
 
 </LinearLayout>

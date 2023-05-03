@@ -1,6 +1,8 @@
 package com.asdeporte.asdeportev2.ui.access
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,23 +23,47 @@ class LoginMenuBottomSheet : BottomSheetDialogFragment() {
         initListeners()
         return binding.root
     }
-    private fun initListeners(){
 
-        binding.apply {
-            btnFree.setOnClickListener{
-            }
-            btnFreeWAccount.setOnClickListener{
-            }
-            btnPlus.setOnClickListener{
+    private fun initListeners() {
 
-            }
-            btnPlusWData.setOnClickListener{
-                requireActivity().run {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    finish()
+        // Obtén una instancia de SharedPreferences
+        context?.let {
+            val sharedPref: SharedPreferences = it.getSharedPreferences("MiPreferencia", Context.MODE_PRIVATE)
+
+            // Crea un editor de SharedPreferences
+            val editor: SharedPreferences.Editor = sharedPref.edit()
+
+            binding.apply {
+                btnFree.setOnClickListener {
+                    editor.putString("screenType", "Free")
+                    editor.apply()
+                    goToMainActivity()
+                }
+                btnFreeWAccount.setOnClickListener {
+                    editor.putString("screenType", "FreeWithAccount")
+                    editor.apply()
+                    goToMainActivity()
+                }
+                btnPlus.setOnClickListener {
+                    editor.putString("screenType", "PlusNoData")
+                    editor.apply()
+                    goToMainActivity()
+                }
+                btnPlusWData.setOnClickListener {
+                    editor.putString("screenType", "PlusWithData")
+                    editor.apply()
+                    goToMainActivity()
                 }
             }
+
+        }
+    }
+
+    private fun goToMainActivity() {
+        requireActivity().run {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

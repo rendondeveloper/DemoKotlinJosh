@@ -22,37 +22,38 @@
             android:orientation="vertical">
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyLatestResultView
-                android:id="@+id/latestResult"
+                android:id="@+id/myLatestResultView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <LinearLayout
+                android:id="@+id/lineGrayOne"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:background="@color/secondary_background"
                 android:orientation="vertical" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyNextCompetitionView
+                android:id="@+id/myNextCompetitionView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
             <LinearLayout
+                android:id="@+id/lineGrayTwo"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:background="@color/secondary_background"
                 android:orientation="vertical" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyResumeHomeView
-                android:id="@+id/resumeHome"
+                android:id="@+id/myResumeHomeView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.SliderHomeView
-                android:id="@+id/sliderHome"
+                android:id="@+id/sliderHomeView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </com.asdeporte.asdeportev2.ui.reusableview.home.SliderHomeView>
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:id="@+id/lnSeriales"
@@ -93,10 +94,10 @@
                     app:cardCornerRadius="@dimen/dimen_8dp">
 
                     <ImageView
-                        android:contentDescription="@string/todo"
                         android:id="@+id/img_next2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/todo" />
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
@@ -210,7 +211,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@color/black_dynamic"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView
                 android:id="@+id/myTribe"

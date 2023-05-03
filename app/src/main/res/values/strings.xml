@@ -1162,4 +1162,6 @@
     <string name="txtPublic">Limitar el público de publicaciones anteriores</string>
     <string name="txtNext">¿Quién puede ver mis próximos eventos?</string>
     <string name="txtDirection">Av. Universidad #424, Col. San Jerónimo, México.</string>
+    <string name="description_create_tribe">Tienes la opción de permanecer a 3 tribus como máximo y recuerda que al crear una Tribu, <b>te vuelves administrador</b></string>
+    <string name="my_tribe_description">La <b>comunidad</b> para todos los <b>Atletas</b> donde pueden <b>compartir</b> e interactuar con otros miembros con la misma pasión hacia el <b>deporte.</b></string>
 </resources>
