@@ -83,7 +83,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <include layout="@layout/history_item_activity" />
+                <include
+                    android:id="@+id/historyItemActivity"
+                    layout="@layout/history_item_activity" />
 
                 <View
                     android:layout_width="match_parent"
