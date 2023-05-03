@@ -7,16 +7,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentPersonalHistoryBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
+import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeAdapter
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceValueFormatter
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceZonesValueFormatter
 import com.github.mikephil.charting.charts.BarChart
@@ -44,9 +50,15 @@ import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
 import com.github.mikephil.charting.utils.Utils
 import com.google.android.material.tabs.TabLayout
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 
 class PersonalHistoryFragment : Fragment() {
+
+
+    private lateinit var viewPager: ViewPager2
+    private lateinit var dotsIndicator: DotsIndicator
+    private lateinit var eventsCollectionAdapter: EventsCollectionAdapter
 
     private var binding: FragmentPersonalHistoryBinding? = null
     private var chart: PieChart? = null
@@ -119,6 +131,21 @@ class PersonalHistoryFragment : Fragment() {
         setupGraphicRecovery()
         setupGraphicActivity()
         setupGraphicBar()
+        setupPager()
+    }
+
+    private fun setupPager() {
+        binding?.let {
+            eventsCollectionAdapter = EventsCollectionAdapter(this)
+            viewPager = it.pagerEvents
+
+            viewPager.offscreenPageLimit = 4
+            viewPager.adapter = eventsCollectionAdapter
+
+            dotsIndicator  = it.dotsIndicator
+            dotsIndicator.selectedDotColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
+            dotsIndicator.attachTo(viewPager)
+        }
     }
 
     private fun setupGraphicBar() {
@@ -596,5 +623,23 @@ class PersonalHistoryFragment : Fragment() {
         super.onDestroyView()
         binding = null
     }
+}
 
+class EventsCollectionAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
+    override fun getItemCount(): Int = 4
+
+    override fun createFragment(position: Int): Fragment {
+        return EventObjectFragment()
+    }
+}
+
+class EventObjectFragment : Fragment() {
+
+    override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View {
+        return inflater.inflate(R.layout.history_item_total_events, container, false)
+    }
 }
