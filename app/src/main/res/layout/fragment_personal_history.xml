@@ -103,7 +103,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="24dp" />
 
-                <include layout="@layout/history_item_average_force" />
+                <include
+                    android:id="@+id/historyItemAverageForce"
+                    layout="@layout/history_item_average_force" />
 
                 <View
                     android:layout_width="match_parent"

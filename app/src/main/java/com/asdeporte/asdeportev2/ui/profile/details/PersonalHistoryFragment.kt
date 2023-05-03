@@ -15,28 +15,36 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentPersonalHistoryBinding
-import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
+import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceValueFormatter
+import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceZonesValueFormatter
+import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.components.Legend.LegendForm
 import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.components.XAxis.XAxisPosition
 import com.github.mikephil.charting.components.YAxis
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
-import com.github.mikephil.charting.formatter.IFillFormatter
+import com.github.mikephil.charting.formatter.IAxisValueFormatter
 import com.github.mikephil.charting.formatter.PercentFormatter
+import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
 import com.github.mikephil.charting.utils.Utils
 import com.google.android.material.tabs.TabLayout
+
 
 class PersonalHistoryFragment : Fragment() {
 
@@ -49,6 +57,7 @@ class PersonalHistoryFragment : Fragment() {
     private var chartActivity: LineChart? = null
     private var chartAverageSleepTwo: LineChart? = null
     private var chartAverageRecovery: LineChart? = null
+    private var chartBar: BarChart? = null
 
     private lateinit var eventsAdapter: EventHistoryAdapter
     val testEvent = EventData("123",
@@ -109,12 +118,91 @@ class PersonalHistoryFragment : Fragment() {
         setupCalories()
         setupGraphicRecovery()
         setupGraphicActivity()
+        setupGraphicBar()
+    }
+
+    private fun setupGraphicBar() {
+        chartBar = binding!!.historyItemAverageForce.chartBar
+
+        chartBar!!.setBackgroundColor(Color.WHITE)
+        chartBar!!.description.isEnabled = false
+        chartBar!!.setMaxVisibleValueCount(60)
+        chartBar!!.setPinchZoom(false)
+        chartBar!!.setTouchEnabled(false)
+        chartBar!!.isDragEnabled = false
+        chartBar!!.setScaleEnabled(false)
+        chartBar!!.setDrawBarShadow(false)
+        chartBar!!.setDrawGridBackground(false)
+        //chartBar!!.axisRight.isEnabled = false
+
+        val leftAxis: YAxis = chartBar!!.axisLeft
+        leftAxis.typeface = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
+        leftAxis.textSize = 12f
+        leftAxis.textColor = resources.getColor(R.color.label_secondary)
+        leftAxis.setLabelCount(8, false)
+        leftAxis.valueFormatter = AxisAverageForceValueFormatter()
+        leftAxis.setDrawGridLines(true)
+        leftAxis.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART)
+        leftAxis.spaceTop = 15f
+        leftAxis.axisMinimum = 0f
+
+        val rightAxis: YAxis = chartBar!!.axisRight
+        rightAxis.setDrawGridLines(false)
+        rightAxis.isEnabled = false
+        rightAxis.typeface = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
+        rightAxis.textSize = 12f
+        rightAxis.textColor = resources.getColor(R.color.label_secondary)
+        rightAxis.setLabelCount(8, false)
+        rightAxis.valueFormatter = AxisAverageForceValueFormatter()
+        rightAxis.spaceTop = 15f
+        rightAxis.axisMinimum = 0f //
+
+        val xAxis = chartBar!!.xAxis
+        xAxis.position = XAxisPosition.BOTTOM
+        xAxis.typeface = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
+        xAxis.textSize = 10f
+        xAxis.textColor = resources.getColor(R.color.label_secondary)
+        xAxis.setDrawGridLines(false)
+        xAxis.granularity = 1f
+        xAxis.labelCount = 14
+        xAxis.valueFormatter = AxisAverageForceZonesValueFormatter()
+
+        chartBar!!.legend.apply {
+            isEnabled = false
+        }
+
+        val values = ArrayList<BarEntry>()
+
+        values.add(BarEntry(1f, 15f))
+        values.add(BarEntry(2f, 22f))
+        values.add(BarEntry(3f, 28f))
+        values.add(BarEntry(4f, 44f))
+        values.add(BarEntry(5f, 10f))
+
+        val set1: BarDataSet = BarDataSet(values, "Data Set")
+        set1.setColors(Color.parseColor("#FF6A00"))
+        set1.form = LegendForm.CIRCLE
+        set1.setDrawValues(false)
+
+        val dataSets = java.util.ArrayList<IBarDataSet>()
+        dataSets.add(set1)
+
+        val data = BarData(dataSets)
+        chartBar!!.data = data
+        chartBar!!.setFitBars(false)
+
+        chartBar!!.invalidate()
     }
 
     private fun setupCalories(){
         mTf = ResourcesCompat.getFont(requireContext(), R.font.kanit_regular)
         binding?.apply {
             lineChart = caloriesHeart.lineChart
+            caloriesHeart.lineChart.setPinchZoom(false)
+            caloriesHeart.lineChart.setTouchEnabled(false)
+            caloriesHeart.lineChart.isDragEnabled = false
+            caloriesHeart.lineChart.setScaleEnabled(false)
+            caloriesHeart.lineChart.setDrawGridBackground(false)
             val frecuencia = ArrayList<Entry>()
             frecuencia.add(Entry(0f, 150f))
             frecuencia.add(Entry(10f, 300f))
@@ -128,11 +216,13 @@ class PersonalHistoryFragment : Fragment() {
             calorias.add(Entry(40f, 500f))
             calorias.add(Entry(55f, 560f))
             val lineFrecuencia = LineDataSet(frecuencia, "Frecuencia")
+            lineFrecuencia.setDrawCircles(false)
             lineFrecuencia.color = Color.RED
-            lineFrecuencia.valueTextColor = Color.BLACK
+            lineFrecuencia.valueTextColor = Color.TRANSPARENT
             val lineCalorias = LineDataSet(calorias, "Calorias")
+            lineCalorias.setDrawCircles(false)
             lineCalorias.color = Color.BLACK
-            lineCalorias.valueTextColor = Color.BLACK
+            lineCalorias.valueTextColor = Color.TRANSPARENT
             val lineDataSets = ArrayList<ILineDataSet>()
             lineDataSets.add(lineFrecuencia)
             lineDataSets.add(lineCalorias)
@@ -140,6 +230,14 @@ class PersonalHistoryFragment : Fragment() {
             lineChart?.data = lineData
             lineChart?.description?.isEnabled = false
             lineChart?.setDrawGridBackground(false)
+
+
+            val rightAxis: YAxis = lineChart!!.axisRight
+
+
+            val leftAxis: YAxis = lineChart!!.axisLeft
+
+
             val xAxis = lineChart?.xAxis
             xAxis?.position = XAxis.XAxisPosition.BOTTOM
             val yAxisLeft = lineChart?.axisLeft
@@ -147,6 +245,11 @@ class PersonalHistoryFragment : Fragment() {
             val yAxisRight = lineChart?.axisRight
             yAxisRight?.isEnabled = false
             xAxis?.setDrawGridLines(false)
+
+            lineChart!!.legend.apply {
+                isEnabled = false
+            }
+
             lineChart?.invalidate()
         }
     }
@@ -359,8 +462,6 @@ class PersonalHistoryFragment : Fragment() {
         val l = chartAverageRecovery!!.legend
         l.form = LegendForm.LINE
     }
-
-
     private fun setupStatistics() {
         binding?.apply {
             chart = sportProfile.pieChart
@@ -376,9 +477,10 @@ class PersonalHistoryFragment : Fragment() {
             chart!!.isRotationEnabled = true
             chart!!.isHighlightPerTapEnabled = true
             val l = chart!!.legend
-            l.verticalAlignment = Legend.LegendVerticalAlignment.TOP
+            l.verticalAlignment = Legend.LegendVerticalAlignment.CENTER
             l.horizontalAlignment = Legend.LegendHorizontalAlignment.RIGHT
             l.orientation = Legend.LegendOrientation.VERTICAL
+            l.form = LegendForm.CIRCLE
             l.setDrawInside(false)
             l.xEntrySpace = 7f
             l.yEntrySpace = 0f
