@@ -31,12 +31,13 @@
         app:layout_constraintStart_toStartOf="@+id/tvTitle123"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle123" />
 
-    <ImageView
-                android:contentDescription="@string/todo"
-        android:id="@+id/imageView18"
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
         android:src="@drawable/ic_dummy_grap_two"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,16 +45,71 @@
         app:layout_constraintTop_toBottomOf="@+id/tvShowDetail" />
 
 
+    <LinearLayout
+        android:id="@+id/llData"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="-11dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_chart">
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="01/02" />
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="start"
+            android:text="07/02" />
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="14/02" />
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="end"
+            android:text="21/02" />
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="end"
+            android:text="28/02" />
+    </LinearLayout>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/dimen_12dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/background_item_gray"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/llData"
         tools:layout_editor_absoluteX="16dp">
 
         <TextView

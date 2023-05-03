@@ -1,6 +1,7 @@
 package com.asdeporte.asdeportev2.ui.profile.details
 
 import android.graphics.Color
+import android.graphics.DashPathEffect
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -20,17 +21,21 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
+import com.github.mikephil.charting.components.Legend.LegendForm
 import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.formatter.IFillFormatter
 import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
+import com.github.mikephil.charting.utils.Utils
 import com.google.android.material.tabs.TabLayout
 
 class PersonalHistoryFragment : Fragment() {
@@ -41,6 +46,9 @@ class PersonalHistoryFragment : Fragment() {
     private var mTf: Typeface? = null
 
     private var chartAverageSleep: PieChart? = null
+    private var chartActivity: LineChart? = null
+    private var chartAverageSleepTwo: LineChart? = null
+    private var chartAverageRecovery: LineChart? = null
 
     private lateinit var eventsAdapter: EventHistoryAdapter
     val testEvent = EventData("123",
@@ -96,8 +104,11 @@ class PersonalHistoryFragment : Fragment() {
         }
         setupStatistics()
         setupGraphicSleep()
+        setupGraphicSleepTwo()
         setupEvents()
         setupCalories()
+        setupGraphicRecovery()
+        setupGraphicActivity()
     }
 
     private fun setupCalories(){
@@ -139,6 +150,61 @@ class PersonalHistoryFragment : Fragment() {
             lineChart?.invalidate()
         }
     }
+    private fun setupGraphicSleepTwo() {
+        chartAverageSleepTwo =  binding!!.activitySleep.graphSleep
+        chartAverageSleepTwo!!.setViewPortOffsets(0f, 0f, 0f, 0f)
+        chartAverageSleepTwo!!.description.isEnabled = false
+        chartAverageSleepTwo!!.setTouchEnabled(false)
+        chartAverageSleepTwo!!.isDragEnabled = false
+        chartAverageSleepTwo!!.setScaleEnabled(false)
+        chartAverageSleepTwo!!.setPinchZoom(false)
+        val x =  chartAverageSleepTwo!!.xAxis
+        x.isEnabled = false
+
+        val y: YAxis = chartAverageSleepTwo!!.axisLeft
+        y.setLabelCount(6, false)
+        y.textColor = Color.TRANSPARENT
+        y.setPosition(YAxis.YAxisLabelPosition.INSIDE_CHART)
+        y.setDrawGridLines(false)
+
+        chartAverageSleepTwo!!.axisRight.isEnabled = false
+        chartAverageSleepTwo!!.legend.isEnabled = false
+        chartAverageSleepTwo!!.clearAnimation()
+        chartAverageSleepTwo!!.invalidate()
+        val values = ArrayList<Entry>()
+        values.add(Entry(0f, 0f))
+        values.add(Entry(40f, 5f))
+        values.add(Entry(100f, 8f))
+        values.add(Entry(200f, 9f))
+        values.add(Entry(300f, 8f))
+        values.add(Entry(400f, 7f))
+        values.add(Entry(500f, 6f))
+        values.add(Entry(600f, 6f))
+        values.add(Entry(700f, 7f))
+        values.add(Entry(800f, 10f))
+        values.add(Entry(900f, 11f))
+        values.add(Entry(1000f, 11f))
+        values.add(Entry(1100f, 10f))
+        values.add(Entry(1500f, 8f))
+        values.add(Entry(1600f, 9f))
+
+        val set1: LineDataSet = LineDataSet(values, "DataSet 1")
+
+        set1.mode = LineDataSet.Mode.CUBIC_BEZIER
+        set1.setDrawFilled(true)
+        set1.setDrawCircles(false)
+        set1.lineWidth = 1.8f
+        set1.circleRadius = 4f
+        //set1.color = Color.rgb(51, 180, 105)
+        set1.color = Color.parseColor("#33B469")
+        set1.fillColor = Color.parseColor("#f5e6e6")
+        set1.fillAlpha = 100
+        set1.setDrawHorizontalHighlightIndicator(false)
+        val data = LineData(set1)
+        data.setValueTextSize(9f)
+        data.setDrawValues(false)
+        chartAverageSleepTwo!!.data = data
+    }
 
     private fun setupGraphicSleep(){
         chartAverageSleep = binding!!.averageSleep.pieChartAverageSleep
@@ -162,6 +228,136 @@ class PersonalHistoryFragment : Fragment() {
         //chartAverageSleep?.setEntryLabelTextSize(0f)
         chartAverageSleep?.setDrawEntryLabels(false)
         setDataSleep()
+    }
+
+    private fun setupGraphicActivity(){
+        chartActivity =  binding!!.historyItemActivity.graphActivity
+        chartActivity!!.setViewPortOffsets(0f, 0f, 0f, 0f)
+        chartActivity!!.description.isEnabled = false
+        chartActivity!!.setTouchEnabled(false)
+        chartActivity!!.isDragEnabled = false
+        chartActivity!!.setScaleEnabled(false)
+        chartActivity!!.setPinchZoom(false)
+        val x =  chartActivity!!.xAxis
+        x.isEnabled = false
+
+        val y: YAxis = chartActivity!!.axisLeft
+        y.setLabelCount(6, false)
+        y.textColor = Color.TRANSPARENT
+        y.setPosition(YAxis.YAxisLabelPosition.INSIDE_CHART)
+        y.setDrawGridLines(false)
+
+        chartActivity!!.axisRight.isEnabled = false
+        chartActivity!!.legend.isEnabled = false
+        chartActivity!!.clearAnimation()
+        chartActivity!!.invalidate()
+        val values = ArrayList<Entry>()
+        values.add(Entry(0f, 0f))
+        values.add(Entry(40f, 5f))
+        values.add(Entry(100f, 8f))
+        values.add(Entry(200f, 9f))
+        values.add(Entry(300f, 8f))
+        values.add(Entry(400f, 7f))
+        values.add(Entry(500f, 6f))
+        values.add(Entry(600f, 6f))
+        values.add(Entry(700f, 7f))
+        values.add(Entry(800f, 10f))
+        values.add(Entry(900f, 11f))
+        values.add(Entry(1000f, 11f))
+        values.add(Entry(1100f, 10f))
+        values.add(Entry(1500f, 8f))
+        values.add(Entry(1600f, 9f))
+
+        val set1: LineDataSet = LineDataSet(values, "DataSet 1")
+
+        set1.mode = LineDataSet.Mode.CUBIC_BEZIER
+        set1.setDrawFilled(true)
+        set1.setDrawCircles(false)
+        set1.lineWidth = 1.8f
+        set1.circleRadius = 4f
+        //set1.color = Color.rgb(51, 180, 105)
+        set1.color = Color.parseColor("#33B469")
+        set1.fillColor = Color.parseColor("#f5e6e6")
+        set1.fillAlpha = 100
+        set1.setDrawHorizontalHighlightIndicator(false)
+        val data = LineData(set1)
+        data.setValueTextSize(9f)
+        data.setDrawValues(false)
+        chartActivity!!.data = data
+    }
+
+
+    private fun setupGraphicRecovery(){
+        chartAverageRecovery =  binding!!.historyRecovery.lineChart
+        chartAverageRecovery!!.setBackgroundColor(Color.WHITE)
+        chartAverageRecovery!!.description.isEnabled = false
+        chartAverageRecovery!!.setTouchEnabled(false)
+        chartAverageRecovery!!.setDrawGridBackground(false)
+        chartAverageRecovery!!.isDragEnabled = false
+        chartAverageRecovery!!.setScaleEnabled(false)
+        chartAverageRecovery!!.setPinchZoom(false)
+        val xAxis = chartAverageRecovery!!.xAxis
+        xAxis.enableGridDashedLine(10f, 0f, 0f)
+        xAxis.setDrawGridLines(false)
+        xAxis.setDrawAxisLine(false)
+        xAxis.setDrawLabels(false)
+        val yAxis: YAxis = chartAverageRecovery!!.getAxisLeft()
+        chartAverageRecovery!!.axisRight.isEnabled = false
+        yAxis.enableGridDashedLine(10f, 0f, 100f)
+        yAxis.gridColor = R.color.white
+        yAxis.axisMaximum = 130f
+        yAxis.axisMinimum = 90f
+        yAxis.setDrawGridLines(true)
+        yAxis.setDrawLimitLinesBehindData(false)
+        xAxis.setDrawLimitLinesBehindData(false)
+
+        val values = java.util.ArrayList<Entry>()
+
+        values.add(Entry(20f, 106f))
+        values.add(Entry(50f, 100f))
+        values.add(Entry(80f, 96f))
+        values.add(Entry(110f, 101f))
+        values.add(Entry(140f, 106f))
+        values.add(Entry(170f, 110f))
+        values.add(Entry(200f, 120f))
+        values.add(Entry(230f, 110f))
+        values.add(Entry(270f, 96f))
+        values.add(Entry(300f, 106f))
+        values.add(Entry(310f, 110f))
+        values.add(Entry(320f, 120f))
+        values.add(Entry(340f, 110f))
+        values.add(Entry(370f, 100f))
+
+        val set1: LineDataSet = LineDataSet(values, "")
+        set1.setDrawIcons(false)
+        set1.enableDashedLine(10f, 0f, 0f)
+        set1.color = Color.BLACK
+        set1.setCircleColor(Color.TRANSPARENT)
+        set1.lineWidth = 4f
+        set1.circleRadius = 0f
+        set1.setDrawCircleHole(false)
+        set1.formLineWidth = 1f
+        set1.formLineDashEffect = DashPathEffect(floatArrayOf(10f, 5f), 0f)
+        set1.color = Color.parseColor("#FF6A00")
+        //set1.fillColor = Color.parseColor("#f5e6e6")
+        set1.formSize = 15f
+        set1.valueTextSize = 0f
+        set1.enableDashedHighlightLine(10f, 5f, 0f)
+        set1.setDrawFilled(true)
+        //set1.fillFormatter = IFillFormatter { dataSet, dataProvider -> chartAverageRecoveryt.getAxisLeft().getAxisMinimum() }
+        if (Utils.getSDKInt() >= 18) {
+            val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.background_graph)
+            set1.fillDrawable = drawable
+        } else {
+            set1.fillColor = Color.BLACK
+        }
+
+        val dataSets = java.util.ArrayList<ILineDataSet>()
+        dataSets.add(set1)
+        val data = LineData(dataSets)
+        chartAverageRecovery!!.data = data
+        val l = chartAverageRecovery!!.legend
+        l.form = LegendForm.LINE
     }
 
 
@@ -242,7 +438,7 @@ class PersonalHistoryFragment : Fragment() {
         chart!!.invalidate()
     }
 
-    private fun setDataSleep(){
+    private fun setDataSleep( ){
         val values = arrayOf(3.8f, 3f, 2f, 1.2f)
         val titles = arrayOf(
                 "Sueño profundo 38.6%", "Sueño ligero 30.8%", "Sueño REM 22.5%", "Interrupciones 8.1%"

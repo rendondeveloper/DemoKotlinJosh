@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
@@ -125,19 +126,54 @@
         app:layout_constraintStart_toStartOf="@+id/tvActivityDistance"
         app:layout_constraintTop_toBottomOf="@+id/tvActivityDistance" />
 
-    <ImageView
-                android:contentDescription="@string/todo"
-        android:id="@+id/graph"
+    <TextView
+        android:id="@+id/textview22"
+        style="@style/Kanit_Regular.Secondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Ritmo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivityCaloriesData" />
+
+    <TextView
+        android:id="@+id/textview23"
+        style="@style/Kanit_Regular.Secondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="190 lpm"
+        app:layout_constraintBottom_toBottomOf="@+id/graph_activity"
+        app:layout_constraintEnd_toEndOf="@+id/graph_activity"
+        app:layout_constraintTop_toTopOf="@+id/graph_activity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textview24"
+        style="@style/Kanit_Regular.Secondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="60 lpm"
+        app:layout_constraintBottom_toBottomOf="@+id/graph_activity"
+        app:layout_constraintEnd_toEndOf="@+id/graph_activity"
+        app:layout_constraintTop_toTopOf="@+id/graph_activity"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/graph_activity"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_graph_dummy"
+        android:src="@drawable/ic_dummy_sleep"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvActivityRitmoData" />
+        app:layout_constraintTop_toBottomOf="@+id/textview22" />
+
 
     <TextView
         android:id="@+id/tvShowDetail"
@@ -148,9 +184,9 @@
         android:layout_marginBottom="16dp"
         android:text="Ver detalles"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/graph"
-        app:layout_constraintStart_toStartOf="@+id/graph"
-        app:layout_constraintTop_toBottomOf="@+id/graph" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graph_activity" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

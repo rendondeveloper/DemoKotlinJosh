@@ -83,7 +83,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <include layout="@layout/history_item_activity" />
+                <include
+                    android:id="@+id/historyItemActivity"
+                    layout="@layout/history_item_activity" />
 
                 <View
                     android:layout_width="match_parent"
@@ -118,6 +120,7 @@
 
             <LinearLayout
                 android:id="@+id/llSleep"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -143,11 +146,18 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="24dp"/>
-            </LinearLayout>
 
+                <include
+                    layout="@layout/history_item_average_time_sleep" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/llHrv"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -158,7 +168,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="24dp"/>
 
-                <include layout="@layout/history_item_recovery" />
+                <include
+                    android:id="@+id/historyRecovery"
+                    layout="@layout/history_item_recovery" />
 
                 <View
                     android:layout_width="match_parent"
