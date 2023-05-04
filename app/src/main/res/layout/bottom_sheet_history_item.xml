@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="360dp"
+    android:layout_height="60dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/shape_gray">
+
+    <TextView
+        android:id="@+id/tvDateLabel"
+        style="@style/Kanit_Semi_Bold.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Viernes" />
+
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/Kanit_Regular.Secondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="30/04/2023"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateLabel" />
+
+
+    <TextView
+        android:id="@+id/tvTimeDreamLabel"
+        style="@style/Kanit_Regular.Secondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="Tiempo de sueño"
+        app:layout_constraintEnd_toStartOf="@+id/ivArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTimeDreamDate"
+        style="@style/Kanit_Semi_Bold.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="85 Pts."
+        app:layout_constraintEnd_toEndOf="@+id/tvTimeDreamLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvTimeDreamLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeDreamLabel" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/arrow_down_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

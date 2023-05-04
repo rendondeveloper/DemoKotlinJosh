@@ -23,6 +23,7 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
 import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeAdapter
 import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeFilterSheet
 import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.DeviceIntegrationBottomSheet
+import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.HistoryActivitiesBottomSheet
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceValueFormatter
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceZonesValueFormatter
 import com.github.mikephil.charting.charts.BarChart
@@ -144,6 +145,9 @@ class PersonalHistoryFragment : Fragment() {
     private fun setupListeners() {
         binding!!.historyItemScore.btnConnect.setOnClickListener {
             DeviceIntegrationBottomSheet().show(requireActivity().supportFragmentManager, "EventBottomSheet")
+        }
+        binding!!.historyItemHistory.tvShowDetail.setOnClickListener {
+            HistoryActivitiesBottomSheet().show(requireActivity().supportFragmentManager, "EventBottomSheet")
         }
     }
 
