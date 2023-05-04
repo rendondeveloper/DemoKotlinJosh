@@ -24,6 +24,7 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeAdapter
 import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeFilterSheet
 import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.DeviceIntegrationBottomSheet
 import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.HistoryActivitiesBottomSheet
+import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.MyScoreBottomSheet
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceValueFormatter
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceZonesValueFormatter
 import com.github.mikephil.charting.charts.BarChart
@@ -148,6 +149,9 @@ class PersonalHistoryFragment : Fragment() {
         }
         binding!!.historyItemHistory.tvShowDetail.setOnClickListener {
             HistoryActivitiesBottomSheet().show(requireActivity().supportFragmentManager, "EventBottomSheet")
+        }
+        binding!!.historyItemScore.ivScore.setOnClickListener {
+            MyScoreBottomSheet().show(requireActivity().supportFragmentManager, "EventBottomSheet")
         }
     }
 
