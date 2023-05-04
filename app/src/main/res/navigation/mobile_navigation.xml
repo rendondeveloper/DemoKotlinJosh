@@ -350,7 +350,11 @@
         android:id="@+id/personal_history"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalHistoryFragment"
         android:label="Mi histórico"
-        tools:layout="@layout/fragment_personal_history" />
+        tools:layout="@layout/fragment_personal_history" >
+        <action
+            android:id="@+id/action_personal_history_to_personalDetailActivityFragment"
+            app:destination="@id/personalDetailActivityFragment" />
+    </fragment>
     <fragment
         android:id="@+id/personal_data"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalDataFragment"
@@ -640,4 +644,9 @@
         android:id="@+id/galleryPhotosFragment"
         android:name="com.asdeporte.asdeportev2.ui.profile.details.photos.GalleryPhotosFragment"
         android:label="GalleryPhotosFragment" />
+    <fragment
+        android:id="@+id/personalDetailActivityFragment"
+        android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalDetailActivityFragment"
+        android:label="fragment_personal_detail_activity"
+        tools:layout="@layout/fragment_personal_detail_activity" />
 </navigation>

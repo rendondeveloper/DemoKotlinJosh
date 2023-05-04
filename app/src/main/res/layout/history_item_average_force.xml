@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/chart_bar"
+        android:id="@+id/barChart"
         android:layout_width="0dp"
         android:layout_height="160dp"
         android:layout_marginStart="12dp"
