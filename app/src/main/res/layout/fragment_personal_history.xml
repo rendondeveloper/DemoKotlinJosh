@@ -37,7 +37,9 @@
                 android:layout_height="16dp"
                 android:background="@color/secondary_background" />
 
-            <include layout="@layout/history_item_score" />
+            <include
+                android:id="@+id/historyItemScore"
+                layout="@layout/history_item_score" />
 
             <View
                 android:layout_width="match_parent"

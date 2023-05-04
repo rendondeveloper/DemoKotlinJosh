@@ -24,4 +24,11 @@
         <attr name="history_item_two_score" format="string"/>
         <attr name="history_item_two_time" format="string"/>
     </declare-styleable>
+    <declare-styleable name="DeviceItem">
+        <attr name="device_item_title" format="string"/>
+        <attr name="device_item_image" format="string|reference"/>
+        <attr name="device_item_button_text" format="string"/>
+        <attr name="device_item_description" format="string"/>
+        <attr name="device_item_is_connect" format="boolean"/>
+    </declare-styleable>
 </resources>

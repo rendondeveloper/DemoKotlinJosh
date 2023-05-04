@@ -20,6 +20,9 @@ import com.asdeporte.asdeportev2.databinding.FragmentPersonalHistoryBinding
 import com.asdeporte.asdeportev2.extensions.safelyNavigate
 import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.profile.adapters.EventHistoryAdapter
+import com.asdeporte.asdeportev2.ui.profile.adapters.badget.BadgeAdapter
+import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeFilterSheet
+import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.DeviceIntegrationBottomSheet
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceValueFormatter
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceZonesValueFormatter
 import com.github.mikephil.charting.charts.BarChart
@@ -74,9 +77,9 @@ class PersonalHistoryFragment : Fragment() {
     )
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPersonalHistoryBinding.inflate(inflater, container, false)
         return binding?.root
@@ -99,6 +102,7 @@ class PersonalHistoryFragment : Fragment() {
                     llActivity.visibility = if (index == 0) View.VISIBLE else View.GONE
                     llSleep.visibility = if (index == 1) View.VISIBLE else View.GONE
                     llHrv.visibility = if (index == 2) View.VISIBLE else View.GONE
+
                 }
 
                 override fun onTabReselected(tab: TabLayout.Tab?) {}
@@ -134,6 +138,13 @@ class PersonalHistoryFragment : Fragment() {
         setupGraphicActivity()
         setupGraphicBar()
         setupPager()
+        setupListeners()
+    }
+
+    private fun setupListeners() {
+        binding!!.historyItemScore.btnConnect.setOnClickListener {
+            DeviceIntegrationBottomSheet().show(requireActivity().supportFragmentManager, "EventBottomSheet")
+        }
     }
 
     private fun setupPager() {
@@ -145,8 +156,7 @@ class PersonalHistoryFragment : Fragment() {
             viewPager.adapter = eventsCollectionAdapter
 
             dotsIndicator = it.dotsIndicator
-            dotsIndicator.selectedDotColor =
-                ContextCompat.getColor(requireContext(), R.color.orange_as_light)
+            dotsIndicator.selectedDotColor = ContextCompat.getColor(requireContext(), R.color.orange_as_light)
             dotsIndicator.attachTo(viewPager)
         }
     }
@@ -527,7 +537,7 @@ class PersonalHistoryFragment : Fragment() {
     private fun setData(count: Int, range: Float) {
         val values = arrayOf(7f, 3f)
         val titles = arrayOf(
-            "Triatleta", "Corredor"
+                "Triatleta", "Corredor"
         )
 
         val entries = ArrayList<PieEntry>()
@@ -536,8 +546,10 @@ class PersonalHistoryFragment : Fragment() {
         // the chart.
         for (i in 0 until count) {
             val value = (Math.random() * range + range / 5).toFloat()
-            entries.add(
-                PieEntry(values[i], titles[i % titles.size])
+            entries.add(PieEntry(
+                    values[i],
+                    titles[i % titles.size]
+                )
             )
         }
         val dataSet = PieDataSet(entries, "")
@@ -574,15 +586,15 @@ class PersonalHistoryFragment : Fragment() {
     private fun setDataSleep() {
         val values = arrayOf(3.8f, 3f, 2f, 1.2f)
         val titles = arrayOf(
-            "Sueño profundo 38.6%", "Sueño ligero 30.8%", "Sueño REM 22.5%", "Interrupciones 8.1%"
+                "Sueño profundo 38.6%", "Sueño ligero 30.8%", "Sueño REM 22.5%", "Interrupciones 8.1%"
         )
 
         val entries = ArrayList<PieEntry>()
 
         values.forEachIndexed { index, _ ->
-            entries.add(
-                PieEntry(values[index], titles[index])
-            )
+            entries.add(PieEntry(
+                    values[index], titles[index]
+            ))
         }
 
         val dataSet = PieDataSet(entries, "")
@@ -616,7 +628,8 @@ class PersonalHistoryFragment : Fragment() {
 
         binding?.eventsList?.adapter = eventsAdapter
         binding?.eventsList?.setHasFixedSize(true)
-        binding?.eventsList?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding?.eventsList?.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         val items = listOf(testEvent, testEvent, testEvent, testEvent, testEvent, testEvent)
         eventsAdapter.setItems(items)
@@ -639,9 +652,9 @@ class EventsCollectionAdapter(fragment: Fragment) : FragmentStateAdapter(fragmen
 class EventObjectFragment : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
         return inflater.inflate(R.layout.history_item_total_events, container, false)
     }
