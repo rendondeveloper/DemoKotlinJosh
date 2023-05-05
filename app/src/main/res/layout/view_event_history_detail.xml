@@ -14,7 +14,7 @@
 
     <TextView
         android:id="@+id/tvGoalLabel"
-        style="@style/Kanit_Semibold.Default.16"
+        style="@style/Kanit_Medium.Default.16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -44,7 +44,7 @@
 
     <TextView
         android:id="@+id/tvPositionLabel"
-        style="@style/Kanit_Semibold.Default.16"
+        style="@style/Kanit_Medium.Default.16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -75,7 +75,7 @@
 
     <TextView
         android:id="@+id/tvTimeLabel"
-        style="@style/Kanit_Semibold.Default.16"
+        style="@style/Kanit_Medium.Default.16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -135,7 +135,7 @@
 
             <TextView
                 android:id="@+id/tv_distance"
-                style="@style/Kanit_Semibold.Default.14"
+                style="@style/Kanit_Medium.Default.14"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
 
             <TextView
                 android:id="@+id/tvTimesLabel"
-                style="@style/Kanit_Semibold.Default.14"
+                style="@style/Kanit_Medium.Default.14"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -178,7 +178,7 @@
 
             <TextView
                 android:id="@+id/tvTotalLabel"
-                style="@style/Kanit_Semibold.Default.16"
+                style="@style/Kanit_Medium.Default.16"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
 
             <TextView
                 android:id="@+id/tvTotalDate"
-                style="@style/Kanit_Semibold.Default.16"
+                style="@style/Kanit_Medium.Default.16"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -201,7 +201,7 @@
 
     <TextView
         android:id="@+id/tvGalleyLabel"
-        style="@style/Kanit_Semibold.Orange.14"
+        style="@style/Kanit_Medium.Orange.14"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"

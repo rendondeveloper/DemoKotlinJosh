@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/tvDateLabel"
-        style="@style/Kanit_Semi_Bold.Default.12"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -44,14 +44,12 @@
 
     <TextView
         android:id="@+id/tvCaloriesData"
-        style="@style/Kanit_Semi_Bold.Default.12"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
         android:layout_marginBottom="8dp"
         android:text="444 kcal."
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvCaloriesLabel"
         app:layout_constraintStart_toStartOf="@+id/tvCaloriesLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvCaloriesLabel" />
 
@@ -80,14 +78,12 @@
 
     <TextView
         android:id="@+id/tvMidLabelData"
-        style="@style/Kanit_Semi_Bold.Default.12"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
         android:layout_marginBottom="8dp"
         android:text="140 lpm"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvMidLabel"
         app:layout_constraintStart_toStartOf="@+id/tvMidLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvMidLabel" />
 
@@ -118,13 +114,12 @@
 
     <TextView
         android:id="@+id/tvTimeLabelData"
-        style="@style/Kanit_Semi_Bold.Default.12"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="08:00:00"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvTimeLabel"
         app:layout_constraintStart_toStartOf="@+id/tvTimeLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvTimeLabel" />
 

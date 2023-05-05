@@ -19,7 +19,7 @@
         android:id="@+id/view18"
         android:layout_width="100dp"
         android:layout_height="10dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="9dp"
         android:background="@drawable/background_item_gray"
         app:layout_constraintBottom_toBottomOf="@+id/tvActivity"
         app:layout_constraintStart_toEndOf="@+id/tvActivity"
@@ -40,7 +40,7 @@
 
     <TextView
         android:id="@+id/tvActivityPercent"
-        style="@style/Kanit_Medium.Default.14"
+        style="@style/Kanit_Medium.Default.12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -95,7 +95,7 @@
 
     <TextView
         android:id="@+id/tvSleepPercent"
-        style="@style/Kanit_Medium.Default.14"
+        style="@style/Kanit_Medium.Default.12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -148,7 +148,7 @@
 
     <TextView
         android:id="@+id/tvHrvPercent"
-        style="@style/Kanit_Medium.Default.14"
+        style="@style/Kanit_Medium.Default.12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -171,24 +171,23 @@
 
     <TextView
         android:id="@+id/tvScoreLabel"
-        style="@style/Kanit_Bold.Default.16"
+        style="@style/Kanit_Bold_Italic.Default.16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="SCORE"
+        android:text="MI SCORE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/tvScore"
-        style="@style/Kanit_Bold.Default.36"
+        style="@style/Kanit_Semibold.Default.34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="12dp"
-        android:text="56%"
+        android:text="75%"
         app:layout_constraintEnd_toEndOf="@+id/tvScoreLabel"
         app:layout_constraintStart_toStartOf="@+id/tvScoreLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvScoreLabel" />
@@ -196,8 +195,8 @@
 
     <ImageView
         android:id="@+id/ivScore"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
         android:layout_marginStart="6dp"
         android:contentDescription="@string/todo"
         android:src="@drawable/ic_help_history"
@@ -208,9 +207,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnConnect"
-        style="@style/Kanit_Regular.Default.10"
-        android:layout_width="194dp"
-        android:layout_height="32dp"
+        style="@style/Kanit_Regular.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="16dp"
@@ -237,12 +236,15 @@
 
     <ImageView
         android:id="@+id/tvConnectStatus"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="34dp"
         android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_device_conected"
         app:layout_constraintBottom_toBottomOf="@+id/tvConnect"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvConnect"
         app:layout_constraintTop_toTopOf="@+id/tvConnect" />
 

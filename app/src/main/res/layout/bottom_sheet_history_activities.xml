@@ -51,7 +51,7 @@
         android:orientation="horizontal">
 
         <TextView
-            style="@style/Kanit_Bold.Default.16"
+            style="@style/Kanit_Medium.Default.16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/dimen_24dp"
@@ -63,9 +63,9 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/input_height"
             android:hint="Última semana"
+            app:hintTextAppearance="@style/Kanit_Regular.Secondary.16"
             app:endIconDrawable="@drawable/arrow_down"
-            app:endIconTint="@color/black_dynamic"
-            app:hintTextColor="@color/black_dynamic">
+            app:endIconTint="@color/black_dynamic">
 
             <AutoCompleteTextView
                 android:id="@+id/cityTextInput"

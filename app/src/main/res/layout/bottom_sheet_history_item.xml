@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/tvDateLabel"
-        style="@style/Kanit_Semi_Bold.Default.14"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -46,7 +46,7 @@
 
     <TextView
         android:id="@+id/tvTimeDreamDate"
-        style="@style/Kanit_Semi_Bold.Default.14"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="85 Pts."
@@ -57,8 +57,8 @@
 
     <ImageView
         android:id="@+id/ivArrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/arrow_down_line"
         app:layout_constraintBottom_toBottomOf="parent"

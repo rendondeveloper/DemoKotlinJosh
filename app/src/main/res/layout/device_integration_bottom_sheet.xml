@@ -52,10 +52,10 @@
         android:layout_height="@dimen/input_height"
         android:layout_marginTop="18dp"
         android:hint="Buscar plataformas"
+        app:hintTextAppearance="@style/Kanit_Regular.Secondary.16"
         app:endIconDrawable="@drawable/ic_search"
         app:endIconMode="custom"
-        app:endIconTint="@color/black_dynamic"
-        app:hintTextColor="@color/label_secondary">
+        app:endIconTint="@color/black_dynamic">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/searchTextInput"
             style="@style/Kanit_Regular.Default.16"

@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/tvActivity"
-        style="@style/Kanit_Bold.Default.16"
+        style="@style/Kanit_Semibold.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -23,7 +23,6 @@
         style="@style/Kanit_Regular.Default.12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="31/01/2023 - 06:50 am"
         android:textColor="@color/label_secondary"
         app:layout_constraintEnd_toEndOf="@+id/tvActivity"
@@ -46,10 +45,9 @@
 
     <TextView
         android:id="@+id/tvActivityDateOfficialDate"
-        style="@style/Kanit_Bold.Default.16"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="00:22:18 min"
         app:layout_constraintEnd_toEndOf="@+id/tvActivityDateOfficial"
         app:layout_constraintStart_toStartOf="@+id/tvActivityDateOfficial"
@@ -69,10 +67,9 @@
 
     <TextView
         android:id="@+id/tvActivityCaloriesData"
-        style="@style/Kanit_Bold.Default.16"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="00:22:18 min"
         app:layout_constraintStart_toStartOf="@+id/tvActivityCalories"
         app:layout_constraintTop_toBottomOf="@+id/tvActivityCalories" />
@@ -93,10 +90,9 @@
 
     <TextView
         android:id="@+id/tvActivityRitmoData"
-        style="@style/Kanit_Bold.Default.16"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="5.5 Km"
         app:layout_constraintStart_toStartOf="@+id/tvActivityRitmo"
         app:layout_constraintTop_toBottomOf="@+id/tvActivityRitmo" />
@@ -115,10 +111,9 @@
 
     <TextView
         android:id="@+id/tvActivityDistanceData"
-        style="@style/Kanit_Bold.Default.16"
+        style="@style/Kanit_Medium.Default.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="5.5 Km"
         app:layout_constraintEnd_toEndOf="@+id/tvActivityDistance"
         app:layout_constraintHorizontal_bias="1.0"
@@ -138,7 +133,7 @@
 
     <TextView
         android:id="@+id/textview23"
-        style="@style/Kanit_Regular.Secondary.12"
+        style="@style/Kanit_Regular.Secondary.10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -150,7 +145,7 @@
 
     <TextView
         android:id="@+id/textview24"
-        style="@style/Kanit_Regular.Secondary.12"
+        style="@style/Kanit_Regular.Secondary.10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -176,7 +171,7 @@
 
     <TextView
         android:id="@+id/tvShowDetail"
-        style="@style/Kanit_Bold.Orange.14"
+        style="@style/Kanit_Regular.Orange.14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

@@ -55,7 +55,8 @@
                 app:tabGravity="fill"
                 app:tabMode="fixed"
                 app:tabSelectedTextColor="@color/orange_as_light"
-                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabIndicatorHeight="3dp"
+                app:tabTextAppearance="@style/SelectedTabText"
                 app:tabTextColor="@color/label_secondary">
 
                 <com.google.android.material.tabs.TabItem
@@ -121,7 +122,7 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="24dp" />
+                    android:layout_height="16dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -200,7 +201,8 @@
                 app:tabGravity="fill"
                 app:tabMode="fixed"
                 app:tabSelectedTextColor="@color/orange_as_light"
-                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabIndicatorHeight="3dp"
+                app:tabTextAppearance="@style/SelectedTabText"
                 app:tabTextColor="@color/label_secondary">
 
                 <com.google.android.material.tabs.TabItem
@@ -224,7 +226,7 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="16dp" />
+                    android:layout_height="24dp" />
 
                 <include
                     android:id="@+id/sport_profile"
@@ -247,7 +249,19 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="32dp" />
+                    android:layout_height="13dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_400"
+                    android:layout_marginTop="12dp"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout21"
@@ -264,9 +278,9 @@
                         android:text="Cantidad de eventos:" />
 
                     <TextView
-                        style="@style/Kanit_Regular.Secondary.12"
-                        android:layout_width="34dp"
-                        android:layout_height="wrap_content"
+                        style="@style/Kanit_Regular.Default.10"
+                        android:layout_width="36dp"
+                        android:layout_height="19dp"
                         android:background="@drawable/badge_circle_shape_red"
                         android:gravity="center"
                         android:text="30"
