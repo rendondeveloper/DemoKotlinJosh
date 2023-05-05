@@ -78,6 +78,12 @@
 
             <View
                 android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_margin" />
+
+
+            <View
+                android:layout_width="match_parent"
                 android:layout_height="16dp" />
 
             <LinearLayout
@@ -197,6 +203,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:endColor="@android:color/transparent"
+                app:tabIndicatorFullWidth="true"
                 app:flow_horizontalAlign="start"
                 app:tabGravity="fill"
                 app:tabMode="fixed"
@@ -216,6 +223,11 @@
                     android:text="Mis eventos" />
 
             </com.google.android.material.tabs.TabLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_margin" />
 
             <!-- Statistics -->
             <LinearLayout
