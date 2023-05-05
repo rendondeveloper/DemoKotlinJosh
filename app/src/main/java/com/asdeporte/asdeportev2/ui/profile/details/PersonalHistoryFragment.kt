@@ -25,6 +25,9 @@ import com.asdeporte.asdeportev2.ui.profile.adapters.bottomSheet.BadgeFilterShee
 import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.DeviceIntegrationBottomSheet
 import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.HistoryActivitiesBottomSheet
 import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.MyScoreBottomSheet
+import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.model.EventHistoryImageModel
+import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.model.EventHistoryLapModel
+import com.asdeporte.asdeportev2.ui.profile.details.bottomSheet.model.EventHistoryModel
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceValueFormatter
 import com.asdeporte.asdeportev2.ui.profile.details.formater.AxisAverageForceZonesValueFormatter
 import com.github.mikephil.charting.charts.BarChart
@@ -71,11 +74,29 @@ class PersonalHistoryFragment : Fragment() {
     private var chartBar: BarChart? = null
 
     private lateinit var eventsAdapter: EventHistoryAdapter
-    val testEvent = EventData(
-        "123",
-        "7, 14 y 21K by WomanUp",
-        "https://d3cnkhyiyh0ve2.cloudfront.net/upload%2F2021%2F6%2Fimg_1625774286890_21K-WUp-logo-A-jul-6.jpg",
-        "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80"
+
+
+    private val itemModel = EventHistoryLapModel(
+            "1km",
+            "00:07:00",
+    )
+
+    private val itemModel2 = EventHistoryImageModel(
+            R.drawable.activities_dummy,
+    )
+
+    val testEvent = EventHistoryModel(
+            "Astri Acapulco Cabo Marqués",
+            "30 octubre 2022",
+            "Varonil",
+            "5k",
+            "5K",
+            "4º",
+            "00:32:10",
+            "00:32:10",
+            listOf(itemModel, itemModel, itemModel, itemModel, itemModel, itemModel),
+            listOf(itemModel2, itemModel2, itemModel2, itemModel2, itemModel2, itemModel2),
+            R.drawable.ic_dummy_device
     )
 
     override fun onCreateView(
@@ -287,7 +308,7 @@ class PersonalHistoryFragment : Fragment() {
 
 
             val xAxis = lineChart?.xAxis
-            xAxis?.position = XAxis.XAxisPosition.BOTTOM
+            xAxis?.position = XAxisPosition.BOTTOM
             val yAxisLeft = lineChart?.axisLeft
             yAxisLeft?.axisMinimum = 0f
             val yAxisRight = lineChart?.axisRight
@@ -453,7 +474,7 @@ class PersonalHistoryFragment : Fragment() {
         xAxis.setDrawGridLines(false)
         xAxis.setDrawAxisLine(false)
         xAxis.setDrawLabels(false)
-        val yAxis: YAxis = chartAverageRecovery!!.getAxisLeft()
+        val yAxis: YAxis = chartAverageRecovery!!.axisLeft
         chartAverageRecovery!!.axisRight.isEnabled = false
         yAxis.enableGridDashedLine(10f, 0f, 100f)
         yAxis.gridColor = R.color.white
@@ -557,7 +578,7 @@ class PersonalHistoryFragment : Fragment() {
             entries.add(PieEntry(
                     values[i],
                     titles[i % titles.size]
-                )
+            )
             )
         }
         val dataSet = PieDataSet(entries, "")

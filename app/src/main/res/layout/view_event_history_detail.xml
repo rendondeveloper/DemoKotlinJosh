@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDetail"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginHorizontal="@dimen/dimen_16dp"
+    android:background="@drawable/shape_gray"
+    android:layout_gravity="center"
+    android:backgroundTint="@color/secondary_background">
+
+    <TextView
+        android:id="@+id/tvGoalLabel"
+        style="@style/Kanit_Semibold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="5K" />
+
+    <TextView
+        android:id="@+id/tvGoalData"
+        style="@style/Kanit_Regular.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvGoalLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvGoalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvGoalLabel"
+        android:text="Meta" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="54dp"
+        android:background="@color/border_gray"
+        app:layout_constraintEnd_toStartOf="@+id/tvPositionData"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPositionLabel"
+        style="@style/Kanit_Semibold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="4ª" />
+
+    <TextView
+        android:id="@+id/tvPositionData"
+        style="@style/Kanit_Regular.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvPositionLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvPositionLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvPositionLabel"
+        android:text="Lugar" />
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/border_gray"
+        app:layout_constraintStart_toEndOf="@+id/tvPositionData"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimeLabel"
+        style="@style/Kanit_Semibold.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="00:32:10" />
+
+    <TextView
+        android:id="@+id/tvTimeData"
+        style="@style/Kanit_Regular.Default.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvTimeLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTimeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeLabel"
+        android:text="Tiempo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPositionData">
+
+
+        <TextView
+            android:id="@+id/tvTitleCategoryData"
+            style="@style/Kanit_Semibold.Orange.14"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_category_title"
+            android:gravity="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="CATEGORÍA - 5K" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout23"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@drawable/background_category_data"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleCategoryData">
+
+            <TextView
+                android:id="@+id/tv_distance"
+                style="@style/Kanit_Semibold.Default.14"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Distancias" />
+
+            <TextView
+                android:id="@+id/tvTimesLabel"
+                style="@style/Kanit_Semibold.Default.14"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Tiempos" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLaps"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout23"
+            tools:listitem="@layout/view_event_history_detail_item_lap"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearLayout24"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/background_category_total"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tvTotalLabel"
+                style="@style/Kanit_Semibold.Default.16"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Total" />
+
+            <TextView
+                android:id="@+id/tvTotalDate"
+                style="@style/Kanit_Semibold.Default.16"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="00:32:10" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvGalleyLabel"
+        style="@style/Kanit_Semibold.Orange.14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="Ver mis fotos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPhotos"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/view_event_history_detail_item_picture"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGalleyLabel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -321,19 +321,24 @@
                     style="@style/Kanit_Semi_Bold_Italic.Default.20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="24dp"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
                     android:text="Mis eventos"
                     android:textAllCaps="true" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray_400" />
+                    android:background="@color/gray_400"
+                    android:layout_marginTop="12dp"
+                    />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/events_list"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    />
 
             </LinearLayout>
 
