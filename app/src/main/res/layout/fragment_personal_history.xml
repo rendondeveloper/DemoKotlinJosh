@@ -56,7 +56,7 @@
                 app:tabMode="fixed"
                 app:tabSelectedTextColor="@color/orange_as_light"
                 app:tabIndicatorHeight="3dp"
-                app:tabTextAppearance="@style/SelectedTabText"
+                app:tabTextAppearance="@style/SelectedBoldTabText"
                 app:tabTextColor="@color/label_secondary">
 
                 <com.google.android.material.tabs.TabItem
@@ -202,7 +202,7 @@
                 app:tabMode="fixed"
                 app:tabSelectedTextColor="@color/orange_as_light"
                 app:tabIndicatorHeight="3dp"
-                app:tabTextAppearance="@style/SelectedTabText"
+                app:tabTextAppearance="@style/SelectedBoldTabText"
                 app:tabTextColor="@color/label_secondary">
 
                 <com.google.android.material.tabs.TabItem
