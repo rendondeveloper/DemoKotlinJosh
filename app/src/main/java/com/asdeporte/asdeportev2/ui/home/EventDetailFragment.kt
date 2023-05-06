@@ -15,6 +15,8 @@ import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentEventDetailBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
+import com.asdeporte.asdeportev2.ui.home.models.tabs.plusMembership.PlusMembershipBenefitModel
+import com.asdeporte.asdeportev2.ui.home.models.tabs.plusMembership.PlusMembershipModel
 import com.asdeporte.asdeportev2.ui.inscription.InscriptionActivity
 import com.asdeporte.asdeportev2.ui.reusableview.convocatory.BenefitEventView
 import com.asdeporte.asdeportev2.ui.reusableview.convocatory.ServicesInEventView
@@ -26,11 +28,48 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.FitCenter
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener {
     private var _binding: FragmentEventDetailBinding? = null
     private val binding get() = _binding!!
+
+    private  val plusMembershipData = listOf(
+            PlusMembershipModel(
+                    R.drawable.upload_image,
+                    "FILA EXPRESS",
+                    "Viernes 16 de septiembre",
+                    "Quedan 10 reservas",
+                    "Reserver",
+                    listOf(
+                            PlusMembershipBenefitModel("No hagas filas"),
+                            PlusMembershipBenefitModel("Tendremos tu talla de playera asegurada"),
+                            PlusMembershipBenefitModel("Recoge tu kit en un módulo exclusivo para miembros Plus"),
+                    )
+            ),
+            PlusMembershipModel(
+                    R.drawable.upload_image,
+                    "mismo día",
+                    "Sábado 17 de septiembre",
+                    "",
+                    "Reserver",
+                    listOf(
+                            PlusMembershipBenefitModel("Tendremos tu talla de playera asegurada"),
+                    )
+            ),
+            PlusMembershipModel(
+                    R.drawable.upload_image,
+                    "recupera el costo de tu inscripción",
+                    "",
+                    "",
+                    "Solicitar abono a Wallet",
+                    listOf(
+                            PlusMembershipBenefitModel("Sin costo por servicio"),
+                            PlusMembershipBenefitModel("Hasta 7 días antes de la entrega de paquetes"),
+                    )
+            )
+    )
 
     val testEvent = EventData("123",
         "7, 14 y 21K by WomanUp",
@@ -66,6 +105,20 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
 
         val titles = listOf("Distancias y Categorías", "Inscripciones y Precios", "Beneficios Plus", "Hospedaje y Turismo", "Ruta", "Programa del Evento", "Entrega de Kit")
         binding.tabViews.setTabs(titles)
+
+        binding.tabViews.setCallback {tab ->
+            binding.contentView.visibility = View.GONE
+            when(tab){
+                "Beneficios Plus" -> {
+                    binding.plusMembership.setData(plusMembershipData)
+                    binding.plusMembership.visibility = View.VISIBLE
+                }
+                else -> {
+                    binding.contentView.visibility = View.VISIBLE
+                    binding.plusMembership.visibility = View.GONE
+                }
+            }
+        }
 
         binding.inscriptionButton.setOnClickListener {
             startActivity(Intent(requireContext(), InscriptionActivity::class.java))

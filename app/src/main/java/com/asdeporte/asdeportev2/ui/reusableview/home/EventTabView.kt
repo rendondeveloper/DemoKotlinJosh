@@ -22,8 +22,15 @@ class EventTabView @JvmOverloads constructor(
     private var binding: EventTabViewBinding
     var currentTab = 0
 
+    lateinit var callBack : (String) -> Unit
+
     init {
         binding = EventTabViewBinding.inflate(LayoutInflater.from(context), this, true)
+    }
+
+
+    fun setCallback(callBack : (String) -> Unit  ){
+        this.callBack = callBack
     }
 
     fun setTabs(titles: List<String>) {
@@ -50,6 +57,7 @@ class EventTabView @JvmOverloads constructor(
                 removeSelected()
                 tabContainer.backgroundTintList = ContextCompat.getColorStateList(context, R.color.dark_blue)
                 titleView.setTextColor(ContextCompat.getColor(context, R.color.white))
+                this.callBack(titleView.text.toString())
             }
 
             binding.tabView.addView(layout)

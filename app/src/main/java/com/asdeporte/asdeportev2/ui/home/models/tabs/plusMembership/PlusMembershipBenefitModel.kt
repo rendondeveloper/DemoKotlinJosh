@@ -1,0 +1,1 @@
+package com.asdeporte.asdeportev2.ui.home.models.tabs.plusMembershipdata class PlusMembershipBenefitModel(        val title : String,)

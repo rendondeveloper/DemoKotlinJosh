@@ -1,0 +1,1 @@
+package com.asdeporte.asdeportev2.ui.home.models.tabs.plusMembershipdata class PlusMembershipModel(        val image : Int,        val title : String,        val date : String,        val warning : String,        val textAction : String,        val benefits : List<PlusMembershipBenefitModel>)

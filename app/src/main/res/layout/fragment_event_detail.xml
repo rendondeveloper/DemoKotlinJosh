@@ -8,8 +8,6 @@
     android:background="@color/secondary_background"
     tools:context=".ui.home.HomeFragment" >
 
-
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -171,11 +169,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+
+            <com.asdeporte.asdeportev2.ui.home.views.tabs.plusMembership.EventDetailPlusMembershipView
+                android:id="@+id/plusMembership"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
             <LinearLayout
                 android:id="@+id/content_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
+
 
 
         </LinearLayout>
