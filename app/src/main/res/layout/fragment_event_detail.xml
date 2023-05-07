@@ -182,6 +182,13 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
 
+            <!-- Section Entrega de Kit -->
+            <com.asdeporte.asdeportev2.ui.home.views.tabs.kitDelivery.EventDetailKitDeliveryView
+                android:id="@+id/kitDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
             <LinearLayout
                 android:id="@+id/content_view"
                 android:layout_width="match_parent"

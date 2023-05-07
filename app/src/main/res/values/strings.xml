@@ -1165,4 +1165,6 @@
     <string name="description_create_tribe">Tienes la opción de permanecer a 3 tribus como máximo y recuerda que al crear una Tribu, <b>te vuelves administrador</b></string>
     <string name="my_tribe_description">La <b>comunidad</b> para todos los <b>Atletas</b> donde pueden <b>compartir</b> e interactuar con otros miembros con la misma pasión hacia el <b>deporte.</b></string>
     <string name="my_tribe_description_fwd"><b>1500 Atletas</b> han encontrado su tribu y ya están practicando su deporte favorito.</string>
+    <string name="kit_delivery_description_card">Si quieres que te enviemos tu kit una semana antes del evento, deberás elegir la opción de pago con <b>ENVÍO A DOMICILIO y pagar $138.00 por envío.</b></string>
+    <string name="kit_delivery_description_section">Recoge tu paquete de forma sencilla sin llevar ningún documento impreso, haciendo tu <b>CHECK IN</b> en nuestra APP. Solo necesitas tener a la mano tu identificación y seguir el proceso que se te indica. ¡El día de entrega de papeles solo muestra el código QR y listo!</string>
 </resources>

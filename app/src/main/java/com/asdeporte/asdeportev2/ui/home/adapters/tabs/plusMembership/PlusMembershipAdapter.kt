@@ -9,11 +9,13 @@ import com.asdeporte.asdeportev2.databinding.EventDetailViewPlusMembershipCardBi
 import com.asdeporte.asdeportev2.ui.home.models.tabs.plusMembership.PlusMembershipModel
 
 class PlusMembershipCardAdapter(
-        private val items: List<PlusMembershipModel>
-) :
-        RecyclerView.Adapter<PlusMembershipCardAdapter.EventDetailViewPlusMembershipCardHolder>() {
+    private val items: List<PlusMembershipModel>
+) : RecyclerView.Adapter<PlusMembershipCardAdapter.EventDetailViewPlusMembershipCardHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventDetailViewPlusMembershipCardHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): EventDetailViewPlusMembershipCardHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = EventDetailViewPlusMembershipCardBinding.inflate(inflater, parent, false)
         return EventDetailViewPlusMembershipCardHolder(binding)
@@ -26,10 +28,10 @@ class PlusMembershipCardAdapter(
     override fun getItemCount(): Int = items.size
 
     class EventDetailViewPlusMembershipCardHolder(private val binding: EventDetailViewPlusMembershipCardBinding) :
-            RecyclerView.ViewHolder(binding.root) {
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(
-                item: PlusMembershipModel
+            item: PlusMembershipModel
         ) {
             binding.apply {
                 ivImage.setImageResource(item.image)
@@ -45,7 +47,8 @@ class PlusMembershipCardAdapter(
                 binding.rvData.apply {
                     this.adapter = adapter
                     setHasFixedSize(true)
-                    layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+                    layoutManager =
+                        LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                     isNestedScrollingEnabled = true
                 }
             }

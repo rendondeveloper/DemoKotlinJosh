@@ -5,11 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.allViews
-import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
@@ -18,8 +15,6 @@ import com.asdeporte.asdeportev2.ui.MainActivity
 import com.asdeporte.asdeportev2.ui.home.models.tabs.plusMembership.PlusMembershipBenefitModel
 import com.asdeporte.asdeportev2.ui.home.models.tabs.plusMembership.PlusMembershipModel
 import com.asdeporte.asdeportev2.ui.inscription.InscriptionActivity
-import com.asdeporte.asdeportev2.ui.reusableview.convocatory.BenefitEventView
-import com.asdeporte.asdeportev2.ui.reusableview.convocatory.ServicesInEventView
 import com.asdeporte.asdeportev2.ui.reusableview.convocatory.TitleAndDescripctionView
 import com.asdeporte.asdeportev2.ui.reusableview.home.SearchTribuView
 import com.asdeporte.asdeportev2.utils.dpToPx
@@ -28,7 +23,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.FitCenter
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
-import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener {
@@ -110,6 +104,7 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
             binding.contentView.visibility = View.GONE
             binding.plusMembership.visibility = View.GONE
             binding.eventProgram.visibility = View.GONE
+            binding.kitDelivery.visibility = View.GONE
             when(tab){
                 "Beneficios Plus" -> {
                     binding.plusMembership.setData(plusMembershipData)
@@ -117,6 +112,10 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                 }
                 "Programa del Evento" -> {
                     binding.eventProgram.visibility = View.VISIBLE
+                }
+                "Entrega de Kit" -> {
+                    binding.kitDelivery.visibility = View.VISIBLE
+                    binding.kitDelivery.setData(plusMembershipData)
                 }
                 else -> {
                     binding.contentView.visibility = View.VISIBLE
