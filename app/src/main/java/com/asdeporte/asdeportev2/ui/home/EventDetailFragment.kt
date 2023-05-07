@@ -105,6 +105,7 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
             binding.plusMembership.visibility = View.GONE
             binding.eventProgram.visibility = View.GONE
             binding.kitDelivery.visibility = View.GONE
+            binding.route.visibility = View.GONE
             when(tab){
                 "Beneficios Plus" -> {
                     binding.plusMembership.setData(plusMembershipData)
@@ -112,6 +113,10 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                 }
                 "Programa del Evento" -> {
                     binding.eventProgram.visibility = View.VISIBLE
+                }
+                "Ruta" -> {
+                    binding.route.visibility = View.VISIBLE
+                    binding.route.setDataGraphic()
                 }
                 "Entrega de Kit" -> {
                     binding.kitDelivery.visibility = View.VISIBLE

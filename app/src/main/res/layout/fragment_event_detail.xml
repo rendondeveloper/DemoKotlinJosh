@@ -176,6 +176,13 @@
                 android:visibility="gone" />
 
             <!-- Section Programa del Evento -->
+            <com.asdeporte.asdeportev2.ui.home.views.tabs.route.EventDetailRouteView
+                android:id="@+id/route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- Section Programa del Evento -->
             <com.asdeporte.asdeportev2.ui.home.views.tabs.eventProgram.EventDetailEventProgramView
                 android:id="@+id/eventProgram"
                 android:layout_width="match_parent"

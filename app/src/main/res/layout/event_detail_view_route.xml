@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_dynamic"
+    android:orientation="vertical"
+    android:paddingVertical="26dp">
+
+    <TextView
+        style="@style/Kanit_Bold_Italic.Default.20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="Ruta"
+        android:textAllCaps="true" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp" />
+
+    <LinearLayout
+        android:id="@+id/llData"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="-11dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="01/02" />
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="start"
+            android:text="07/02" />
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="14/02" />
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="end"
+            android:text="21/02" />
+
+        <TextView
+            style="@style/Kanit_Regular.Secondary.10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="end"
+            android:text="28/02" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/Kanit_Medium.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/dimen_32dp"
+        android:text="Descripción del recorrido" />
+
+    <TextView
+        style="@style/Kanit_Regular.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar dictum a cursus non eget non. " />
+</LinearLayout>
