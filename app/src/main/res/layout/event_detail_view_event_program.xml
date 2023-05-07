@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_dynamic"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Kanit_Bold_Italic.Default.20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="26dp"
+        android:text="Día de la competencia"
+        android:textAllCaps="true" />
+
+    <TextView
+        style="@style/Kanit_Bold_Italic.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text='"Llega a la línea de salida, \n es tu momento"'
+        android:textAllCaps="true" />
+
+    <com.asdeporte.asdeportev2.ui.home.views.tabs.EventDetailActivityTableView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_24dp" />
+
+    <TextView
+        style="@style/Kanit_Medium.Default.16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginBottom="36dp"
+        android:text="Te pedimos llegar con 30-45 minutos de anticipación a tu horario de arranque." />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_16dp"
+        android:background="@color/secondary_background" />
+
+    <com.asdeporte.asdeportev2.ui.home.views.tabs.EventDetailRecommendationCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

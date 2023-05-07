@@ -108,14 +108,18 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
 
         binding.tabViews.setCallback {tab ->
             binding.contentView.visibility = View.GONE
+            binding.plusMembership.visibility = View.GONE
+            binding.eventProgram.visibility = View.GONE
             when(tab){
                 "Beneficios Plus" -> {
                     binding.plusMembership.setData(plusMembershipData)
                     binding.plusMembership.visibility = View.VISIBLE
                 }
+                "Programa del Evento" -> {
+                    binding.eventProgram.visibility = View.VISIBLE
+                }
                 else -> {
                     binding.contentView.visibility = View.VISIBLE
-                    binding.plusMembership.visibility = View.GONE
                 }
             }
         }

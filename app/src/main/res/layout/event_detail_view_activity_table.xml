@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_dynamic"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Kanit_Medium.Default.16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:gravity="center_horizontal"
+        android:paddingVertical="@dimen/dimen_16dp"
+        android:text="Domingo 18 de septiembre del 2022"
+        android:textColor="@color/white" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow android:background="@color/dark_blue">
+
+            <TextView
+                style="@style/Kanit_Medium.Default.14"
+                android:layout_weight="3"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:text="Actividad"
+                android:textColor="@color/white" />
+
+            <TextView
+                style="@style/Kanit_Medium.Default.14"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:text="Horario"
+                android:textColor="@color/white" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/border_table_white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="Abre zona de transición por categorías por edad" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_table_white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="5:30 am - 6:45 am" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/border_table_gray"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="Primer arranque categorías por edad" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_table_gray"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="7:00 am" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/border_table_white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="Abre zona de transición para 3kids, 14-15 años y WomanUp" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_table_white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="3:00 pm" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/border_table_gray"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_16dp">
+
+                <TextView
+                    style="@style/Kanit_Regular.Default.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Primer arranque de jornada de la tarde" />
+
+                <TextView
+                    style="@style/Kanit_Semibold.Orange.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver guía del atleta" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_table_gray"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="7:00 am" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/border_table_white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="Ceremonia de premiación" />
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_table_white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="7:00 pm" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow android:background="@color/dark_blue">
+
+            <TextView
+                style="@style/Kanit_Medium.Default.14"
+                android:layout_weight="3"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:text="Lugar"
+                android:textColor="@color/white" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/border_table_white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_16dp"
+                android:text="Santa Fe, Cuajimalpa, CDMX" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
