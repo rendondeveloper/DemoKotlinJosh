@@ -31,7 +31,7 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
 
     private  val plusMembershipData = listOf(
             PlusMembershipModel(
-                    R.drawable.upload_image,
+                    R.drawable.ic_clock,
                     "FILA EXPRESS",
                     "Viernes 16 de septiembre",
                     "Quedan 10 reservas",
@@ -43,7 +43,7 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                     )
             ),
             PlusMembershipModel(
-                    R.drawable.upload_image,
+                    R.drawable.ic_clock,
                     "mismo día",
                     "Sábado 17 de septiembre",
                     "",
@@ -53,7 +53,7 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                     )
             ),
             PlusMembershipModel(
-                    R.drawable.upload_image,
+                    R.drawable.ic_clock,
                     "recupera el costo de tu inscripción",
                     "",
                     "",
