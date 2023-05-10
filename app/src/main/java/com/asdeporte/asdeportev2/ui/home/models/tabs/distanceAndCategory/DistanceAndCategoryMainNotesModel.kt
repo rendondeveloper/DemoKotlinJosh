@@ -1,0 +1,1 @@
+package com.asdeporte.asdeportev2.ui.home.models.tabs.distanceAndCategorydata class DistanceAndCategoryMainNotesModel(        val title: String,        val list: List<DistanceAndCategoryNotesModel>)

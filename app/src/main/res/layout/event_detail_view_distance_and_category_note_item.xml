@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvNoteNumber"
+        style="@style/Kanit_Medium.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        tools:text="1." />
+
+    <TextView
+        android:id="@+id/tvNotaData"
+        style="@style/Kanit_Regular.Default.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        tools:text="La edad mínima para participar es de 15 años cumplidos al 31 de diciembre del 2022." />
+</LinearLayout>

@@ -14,22 +14,22 @@ import com.asdeporte.asdeportev2.databinding.EventTabViewBinding
 
 
 class EventTabView @JvmOverloads constructor(
-    context: Context,
-    attrs: AttributeSet? = null,
-    defStyle: Int = 0
+        context: Context,
+        attrs: AttributeSet? = null,
+        defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
 
     private var binding: EventTabViewBinding
     var currentTab = 0
 
-    lateinit var callBack : (String) -> Unit
+    lateinit var callBack: (String) -> Unit
 
     init {
         binding = EventTabViewBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
 
-    fun setCallback(callBack : (String) -> Unit  ){
+    fun setCallback(callBack: (String) -> Unit) {
         this.callBack = callBack
     }
 
@@ -62,11 +62,23 @@ class EventTabView @JvmOverloads constructor(
 
             binding.tabView.addView(layout)
         }
-
     }
 
-    private fun removeSelected(){
-        for(view in binding.tabView.allViews) {
+    fun setFirstStep() {
+        currentTab = 0
+        val view =  binding.tabView.allViews.firstOrNull()
+
+        view?.let {
+            val tabContainer = it.findViewById(R.id.tab_container) as? RelativeLayout
+            val titleView = it.findViewById(R.id.title_view) as? TextView
+            tabContainer?.backgroundTintList = ContextCompat.getColorStateList(context, R.color.dark_blue)
+            titleView?.setTextColor(ContextCompat.getColor(context, R.color.white))
+            this.callBack(titleView?.text.toString())
+        }
+    }
+
+    private fun removeSelected() {
+        for (view in binding.tabView.allViews) {
             val tabContainer = view.findViewById(R.id.tab_container) as? RelativeLayout
             val titleView = view.findViewById(R.id.title_view) as? TextView
             tabContainer?.backgroundTintList = ContextCompat.getColorStateList(context, R.color.white)

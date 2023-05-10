@@ -175,6 +175,13 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
 
+            <!-- Section Beneficios Plus -->
+            <com.asdeporte.asdeportev2.ui.home.views.tabs.distanceAndCategory.EventDetailDistanceAndCategoryView
+                android:id="@+id/distanceAndCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
             <!-- Section Programa del Evento -->
             <com.asdeporte.asdeportev2.ui.home.views.tabs.route.EventDetailRouteView
                 android:id="@+id/route"
