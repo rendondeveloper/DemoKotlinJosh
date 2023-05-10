@@ -34,27 +34,27 @@ class LoginMenuBottomSheet : BottomSheetDialogFragment() {
             val editor: SharedPreferences.Editor = sharedPref.edit()
 
             binding.apply {
-                btnFree.setOnClickListener {
+                lnFree.setOnClickListener {
                     editor.putString("screenType", "Free")
                     editor.apply()
                     goToMainActivity()
                 }
-                btnFreeWAccount.setOnClickListener {
+                lnFreeWAccount.setOnClickListener {
                     editor.putString("screenType", "FreeWithAccount")
                     editor.apply()
                     goToMainActivity()
                 }
-                btnPlus.setOnClickListener {
+                lnPlus.setOnClickListener {
                     editor.putString("screenType", "PlusNoData")
                     editor.apply()
                     goToMainActivity()
                 }
-                btnPlusWData.setOnClickListener {
+                lnPlusWData.setOnClickListener {
                     editor.putString("screenType", "PlusWithData")
                     editor.apply()
                     goToMainActivity()
                 }
-                btnPlusWDataNComp.setOnClickListener {
+                lnPlusWDataNComp.setOnClickListener {
                     editor.putString("screenType", "PlusWithDataNextComp")
                     editor.apply()
                     goToMainActivity()

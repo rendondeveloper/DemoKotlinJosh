@@ -182,6 +182,13 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
 
+            <!-- Section Hospedaje Turismo -->
+            <com.asdeporte.asdeportev2.ui.home.views.tabs.tourism.EventDetailTourismView
+                android:id="@+id/tourism"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
             <!-- Section Programa del Evento -->
             <com.asdeporte.asdeportev2.ui.home.views.tabs.route.EventDetailRouteView
                 android:id="@+id/route"

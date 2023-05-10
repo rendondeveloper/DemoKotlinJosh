@@ -21,13 +21,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnFree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_32dp"
         android:orientation="horizontal">
 
         <ImageView
-                android:contentDescription="@string/todo"
             android:id="@+id/imageView4"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -37,6 +37,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:layout_weight="1"
+            android:contentDescription="@string/todo"
             android:src="@drawable/arrow_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,12 +58,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnFreeWAccount"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <ImageView
-                android:contentDescription="@string/todo"
             android:id="@+id/imageView1"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -72,6 +73,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:layout_weight="1"
+            android:contentDescription="@string/todo"
             android:src="@drawable/arrow_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,12 +94,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnPlus"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <ImageView
-                android:contentDescription="@string/todo"
             android:id="@+id/imageView2"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -107,6 +109,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:layout_weight="1"
+            android:contentDescription="@string/todo"
             android:src="@drawable/arrow_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,12 +130,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnPlusWData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
-                android:contentDescription="@string/todo"
             android:id="@+id/imageView5"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -142,6 +145,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:layout_weight="1"
+            android:contentDescription="@string/todo"
             android:src="@drawable/arrow_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -162,12 +166,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnPlusWDataNComp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
-            android:contentDescription="@string/todo"
             android:id="@+id/imageView6"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -177,6 +181,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:layout_weight="1"
+            android:contentDescription="@string/todo"
             android:src="@drawable/arrow_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

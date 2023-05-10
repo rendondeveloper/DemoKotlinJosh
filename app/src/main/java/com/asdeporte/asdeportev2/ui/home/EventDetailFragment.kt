@@ -172,26 +172,25 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                     binding.plusMembership.setData(plusMembershipData)
                     binding.plusMembership.visibility = View.VISIBLE
                 }
-
+                "Hospedaje y Turismo" -> {
+                    binding.tourism.visibility = View.VISIBLE
+                    binding.tourism.setData()
+                }
                 "Programa del Evento" -> {
                     binding.eventProgram.visibility = View.VISIBLE
                 }
-
                 "Ruta" -> {
                     binding.route.visibility = View.VISIBLE
                     binding.route.setDataGraphic()
                 }
-
                 "Entrega de Kit" -> {
                     binding.kitDelivery.visibility = View.VISIBLE
                     binding.kitDelivery.setData(plusMembershipData)
                 }
-
                 "Distancias y Categorías" -> {
                     binding.distanceAndCategory.visibility = View.VISIBLE
                     binding.distanceAndCategory.setData(distanceAndCategoryData)
                 }
-
                 else -> {
                     binding.contentView.visibility = View.VISIBLE
                 }
