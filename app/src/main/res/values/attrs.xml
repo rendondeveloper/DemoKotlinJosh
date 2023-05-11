@@ -31,4 +31,10 @@
         <attr name="device_item_description" format="string"/>
         <attr name="device_item_is_connect" format="boolean"/>
     </declare-styleable>
+    <declare-styleable name="SectionView">
+        <attr name="section_title" format="string"/>
+        <attr name="section_sub_title" format="string"/>
+        <attr name="section_description" format="string"/>
+        <attr name="section_footer" format="string|reference"/>
+    </declare-styleable>
 </resources>

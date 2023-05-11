@@ -1,0 +1,1 @@
+package com.asdeporte.asdeportev2.ui.home.models.tabs.inscriptionAndPriceimport androidx.annotation.StringResdata class InscriptionWayModel(        @StringRes        val footer : Int,        val list : List<InscriptionWayItemModel>)

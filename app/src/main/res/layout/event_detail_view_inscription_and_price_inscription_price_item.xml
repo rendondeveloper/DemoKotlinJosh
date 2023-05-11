@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/gray_item">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Kanit_Regular.Default.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/inscription_price_text_one" />
+
+        <ImageView
+            android:id="@+id/ivAction"
+            android:layout_width="@dimen/dimen_24dp"
+            android:layout_height="@dimen/dimen_24dp"
+            android:layout_marginEnd="28dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black_dynamic" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:id="@+id/tlData"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <TableRow>
+            <TextView
+                style="@style/Kanit_Regular.Default.16"
+                android:textColor="@color/dark_blue"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:textAlignment="textStart"
+                android:background="@drawable/border_square_gray_transparent"                android:text="Precio promoción \nHasta el 4 de agosto" />
+            <TextView
+                style="@style/Kanit_Medium.Default.16"
+                android:textColor="@color/dark_blue"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_square_gray_transparent"                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="$610" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/Kanit_Regular.Default.16"
+                android:textColor="@color/dark_blue"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:background="@drawable/border_square_gray_transparent"                android:text="Precio regular \nDel 5 de agosto al \n16 de septiembre" />
+            <TextView
+                style="@style/Kanit_Medium.Default.16"
+                android:textColor="@color/dark_blue"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_square_gray_transparent"                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="$660" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/Kanit_Regular.Default.16"
+                android:textColor="@color/dark_blue"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:background="@drawable/border_square_gray_transparent"
+                android:text="Precio extemporáneo\nEn el registro\n17 de septiembre" />
+            <TextView
+                style="@style/Kanit_Medium.Default.16"
+                android:textColor="@color/dark_blue"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_square_gray_transparent"                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="$720" />
+        </TableRow>
+        <TableRow android:background="@color/black">
+            <TextView
+                style="@style/Kanit_Regular.Default.16"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:background="@drawable/border_square_white_transparent"
+                android:text="@string/inscription_price_text_last" />
+            <TextView
+                style="@style/Kanit_Medium.Default.16"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/border_square_white_transparent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="$550" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

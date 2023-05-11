@@ -1,0 +1,1 @@
+package com.asdeporte.asdeportev2.ui.home.models.tabs.inscriptionAndPricedata class PayModel(        val list : List<PayItemModel>,        val footer: String = "")

@@ -1167,4 +1167,13 @@
     <string name="my_tribe_description_fwd"><b>1500 Atletas</b> han encontrado su tribu y ya están practicando su deporte favorito.</string>
     <string name="kit_delivery_description_card">Si quieres que te enviemos tu kit una semana antes del evento, deberás elegir la opción de pago con <b>ENVÍO A DOMICILIO y pagar $138.00 por envío.</b></string>
     <string name="kit_delivery_description_section">Recoge tu paquete de forma sencilla sin llevar ningún documento impreso, haciendo tu <b>CHECK IN</b> en nuestra APP. Solo necesitas tener a la mano tu identificación y seguir el proceso que se te indica. ¡El día de entrega de papeles solo muestra el código QR y listo!</string>
+    <string name="event_services_footer">*Si tu inscripción es para hacer la <b>carrera outdoor(virtual)</b> incluye el kit de competidor y tu medalla de finalista.</string>
+    <string name="inscription_way_footer">Si realizas inscripciones de más de 20 personas, por favor comunícate con nosotros para indicarte el proceso y el precio especial que tenemos para ti</string>
+    <string name="send_home_description">Si quieres que te enviemos tu kit una semana antes del evento, deberás elegir la opción de pago con <b>ENVÍO A DOMICILIO y pagar $138.00 por envío.</b></string>
+    <string name="inscription_price_text_one">Carrera <b>PRESENCIAL INDIVIDUAL</b></string>
+    <string name="inscription_price_text_two">Carrera <b>PRESENCIAL EN RELEVOS</b> 16 km equipo 2 integrantes</string>
+    <string name="inscription_price_text_three">Carrera <b>PRESENCIAL EN RELEVOS</b> 24 km equipo 3 integrantes</string>
+    <string name="inscription_price_text_four">Carrera <b>PRESENCIAL EN RELEVOS</b> 24 km equipo 3 integrantes</string>
+    <string name="inscription_price_text_five">Carrera <b>OUTDOOR INDIVIDUAL</b> Virtual</string>
+    <string name="inscription_price_text_last"><b>Precio PLUS</b>\n10% de descuento</string>
 </resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/viewAnnouncementMain"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <com.asdeporte.asdeportev2.ui.reusableview.section.SectionView
+        android:id="@+id/viewKit"
+        app:section_title="tu inscripción incluye:"
+        app:section_sub_title="Kit de competidor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_dummy_kit_example"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/gray_item"
+        />
+
+    <com.asdeporte.asdeportev2.ui.reusableview.section.SectionView
+        android:id="@+id/viewEventServices"
+        app:section_title="servicios en el evento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/gray_item"
+        />
+
+    <com.asdeporte.asdeportev2.ui.reusableview.section.SectionView
+        android:id="@+id/viewPriceInscription"
+        app:section_title="PRECIOS DE INSCRIPCIÓN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/gray_item"
+        />
+
+    <com.asdeporte.asdeportev2.ui.reusableview.section.SectionView
+        android:id="@+id/viewInscriptionWays"
+        app:section_title="FORMAS DE REALIZAR TU INSCRIPCIÓN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/Kanit_Regular.Default.14"
+        android:layout_marginHorizontal="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://asdeporte.com/contacto "
+        android:textColor="#FF6A00" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/gray_item"
+        />
+
+    <com.asdeporte.asdeportev2.ui.reusableview.section.SectionView
+        android:id="@+id/viewSendHome"
+        app:section_title="Envío de kit a domicilio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/gray_item"
+        />
+
+    <com.asdeporte.asdeportev2.ui.reusableview.section.SectionView
+        android:id="@+id/viewPayWay"
+        app:section_title="FORMAS DE PAGO"
+        app:section_description="Conoce todas nuestras formas de pago seleccionando cada una para conocer más detalles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.asdeporte.asdeportev2.ui.reusableview.section.SectionView
+        android:id="@+id/viewPayWayTwo"
+        app:section_sub_title="Inscríbete también en:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/gray_item"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vwSeparator"
+        tools:itemCount="1"
+        tools:listitem="@layout/event_detail_view_distance_and_category_note" />
+</LinearLayout>

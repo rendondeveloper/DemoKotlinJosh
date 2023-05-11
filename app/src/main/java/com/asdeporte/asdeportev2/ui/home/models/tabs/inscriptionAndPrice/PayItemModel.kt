@@ -1,0 +1,1 @@
+package com.asdeporte.asdeportev2.ui.home.models.tabs.inscriptionAndPricedata class PayItemModel(        val image : Int,        val title : String = "",)

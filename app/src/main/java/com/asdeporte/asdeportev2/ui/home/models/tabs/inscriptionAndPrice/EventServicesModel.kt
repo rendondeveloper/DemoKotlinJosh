@@ -1,0 +1,1 @@
+package com.asdeporte.asdeportev2.ui.home.models.tabs.inscriptionAndPricedata class EventServicesModel(        val list : List<EventServicesItemModel>,        val footer : Int)
