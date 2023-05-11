@@ -10,7 +10,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/inscription_view"
+        app:layout_constraintBottom_toTopOf="@+id/rlInfoBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -162,6 +162,32 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <LinearLayout
+                android:id="@+id/llStopwatchCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:background="@color/white_dynamic"
+                android:orientation="vertical">
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.StopwatchCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Kanit_Regular.Default.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginBottom="@dimen/dimen_32dp"
+                    android:background="@drawable/pill_background"
+                    android:paddingHorizontal="@dimen/dimen_24dp"
+                    android:text="Hacer otra inscripción"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventTabView
                 android:id="@+id/tab_views"
@@ -237,67 +263,106 @@
         app:titleTextColor="@color/black_dynamic" />
 
     <RelativeLayout
-        android:id="@+id/inscription_view"
+        android:id="@+id/rlInfoBottom"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/black"
-        android:paddingHorizontal="16dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/inscription_button"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
-
-            <TextView
-                style="@style/Kanit_Regular.Default.14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Desde: $680.00 MNX"
-                android:textColor="@color/white" />
+        <RelativeLayout
+            android:id="@+id/inscription_view"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/inscription_button"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
                 <TextView
                     style="@style/Kanit_Regular.Default.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
-                    android:text="Plus:"
+                    android:text="Desde: $680.00 MNX"
                     android:textColor="@color/white" />
 
-                <TextView
-                    style="@style/Kanit_Semi_Bold.Default.18"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="$580.00 MNX"
-                    android:textColor="@color/white" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Kanit_Regular.Default.14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="Plus:"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/Kanit_Semi_Bold.Default.18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$580.00 MNX"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/inscription_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/pill_background"
+                android:text="Inscribirme"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/inscription_button"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/button_height"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/pill_background"
-            android:text="Inscribirme"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/another_inscription_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_dynamic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="gone">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray_item" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginVertical="22dp"
+                android:background="@drawable/pill_background"
+                android:text="Hacer otra inscripción"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

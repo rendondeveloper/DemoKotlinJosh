@@ -36,7 +36,8 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyNextCompetitionView
                 android:id="@+id/myNextCompetitionView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_8dp" />
 
             <LinearLayout
                 android:id="@+id/lineGrayTwo"
@@ -216,7 +217,7 @@
             <com.asdeporte.asdeportev2.ui.reusableview.home.MyTribeView
                 android:id="@+id/myTribe"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <com.asdeporte.asdeportev2.ui.reusableview.home.BlogView
                 android:id="@+id/blog"
@@ -299,8 +300,7 @@
                     android:layout_marginHorizontal="@dimen/dimen_16dp"
                     android:layout_marginTop="@dimen/dimen_16dp"
                     android:layout_marginBottom="@dimen/dimen_32dp"
-                    android:visibility="gone"
-                    />
+                    android:visibility="gone" />
 
 
             </RelativeLayout>
@@ -311,8 +311,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/dimen_16dp"
                 android:layout_marginTop="@dimen/dimen_16dp"
-                android:layout_marginBottom="@dimen/dimen_32dp"
-                />
+                android:layout_marginBottom="@dimen/dimen_32dp" />
 
         </LinearLayout>
 

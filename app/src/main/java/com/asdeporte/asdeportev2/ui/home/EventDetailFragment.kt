@@ -35,103 +35,92 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
     private val binding get() = _binding!!
 
     private val plusMembershipData = listOf(
-            PlusMembershipModel(
-                    R.drawable.ic_clock,
-                    "FILA EXPRESS",
-                    "Viernes 16 de septiembre",
-                    "Quedan 10 reservas",
-                    "Reserver",
-                    listOf(
-                            PlusMembershipBenefitModel("No hagas filas"),
-                            PlusMembershipBenefitModel("Tendremos tu talla de playera asegurada"),
-                            PlusMembershipBenefitModel("Recoge tu kit en un módulo exclusivo para miembros Plus"),
-                    )
-            ),
-            PlusMembershipModel(
-                    R.drawable.ic_clock,
-                    "mismo día",
-                    "Sábado 17 de septiembre",
-                    "",
-                    "Reserver",
-                    listOf(
-                            PlusMembershipBenefitModel("Tendremos tu talla de playera asegurada"),
-                    )
-            ),
-            PlusMembershipModel(
-                    R.drawable.ic_clock,
-                    "recupera el costo de tu inscripción",
-                    "",
-                    "",
-                    "Solicitar abono a Wallet",
-                    listOf(
-                            PlusMembershipBenefitModel("Sin costo por servicio"),
-                            PlusMembershipBenefitModel("Hasta 7 días antes de la entrega de paquetes"),
-                    )
+        PlusMembershipModel(
+            R.drawable.ic_clock,
+            "FILA EXPRESS",
+            "Viernes 16 de septiembre",
+            "Quedan 10 reservas",
+            "Reserver",
+            listOf(
+                PlusMembershipBenefitModel("No hagas filas"),
+                PlusMembershipBenefitModel("Tendremos tu talla de playera asegurada"),
+                PlusMembershipBenefitModel("Recoge tu kit en un módulo exclusivo para miembros Plus"),
             )
+        ), PlusMembershipModel(
+            R.drawable.ic_clock, "mismo día", "Sábado 17 de septiembre", "", "Reserver", listOf(
+                PlusMembershipBenefitModel("Tendremos tu talla de playera asegurada"),
+            )
+        ), PlusMembershipModel(
+            R.drawable.ic_clock,
+            "recupera el costo de tu inscripción",
+            "",
+            "",
+            "Solicitar abono a Wallet",
+            listOf(
+                PlusMembershipBenefitModel("Sin costo por servicio"),
+                PlusMembershipBenefitModel("Hasta 7 días antes de la entrega de paquetes"),
+            )
+        )
     )
 
+    private var viewFrom: String = ""
+
     private val distanceAndCategoryData = DistanceAndCategoryModel(
-            sections = listOf(
-                    DistanceAndCategoryMainSectionModel(
-                            title = "DISTANCIA",
-                            list = listOf(
-                                    DistanceAndCategorySectionModel(
-                                            title = "Presencial",
-                                            description = "Corre en Santa Fe, Cuajimalpa, Ciudad de México, el sábado 17 de septiembre en la noche 19:00 hr. La carrera PRESENCIAL las podrás hacer de manera INDIVIDUAL o en RELEVOS.",
-                                            showTable = true,
-                                    ),
-                                    DistanceAndCategorySectionModel(
-                                            title = "Virtual outdoor",
-                                            description = "Corre en Santa Fe, Cuajimalpa, Ciudad de México, el sábado 17 de septiembre en la noche 19:00 hr. La carrera PRESENCIAL las podrás hacer de manera INDIVIDUAL o en RELEVOS.",
-                                            showTable = false,
-                                    ))
-                    ),
-                    DistanceAndCategoryMainSectionModel(
-                            title = "CATEGORÍAS",
-                            list = listOf(
-                                    DistanceAndCategorySectionModel(
-                                            title = "Presencial",
-                                            description = "Corre en Santa Fe, Cuajimalpa, Ciudad de México, el sábado 17 de septiembre en la noche 19:00 hr. La carrera PRESENCIAL las podrás hacer de manera INDIVIDUAL o en RELEVOS.",
-                                            showTable = true,
-                                    ),
-                                    DistanceAndCategorySectionModel(
-                                            title = "Virtual outdoor",
-                                            description = "Corre en Santa Fe, Cuajimalpa, Ciudad de México, el sábado 17 de septiembre en la noche 19:00 hr. La carrera PRESENCIAL las podrás hacer de manera INDIVIDUAL o en RELEVOS.",
-                                            showTable = false,
-                                    ))
+        sections = listOf(
+            DistanceAndCategoryMainSectionModel(
+                title = "DISTANCIA", list = listOf(
+                    DistanceAndCategorySectionModel(
+                        title = "Presencial",
+                        description = "Corre en Santa Fe, Cuajimalpa, Ciudad de México, el sábado 17 de septiembre en la noche 19:00 hr. La carrera PRESENCIAL las podrás hacer de manera INDIVIDUAL o en RELEVOS.",
+                        showTable = true,
+                    ), DistanceAndCategorySectionModel(
+                        title = "Virtual outdoor",
+                        description = "Corre en Santa Fe, Cuajimalpa, Ciudad de México, el sábado 17 de septiembre en la noche 19:00 hr. La carrera PRESENCIAL las podrás hacer de manera INDIVIDUAL o en RELEVOS.",
+                        showTable = false,
                     )
-            ),
-            notes = listOf(
-                    DistanceAndCategoryMainNotesModel(
-                            title = "Notas importantes",
-                            list = listOf(
-                                    DistanceAndCategoryNotesModel(
-                                            "La edad mínima para participar es de 15 años cumplidos al 31 de diciembre del 2022."
-                                    ),
-                                    DistanceAndCategoryNotesModel(
-                                            " La categoría será determinada por la edad que tenga el competidor al 31 de diciembre del 2022."
-                                    ),
-                                    DistanceAndCategoryNotesModel(
-                                            "Se premiará con trofeo a los 3 primeros lugares INDIVIDUALES de la carrera PRESENCIAL, en cada distancia, como GANADORES ABSOLUTOS, en las ramas femenil y varonil, de acuerdo al TIEMPO OFICIAL de competencia."
-                                    ),
-                                    DistanceAndCategoryNotesModel(
-                                            "Esto es, los 3 primeros hombres y las 3 primeras mujeres que crucen la meta en cada distancia y de manera INDIVIDUAL."
-                                    ),
-                                    DistanceAndCategoryNotesModel(
-                                            "La carrera outdoor no tendrá premiación."
-                                    )
-                            )
+                )
+            ), DistanceAndCategoryMainSectionModel(
+                title = "CATEGORÍAS", list = listOf(
+                    DistanceAndCategorySectionModel(
+                        title = "Presencial",
+                        description = "Corre en Santa Fe, Cuajimalpa, Ciudad de México, el sábado 17 de septiembre en la noche 19:00 hr. La carrera PRESENCIAL las podrás hacer de manera INDIVIDUAL o en RELEVOS.",
+                        showTable = true,
+                    ), DistanceAndCategorySectionModel(
+                        title = "Virtual outdoor",
+                        description = "Corre en Santa Fe, Cuajimalpa, Ciudad de México, el sábado 17 de septiembre en la noche 19:00 hr. La carrera PRESENCIAL las podrás hacer de manera INDIVIDUAL o en RELEVOS.",
+                        showTable = false,
                     )
-            ),
-
+                )
             )
+        ), notes = listOf(
+            DistanceAndCategoryMainNotesModel(
+                title = "Notas importantes", list = listOf(
+                    DistanceAndCategoryNotesModel(
+                        "La edad mínima para participar es de 15 años cumplidos al 31 de diciembre del 2022."
+                    ), DistanceAndCategoryNotesModel(
+                        " La categoría será determinada por la edad que tenga el competidor al 31 de diciembre del 2022."
+                    ), DistanceAndCategoryNotesModel(
+                        "Se premiará con trofeo a los 3 primeros lugares INDIVIDUALES de la carrera PRESENCIAL, en cada distancia, como GANADORES ABSOLUTOS, en las ramas femenil y varonil, de acuerdo al TIEMPO OFICIAL de competencia."
+                    ), DistanceAndCategoryNotesModel(
+                        "Esto es, los 3 primeros hombres y las 3 primeras mujeres que crucen la meta en cada distancia y de manera INDIVIDUAL."
+                    ), DistanceAndCategoryNotesModel(
+                        "La carrera outdoor no tendrá premiación."
+                    )
+                )
+            )
+        )
+    )
 
-    val testEvent = EventData("123",
-            "7, 14 y 21K by WomanUp",
-            "https://d3cnkhyiyh0ve2.cloudfront.net/upload%2F2021%2F6%2Fimg_1625774286890_21K-WUp-logo-A-jul-6.jpg",
-            "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80")
+    val testEvent = EventData(
+        "123",
+        "7, 14 y 21K by WomanUp",
+        "https://d3cnkhyiyh0ve2.cloudfront.net/upload%2F2021%2F6%2Fimg_1625774286890_21K-WUp-logo-A-jul-6.jpg",
+        "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3285&q=80"
+    )
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
         _binding = FragmentEventDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -141,6 +130,8 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).hideActionBar()
+
+        initArguments()
 
         Glide.with(this)
                 .load("https://picsum.photos/600/300")
@@ -158,50 +149,9 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                 .apply(requestOptions)
                 .into(binding.eventLogo)
 
-        val titles = listOf("Distancias y Categorías", "Inscripciones y Precios", "Beneficios Plus", "Hospedaje y Turismo", "Ruta", "Programa del Evento", "Entrega de Kit")
-        binding.tabViews.setTabs(titles)
-        binding.tabViews.setCallback { tab ->
-            binding.contentView.visibility = View.GONE
-            binding.plusMembership.visibility = View.GONE
-            binding.eventProgram.visibility = View.GONE
-            binding.kitDelivery.visibility = View.GONE
-            binding.route.visibility = View.GONE
-            binding.distanceAndCategory.visibility = View.GONE
-            when (tab) {
-                "Beneficios Plus" -> {
-                    binding.plusMembership.setData(plusMembershipData)
-                    binding.plusMembership.visibility = View.VISIBLE
-                }
-                "Hospedaje y Turismo" -> {
-                    binding.tourism.visibility = View.VISIBLE
-                    binding.tourism.setData()
-                }
-                "Programa del Evento" -> {
-                    binding.eventProgram.visibility = View.VISIBLE
-                }
-                "Ruta" -> {
-                    binding.route.visibility = View.VISIBLE
-                    binding.route.setDataGraphic()
-                }
-                "Entrega de Kit" -> {
-                    binding.kitDelivery.visibility = View.VISIBLE
-                    binding.kitDelivery.setData(plusMembershipData)
-                }
-                "Distancias y Categorías" -> {
-                    binding.distanceAndCategory.visibility = View.VISIBLE
-                    binding.distanceAndCategory.setData(distanceAndCategoryData)
-                }
-                else -> {
-                    binding.contentView.visibility = View.VISIBLE
-                }
-            }
-        }
-
         binding.inscriptionButton.setOnClickListener {
             startActivity(Intent(requireContext(), InscriptionActivity::class.java))
         }
-
-        binding.tabViews.setFirstStep()
 
         //setupContent()
         /*
@@ -212,6 +162,108 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                 "• La carrera outdoor no tendrá premiación.")
 
          */
+    }
+
+    private fun initArguments() {
+        viewFrom = arguments?.getString("viewFrom") ?: ""
+        showViewFrom(viewFrom)
+    }
+
+    private fun showViewFrom(viewFrom: String) {
+        when(viewFrom) {
+            "MyNextCompetition" -> {
+                binding.llStopwatchCard.visibility = View.VISIBLE
+                binding.inscriptionView.visibility = View.GONE
+                binding.inscriptionView.visibility = View.GONE
+                binding.anotherInscriptionView.visibility = View.GONE
+                val titles = listOf("Detalles de inscripción", "Hospedaje y Turismo", "Ruta", "Programa del evento", "Beneficios plus", "Distancias y categorías", "Inscripciones y precios")
+                binding.tabViews.setTabs(titles)
+                binding.tabViews.setCallback { tab ->
+                    binding.contentView.visibility = View.GONE
+                    binding.tourism.visibility = View.GONE
+                    binding.route.visibility = View.GONE
+                    binding.eventProgram.visibility = View.GONE
+                    binding.plusMembership.visibility = View.GONE
+                    binding.distanceAndCategory.visibility = View.GONE
+                    when (tab) {
+                        "Hospedaje y Turismo" -> {
+                            binding.anotherInscriptionView.visibility = View.VISIBLE
+                            binding.tourism.visibility = View.VISIBLE
+                            binding.tourism.setData()
+                        }
+                        "Ruta" -> {
+                            binding.anotherInscriptionView.visibility = View.VISIBLE
+                            binding.route.visibility = View.VISIBLE
+                            binding.route.setDataGraphic()
+                        }
+                        "Programa del evento" -> {
+                            binding.anotherInscriptionView.visibility = View.VISIBLE
+                            binding.eventProgram.visibility = View.VISIBLE
+                        }
+                        "Beneficios plus" -> {
+                            binding.anotherInscriptionView.visibility = View.VISIBLE
+                            binding.plusMembership.setData(plusMembershipData)
+                            binding.plusMembership.visibility = View.VISIBLE
+                        }
+                        "Distancias y categorías" -> {
+                            binding.anotherInscriptionView.visibility = View.VISIBLE
+                            binding.distanceAndCategory.visibility = View.VISIBLE
+                            binding.distanceAndCategory.setData(distanceAndCategoryData)
+                        }
+                        else -> {
+                            binding.anotherInscriptionView.visibility = View.GONE
+                        }
+                    }
+                }
+                binding.tabViews.setFirstStep()
+            }
+            else -> {
+                binding.llStopwatchCard.visibility = View.GONE
+                binding.inscriptionView.visibility = View.VISIBLE
+                binding.inscriptionView.visibility = View.VISIBLE
+                binding.anotherInscriptionView.visibility = View.GONE
+                val titles = listOf("Distancias y Categorías", "Inscripciones y Precios", "Beneficios Plus", "Hospedaje y Turismo", "Ruta", "Programa del Evento", "Entrega de Kit")
+                binding.tabViews.setTabs(titles)
+                binding.tabViews.setCallback { tab ->
+                    binding.contentView.visibility = View.GONE
+                    binding.distanceAndCategory.visibility = View.GONE
+                    binding.plusMembership.visibility = View.GONE
+                    binding.tourism.visibility = View.GONE
+                    binding.route.visibility = View.GONE
+                    binding.eventProgram.visibility = View.GONE
+                    binding.kitDelivery.visibility = View.GONE
+                    when (tab) {
+                        "Distancias y Categorías" -> {
+                            binding.distanceAndCategory.visibility = View.VISIBLE
+                            binding.distanceAndCategory.setData(distanceAndCategoryData)
+                        }
+                        "Beneficios Plus" -> {
+                            binding.plusMembership.setData(plusMembershipData)
+                            binding.plusMembership.visibility = View.VISIBLE
+                        }
+                        "Hospedaje y Turismo" -> {
+                            binding.tourism.visibility = View.VISIBLE
+                            binding.tourism.setData()
+                        }
+                        "Ruta" -> {
+                            binding.route.visibility = View.VISIBLE
+                            binding.route.setDataGraphic()
+                        }
+                        "Programa del Evento" -> {
+                            binding.eventProgram.visibility = View.VISIBLE
+                        }
+                        "Entrega de Kit" -> {
+                            binding.kitDelivery.visibility = View.VISIBLE
+                            binding.kitDelivery.setData(plusMembershipData)
+                        }
+                        else -> {
+                            binding.contentView.visibility = View.VISIBLE
+                        }
+                    }
+                }
+                binding.tabViews.setFirstStep()
+            }
+        }
     }
 
     private fun setupContent() {

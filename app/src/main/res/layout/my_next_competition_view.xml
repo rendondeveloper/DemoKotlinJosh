@@ -37,11 +37,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <ImageView
-                android:contentDescription="@string/todo"
                 android:id="@+id/event_image"
                 android:layout_width="@dimen/dimen_48dp"
                 android:layout_height="@dimen/dimen_48dp"
                 android:layout_marginTop="@dimen/dimen_16dp"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/next_competition_dummy"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/view3"
@@ -82,245 +82,20 @@
                 app:layout_constraintTop_toTopOf="@+id/textView3" />
 
             <ImageView
-                android:contentDescription="@string/todo"
-                android:id="@+id/imageView2"
+                android:id="@+id/ivGoToEventDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dimen_8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tvName"
                 app:srcCompat="@drawable/arrow_right_rounded" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <com.asdeporte.asdeportev2.ui.reusableview.home.StopwatchCardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dimen_16dp"
-            android:layout_marginBottom="@dimen/dimen_16dp"
-            android:background="@drawable/event_tribu_background"
-            android:orientation="vertical"
-            android:padding="@dimen/dimen_16dp">
-
-            <TextView
-                style="@style/Kanit_Regular.Default.14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/dimen_8dp"
-                android:text="@string/tu_evento_comienza_en"
-                android:textColor="#2B2826" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <LinearLayout
-                    android:id="@+id/daysView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/Kanit_Medium.Default.10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/dias" />
-
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="40dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-
-                        <TextView
-                            style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="@dimen/dimen_16dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/dark_blue"
-                            android:gravity="center"
-                            android:text="1"
-                            android:textColor="@color/white" />
-
-                        <TextView
-                            style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="@dimen/dimen_16dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/dark_blue"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/hoursView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/Kanit_Medium.Default.10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/horas" />
-
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="40dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-
-                        <TextView
-                            style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="@dimen/dimen_16dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/dark_blue"
-                            android:gravity="center"
-                            android:text="2"
-                            android:textColor="@color/white" />
-
-                        <TextView
-                            style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="@dimen/dimen_16dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/dark_blue"
-                            android:gravity="center"
-                            android:text="3"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <TextView
-                    style="@style/Kanit_Extra_Bold.Default.20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="0"
-                    android:gravity="center"
-                    android:text=":"
-                    android:textColor="@color/dark_blue" />
-
-                <LinearLayout
-                    android:id="@+id/minutesView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/Kanit_Medium.Default.10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/minutos" />
-
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="40dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-
-                        <TextView
-                            style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="@dimen/dimen_16dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/dark_blue"
-                            android:gravity="center"
-                            android:text="5"
-                            android:textColor="@color/white" />
-
-                        <TextView
-                            style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="@dimen/dimen_16dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/dark_blue"
-                            android:gravity="center"
-                            android:text="9"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <TextView
-                    style="@style/Kanit_Extra_Bold.Default.20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="0"
-                    android:gravity="center"
-                    android:text=":"
-                    android:textColor="@color/dark_blue" />
-
-                <LinearLayout
-                    android:id="@+id/secondsView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/Kanit_Medium.Default.10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/segundos" />
-
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="40dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-
-                        <TextView
-                            style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="@dimen/dimen_16dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/dark_blue"
-                            android:gravity="center"
-                            android:text="4"
-                            android:textColor="@color/white" />
-
-                        <TextView
-                            style="@style/Kanit_Extra_Bold.Default.20"
-                            android:layout_width="@dimen/dimen_16dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/dark_blue"
-                            android:gravity="center"
-                            android:text="7"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
