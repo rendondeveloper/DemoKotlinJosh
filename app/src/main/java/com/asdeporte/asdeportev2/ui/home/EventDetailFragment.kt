@@ -403,6 +403,10 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                     binding.distanceAndCategory.visibility = View.GONE
                     binding.inscriptionAndPrice.visibility = View.GONE
                     when (tab) {
+                        "Inscripciones y Precios" -> {
+                            binding.inscriptionAndPrice.visibility = View.VISIBLE
+                            binding.inscriptionAndPrice.setData(inscriptionAndPriceModel)
+                        }
                         "Distancias y Categorías" -> {
                             binding.distanceAndCategory.visibility = View.VISIBLE
                             binding.distanceAndCategory.setData(distanceAndCategoryData)
