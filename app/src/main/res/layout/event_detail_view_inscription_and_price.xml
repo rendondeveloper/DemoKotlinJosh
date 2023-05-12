@@ -66,9 +66,9 @@
 
     <TextView
         style="@style/Kanit_Regular.Default.14"
-        android:layout_marginHorizontal="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         android:text="https://asdeporte.com/contacto "
         android:textColor="#FF6A00" />
 
