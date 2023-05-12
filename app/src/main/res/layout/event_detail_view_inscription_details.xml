@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_dynamic"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginVertical="@dimen/dimen_32dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clInscription"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/gray_item">
+
+            <TextView
+                android:id="@+id/tvTitleInscription"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="14dp"
+                android:layout_marginStart="16dp"
+                android:text="Mi inscripción"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivIconInscription"
+                android:layout_width="@dimen/dimen_16dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#1B1C1D" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llContentInscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Kanit_Medium.Default.24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:text="Ernesto," />
+
+            <LinearLayout
+                android:id="@+id/llStopwatchCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_dynamic"
+                android:orientation="vertical">
+
+                <com.asdeporte.asdeportev2.ui.reusableview.home.StopwatchCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Kanit_Medium.Default.16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginBottom="@dimen/dimen_24dp"
+                    android:background="@drawable/pill_background"
+                    android:text="Obtener QR"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/Kanit_Medium.Default.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:gravity="center"
+                android:text="Estos son los datos de tu próxima competencia:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:background="@drawable/badge_background"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_16dp">
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Número de competidor"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/dimen_32dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@color/border_gray" />
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold.Default.34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:text="1620"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:background="@drawable/badge_background"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_16dp">
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Distancia"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/dimen_32dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@color/border_gray" />
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold.Default.34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:text="8K"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:background="@drawable/badge_background"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_16dp">
+
+                <TextView
+                    style="@style/Kanit_Medium.Default.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Categoría"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/dimen_32dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:background="@color/border_gray" />
+
+                <TextView
+                    style="@style/Kanit_Semi_Bold.Default.20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:gravity="center"
+                    android:text="Varonil \n50 - 54 años"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/Kanit_Regular.Default.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:text="Tu correo electrónico:" />
+
+            <TextView
+                style="@style/Kanit_Medium.Orange.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:text="Tu correo electrónico:" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clInscriptionDependent"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:background="@color/gray_item">
+
+            <TextView
+                android:id="@+id/tvTitleInscriptionDependent"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="14dp"
+                android:layout_marginStart="16dp"
+                android:text="Inscripción dependientes (3)"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivIconInscriptionDependent"
+                android:layout_width="@dimen/dimen_16dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#1B1C1D" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llContentInscriptionDependent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvInscriptionDependent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="false"
+                tools:ignore="RtlSymmetry"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_inscription_detail" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:background="@color/gray_item">
+
+            <TextView
+                android:id="@+id/tvTitleGuide"
+                style="@style/Kanit_Regular.Default.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="14dp"
+                android:layout_marginStart="16dp"
+                android:text="Guía del atleta y del acompañante"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivIconGuide"
+                android:layout_width="@dimen/dimen_16dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#1B1C1D" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_24dp"
+        android:background="@color/secondary_background" />
+
+    <com.asdeporte.asdeportev2.ui.home.views.tabs.EventDetailBenefitPlusView
+        android:id="@+id/benefitPlus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_24dp"
+        android:background="@color/secondary_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_32dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Kanit_Semi_Bold.Default.24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recomendaciones"
+            android:textAllCaps="true" />
+
+        <TextView
+            style="@style/Kanit_Regular.Default.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:fontFamily="@font/kanit_light"
+            android:text="Si llegas en transporte público, la estación del Metrobús/metro tal, te quedará a 5 min caminando. \n\n Si llegas en auto privado: Hay estacionamiento en la plaza tal *El estacionamiento no es operado por Asdeporte." />
+
+        <TextView
+            style="@style/Kanit_Semi_Bold.Default.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="¡Puedes acudir con acompañantes!" />
+
+        <TextView
+            style="@style/Kanit_Regular.Default.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:fontFamily="@font/kanit_light"
+            android:text="Te invitamos a conocer los productos exclusivos que se encontrarán en los stands (EXPO) en la entrega de kits , recuerda llevar efectivo o tarjeta ¡Habrá descuentos y precios especiales! \nTambién podrás adquirir inscripciones para futuros eventos en el stand de inscripciones de Asdeporte a precios increíbles, grandes descuentos solo para ti. \n\nAdquiere tu acceso a la CARPA SANTANDER , la cual podrás comprar el día de la entrega de paquetes, donde podrán tener, desayuno, asientos, sombra, sanitarios, hidratación y además una vista increíble al evento, podrás ver a los demás CRUZANDO LA META." />
+
+    </LinearLayout>
+
+</LinearLayout>

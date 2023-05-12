@@ -333,10 +333,7 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
             "MyNextCompetition" -> {
                 binding.llStopwatchCard.visibility = View.VISIBLE
                 binding.inscriptionView.visibility = View.GONE
-                binding.inscriptionView.visibility = View.GONE
-                binding.anotherInscriptionView.visibility = View.GONE
-                binding.distanceAndCategory.visibility = View.GONE
-                binding.inscriptionAndPrice.visibility = View.GONE
+                binding.anotherInscriptionView.visibility = View.VISIBLE
                 val titles = listOf("Detalles de inscripción", "Hospedaje y Turismo", "Ruta", "Programa del evento", "Beneficios plus", "Distancias y categorías", "Inscripciones y precios")
                 binding.tabViews.setTabs(titles)
                 binding.tabViews.setCallback { tab ->
@@ -347,7 +344,13 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                     binding.plusMembership.visibility = View.GONE
                     binding.distanceAndCategory.visibility = View.GONE
                     binding.inscriptionAndPrice.visibility = View.GONE
+                    binding.inscriptionDetails.visibility = View.GONE
                     when (tab) {
+                        "Detalles de inscripción" -> {
+                            binding.anotherInscriptionView.visibility = View.VISIBLE
+                            binding.inscriptionDetails.visibility = View.VISIBLE
+                            binding.inscriptionDetails.setData(plusMembershipData)
+                        }
                         "Hospedaje y Turismo" -> {
                             binding.anotherInscriptionView.visibility = View.VISIBLE
                             binding.tourism.visibility = View.VISIBLE
@@ -372,7 +375,8 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                             binding.distanceAndCategory.visibility = View.VISIBLE
                             binding.distanceAndCategory.setData(distanceAndCategoryData)
                         }
-                        "Inscripciones y Precios" -> {
+                        "Inscripciones y precios" -> {
+                            binding.anotherInscriptionView.visibility = View.VISIBLE
                             binding.inscriptionAndPrice.visibility = View.VISIBLE
                             binding.inscriptionAndPrice.setData(inscriptionAndPriceModel)
                         }
@@ -386,10 +390,7 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
             else -> {
                 binding.llStopwatchCard.visibility = View.GONE
                 binding.inscriptionView.visibility = View.VISIBLE
-                binding.inscriptionView.visibility = View.VISIBLE
                 binding.anotherInscriptionView.visibility = View.GONE
-                binding.distanceAndCategory.visibility = View.GONE
-                binding.inscriptionAndPrice.visibility = View.GONE
                 val titles = listOf("Distancias y Categorías", "Inscripciones y Precios", "Beneficios Plus", "Hospedaje y Turismo", "Ruta", "Programa del Evento", "Entrega de Kit")
                 binding.tabViews.setTabs(titles)
                 binding.tabViews.setCallback { tab ->

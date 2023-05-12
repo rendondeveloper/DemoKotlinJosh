@@ -72,6 +72,9 @@
     <style name="Kanit_Semi_Bold.Default.25" parent="Kanit_Semi_Bold.Default">
         <item name="android:textSize">@dimen/text_25</item>
     </style>
+    <style name="Kanit_Semi_Bold.Default.34" parent="Kanit_Semi_Bold.Default">
+        <item name="android:textSize">@dimen/text_34</item>
+    </style>
     <!-- Secondary color -->
     <style name="Kanit_Semi_Bold.Secondary.10" parent="Kanit_Semi_Bold.Secondary">
         <item name="android:textSize">@dimen/text_10</item>

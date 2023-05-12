@@ -194,6 +194,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <!-- Section Detalles de inscripción -->
+            <com.asdeporte.asdeportev2.ui.home.views.tabs.inscriptionDetails.EventDetailInscriptionDetailsView
+                android:id="@+id/inscriptionDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
             <!-- Section Beneficios Plus -->
             <com.asdeporte.asdeportev2.ui.home.views.tabs.plusMembership.EventDetailPlusMembershipView
                 android:id="@+id/plusMembership"
@@ -239,7 +246,8 @@
             <com.asdeporte.asdeportev2.ui.home.views.tabs.inscriptionAndPrice.EventDetailInscriptionAndPrice
                 android:id="@+id/inscriptionAndPrice"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:id="@+id/content_view"

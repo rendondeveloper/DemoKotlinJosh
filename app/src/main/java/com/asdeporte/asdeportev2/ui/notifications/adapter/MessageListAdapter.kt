@@ -18,7 +18,7 @@ import com.bumptech.glide.request.RequestOptions
 
 
 /*class MessageListAdapter(context: Context, messageList: List<BaseMessage>) :
-    RecyclerView.Adapter<Any?>() {
+    RecyclerView.InscriptionDetailAdapter<Any?>() {
     private val mContext: Context
     private val mMessageList: List<BaseMessage>
 
