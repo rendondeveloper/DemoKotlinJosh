@@ -104,6 +104,7 @@
                     android:textAllCaps="true" />
 
                 <TextView
+                    android:id="@+id/tvShowDetails"
                     style="@style/Kanit_Medium.Orange.14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

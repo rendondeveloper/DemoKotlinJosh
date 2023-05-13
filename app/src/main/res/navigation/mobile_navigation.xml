@@ -27,6 +27,9 @@
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/nav_slide_in_left"
             app:popExitAnim="@anim/nav_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_detailResultsFragment3"
+            app:destination="@id/detailResultsFragment3" />
 
     </fragment>
     <fragment
@@ -649,4 +652,9 @@
         android:name="com.asdeporte.asdeportev2.ui.profile.details.PersonalDetailActivityFragment"
         android:label="fragment_personal_detail_activity"
         tools:layout="@layout/fragment_personal_detail_activity" />
+    <fragment
+        android:id="@+id/detailResultsFragment3"
+        android:name="com.asdeporte.asdeportev2.ui.home.DetailResultsFragment"
+        android:label="DetailResultsFragment"
+        tools:layout="@layout/fragment_detail_results" />
 </navigation>

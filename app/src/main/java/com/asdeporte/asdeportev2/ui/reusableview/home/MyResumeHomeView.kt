@@ -5,8 +5,10 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
+import androidx.navigation.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.databinding.MyResumeHomeViewBinding
+import com.asdeporte.asdeportev2.extensions.safelyNavigate
 
 class MyResumeHomeView @JvmOverloads constructor(
     context: Context,
@@ -18,6 +20,9 @@ class MyResumeHomeView @JvmOverloads constructor(
 
     init {
         binding = MyResumeHomeViewBinding.inflate(LayoutInflater.from(context), this, true)
+        binding?.tvShowDetails?.setOnClickListener {
+            findNavController().safelyNavigate(R.id.action_navigation_home_to_detailResultsFragment3)
+        }
     }
 
     fun setData(events: String) {
