@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.allViews
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentEventDetailBinding
@@ -310,6 +311,10 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
 
         binding.inscriptionButton.setOnClickListener {
             startActivity(Intent(requireContext(), InscriptionActivity::class.java))
+        }
+
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
         }
 
         //setupContent()

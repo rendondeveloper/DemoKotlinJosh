@@ -45,17 +45,11 @@ class EventTabView @JvmOverloads constructor(
             tabContainer.tag = index
             val titleView: TextView = layout.findViewById(R.id.title_view) as TextView
             titleView.text = title
-            /*
-            if (currentTab == index) {
-                tabContainer.backgroundTintList = ContextCompat.getColorStateList(context, R.color.dark_blue)
-                titleView.setTextColor(ContextCompat.getColor(context, R.color.white))
-            }
-             */
 
             tabContainer.setOnClickListener {
                 currentTab = it.tag as Int
                 removeSelected()
-                tabContainer.backgroundTintList = ContextCompat.getColorStateList(context, R.color.dark_blue)
+                tabContainer.background = resources.getDrawable(R.drawable.event_tab_border_select)
                 titleView.setTextColor(ContextCompat.getColor(context, R.color.white))
                 this.callBack(titleView.text.toString())
             }
@@ -71,7 +65,7 @@ class EventTabView @JvmOverloads constructor(
         view?.let {
             val tabContainer = it.findViewById(R.id.tab_container) as? RelativeLayout
             val titleView = it.findViewById(R.id.title_view) as? TextView
-            tabContainer?.backgroundTintList = ContextCompat.getColorStateList(context, R.color.dark_blue)
+            tabContainer?.background = resources.getDrawable(R.drawable.event_tab_border_select)
             titleView?.setTextColor(ContextCompat.getColor(context, R.color.white))
             this.callBack(titleView?.text.toString())
         }
@@ -81,7 +75,7 @@ class EventTabView @JvmOverloads constructor(
         for (view in binding.tabView.allViews) {
             val tabContainer = view.findViewById(R.id.tab_container) as? RelativeLayout
             val titleView = view.findViewById(R.id.title_view) as? TextView
-            tabContainer?.backgroundTintList = ContextCompat.getColorStateList(context, R.color.white)
+            tabContainer?.background = resources.getDrawable(R.drawable.event_tab_border)
             titleView?.setTextColor(ContextCompat.getColor(context, R.color.dark_blue))
         }
     }

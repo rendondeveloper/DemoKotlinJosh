@@ -189,6 +189,12 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/secondary_background"
+                />
+
             <com.asdeporte.asdeportev2.ui.reusableview.home.EventTabView
                 android:id="@+id/tab_views"
                 android:layout_width="match_parent"
