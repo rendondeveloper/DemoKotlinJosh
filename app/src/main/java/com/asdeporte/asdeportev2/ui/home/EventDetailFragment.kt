@@ -13,7 +13,6 @@ import com.asdeporte.asdeportev2.R
 import com.asdeporte.asdeportev2.data.responses.events.EventData
 import com.asdeporte.asdeportev2.databinding.FragmentEventDetailBinding
 import com.asdeporte.asdeportev2.ui.MainActivity
-import com.asdeporte.asdeportev2.ui.home.adapters.tabs.inscriptionAndPrice.KitAdapter
 import com.asdeporte.asdeportev2.ui.home.models.tabs.distanceAndCategory.DistanceAndCategoryMainNotesModel
 import com.asdeporte.asdeportev2.ui.home.models.tabs.distanceAndCategory.DistanceAndCategoryMainSectionModel
 import com.asdeporte.asdeportev2.ui.home.models.tabs.distanceAndCategory.DistanceAndCategoryModel
@@ -39,9 +38,14 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.FitCenter
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.LatLng
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
-class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener {
+
+class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener, OnMapReadyCallback {
     private var _binding: FragmentEventDetailBinding? = null
     private val binding get() = _binding!!
 
@@ -293,6 +297,9 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
 
         initArguments()
 
+        binding.route.getMapView().onCreate(savedInstanceState)
+        binding.route.getMapView().getMapAsync(this)
+
         Glide.with(this)
                 .load("https://picsum.photos/600/300")
                 .centerCrop()
@@ -326,6 +333,11 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
                 "• La carrera outdoor no tendrá premiación.")
 
          */
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.route.getMapView().onResume()
     }
 
     private fun initArguments() {
@@ -515,5 +527,9 @@ class EventDetailFragment : Fragment(), SearchTribuView.SearchTribuViewListener 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onMapReady(p0: GoogleMap) {
+        p0.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(-34.0, 151.0), 10f))
     }
 }
